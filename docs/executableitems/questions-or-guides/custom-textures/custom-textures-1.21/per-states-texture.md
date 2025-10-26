@@ -2,9 +2,9 @@
 
 First of all, to better understanding this tutorial you must read first [****General Items****](general-items.md) because I will suppose you already know some basic stuff of Texture pack, after telling this, let's begin.
 
-\{% embed url="https://youtu.be/tfiEoQG_qWI" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tfiEoQG_qWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-\{% embed url="https://youtu.be/9r7n3omVNnY" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9r7n3omVNnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Commentary
 

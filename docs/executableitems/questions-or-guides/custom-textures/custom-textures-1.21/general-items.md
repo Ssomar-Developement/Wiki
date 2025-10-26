@@ -18,7 +18,7 @@ This page will guide you how to add new textures to the game (without modifying 
 
 First of all tell you that all this tutorial is based on the next video:
 
-\{% embed url="https://youtu.be/y-t1YMslFLM" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y-t1YMslFLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Here you can learn more deeply about the texture pack, how it works, and if you didn't get at all this tutorial, check the video, its made to understand everything. 🥳😈
 

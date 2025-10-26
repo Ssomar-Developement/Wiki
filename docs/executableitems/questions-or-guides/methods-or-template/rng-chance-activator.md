@@ -73,4 +73,4 @@ If have any question feel free to ask it in the discord of EI, have a nice day :
 
 ## How to set the correct values to get the percentage you want
 
-\{% embed url="https://youtu.be/jXTDlqoE8dc" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jXTDlqoE8dc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

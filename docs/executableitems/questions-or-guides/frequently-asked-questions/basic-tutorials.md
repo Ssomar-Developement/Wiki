@@ -4,11 +4,11 @@ Since this plugin has a lot of features, and a lot of stuff to check, we made a 
 
 ## Premium basic tutorial
 
-\{% embed url="https://youtu.be/I4eYrWWOyQk" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I4eYrWWOyQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Free basic tutorial
 
-\{% embed url="https://youtu.be/n1KZoeeuKmM" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n1KZoeeuKmM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Discord
 

@@ -1,6 +1,6 @@
 # How to duplicate an EI Item
 
-\{% embed url="https://youtu.be/P_WAW8l_bLc" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P_WAW8l_bLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you'd like to have another copy of your EI Item, for example, to create different classes of the same Item, such as \[Legendary], \[Epic], etc, and don't want to create each item from 0, just having a copy
 

@@ -1,6 +1,6 @@
 # Animated textures
 
-\{% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=IAAj2a2dBQo" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IAAj2a2dBQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 \{% file src="../../../../.gitbook/assets/AnimatedTextures1 (1).zip" %\}
 

@@ -1,6 +1,6 @@
 # Folders on /ei show
 
-\{% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=h-gkzHYPUmg" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h-gkzHYPUmg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Folder management
 

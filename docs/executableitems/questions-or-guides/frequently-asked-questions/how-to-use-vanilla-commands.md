@@ -1,6 +1,6 @@
 # How to use vanilla commands
 
-\{% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=cYtk6Z8O2-c" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cYtk6Z8O2-c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 It is possible that inside your ExecutableItem you will use vanilla commands that **needs a position**, such as:
 

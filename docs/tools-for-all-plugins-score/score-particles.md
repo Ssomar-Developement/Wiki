@@ -1,6 +1,6 @@
 # ✨    SCore particles
 
-\{% embed url="https://youtu.be/_GavkHnQcvg?si=UaRm9LlUomDzoveQ" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_GavkHnQcvg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Score includes many pre-made particles shapes from XParticle library and some custom other. 
 

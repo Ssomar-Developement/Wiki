@@ -6,7 +6,7 @@ Here you will learn how to create the 3d model, and using the methods already ex
 
 ## This tutorial is based on this video
 
-\{% embed url="https://youtu.be/4DiwHcW48Qg" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4DiwHcW48Qg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Application
 

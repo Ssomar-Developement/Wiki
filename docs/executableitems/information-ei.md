@@ -2,7 +2,7 @@
 
 ## Description 
 
-\{% embed url="https://www.youtube.com/watch?t=&v=KvhC9YYnB4U" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KvhC9YYnB4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Many new features / default items appeared after this video, I let you discover them directly in-game :smile:
 \{% endembed %\}
 

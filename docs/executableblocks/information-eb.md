@@ -2,7 +2,7 @@
 
 ## Description 
 
-\{% embed url="https://www.youtube.com/watch?v=3gD_c-axpWI" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3gD_c-axpWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Support
 

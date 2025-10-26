@@ -2,7 +2,7 @@
 
 ## This tutorial works on **free** version.
 
-\{% embed url="https://youtu.be/_KqqBRstZ7k" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KqqBRstZ7k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Make the item disappear after "x" uses
 

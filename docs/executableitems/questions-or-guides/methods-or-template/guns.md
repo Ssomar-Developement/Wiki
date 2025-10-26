@@ -1,3 +1,3 @@
 # Guns
 
-\{% embed url="https://youtu.be/2qugSjy5kRM?si=nTxPNkS82DgOUx7f" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2qugSjy5kRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

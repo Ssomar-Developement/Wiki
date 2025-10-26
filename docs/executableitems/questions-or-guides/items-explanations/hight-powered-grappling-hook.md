@@ -4,7 +4,7 @@ description: This page allows you to create a High-Powered Grappling Hook
 
 # Hight-Powered Grappling Hook
 
-\{% embed url="https://youtu.be/bEUAkqFNbx0" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bEUAkqFNbx0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ###
 

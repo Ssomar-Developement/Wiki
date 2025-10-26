@@ -1,6 +1,6 @@
 # Bag of items
 
-\{% embed url="https://youtu.be/kzwHkY-xbzA" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kzwHkY-xbzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you would like to store items like having a bag of cobblestone, or bag of different stuff, this is your place
 

@@ -1,3 +1,3 @@
 # Custom TNT
 
-\{% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=ZZuu5Z5BcOc" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZZuu5Z5BcOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

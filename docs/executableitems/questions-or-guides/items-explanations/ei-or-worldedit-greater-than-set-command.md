@@ -2,7 +2,7 @@
 
 This is not an easy item, so you may require a little of knowledge how the plugin works to achieve this. This is a guide, "where to search this" "what this means" won't be answered here, BUT we'll leave everything for you to understand or to go to read what "x" means.
 
-\{% embed url="https://www.youtube.com/watch?ab_channel=Vayk&v=cGAg5iZCtw8" %\}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cGAg5iZCtw8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 :::info
 **REQUIRES**
