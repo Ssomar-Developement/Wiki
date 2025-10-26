@@ -12,13 +12,13 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://ssomar-developement.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/',
+  baseUrl: '/Wiki/',
 
   // GitHub pages deployment config.
-  organizationName: 'ssomar', // Usually your GitHub org/user name.
-  projectName: 'score-plugins-wiki', // Usually your repo name.
+  organizationName: 'Ssomar-Developement', // Usually your GitHub org/user name.
+  projectName: 'Wiki', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
