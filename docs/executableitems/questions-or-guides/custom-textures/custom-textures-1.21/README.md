@@ -1,2 +1,0 @@
-# \[Premium] Custom textures
-
