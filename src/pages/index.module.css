@@ -1,0 +1,135 @@
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: calc(100vh - 60px);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #5b5ee6 0%, #8b8ff1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pluginsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pluginCard {
+  position: relative;
+  background: var(--ifm-background-surface-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.pluginCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(91, 94, 230, 0.15);
+  border-color: rgba(91, 94, 230, 0.4);
+  text-decoration: none;
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ifm-heading-color);
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cardArrow {
+  font-size: 1.5rem;
+  color: rgba(91, 94, 230, 0.7);
+  transition: transform 0.3s ease;
+  align-self: flex-end;
+}
+
+.pluginCard:hover .cardArrow {
+  transform: translateX(4px);
+  color: rgba(91, 94, 230, 1);
+}
+
+@media (max-width: 996px) {
+  .pluginsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    margin-bottom: 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .pluginsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .pluginCard {
+    padding: 1.5rem;
+  }
+
+  .cardIcon {
+    font-size: 2.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+}

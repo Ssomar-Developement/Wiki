@@ -1,0 +1,123 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+.purchaseContainer {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  min-height: calc(100vh - 60px);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #5b5ee6 0%, #8b8ff1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 1.5rem 0;
+}
+
+.storeLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.storeLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(91, 94, 230, 0.1);
+  border: 1px solid rgba(91, 94, 230, 0.2);
+  border-radius: 8px;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.storeLinks a:hover {
+  background: rgba(91, 94, 230, 0.2);
+  border-color: rgba(91, 94, 230, 0.4);
+  transform: translateY(-2px);
+}
+
+.section {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.pluginsBox,
+.featuredBox {
+  background: var(--ifm-background-surface-color);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  width: 100%;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.bundleDescription {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .purchaseContainer {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .storeLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .storeLinks a {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .pluginsBox,
+  .featuredBox {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
