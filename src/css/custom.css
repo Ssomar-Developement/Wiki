@@ -134,6 +134,14 @@ body .footer {
   box-shadow: 0 35px 70px rgba(28, 36, 48, 0.12);
   border: 1px solid var(--doc-border);
   line-height: 1.7;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.theme-doc-markdown .markdown {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .theme-doc-markdown .markdown h1,
