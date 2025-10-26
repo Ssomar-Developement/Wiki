@@ -289,24 +289,24 @@ code {
 
 /* Resizable sidebar */
 .theme-doc-sidebar-container {
-  position: relative;
+  position: relative !important;
 }
 
 .sidebar-resize-handle {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -3px;
   bottom: 0;
-  width: 6px;
+  width: 12px;
   cursor: col-resize;
   background: transparent;
-  z-index: 100;
+  z-index: 1000;
   transition: background 0.2s ease;
 }
 
 .sidebar-resize-handle:hover,
 .sidebar-resize-handle.resizing {
-  background: rgba(91, 94, 230, 0.3);
+  background: rgba(91, 94, 230, 0.25);
 }
 
 .sidebar-resize-handle::before {
@@ -315,10 +315,10 @@ code {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 3px;
-  height: 40px;
-  background: rgba(91, 94, 230, 0.4);
-  border-radius: 2px;
+  width: 4px;
+  height: 50px;
+  background: rgba(91, 94, 230, 0.5);
+  border-radius: 3px;
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -330,11 +330,11 @@ code {
 
 [data-theme='dark'] .sidebar-resize-handle:hover,
 [data-theme='dark'] .sidebar-resize-handle.resizing {
-  background: rgba(140, 145, 255, 0.3);
+  background: rgba(140, 145, 255, 0.25);
 }
 
 [data-theme='dark'] .sidebar-resize-handle::before {
-  background: rgba(140, 145, 255, 0.5);
+  background: rgba(140, 145, 255, 0.6);
 }
 
 @media (max-width: 996px) {
