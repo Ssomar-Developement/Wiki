@@ -1,4 +1,8 @@
 {
   "collapsed": true,
-  "label": "Configurations"
+  "label": "Configurations",
+  "link": {
+    "type": "generated-index",
+    "description": "Configuration guides for ExecutableItems"
+  }
 }
