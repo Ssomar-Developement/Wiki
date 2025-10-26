@@ -37,6 +37,10 @@ const config = {
     locales: ['en'],
   },
 
+  clientModules: [
+    require.resolve('./src/components/ResizableSidebar.js'),
+  ],
+
   presets: [
     [
       'classic',

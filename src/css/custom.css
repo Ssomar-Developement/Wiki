@@ -287,6 +287,56 @@ code {
   margin-top: 4rem;
 }
 
+/* Resizable sidebar */
+.theme-doc-sidebar-container {
+  position: relative;
+}
+
+.sidebar-resize-handle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 100;
+  transition: background 0.2s ease;
+}
+
+.sidebar-resize-handle:hover,
+.sidebar-resize-handle.resizing {
+  background: rgba(91, 94, 230, 0.3);
+}
+
+.sidebar-resize-handle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 40px;
+  background: rgba(91, 94, 230, 0.4);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-resize-handle:hover::before,
+.sidebar-resize-handle.resizing::before {
+  opacity: 1;
+}
+
+[data-theme='dark'] .sidebar-resize-handle:hover,
+[data-theme='dark'] .sidebar-resize-handle.resizing {
+  background: rgba(140, 145, 255, 0.3);
+}
+
+[data-theme='dark'] .sidebar-resize-handle::before {
+  background: rgba(140, 145, 255, 0.5);
+}
+
 @media (max-width: 996px) {
   .theme-doc-markdown {
     padding: 2rem;
@@ -296,6 +346,10 @@ code {
   .theme-doc-sidebar-container {
     border-right: none;
     background: transparent;
+  }
+
+  .sidebar-resize-handle {
+    display: none;
   }
 
   body .navbar,
