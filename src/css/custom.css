@@ -301,6 +301,12 @@ code {
   flex: 0 0 auto !important;
 }
 
+.theme-doc-sidebar-container .sidebar_njMd,
+.theme-doc-sidebar-container .sidebarViewport_aRkj {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .docMainContainer_gTbr {
   flex: 1 1 auto !important;
   min-width: 0 !important;
