@@ -290,6 +290,12 @@ code {
 /* Resizable sidebar */
 .theme-doc-sidebar-container {
   position: relative !important;
+  flex: 0 0 auto !important;
+}
+
+.docMainContainer_gTbr {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
 }
 
 .sidebar-resize-handle {
