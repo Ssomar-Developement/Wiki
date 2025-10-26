@@ -104,7 +104,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/ssomar1607',
+            href: 'https://github.com/Ssomar-Developement',
             label: 'GitHub',
             position: 'right',
           },
@@ -136,7 +136,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ssomar1607',
+                href: 'https://github.com/Ssomar-Developement',
               },
             ],
           },
