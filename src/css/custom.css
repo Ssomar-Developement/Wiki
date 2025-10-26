@@ -301,13 +301,14 @@ code {
 .sidebar-resize-handle {
   position: absolute;
   top: 0;
-  right: -3px;
+  right: -6px;
   bottom: 0;
   width: 12px;
-  cursor: col-resize;
+  cursor: col-resize !important;
   background: transparent;
   z-index: 1000;
   transition: background 0.2s ease;
+  pointer-events: auto;
 }
 
 .sidebar-resize-handle:hover,
