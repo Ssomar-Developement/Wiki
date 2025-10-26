@@ -127,7 +127,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/your-discord',
+                href: 'https://discord.com/invite/TRmSwJaYNv',
               },
             ],
           },
