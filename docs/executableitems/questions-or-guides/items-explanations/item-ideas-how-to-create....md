@@ -150,7 +150,7 @@ just modify the delay depending the time you want the wolf to be alive
 
 * First create an activator PLAYER\_ALL\_CLICK or PLAYER\_RIGHT\_CLICK or PLAYER\_LEFT\_CLICK
 * Then in commands use the custom command [SPAWNENTITYONCURSOR](https://docs.ssomar.com/tools-for-all-plugins/custom-commands/player-and-target-commands#spawnentityoncursor) [LIGHTNING](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html#LIGHTNING) 1
-  * By default it doesn't do damage so in addition you can add the custom command DAMAGE {number}
+  * By default it doesn't do damage so in addition you can add the custom command `DAMAGE <number>`
 
 ### How to increase the max life "x" each time the activator gets triggered
 

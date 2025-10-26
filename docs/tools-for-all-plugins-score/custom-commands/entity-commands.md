@@ -84,9 +84,9 @@ it only works for 1.16.5+
 ### DROPEXECUTABLEITEM
 
 * Info: Drops an Executable Item in the entity's location
-* Command: DROPEXECUTABLEITEM \{id\} \{quantity\}
-  * {id}: Item id of the ExecutableItem
-  * {quantity}: The amount of the executable item that will drop
+* Command: `DROPEXECUTABLEITEM {id} {quantity}`
+  * `{id}`: Item id of the ExecutableItem
+  * `{quantity}`: The amount of the executable item that will drop
 * Example:
 
 ```
@@ -96,9 +96,9 @@ it only works for 1.16.5+
 ### DROPEXECUTABLEBLOCK
 
 * Info: Drops an Executable Block in the entity's location
-* Command: DROPEXECUTABLEBLOCK \{id\} \{quantity\}
-  * {id}: Item id of the ExecutableBlock
-  * {quantity}: The amount of the executable block that will drop
+* Command: `DROPEXECUTABLEBLOCK {id} {quantity}`
+  * `{id}`: Item id of the ExecutableBlock
+  * `{quantity}`: The amount of the executable block that will drop
 * Example:
 
 ```
@@ -108,9 +108,9 @@ it only works for 1.16.5+
 ### DROPITEM
 
 * Info: Drops an item in the entity's location
-* Command: DROPITEM \{material\} \{quantity\}
-  * {material}: The item type. [Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) **(MUST BE AT ALL CAPS)**
-  * {quantity}: The amount of the item that will drop
+* Command: `DROPITEM {material} {quantity}`
+  * `{material}`: The item type. [Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) **(MUST BE AT ALL CAPS)**
+  * `{quantity}`: The amount of the item that will drop
 * Example:
 
 ```

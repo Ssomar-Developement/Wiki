@@ -126,7 +126,7 @@ activators:**
 
 * Info: Remove a lore line
 * Command settings:
-  * {line}: The line that you want to remove
+  * `{line}`: The line that you want to remove
 * Example:
 
 ```yaml
