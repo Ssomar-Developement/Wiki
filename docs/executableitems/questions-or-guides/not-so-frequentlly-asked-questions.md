@@ -87,3 +87,60 @@ How to fix it?\
 ![](<../../../.gitbook/assets/image (453).png>) Try to remove these 4 lines and reload the plugin.
 
 The question is, does it solve the issue? Not entirely. The cause of such issue may vary from case-to-case. Please create a new post at the bugs-errors-issues channel in the discord so this issue can at least be prevented in the future updates.
+
+### Q: I input the customModelData value to a chestplate. The inv custom texture works except the worn armor render. What happened?
+
+A: Configure the equip model at https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#equippable-features
+:::info
+Snippet of the ei item config 
+```yml
+equippableFeatures:
+    enable: true
+    slot: CHEST
+    enableSound: false
+    sound: ITEM_ARMOR_EQUIP_DIAMOND
+
+    equipModel: "nexo:super" # Enter the equip model of your custom texture
+    cameraOverlay: "nexo:super" # You can remove this if you don't need it
+
+    damageableOnHurt: false
+    dispensable: true
+    swappable: true
+
+    allowedEntities:
+     - PLAYER
+```
+:::
+
+:::info
+Reference nexo armor config
+```yml
+super_chestplate:
+  material: NETHERITE_CHESTPLATE
+  name: '&6Super Chestplate'
+  type: chestplate
+  slot: chest
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - super_set:armors/super_set_chestplate_icon.png
+    - layer1: super_set:models/armor/super_armor_layer_1
+    custom_model_data: 10002
+  components:
+    equippable:
+      enabled: true
+      slot: chest
+      max-stack: 1
+      durability: 592
+  stats:
+    armor: 8
+    toughness: 2
+  Components:
+    equippable:
+      slot: CHEST
+      asset_id: nexo:super
+```
+:::
+
+Context: https://discord.com/channels/701066025516531753/1428177971700830218
