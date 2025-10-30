@@ -3,7 +3,7 @@
 :::tip
 "Multi-world" compatibility for the vanilla commands.
 
-`execute in <<NAME`_`OF`_`YOUR_WORLD>> run ...`
+`execute in <<NAME_OF_YOUR_WORLD>> run ...`
 
 Example, you want summon a Zombie in the world SsomarWorld:
 
@@ -32,11 +32,11 @@ _Sorted by alphabetical order_
 * Example: 
 
 ```text
-- AROUND 10 execute at %around_target% run summon lightning_bolt ~ ~ ~ &lt;+&gt; SENDMESSAGE &You got smited!
+- AROUND 10 execute at %around_target% run summon lightning_bolt ~ ~ ~ <+> SENDMESSAGE &You got smited!
 ```
 
 ```text
-MOB_AROUND 7 STUN_ENABLE &lt;+&gt; DELAY 5 &lt;+&gt; STUN_DISABLE
+- MOB_AROUND 7 STUN_ENABLE <+> DELAY 5 <+> STUN_DISABLE
 ```
 
 ### AROUND
