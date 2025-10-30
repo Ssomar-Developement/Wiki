@@ -11,7 +11,7 @@ Example, you want summon a Zombie in the world SsomarWorld:
 
 `execute in <<SsomarWorld>> run summon zombie 100 50 100`
 
-Example with a placeholder`:`
+Example with a placeholder:
 
 `execute in <<%block_world%>> run summon zombie 100 50 100`
 :::
