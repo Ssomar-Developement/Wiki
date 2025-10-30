@@ -1,3 +1,5 @@
+import LinkPreview from '@site/src/components/LinkPreview';
+
 # Block Commands
 
 :::tip
@@ -210,9 +212,10 @@ DRAININCUBE *12 WATER
 * Info: Drops an item in the block's location
 * Command: DROPITEM \{material\} \{quantity\}
   * `{material}`: The item type. 
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
-
+  <LinkPreview
+    url="https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html"
+    title="Material"
+  />
 * `{quantity}`: The amount of the item that will drop
 * Example:
 
