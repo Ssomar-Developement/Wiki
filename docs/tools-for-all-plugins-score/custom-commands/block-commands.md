@@ -44,8 +44,7 @@ _Sorted by alphabetical order_
 ### AROUND
 
 * Info: Targets players in a specific radius and makes them run commands
-* Command: 
-  * `AROUND {distance} {command}`
+* Command settings
     * `{distance}`: To how far in radius the command will select players
     * `{command}`: The command that the targeted players will execute
 * Example:
@@ -75,7 +74,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### APPLY\_BONEMEAL
 
 * Info: Apply the same effect that happen when a player use bone meal on a block (crop)
-* Command: APPLY\_BONEMEAL
+* No command setting
 * Example:
 
 ```yaml
@@ -85,7 +84,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### BREAK
 
 * Info: Breaks the target block
-* Command: BREAK
+* No command setting
 * Example:
 
 ```
@@ -95,7 +94,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### CONTENT\_ADD
 
 * Info: Adds an item into a container
-* Command: CONTENT\_ADD \{Item\} \[Amount] \[slot]
+* Command settings
   * \{Item\}: Item to add
   * \[Amount]: Amount to add (default is 1)
 * Example:
@@ -109,7 +108,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### CONTENT\_CLEAR
 
 * Info: Clear a container
-* Command: CONTENT\_CLEAR
+* No command setting
 * Example:
 
 ```
@@ -119,7 +118,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 ### CONTENT\_REMOVE
 
 * Info: Removes an item from a container
-* Command: CONTENT\_REMOVE \{Item\} \[Amount]
+* Command settings
   * \{Item\}: Item to remove
   * \[Amount]: Amount to remove (default is 1)
 * Example:
@@ -135,7 +134,7 @@ It will not remove ExecutableItems if the material matches. The only way would b
 ### CONSOLEMESSAGE
 
 * Info: Sends a message to the console
-* Command: CONSOLEMESSAGE \{text\}
+* Command setting
   * `{text}`: Text to send tho the console
 * Example:
 
@@ -146,7 +145,7 @@ It will not remove ExecutableItems if the material matches. The only way would b
 ### CHANGE\_BLOCK\_TYPE
 
 * Info: Changes the block type of the block selected by the activator
-* Command: CHANGE\_BLOCK\_TYPE \{MATERIAL\}
+* Command setting
 * Example:
 
 ```
@@ -174,7 +173,7 @@ It works with ItemsAdder
 ### DROPEXECUTABLEITEM
 
 * Info: Drops an Executable Item in the block's location
-* Command: DROPEXECUTABLEITEM \{id\} \{quantity\}
+* Command settings
   * `{id}`: Item id of the ExecutableItem
   * `{quantity}`: The amount of the executable item that will drop
 * Example:
@@ -186,7 +185,7 @@ It works with ItemsAdder
 ### DROPEXECUTABLEBLOCK
 
 * Info: Drops an Executable Block in the block's location
-* Command: DROPEXECUTABLEBLOCK \{id\} \{quantity\}
+* Command settings
   * `{id}`: Item id of the ExecutableBlock
   * `{quantity}`: The amount of the executable block that will drop
 * Example:
@@ -198,8 +197,9 @@ It works with ItemsAdder
 ### DRAIN IN CUBE
 
 * Info: it drains in a cube of "r" radius the source of lava and/or water
-* Command: DRAININCUBE \{radius\} \[LAVA or WATER (no need if you want both)]
+* Command settings
   * `{radius}`: The radius in blocks (9 is the limit), you can bypass the limit by adding a * before your radius (as your own risks).
+  * `{drainType}`: LAVA or WATER (no need if you want both)
 * Example:
 
 ```
@@ -210,7 +210,7 @@ DRAININCUBE *12 WATER
 ### DROPITEM
 
 * Info: Drops an item in the block's location
-* Command: DROPITEM \{material\} \{quantity\}
+* Command settings
   * `{material}`: The item type.
     
 <LinkPreview
@@ -228,7 +228,7 @@ DRAININCUBE *12 WATER
 ### EXPLODE
 
 * Information: Breaks the block you targeted and spawns a primed tnt on that location
-* Command: EXPLODE
+* No command setting
 * Example:
 
 ```
@@ -238,12 +238,12 @@ DRAININCUBE *12 WATER
 ### FARMINCUBE
 
 * Information: Breaks all crops in a given radius
-* Command: FARMINCUBE \{radius\} \[drop] \[onlyMaxAge] \[replant]
+* Command settings
   * `{radius}`: Radius of how big the area of the crops you want to break. **(LIMIT IS 9)**
-  * \[drop]: Whether the block drops loot or not
-  * \[onlyMaxAge]: It will only break crops with max age
-  * \[replant]: Whether the crop will be replanted or not
-  * \[event true or false]: Whether the crop will generate the event or not.
+  * `{drop}`: Whether the block drops loot or not
+  * `{onlyMaxAge}`: It will only break crops with max age
+  * `{replant}`: Whether the crop will be replanted or not
+  * `{event}`: Whether the crop will generate the event or not.
 * Example:
 
 ```
@@ -253,7 +253,7 @@ DRAININCUBE *12 WATER
 ### FERTILIZEINCUBE
 
 * Info: Fertilizes nearby crops by 1 age, its like applying bonemeal but it growth the plant 100% of the time.
-* Command: FERTILIZEINCUBE \{radius\} 
+* Command setting
   * `{radius}`: Radius of how big the area of the crops you want to fertilize **(LIMIT IS 9)**
 * Example:
 
@@ -264,12 +264,12 @@ DRAININCUBE *12 WATER
 ### INLINE\_MINEINCUBE
 
 * Info: Destroys blocks in a radius in a rectangle shape. Each block broken by this command gets counted as a player block break event.
-* Command: INLINE\_MINEINCUBE \{cube\_radius\} \{depth\} \{ActiveDrop true or false\} \{create blockBreakEvent true or false\} \{optional direction\}
-  * \{cube\_radius\}: Radius of how big the cube radius will be
-  * \{depth\}: How depth the rectangle will be.
-  * \{drop\}: Whether the block drops loot or not
-  * \[create blockBreakEvent]: if the plugin will generate a blockBreakEvent for each broken block by the MINEINCUBE (default true)
-  * \{optional direction\}: If you want to force a direction.
+* Command settings
+  * `{cube_radius}`: Radius of how big the cube radius will be
+  * `{depth}`: How depth the rectangle will be.
+  * `{drop}`: Whether the block drops loot or not
+  * `{create blockBreakEvent}`: if the plugin will generate a blockBreakEvent for each broken block by the MINEINCUBE (default true)
+  * `{direction}`: If you want to force a direction (Optional).
 * Example:
 
 ```
@@ -284,8 +284,10 @@ Example: INLINE\_MINEINCUBE 1 1 true true %player\_direction\_xz%
 ### LAUNCH
 
 * Info: Makes the target block shoot projectiles
-* Command: LAUNCH \{projectile\} \[speed] \[despawnDelay]
-  * the despawn delay is in seconds (Default 10)
+* Command settings
+  * `{projectile}`: the projectile type
+  * `{speed}`: the projectile speed
+  * `{despawnDelay}`: the despawn delay is in seconds (Default 10)
 * Example:
 
 ```
@@ -301,11 +303,11 @@ Example: AmethystCluster, Barrel, Bed, Beehive, Bell, BigDripleaf, CalibratedScu
 ### MINEINCUBE
 
 * Info: Destroys blocks in a radius in a cuboid shape. Each block broken by this command gets counted as a player block break event.
-* Command: MINEINCUBE \{radius\} \{drop\} \[generate BlockBreakEvent] \{offset default false\}
+* Command settings
   * `{radius}`: Radius of how big the area of the crops you want to break **(LIMIT IS 9)**
   * `{drop}`: Whether the block drops loot or not
-  * \[create blockBreakEvent]: if the plugin will generate a blockBreakEvent for each broken block by the MINEINCUBE (default true)
-  * `{offset default false}`: If the area of block starts to break from the block broken, or from the "center" to make the area really works the "radius" selected.
+  * `{create blockBreakEvent}`: if the plugin will generate a blockBreakEvent for each broken block by the MINEINCUBE (default true)
+  * `{offset}`: If the area of block starts to break from the block broken, or from the "center" to make the area really works the "radius" selected. (default false)
 * Example:
 
 ```
@@ -315,10 +317,10 @@ Example: AmethystCluster, Barrel, Bed, Beehive, Bell, BigDripleaf, CalibratedScu
 ### MINEINSPHERE
 
 * Info: Destroys blocks in a radius in a cuboid shape. Each block broken by this command gets counted as a player block break event.
-* Command: MINEINSPHERE \{radius\} \{drop\} \[generate BlockBreakEvent]
+* Command settings
   * `{radius}`: Radius of the sphere
   * `{drop}`: Whether the block drops loot or not
-  * \[create blockBreakEvent]: if the plugin will generate a blockBreakEvent for each broken block by the command
+  * `{create blockBreakEvent}`: if the plugin will generate a blockBreakEvent for each broken block by the command
 * Example:
 
 ```
@@ -328,7 +330,7 @@ Example: AmethystCluster, Barrel, Bed, Beehive, Bell, BigDripleaf, CalibratedScu
 ### MOB\_AROUND
 
 * Info: Targets entities in a specific radius and makes them run commands
-* Command: MOB\_AROUND \{distance\} \{mute or not\} (command)
+* Command settings
   * `{distance}`: To how far in radius the command will select entities
   * `{mute or not}`: (true or false) To notify the user of the item if it didn't manage to target any mobs.
     * **Set to true to hide the message**
@@ -346,11 +348,17 @@ Example: AmethystCluster, Barrel, Bed, Beehive, Bell, BigDripleaf, CalibratedScu
 
 To use entity nbt on the WHITELIST/BLACKLIST field, you need to install NBT API plugin
 
-[https://www.spigotmc.org/resources/nbt-api.7939/](https://www.spigotmc.org/resources/nbt-api.7939/)
+<LinkPreview
+  url="https://www.spigotmc.org/resources/nbt-api.7939/"
+  title="NBTAPI Plugin"
+/>
 
 It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1}`
 
-[https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities)
+<LinkPreview
+  url="https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities"
+  title="Entities tags"
+/>
 
 ```
 - MOB_AROUND 7 BLACKLIST(ZOMBIE{CustomName:"Test Test"},ZOMBIE{CustomName:"Miyamoto"}) false BURN 3
@@ -362,7 +370,7 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 ### MOVE
 
 * Info: Move all entities above the block on the direction of the block (for better understanding is like what a conveyor do)
-* Command: MOVE
+* No command setting
 * Example:
 
 ```
@@ -376,10 +384,9 @@ It supports NBT Tags so you can add for example something like: `ZOMBIE{IsBaby:1
 ### MOB\_NEAREST
 
 * Info: Targets the nearest mob from the player/target.
-* Command: 
-  * `MOB_NEAREST` `{max accepted distance}` `{command}`
+* Command settings
     * `{max accepted distance}`:  Max distance accepted that the "entity" can be.
-    * `{command}`: The command that will be executed
+    * `{command(s)}`: The command that will be executed
 * Example:
 
 Damages nearest player
@@ -391,8 +398,7 @@ Damages nearest player
 ### NEAREST
 
 * Info: Targets the nearest player from the player/target.
-* Command: 
-  * `NEAREST` `{max accepted distance}` `{command}`
+* Command settings
     * `{max accepted distance}`: Max distance accepted that the "target" can be.
     * `{command}`: The command that will be executed
 * Example:
@@ -406,6 +412,7 @@ Damages nearest player
 ### OPENDOOR
 
 * Open or close a block openable.
+* No command setting
 * Example:
 
 ```
@@ -415,7 +422,7 @@ Damages nearest player
 ### OPMESSAGE
 
 * Info: It sends a message to OP online players and the console
-* Command: OPMESSAGE \{text\} 
+* Command setting
   * `{text}`: Text to send
 * Example:
 
@@ -426,10 +433,13 @@ Damages nearest player
 ### PARTICLE
 
 * Info: Spawns particles in the block's location
-* Command: PARTICLE \{type\} \{quantity\} \{offset\} \{speed\}
+* Command settings
   * `{type}`: The type of particle.
 
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html)
+<LinkPreview
+  url="https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html"
+  title="Particles"
+/>
 
 * `{quantity}`: The amount of particles that will spawn
 * `{offset}`: The radius of the area where the particles may spawn in the block's location
@@ -443,11 +453,11 @@ Damages nearest player
 ### PLANT\_IN\_SQUARE
 
 * Info: Plants in square respect the block selected.
-* Command: PLANT\_IN\_SQUARE \{radius\} \[takeFromInv] \[acceptEI] \[cropType]
+* Command settings
   * `{radius}`: Radius of the square
-  * \[takeFromInv]: Default true, it takes the seeds in the player inv, otherwise it generates the seeds
-  * \[acceptEI]: Default false, accept EI for the seeds
-  * \[cropType]: default all seeds accepted (it takes seeds depending of their order in the inventory)
+  * `{takeFromInv}`: Default true, it takes the seeds in the player inv, otherwise it generates the seeds
+  * `{acceptEI}`: Default false, accept EI for the seeds
+  * `{cropType}`: default all seeds accepted (it takes seeds depending of their order in the inventory)
     * FARMLAND - WHEAT, CARROTS, BEETROOTS, POTATOES, SWEET\_BERRY\_BUSH, MELON\_STEM, PUMPKIN\_STEM, TORCHFLOWER\_CROP
     * SOUL SAND - NETHER\_WART
     * JUNGLE WOOD/LOG - COCOA
@@ -460,7 +470,7 @@ Damages nearest player
 ### REMOVEBLOCK
 
 * Info: Removes the block, no drops, just remove
-* Command: REMOVEBLOCK
+* No command setting
 * Example:
 
 ```
@@ -470,9 +480,9 @@ Damages nearest player
 ### SELL\_CONTENT
 
 * Info: It sells all the content of a chest / furnace / all blocks that has an inventory.
-* Command: SELL\_CONTENT priceBoost:\{float\} deleteUnsellable:\{boolean\}
-  * price\_boost: Float multiplier for the sold items. For example, the value here is 2 so the sold items will give you twice the selling price.
-  * deleteUnsellable: Boolean value to set if it should delete the unsellable items
+* Command settings
+  * `{price_boost}`: Float multiplier for the sold items. For example, the value here is 2 so the sold items will give you twice the selling price.
+  * `{deleteUnsellable}`: Boolean value to set if it should delete the unsellable items
 * Example:
 
 ```
@@ -486,8 +496,8 @@ It requires ShopGUIPlus (priority) & Vault & CMI prices
 ### SETBLOCK
 
 * Info: Replaces the target block with another block
-* Command: SETBLOCK \{material\}
-  * `{material}`: The block id
+* Command setting
+  * `{material}`: The material to set
 * Example:
 
 ```
@@ -497,7 +507,9 @@ It requires ShopGUIPlus (priority) & Vault & CMI prices
 ### SETTEMPBLOCK
 
 * Info: Replaces the target block with a temporary block.
-* Command: SETTEMPBLOCK \{material\} \{time in ticks\}
+* Command settings
+  * `{material}`: The material to set
+  * `{time}`: The time in ticks (20 ticks = 1 sec)
 * Example:
 
 ```
@@ -525,9 +537,12 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 ### SETBLOCKPOS
 
 * Info: Setblocks in a certain position
-* Command: SETBLOCKPOS \{x\} \{y\} \{z\} \{material\} \[bypassWG true or false]
+* Command settings
+  * `{x}`: The block pos X
+  * `{y}`: The block pos Y
+  * `{z}`: The block pos Z
   * `{material}`: The block type
-  * \[bypassWG true or false]: Whether if WorldGuard will interfere with the placement of the block or not
+  * `{bypassWG}`: Whether if WorldGuard will interfere with the placement of the block or not
 * Example:
 
 ```
@@ -537,15 +552,15 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 ### SETEXECUTABLEBLOCK
 
 * Info: Setblock command but for Executable Blocks
-* Command: SETEXECUTABLEBLOCK \{id\} \{x\} \{y\} \{z\} \{world\} \{replace true or false\} \[bypassProtection true or false] \[ownerUUID]
+* Command settings
   * `{id}`: ID of the Executable Block
   * `{x}`: X coordinates
   * `{y}`: Y coordinates
   * `{z}`: Z coordinates
   * `{world}`: The world you want the Executable Block to be at
-  * `{replace true or false}`: Whether you want to replace a block that exists in that location or not
-  * \[bypassProtection true or false] (Default false): Whether you want to replace the block even if there is a terrain protection from a plugin there. 
-  * \[ownerUUID]: (Optional) The uuid of the player who would be the owner of the eb
+  * `{replace}`: Whether you want to replace a block that exists in that location or not
+  * `{bypassProtection}`: (Default false) Whether you want to replace the block even if there is a terrain protection from a plugin there. 
+  * `{ownerUUID}`: (Optional) The uuid of the player who would be the owner of the eb
 * Example:
 
 ```
@@ -555,7 +570,7 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 ### SILK\_SPAWNER
 
 * Info: Collects the spawner involved in the event
-* Command: SILK\_SPAWNER
+* No command setting
 * Example:
 
 ```
@@ -574,7 +589,8 @@ And of course the vanilla spawners.
 ### SMELT
 
 * Info: It smelts the target block dropping the smelted item, for example iron\_ore -> iron\_ingot it supports fortune, if it can't be smelted nothing will happen
-* Command: SMELT \[generateEvent true or false optional, default true]
+* Command setting
+  * `{generateEvent}`: (Optional, default true) Whethe or not it generates a block break event
 * Example:
 
 ```
@@ -584,7 +600,7 @@ And of course the vanilla spawners.
 ### STRIKELIGHTNING
 
 * Info: Strikes a lightning bolt with no damage at the block that runs the command
-* Command: STRIKELIGHTNING
+* No command setting
 * Example:
 
 ```
@@ -594,8 +610,9 @@ And of course the vanilla spawners.
 ### VEIN\_BREAKER
 
 * Info: Breaks blocks in veins in one block break
-* Command: VEIN\_BREAKER \[Max\_vein\_size] \[trigger BREAK event, default true]
-  * \[max\_vein\_size]: Max amount of blocks the command can break
+* Command settings
+  * `{max_vein_size}`: Max amount of blocks the command can break
+  * `{generateEvent}`: (Optional, default true) Whethe or not it generates a block break event
 * Example:
 
 ```
