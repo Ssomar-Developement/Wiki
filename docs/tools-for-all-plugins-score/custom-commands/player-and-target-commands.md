@@ -111,8 +111,7 @@ activators:
 ### ACTIONBAR
 
 * Info: Display the action bar with your text + the time remaining (59, 58, 57...).
-* Command: 
-  * `ACTIONBAR {Your text} {delay}`
+* Command: ACTIONBAR {Your text} {delay}
 * Example:
 
 ```yaml
@@ -130,7 +129,7 @@ activators:
 ### ADD\_ITEM\_ATTRIBUTE
 
 * Info: It adds an attribute to an item as sum or rest operation.
-* Command: settings
+* Command settings:
   * slot: The slot where it will be applied. -1 for mainhand
   * attribute: The attribute you want to add
   * value: The value for the operation
@@ -165,7 +164,7 @@ And the slots here
 ### ADD\_ITEM\_ENCHANTMENT
 
 * Info: It adds an enchantment on an item on a specific slot with certain level
-* Command: settings
+* Command settings:
   * slot: The slot where it will be applied. -1 for mainhand
   * enchantment: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones.
   * level: The level for the enchantment
@@ -192,7 +191,7 @@ You can find the enchantments here
 ### ADD\_ITEM\_LORE
 
 * Info: Adds a line of lore
-* Command settings
+* Command settings:
   * slot: The slot where it will be applied. -1 for mainhand
   * text: The text for the new lore line
 * Example:
@@ -226,11 +225,11 @@ activators:
 ### BOSSBAR
 
 * Info: Creates a bossbar text for a certain duration time.
-* Command: settings
+* Command settings:
   * time: The duration of the bossbar in ticks
   * color: Color of bossbar text
   * text: text on the bossbar
-  * count: how many times you want it to count 
+  * count: how many times you want it to count
     * if this option is present, the time argument will not matter anymore
   * countTicks: true/false whether you want it to count in ticks or in seconds instead
   * countOrder: 
@@ -255,7 +254,7 @@ activators:
 ### CANCEL\_PICKUP
 
 * Info: Disables pickup on a player for a set amount of time
-* Command: settings
+* Command settings:
   * time: The duration in ticks of how long till the player can pickup items again
   * material: If set the player cant pickup only the material specified, if null he can't pickup everything
 * Example:
@@ -276,7 +275,7 @@ The only way to RESET this command after setting a time in ticks is reloading or
 ### CHAT
 
 * Info: Send a message from the player to the chat
-* Command settings
+* Command settings:
   * text: Text to send
 * Example:
 
@@ -340,7 +339,7 @@ activators:
 ### DISABLE\_FLY\_ACTIVATION
 
 * Info: Deny the usage of the fly for a player (Gliding in Elytra is not considered as flying)
-* Command settings
+* Command settings:
   * time: The duration in seconds of the effect
 * Example: (The command below disable the activation of the fly during 1 minute)
 
@@ -459,7 +458,7 @@ activators:
 ### FORCE\_DROP
 
 * Info: It drops all the EI in your inventory with the id specified
-* Command settings
+* Command settings:
   * ei\_id: Specify the EI that you want to be force dropped by the player
 * Example: 
 
@@ -492,7 +491,7 @@ activators:
 
 * Info: Give money to a player
   * It requires Vault plugin
-* Command settings
+* Command settings:
   * amount: the amount to give
 * Example:
 
@@ -557,7 +556,7 @@ It supports "Jobs reborn"
 :::
 
 * Info: Increases the money gained temporarily
-* Command settings
+* Command settings:
   * multiplier: Multiplier value
   * time: Duration in seconds of the boost in seconds
 * Example:
@@ -595,7 +594,7 @@ activators:
 
 </details>
 
-* Command settings
+* Command settings:
   * projectile: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
   * angleRotationVertical: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
   * angleRotationHorizontal: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
@@ -643,7 +642,7 @@ activators:
 ### LOCATED\_LAUNCH
 
 * Info: Launches a projectile at a specific location
-* Command: settings:
+* Command settings:
   * projectileType: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
   * frontValue: positive=front , negative=back - Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
   * rightValue: right=positive, negative=left - Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
@@ -869,8 +868,8 @@ activators:
 ### REPLACE\_BLOCK
 
 * Info: Replaces the block the player is looking at into a different one
-* Command settings
-  * `{material}`: Block ID (Block states are supported) 
+* Command settings:
+  * `{material}`: Block ID (Block states are supported)
 * Example:
 
 ```yaml
@@ -1144,8 +1143,8 @@ Only works at 1.20.5 and above
 :::
 
 * Replaces the material of the item with a different material while keeping the nbt of the target item
-* Commands settings:
-  * slot: Slot number (-1 for mainhand) 
+* Command settings:
+  * slot: Slot number (-1 for mainhand)
   * material: The material you want the item to become into
 * Example:
 
@@ -1177,7 +1176,7 @@ activators:
 ### SET\_TEMP\_BLOCK\_POS
 
 * Info : Set a temporary block
-* Command settings 
+* Command settings:
   * x: X-Coordinate
   * y: Y-Coordinate
   * z: Z-Coordinate
