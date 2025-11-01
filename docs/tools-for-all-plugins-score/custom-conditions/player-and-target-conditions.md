@@ -6,8 +6,28 @@ description: >-
 
 # Player & Target Conditions
 
+## Condition settings
+All conditions are formated the same, you have:
+* `{theCondition}`
+* `{theCondition}Msg`: The message to send if the condition is invalid
+* `{theCondition}Cancel`: Whether or not the event should be cancelled if the condition is invalid
+* `{theCondition}Cmds`: The command(s) to run if the condition is invalid
+* Example:
+
+```yaml
+playerConditions:
+    ifSneaking: true
+    ifSneakingMsg: "&cMy custom error message here"
+    ifSneakingCancel: true
+    ifSneakingCmds:
+    - kill %player%
+```
+
 :::info
-**INFO GIFS:** The activator used on the GIFS to demonstrate how each condition works is the LOOP activator, that why the error message of the condition appear mutiple times.
+For numerical conditions, you can assign 2 conditions at the same time.
+Example: 
+"I want to create a condition that only activates if the value is greater than 50 but less than 250"
+`{theCondition}: 50 < CONDITION < 250`
 :::
 
 :::info
@@ -19,84 +39,8 @@ And obviously it's targetConditions for the condition of the target.
 :::
 
 :::info
-For conditions that require numerical values, you can assign 2 conditions.
-
-Example: "I want to create a condition that only activates if the value is greater than 50 but less than 250"\
-So what you would type in the config will be **`50 < CONDITION < 250`**
+**INFO GIFS:** The activator used on the GIFS to demonstrate how each condition works is the LOOP activator, that why the error message of the condition appear mutiple times.
 :::
-
-:::info
-If a condition fails to be met, **you can enable cancelEvent** so if a specific condition isn't completed, cancelEvent will run.  You can also customize the error message !
-
-You can also run commands if the condition has failed to execute!
-
-Example:
-:::
-
-```yaml
-playerConditions:
-    ifSneaking: true
-    ifSneakingMsg: "&cMy custom error message here"
-    ifSneakingCancel: true
-    ifSneakingCmds:
-    - kill %player%
-
-blockConditions:
-      ifIsPowered: true
-      ifIsPoweredCmds:
-      - test
-```
-
-<details>
-
-<summary>Example</summary>
-
-```yaml
-name: '&bMySword'
-lore: []
-material: DIAMOND_SWORD
-headDBID: ''
-glow: false
-glowDrop: false
-disableStack: false
-keepItemOnDeath: false
-give-first-join: false
-give-slot: 0
-usage: 0
-usePerDay: -1
-usageLimit: -1
-disable-world: []
-unbreakable: false
-isSpecialProjectile: false
-canBeUsedOnlyByTheOwner: false
-storeItemInfos: false
-config_3_5: 'true'
-activators:
-  activator1:
-    activator: PLAYER_CLICK_ON_PLAYER
-    displayName: Activator name
-    usageModification: 0
-    usePerDay: -1
-    cancelEventIfMaxUsePerDay: false
-    autoUpdateItem: false
-    commands:
-    - REGAIN HEALTH 3
-    silenceOutput: false
-    targetCommands:
-    - DAMAGE 5
-    cancelEventIfInvalidRequiredExecutableItems: false
-    detailedClick: RIGHT
-    cancelEvent: false
-    playerConditions:
-      ifSneaking: true
-      ifSneakingMsg: '&cYou must sneaking to activate this activator'
-    targetConditions:
-      ifPlayerHealth: '>10'
-      ifPlayerHealthMsg: '&cInvalid target health'
-
-```
-
-</details>
 
 ### ifSneaking - Not
 
