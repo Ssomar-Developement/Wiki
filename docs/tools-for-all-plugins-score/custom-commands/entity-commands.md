@@ -1,9 +1,11 @@
+import LinkPreview from '@site/src/components/LinkPreview';
+
 # Entity Commands
 
 :::tip
 "Multi-world" compatibility for the vanilla commands.
 
-`execute in <<NAME`_`OF`_`YOUR_WORLD>> run ...`
+`execute in <<NAME_OF_YOUR_WORLD>> run ...`
 
 Example, you want summon a Zombie in the world SsomarWorld:
 
@@ -22,6 +24,10 @@ Entity commands supports NPCs from Citizens
 
 In addition of the following list of commands you can also use:
 
+<LinkPreview
+  url="docs/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity"
+/>
+
 These commands can be used in the Player related commands OR Entity related commands.
 
 ## Custom commands
@@ -31,8 +37,8 @@ _Sorted by alphabetical order_
 ### ANGRY\_AT
 
 * Info: Sets the entity target to a specific UUID
-* Command settings:
-  * entityUUID: The entity UUID of the target
+* Command setting:
+  * `{entityUUID}`: The entity UUID of the target
 * Example:
 
 ```
@@ -49,8 +55,8 @@ _Sorted by alphabetical order_
 it only works for 1.16.5+
 :::
 
-* Command settings:
-  * value: true or false
+* Command setting:
+  * `{value}`: true or false
 * Example:
 
 ```
@@ -63,8 +69,8 @@ it only works for 1.16.5+
   * You can specify an [EntityType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
   * Or an entity definition example: `{HasVisualFire:1b,id:"minecraft:bee"}` (1.21.+)
   * Or a MythicMob ID
-* Command settings:
-  * entity: The entity specification
+* Command setting:
+  * `{entity}`: The entity specification
 * Example:
 
 ```
@@ -84,7 +90,7 @@ it only works for 1.16.5+
 ### DROPEXECUTABLEITEM
 
 * Info: Drops an Executable Item in the entity's location
-* Command: `DROPEXECUTABLEITEM {id} {quantity}`
+* Command settings:
   * `{id}`: Item id of the ExecutableItem
   * `{quantity}`: The amount of the executable item that will drop
 * Example:
@@ -96,7 +102,7 @@ it only works for 1.16.5+
 ### DROPEXECUTABLEBLOCK
 
 * Info: Drops an Executable Block in the entity's location
-* Command: `DROPEXECUTABLEBLOCK {id} {quantity}`
+* Command settings:
   * `{id}`: Item id of the ExecutableBlock
   * `{quantity}`: The amount of the executable block that will drop
 * Example:
@@ -108,7 +114,7 @@ it only works for 1.16.5+
 ### DROPITEM
 
 * Info: Drops an item in the entity's location
-* Command: `DROPITEM {material} {quantity}`
+* Command settings:
   * `{material}`: The item type. [Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) **(MUST BE AT ALL CAPS)**
   * `{quantity}`: The amount of the item that will drop
 * Example:
@@ -120,8 +126,8 @@ it only works for 1.16.5+
 ### HEAL
 
 * Info: Heals the entity with a specific amount, if not specified it will full heal the entity.
-* Command settings:
-  * amount: The amount of the heal
+* Command setting:
+  * `{amount}`: The amount of the heal
 * Example:
 
 ```
@@ -147,8 +153,8 @@ it only works for 1.16.5+
 
 * Info: Makes the player to ride the entity targeted.
 * Command settings:
-  * control: true/false whether you can manually controll the entity or not
-  * speed: how fast the entity can go as you ride it
+  * `{control}`: true/false whether you can manually controll the entity or not
+  * `{speed}`: how fast the entity can go as you ride it
 * Example:
 
 ```yaml
@@ -159,7 +165,7 @@ it only works for 1.16.5+
 
 * Info: Sets the AI state of the entity
 * Command settings:
-  * value: true to enable the AI of the entity and false to disable.
+  * `{value}`: true to enable the AI of the entity and false to disable.
 * Example:
 
 ```
@@ -195,8 +201,8 @@ it only works for 1.16.5+
 ### SET\_ENTITY\_NAME
 
 * Info: Forcefully sets the entity's name
-* Command settings:
-  * name: the new name of the entity
+* Command setting:
+  * `{name}`: the new name of the entity
 * Example:
 
 ```
@@ -237,9 +243,9 @@ it only works for 1.16.5+
 
 * Info: Teleports the entity in a specific location
 * Command settings:
-  * x: X-Coordinate
-  * y: Y-Coordinate
-  * z: Z-Coordinate
+  * `{x}`: X-Coordinate
+  * `{y}`: Y-Coordinate
+  * `{z}`: Z-Coordinate
 * Example:
 
 ```
