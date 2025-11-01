@@ -25,87 +25,86 @@ First of all, to better understanding this tutorial you must read first [****Gen
 * The admin one
 
 ```json
-\{
+{
     "parent": "item/generated",
-    "textures": \{
+    "textures": {
         "layer0": "item/bow"
-    \},
-    "display": \{
-        "thirdperson_righthand": \{
+    },
+    "display": {
+        "thirdperson_righthand": {
             "rotation": [ -80, 260, -40 ],
             "translation": [ -1, -2, 2.5 ],
             "scale": [ 0.9, 0.9, 0.9 ]
-        \},
-        "thirdperson_lefthand": \{
+        },
+        "thirdperson_lefthand": {
             "rotation": [ -80, -280, 40 ],
             "translation": [ -1, -2, 2.5 ],
             "scale": [ 0.9, 0.9, 0.9 ]
-        \},
-        "firstperson_righthand": \{
+        },
+        "firstperson_righthand": {
             "rotation": [ 0, -90, 25 ],
             "translation": [ 1.13, 3.2, 1.13],
             "scale": [ 0.68, 0.68, 0.68 ]
-        \},
-        "firstperson_lefthand": \{
+        },
+        "firstperson_lefthand": {
             "rotation": [ 0, 90, -25 ],
             "translation": [ 1.13, 3.2, 1.13],
             "scale": [ 0.68, 0.68, 0.68 ]
-        \}
-    \},
-    
+        }
+    },
+
     "overrides": [
-        \{
-            "predicate": \{
+        {
+            "predicate": {
                 "pulling": 1
-            \},
+            },
             "model": "item/bow_pulling_0"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "pulling": 1,
                 "pull": 0.65
-            \},
+            },
             "model": "item/bow_pulling_1"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "pulling": 1,
                 "pull": 0.9
-            \},
+            },
             "model": "item/bow_pulling_2"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "custom_model_data": 3
-            \},
+            },
             "model": "item/bow/custom_bow"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "custom_model_data": 3,
                 "pulling": 1
-            \},
+            },
             "model": "item/bow/custom_bow_pulling_0"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "custom_model_data": 3,
                 "pulling": 1,
                 "pull": 0.65
-            \},
+            },
             "model": "item/bow/custom_bow_pulling_1"
-        \},
-        \{
-            "predicate": \{
+        },
+        {
+            "predicate": {
                 "custom_model_data": 3,
                 "pulling": 1,
                 "pull": 0.9
-            \},
+            },
             "model": "item/bow/custom_bow_pulling_2"
-        \}
+        }
     ]
-\}
-**
+}
 ```
 
 * The sub admin ones
