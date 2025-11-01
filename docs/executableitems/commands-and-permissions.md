@@ -178,16 +178,6 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
   * `resetDurability`: Boolean value to allow through the refresh process to reset the durability value
 * Permission: `ei.cmd.refresh`
 
-Refresh ExecutableItems Texture Pack
-
-* Command: **/ei refresh-pack**
-* Permission: `ei.cmd.refresh-pack`
-
-Download Default Executable Items Texture Pack
-
-* Command: **/ei download-default-pack**
-* Permission: `ei.cmd.download-default-pack`
-
 #### **Modify the owner of the ExecutableItem that is in your hand**
 
 * Command: **/ei set\_owner** **\{player\}**
@@ -324,9 +314,65 @@ Download Default Executable Items Texture Pack
     * players: Search the ExecutableItem in all **online** player inventories.
     * containers: Search the ExecutableItem in all **loaded** containers.
     * all: Search using the both methods.
-* Example: 
+* Example:
   * `/ei search EternalSword all`
 * Permission: `ei.cmd.search`
+
+#### Get the file path of an ExecutableItem
+
+* Info: This command displays the absolute file system path to the configuration file of a specific ExecutableItem. Useful for developers or server administrators who need to locate and edit item files directly.
+* Command: **/ei path \{id\}**
+  * `id`: Id of the ExecutableItem you want to get the path for
+* Example:
+  * `/ei path ExcaliburSword`
+  * Output: `[ExecutableItems] The path of ExcaliburSword is /path/to/plugins/ExecutableItems/Items/ExcaliburSword.yml.`
+* Permission: `ei.cmd.path`
+
+#### Check event optimization information
+
+* Info: This command displays detailed information about ExecutableItems' event handler optimization and performance statistics. It shows which events are being listened to and provides information about items using custom recognition (which can impact performance). The output is sent to the server console.
+* Command: **/ei checkevents**
+* Output includes:
+  * List of optimized events and their listener status
+  * Count of ExecutableItems using custom recognition
+  * Performance impact warnings
+  * Recommendations for better performance
+* Permission: `ei.cmd.checkevents`
+
+:::info
+The output of this command is sent to the **console**, not to the player in-game. Check your server console to see the detailed information.
+:::
+
+:::tip
+Items with custom recognition can impact performance. The command will show you how many items are using this feature. If you have performance issues, consider reducing the number of items with custom recognition enabled.
+:::
+
+### Texture Pack Commands
+
+#### Refresh ExecutableItems Texture Pack
+
+* Command: **/ei refresh-pack**
+* Info: Refreshes and reloads the ExecutableItems texture pack for all online players. Useful after making changes to custom textures.
+* Permission: `ei.cmd.refresh-pack`
+
+#### Download Default ExecutableItems Texture Pack
+
+* Command: **/ei download-default-pack**
+* Info: Downloads the default ExecutableItems texture pack from the official repository and automatically unzips it. If `selfHostPack` is enabled in config.yml, the pack will be automatically registered and hosted on your server. This is useful for:
+  * Setting up the texture pack for the first time
+  * Restoring the default pack after modifications
+  * Updating to the latest default pack version
+* Requirements:
+  * `selfHostPack: true` must be set in the config.yml for automatic hosting
+  * Server must have internet connection to download the pack
+* Permission: `ei.cmd.download-default-pack`
+
+:::info
+**Hosting Options:**
+- **Self-hosting on your server**: Set `selfHostPack: true` in config.yml - the pack will be hosted directly by the plugin
+- **External hosting**: If you want to host the pack yourself (on a website, CDN, etc.), set the download URL in `texturesPackUrl` in config.yml
+- **No hosting**: If neither option is enabled, the pack will be downloaded and unzipped locally but not distributed to players
+:::
 
 ### Custom triggers
 

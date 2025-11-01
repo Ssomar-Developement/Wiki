@@ -375,6 +375,25 @@ Activator features are features that are exclusive to that activator.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
+### PLAYER\_FISH\_XIAOMOMI\_FISH <CustomTag type="premium" />
+
+* Info: Activator that gets triggered when the player successfully catches something using the CustomFishing plugin (formerly known as Xiaomomi Fish). This activator requires the [CustomFishing plugin](https://modrinth.com/plugin/customfishing) to be installed on your server.
+* activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
+  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+* Available placeholders:
+  * `%result%` - The fishing result (e.g., SUCCESS, FAILURE, etc.)
+  * `%fish_hook%` - The name of the fish hook used
+  * `%loot%` - The ID of the loot caught
+* Examples:
+  * Custom Fishing Rewards – When catching a rare fish with CustomFishing, grant the player bonus experience or a special currency reward.
+  * Lucky Catch – When successfully fishing with a specific rod, there's a chance to receive additional custom loot items from the CustomFishing plugin.
+  * Fishing Skill Progression – Track successful catches and increase player fishing skill levels based on the rarity of fish caught.
+
+:::info
+This activator only works if you have the **CustomFishing** plugin installed. It integrates with CustomFishing's FishingResultEvent to provide enhanced fishing mechanics.
+:::
+
 ### PLAYER\_HARVEST\_BLOCK
 
 * Info: Activator that gets triggered when the player harvests a block
