@@ -7,9 +7,9 @@ const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Score Plugins Wiki',
-  tagline: 'Complete documentation for ExecutableItems, ExecutableBlocks, ExecutableEvents, and more',
-  favicon: 'img/favicon.ico',
+  title: 'SDevelopement Wiki',
+  tagline: 'Complete documentation for SPlugins : ExecutableItems, ExecutableBlocks, ExecutableEvents, and more',
+  favicon: 'img/ssomarlogo2.png',
 
   // Set the production url of your site here
   url: 'https://ssomar-developement.github.io',
@@ -94,17 +94,17 @@ const config = {
         },
       },
       navbar: {
-        title: 'Score Plugins Wiki',
+        title: 'SDevelopement Wiki',
         logo: {
-          alt: 'Score Plugins Logo',
-          src: 'img/logo.svg',
+          alt: 'SPlugins Logo',
+          src: 'img/ssomarlogo2.png',
         },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'mainSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'Plugins Wiki',
           },
           {
             to: '/purchase',
@@ -115,6 +115,10 @@ const config = {
             to: '/discord',
             position: 'left',
             label: 'Discord',
+          },
+          {
+            position: 'left',
+            label: 'Products for developers',
           },
           {
             type: 'search',
@@ -163,7 +167,7 @@ const config = {
       prism: {
         theme: lightTheme,
         darkTheme: darkTheme,
-        additionalLanguages: ['java'],
+        additionalLanguages: ['java', 'yaml'],
       },
     }),
 };

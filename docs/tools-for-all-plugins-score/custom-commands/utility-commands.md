@@ -10,10 +10,10 @@ If you edit the commands in-game don't add the **-** that is before all examples
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     commands: #There will be a delay of 10 seconds between the command1 and the command2.
-**    - command1**
+    - command1
     - DELAY 10
     - command2
 ```
@@ -63,7 +63,7 @@ activators:
 ```
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     commands:
     - IF 1=1||2=3 BACKDASH 1 # 1=1 OR 2=3 -> YES because 1=1
@@ -212,7 +212,7 @@ activators:
 
 ## Run commands randomly ?
 
-[https://youtu.be/jXTDlqoE8dc](https://youtu.be/jXTDlqoE8dc)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jXTDlqoE8dc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### RANDOM\_RUN / RANDOM\_END
 

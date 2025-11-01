@@ -39,14 +39,14 @@ activators:
 ### Variables modification
 
 * Info: Its a list of variables modification to apply to the variables inside your item. Its useful for example, for increase the value of a variable, for overriding an old value of a variable to another value, etc.
-  * variableName: Name of the variable the variableModification is targetting
-  * type: Type of variableModification you are using
+  * `variableName`: Name of the variable the variableModification is targetting
+  * `type`: Type of variableModification you are using
     * SET: Override the old value of the variable and sets the modification value.
     * ADD: Apply math to the current value of the variable using the modification value. It needs the variable to be type of NUMBER. If the modification value is positive then it will increase, if its negative then it will decrease.
     * LIST\_ADD: Applied to variable type LIST, it appens the modification value to the variable list.
     * LIST\_CLEAR: Applied to variable type LIST, it clears the variable list.
     * LIST\_REMOVE: Applied to variable type LIST, it removes the modification value from the variable list.
-  * modification: Value of modification. Its applied to the variable using the types of modifications.
+  * `modification`: Value of modification. Its applied to the variable using the types of modifications.
 * Example:
 
 ```yaml
@@ -112,17 +112,17 @@ activators:
 * Info: This feature of the activator makes that the item is updated in one of the features of the list. Be careful ! This may not be necessary depending on what you want. There are things that are updated automatically, for example, commands on the activator, conditions, cooldown, etc are updated automatically without this feature. 
 * This feature targets most the visual aspects of the item, so if you created once a ExecutableItem with id:ex\_sword with a display name of "\&dExcalibur" and you distributed this item to all players and now you would like all the ExecutableItems "ex\_sword" to have the new display name of "\&eEpic Sword" then you would need to enable this feature on one of the activators of the item. Enabling the feature (autoUpdateItem) + the feature of update name (updateName).
 * To make sure its correctly explained, this feature will override the current value depending on the options you enabled with the current option of the config file, and its only used for visual features. Its not necessary for common changes that don't involve the options of this feature.
-  * autoUpdateItem: Boolean value that represents if this feature is enabled or not for the activator.
-  * updateName: Boolean value to update the display name of the ExecutableItem. If its true, it will override the current display name of the item with the current/updated item name set on the config file of the ExecutableItem.
-  * updateLore: Boolean value to update the lore of the ExecutableItem. If its true, it will override the current lore of the item with the current/updated lore set on the config file of the ExecutableItem.
-  * updateDurability: Boolean value to update the current durability of the ExecutableItem. If its true, it will override the current durability of the item with the current/updated durability set on the config file of the ExecutableItem.
-  * updateAttributes: Boolean value to update all the attributes of the ExecutableItem. If its true, it will override the current attributes of the item with the current/updated attributes set on the config file of the ExecutableItem.
-  * updateEnchants: Boolean value to update the enchantments of the ExecutableItem. If its true, it will override the current enchantments of the item with the current/updated enchantments set on the config file of the ExecutableItem.
-  * updateCustomModelData: Boolean value to update the custom model data value of the ExecutableItem. If its true, it will override the current custom model data of the item with the current/updated customModelData value set on the config file of the ExecutableItem.
-  * updateArmorSettings: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
-  * updateMaterial: Boolean value to update the material of the ExecutableItem. If its true, it will override the current material of the item with the current/updated material set on the config file of the ExecutableItem.
-  * updateHiders: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current hiders configuration with the current/updated hiders setup on the config file of the ExecutableItem.
-  * updateEquippable: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current equippable component of the item with the current/updated equippable setup on the config file of the ExecutableItem.
+  * `autoUpdateItem`: Boolean value that represents if this feature is enabled or not for the activator.
+  * `updateName`: Boolean value to update the display name of the ExecutableItem. If its true, it will override the current display name of the item with the current/updated item name set on the config file of the ExecutableItem.
+  * `updateLore`: Boolean value to update the lore of the ExecutableItem. If its true, it will override the current lore of the item with the current/updated lore set on the config file of the ExecutableItem.
+  * `updateDurability`: Boolean value to update the current durability of the ExecutableItem. If its true, it will override the current durability of the item with the current/updated durability set on the config file of the ExecutableItem.
+  * `updateAttributes`: Boolean value to update all the attributes of the ExecutableItem. If its true, it will override the current attributes of the item with the current/updated attributes set on the config file of the ExecutableItem.
+  * `updateEnchants`: Boolean value to update the enchantments of the ExecutableItem. If its true, it will override the current enchantments of the item with the current/updated enchantments set on the config file of the ExecutableItem.
+  * `updateCustomModelData`: Boolean value to update the custom model data value of the ExecutableItem. If its true, it will override the current custom model data of the item with the current/updated customModelData value set on the config file of the ExecutableItem.
+  * `updateArmorSettings`: Boolean value to update the armor settings of the ExecutableItem. If its true, it will override the current armor settings of the item with the current/updated armor settings set on the config file of the ExecutableItem. e.g. (Armor color)
+  * `updateMaterial`: Boolean value to update the material of the ExecutableItem. If its true, it will override the current material of the item with the current/updated material set on the config file of the ExecutableItem.
+  * `updateHiders`: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current hiders configuration with the current/updated hiders setup on the config file of the ExecutableItem.
+  * `updateEquippable`: Boolean value to update the hider configuration of the ExecutableItem. If its true, it will override the current equippable component of the item with the current/updated equippable setup on the config file of the ExecutableItem.
 * Example:
 
 ```yaml
@@ -161,7 +161,7 @@ activators:
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [the placeholders list](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders list](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 
 It's available in all activators type since all activators have a player involved.
 
@@ -187,22 +187,22 @@ activators:
 ### playerConditions
 
 * Info: You can use this conditions in all type of activators
-* [Player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* [Player conditions](/docs/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
 
 ### worldConditions
 
 * Info: You can use this conditions in all type of activators
-* [World conditions](../../../tools-for-all-plugins-score/custom-conditions/world-conditions.md)
+* [World conditions](/docs/tools-for-all-plugins-score/custom-conditions/world-conditions.md)
 
 ### placeholdersConditions
 
 * Info: You can use this conditions in all type of activators
-* [PlaceholdersConditions](../../../tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
+* [PlaceholdersConditions](/docs/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
 
 ### itemConditions
 
 * Info: You can use this conditions in all type of activators
-* [Item conditions](../../../tools-for-all-plugins-score/custom-conditions/item-conditions.md)
+* [Item conditions](/docs/tools-for-all-plugins-score/custom-conditions/item-conditions.md)
 
 ## Cooldown
 
@@ -210,19 +210,19 @@ activators:
 
 * Info: Cooldown options its the cooldown applied to the player who triggered this activator for this activator.
 * If the activator is PLAYER\_RIGHT\_CLICK, it has some commands \[] and the cooldown is 30 seconds, if the player triggers this activator he will need to wait 30 seconds in order to make it trigger again. This doesn't prevent other player from running it between those 30 seconds as long as that player is not on cooldown too. This is a feature per player
-  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
-  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
-  * cooldownMsg: String value to be displayed when the player try to trigger the activator when its on cooldown
-  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+  * `cooldown`: Integer value that represents the amount of time the cooldown will last for this activator.
+  * `isCooldownInTicks`: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * `cooldownMsg`: String value to be displayed when the player try to trigger the activator when its on cooldown
+  * `displayCooldownMessage`: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
     * Placeholders that can be used:
       * %time% -> the entire cooldown in seconds
       * %time\_H% -> the hours part of the cooldown
       * %time\_M% -> the minutes part of the cooldown
       * %time\_S% -> the seconds part of the cooldown 
-  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
-  * pauseWhenOffline: Boolean value that pauses the cooldown if the player is offline. To better understanding, if its false, the cooldown time doesn't stop so he can leave the server, wait the cooldown and join again and he will be able to trigger the activator again. But if this feature is enabled and he left the server while on cooldown, when he joins again he will have the same remaining cooldown time that he had when he left.
-  * pausePlaceholdersConditions: Its similar to pauseWhenOffline but it only pauses depending on certain placeholdersConditions. Example of usages would be pausing the cooldown if the player is VIP rank. So VIP rank has access to that feature.
-  * enableVisualCooldown: Enables a visual cooldown for the item.
+  * `cancelEventIfInCooldown`: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * `pauseWhenOffline`: Boolean value that pauses the cooldown if the player is offline. To better understanding, if its false, the cooldown time doesn't stop so he can leave the server, wait the cooldown and join again and he will be able to trigger the activator again. But if this feature is enabled and he left the server while on cooldown, when he joins again he will have the same remaining cooldown time that he had when he left.
+  * `pausePlaceholdersConditions`: Its similar to pauseWhenOffline but it only pauses depending on certain placeholdersConditions. Example of usages would be pausing the cooldown if the player is VIP rank. So VIP rank has access to that feature.
+  * `enableVisualCooldown`: Enables a visual cooldown for the item.
 * Example: 
 
 ```yaml
@@ -242,17 +242,17 @@ activators:
 ### Global cooldown
 
 * Info: Its the same idea as cooldown but instead of being the cooldown applied to the player its a global cooldown that is applied to all players. That means, if someone triggers the activator and it has 30 seconds of global cooldown, then no one will be able to use it after those 30 seconds  has gone. It has the same features as cooldown.
-  * cooldown: Integer value that represents the amount of time the cooldown will last for this activator.
-  * isCooldownInTicks: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
-  * cooldownMsg: String value to be displayed when a player try to trigger this activator when its on cooldown
-  * displayCooldownMessage: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
+  * `cooldown`: Integer value that represents the amount of time the cooldown will last for this activator.
+  * `isCooldownInTicks`: Boolean value that sets the cooldown time to be in ticks (20 ticks = 1 second)
+  * `cooldownMsg`: String value to be displayed when a player try to trigger this activator when its on cooldown
+  * `displayCooldownMessage`: Boolean value to allow or prevent the message of cooldownMsg displayed if the player try to trigger the activator while he is on cooldown.
     * Placeholders that can be used:
       * %time% -> the entire cooldown in seconds
       * %time\_H% -> the hours part of the cooldown
       * %time\_M% -> the minutes part of the cooldown
       * %time\_S% -> the seconds part of the cooldown 
-  * cancelEventIfInCooldown: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
-  * enableVisualCooldown: Enables a visual cooldown for the item.
+  * `cancelEventIfInCooldown`: Boolean value that cancels the event of the activator if the player is on cooldown. This means, if the activator is PLAYER\_HIT\_ENTITY, while he is on cooldown all the player event's of PLAYER\_HIT\_ENTITY will be cancelled and so they will be ignored, disabling the ability of the player to attack entities (reminder: that activator targets all entities except players)
+  * `enableVisualCooldown`: Enables a visual cooldown for the item.
 * Example:
 
 ```yaml
@@ -270,10 +270,10 @@ activators:
 ### otherEICooldowns
 
 * Info: This feature allows to apply player cooldown to specific ExecutableItems and optional specific activators. 
-  * executableItem: ID of the ExecutableItem you want to apply cooldown to.
-  * activators: List of strings which are the ID of the activators you want to affect for the ExecutableItem specified with cooldown. If none are selected then the cooldown will be applied to all activators of the ExecutableItem specified.
-  * cooldown: Integer value that will be the amount of time of cooldown will be applied.
-  * isCooldownInTicks: Boolean value that represents if the cooldown value will be on seconds or ticks. (20 ticks = 1 second)
+  * `executableItem`: ID of the ExecutableItem you want to apply cooldown to.
+  * `activators`: List of strings which are the ID of the activators you want to affect for the ExecutableItem specified with cooldown. If none are selected then the cooldown will be applied to all activators of the ExecutableItem specified.
+  * `cooldown`: Integer value that will be the amount of time of cooldown will be applied.
+  * `isCooldownInTicks`: Boolean value that represents if the cooldown value will be on seconds or ticks. (20 ticks = 1 second)
 * Tips:
   * You can specify the ExecutableItem who run this feature itself. For example if you want from one activator to apply cooldown to another activator in the same item.
   * Another idea can be applying cooldown to all damage related items if you use one of them.
@@ -325,12 +325,12 @@ This section is for setting up features related to required things in order to b
 ### requiredExecutableItems <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement an ExecutableItem(s). If the player meets this requirement the requirement will be consumed and the activator will run.
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * executableItem: ExecutableItem ID that is needed as requiremennt
-  * amount: Integer of amount of items that are needed as requirement.
-  * usageConditions: Optional string condition in format of `(==, !=, >, <, >=, <=){number}` to the usage condition of the ExecutableItem.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `executableItem`: ExecutableItem ID that is needed as requiremennt
+  * `amount`: Integer of amount of items that are needed as requirement.
+  * `usageConditions`: Optional string condition in format of `(==, !=, >, <, >=, <=){number}` to the usage condition of the ExecutableItem.
     * This means, if the condition is >=5 then the requirement is that the Executableitem chosen must be on the player inventory as its a requirement but also needs to have usage over or equal a value of 5.
 * Example:
 
@@ -352,12 +352,12 @@ activators:
 ### requiredItems <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement vanilla item(s). If the player meets this requirement the requirement will be consumed and the activator will run.
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * material: Vanilla MATERIAL that is needed as requirement.
-  * amount: Integer of amount of items that are needed as requirement.
-  * notExecutableItem: Boolean value to make the requirement able to be a ExecutableItem or not.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `material`: Vanilla MATERIAL that is needed as requirement.
+  * `amount`: Integer of amount of items that are needed as requirement.
+  * `notExecutableItem`: Boolean value to make the requirement able to be a ExecutableItem or not.
     * This means, if the requirement is STONE, and this feature is not enabled, then the requirement will meet with vanilla STONE(s) and ExecutableItem(s) with material of STONE and so will be consumed. If you don't want this to happen then enable this feature.
 * Example:
 
@@ -376,10 +376,10 @@ activators:
 ### requiredMoney <CustomTag type="premium" />
 
 * Info: This feature needs the plugin called "Vault". This feature allows the activator to have as requirement money from Vault. If the player meets this requirement the requirement will be consumed and the activator will run.
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * requiredMoney: Float value that represents the amount of money needed as requirement.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `requiredMoney`: Float value that represents the amount of money needed as requirement.
 * Example:
 
 ```yaml
@@ -394,10 +394,10 @@ activators:
 ### requiredLevel <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement vanilla experience levels. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience levels with experience, more info here [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * requiredLevel: Integer value that represents the amount of Minecraft vanilla experience level(s) needed as requirement.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `requiredLevel`: Integer value that represents the amount of Minecraft vanilla experience level(s) needed as requirement.
 * Example:
 
 ```yaml
@@ -412,10 +412,10 @@ activators:
 ### requiredExperience <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement minecraft vanilla experiencei. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience with experience levels, they are different things, more info at [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * requiredExperience: Integer value that represents the amount of experience needed as requirement.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `requiredExperience`: Integer value that represents the amount of experience needed as requirement.
 * Example:
 
 ```yaml
@@ -429,11 +429,11 @@ activators:
 
 ### RequiredMana <CustomTag type="premium" />
 
-* Info: This feature allows the activator to have as requirement mana from **AureliumSkills**, **MMOCore** and **AuraSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+* Info: This feature allows the activator to have as requirement mana from [**AureliumSkills**](https://www.spigotmc.org/resources/auraskills.81069/), [**MMOCore**](https://www.spigotmc.org/resources/%E2%AD%90-mmocore-%E2%AD%90-classes-skills-levels-skill-trees-professions-mana-waypoints.70575/) and [**AuraSkills**](https://www.spigotmc.org/resources/auraskills.81069/). If the player meets this requirement the requirement will be consumed and the activator will run.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * requiredMana: Integer value that represents the amount of mana needed as requirement.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `requiredMana`: Integer value that represents the amount of mana needed as requirement.
 * Example:
 
 ```yaml
@@ -450,12 +450,12 @@ Compatible with AureliumSkills, MMOCore and AuraSkills
 
 ### RequiredMagic (EcoSkills) <CustomTag type="premium" />
 
-* Info: This feature allows the activator to have as requirement magic from **EcoSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
-  * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
+* Info: This feature allows the activator to have as requirement magic from [**EcoSkills**](https://www.spigotmc.org/resources/ecoskills-%E2%AD%95-addictive-mmorpg-skills-%E2%9C%85-create-skills-stats-effects-mana-%E2%9C%A8-plug-play.95541/). If the player meets this requirement the requirement will be consumed and the activator will run.
+  * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
-  * errorMessage: String message that will be sent to the player if the player doesn't meet the requirement.
-  * magicID: The ID of the magic in EcoSkills.
-  * amount: Amount of magic of the magicID needed as requirement.
+  * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
+  * `magicID`: The ID of the magic in EcoSkills.
+  * `amount`: Amount of magic of the magicID needed as requirement.
 
 ```yaml
 activators:  

@@ -8,30 +8,20 @@ description: >-
 
 :::info
 Take note that this list is strict related compatible plugins, almost every plugin is compatible with Ssomar plugins, if you want to run a command from another plugin, just replace the name of the target with the placeholders. \
-\
-For example essentials fly\
-essentials:fly %player%\
-\
-For example vanish\
-vanish %player%
 
-For example essentials economy
-
-economy give %player% 100\
-\
-Etcetera, **every command that supports the name of a player is "compatible" with EI |EB | EE.**
+For example:
+```yaml
+- essentials:fly %player% # For essentials fly
+- vanish %player% # For vanish
+- economy give %player% 100 # To give money
+#...
+```
+Etcetera, **every command that supports the name of a player is "compatible" with our plugins.**
 :::
 
 This section is for compatible plugins that works with Ssomar plugins, there are some features that we have that its compatible with the other plugins.
 
-* Before starting you must know that compatible ≠ usable, allmost all plugins are usable for Ssomar Plugins, this is because all commands are run by the console, that means you can use your custom plugin's commands using the correct arguments. For example
-  * Want to apply fly command from essentials to the player ?
-    * essentials:fly %player%
-  * Want to apply vanish command from essenntials to the player ?
-    * vanish %player%
-  * Want to give money from essentials economy to the player?
-    * economy give %player% 100
-  * And a big list, every command outside Ssomar plugin's world that supports a target where you can fill with %player% then it can be used.
+* Before starting you must know that compatible ≠ usable, allmost all plugins are usable for Ssomar Plugins, this is because all commands are run by the console.
 
 ### MythicMobs
 
@@ -127,7 +117,7 @@ activators:
 ### Nexo
 
 * ExecutableItems
-  * You can use the textures from Nexo inside your ExecutableItem just by using the [custom model data](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14) value or the [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
+  * You can use the textures from Nexo inside your ExecutableItem just by using the [Custom model data](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14) value or the [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
 
 ### PlaceholderAPI
 

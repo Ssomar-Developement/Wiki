@@ -1,8 +1,10 @@
+import CustomTag from '@site/src/components/CustomTag';
+
 # Item Features
 
 List of item features, these are the first thing you should set up on your item.
 
-* Starred features ⭐ are for premium version.
+Premium features are labeled with the tag:  <CustomTag type="premium" />
 
 ### Material of the item
 
@@ -13,8 +15,8 @@ List of item features, these are the first thing you should set up on your item.
 material: DIAMOND
 ```
 
-* You can check the material list information on this link: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
-* If you want to setup as material of the item a custom head check this link [https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings).
+* You can check the material list information on this link: [Material list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
+* If you want to setup as material of the item a custom head check this link [Head settings](/docs/executableitems/configurations/item-configuration/item-features#head-settings).
 
 ### Name or DisplayName of the item
 
@@ -68,9 +70,9 @@ For ExecutableItems free there is a line with "Made with ExecutableItems": It ca
 glow: true
 ```
 
-### Disable the enchant glowing
+### Disable the enchant glowing <CustomTag type="version" version="1.20.5" />
 
-* Info: Its only available in 1.20.5 and above. Boolean value that forces the item to not have the glow effect even if it is enchanted. 
+* Info: Boolean value that forces the item to not have the glow effect even if it is enchanted. 
 * Example: 
 
 ```yaml
@@ -99,18 +101,18 @@ displayConditions:
 ### Durability of the item
 
 * Info: Select the durability value of the item.
-  * For versions 1.20.5— The durability value must be  equal or below the maximum vanilla durability for the item selected.
+  * For versions 1.20.5— The durability value must be equal or below the maximum vanilla durability for the item selected.
   * Example: 
-    * ```yaml
-durability: 150   **
+```yaml
+durability: 150
 ```
   * For versions 1.20.5++ The durability option can be customized, enabling new features such as the sync of the usage of the ExecutableItem and the durability value. And allow to select custom max durability.
   * Example:
-    * ```yaml
-      isDurabilityBasedOnUsage: true
-      maxDurability: 20 
-      durability: 19
-      ```
+```yaml
+isDurabilityBasedOnUsage: true
+maxDurability: 20 
+durability: 19
+```
 
 ### Enchantments of the item
 
@@ -133,19 +135,19 @@ enchantments:
 unbreakable: true
 ```
 
-### Attributes of the item feature (1.12++)
+### Attributes <CustomTag type="version" version="1.12" />
 
 * Info: You can select the attributes of the ExecutableItem.
-  * Attribute: The type of attribute. List here [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html)
-  * UUID: Its a code that minecraft needs to assign the attribute modifiers. You can ignore it.
-  * Name: Its the display name of the Attribute Modifier. Its useful for you to write what it does. It doesn't affect in anything more than visualizing it in the GUI.
-  * Operation: Type of operation that the AttributeModifier will do. List here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html)
-  * Amount: The value for the AttributeModifier, it will be applied to the attribute using the operation selected.
-  * Slot: The slot that the AttributeModifier will work on.
+  * `attribute`: The type of attribute. List here [Attribute list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/attribute/Attribute.html)
+  * `uuid`: Its a code that minecraft needs to assign the attribute modifiers. You can ignore it.
+  * `name`: Its the display name of the Attribute Modifier. Its useful for you to write what it does. It doesn't affect in anything more than visualizing it in the GUI.
+  * `operation`: Type of operation that the AttributeModifier will do. List here [Operations](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html)
+  * `amount`: The value for the AttributeModifier, it will be applied to the attribute using the operation selected.
+  * `slot`: The slot that the AttributeModifier will work on.
   * Example:
 
 ```yaml
-attributes:**
+attributes:
   attribute1: #Id of this attribute, you can add as many as you want
     attribute: GENERIC_ARMOR
     name: '&#x26;eDefault name'
@@ -158,7 +160,7 @@ attributes:**
 :::info
 **If you are using 1.12 version you will need to follow these steps:**
 
-* This process requires the premium version of EI ⭐
+* This process requires the premium version of EI <CustomTag type="premium" />
 * Generate your item with attributes on a website. We suggest [https://mapmaking.fr/give1.12/](https://mapmaking.fr/give1.12/)
 * Then give the item to yourself inside Minecraft
 * While holding it on your hand run the /ei create \<id> command
@@ -177,21 +179,19 @@ ignoreKeepDefaultAttributesFeature: false
 
 * On this link there is a tutorial for attributes, and its features.
 
-[https://youtu.be/HqyF0QBYIY4](https://youtu.be/HqyF0QBYIY4)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HqyF0QBYIY4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 #### **ignoreKeepDefaultAttributesFeature:** 
 
-* **In**fo: It ignores the setting of keep default attributes. Its useful for the third case in this table explanation:
-
-| Before 1.21 | After 1.21 | <p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes YES </li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES</li><li>No other attributes </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li></ul></li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>No other attributes </li><li>When in Main Hand</li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO</li><li>No other attributes</li><li>NOTHING</li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>+ 2 attack damage (blue)</li><li>-2.8 attack speed (red)</li><li>1 armor (blue)</li></ul></li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes YES </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>3 attack damage (green)</li><li>1.2 attack speed (green)</li><li>1 armor (blue)</li></ul></li></ul> | <p>EI STONE_PICKAXE </p><ul><li>keepDefaultAttributes NO</li><li>1 armor attribute</li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul> | <p>EI STONE_PICKAXE</p><ul><li>keepDefaultAttributes NO </li><li>1 armor attribute </li><li><p>When in Main Hand:</p><ul><li>1 armor (blue)</li></ul></li></ul> 
-
+* Info: It ignores the setting of keep default attributes. Its useful for the third case in this table explanation:
 * Example:
 
 ```yaml
 ignoreKeepDefaultAttributesFeature: true
 ```
 
-### Custom model data (1.14++)
+### Custom model data <CustomTag type="version" version="1.14" />
 
 * Info: 
   * For the Minecraft version before 1.21.4: Integer to set the value of the customModelData feature of the item. Useful to create different textures for an item.
@@ -213,11 +213,11 @@ customModelData: 1.0;true;hello
 
 * Tutorial: [https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)
 
-### Item Rarity features (1.20.5+)
+### Item Rarity features <CustomTag type="version" version="1.20.5" />
 
 * Info: Rarity is a vanilla statistic applied to items and blocks to signify their value and ease in obtaining. It has no effect on gameplay whatsoever. There are four rarity tiers: Common, Uncommon, Rare, and Epic.
-  * enableRarity: Boolean that represents if the feature is enabled or not
-  * rarity: Type of rarity
+  * `enableRarity`: Boolean that represents if the feature is enabled or not
+  * `rarity`: Type of rarity
 * Example:
 
 ```yaml
@@ -226,19 +226,19 @@ itemRarity:
   rarity: COMMON
 ```
 
-### Equippable features
+### Equippable features <CustomTag type="version" version="1.21.2" />
 
 * Info: This section configures the behavior of an equippable item. When enabled, the item can be equipped into a designated slot, optionally triggering a sound effect. You can also specify a custom model for the equipped item, define whether it takes damage when the wearer is hurt, and set flags to allow or restrict swapping and disposal. Additionally, you can restrict which entities are allowed to equip the item.
-  * enable: Set to true to enable equipping for this item
-  * slot: The equipment slot (e.g., CHEST, HEAD, LEGS, FEET) where the item is equipped
-  * enableSound: Boolean to play a sound when the item is equipped
-  * sound: Sound effect to play when equipped
-  * equipModel: Optional custom model for the equipped item (e.g., "mynamespace:mymodel")
-  * cameraOverlay: Optional custom camera overlay when the item is equipped
-  * damageableOnHurt: Boolean that selects if the item loses durability when the wearer is hurt
-  * dispensable: Boolean that selects if the item can be disposed of (removed/dropped)
-  * swappable: Boolean that selects if the item can be swapped with another item
-  * allowedEntities: List of entities permitted to equip this item
+  * `enable`: Set to true to enable equipping for this item
+  * `slot`: The equipment slot (e.g., CHEST, HEAD, LEGS, FEET) where the item is equipped
+  * `enableSound`: Boolean to play a sound when the item is equipped
+  * `sound`: Sound effect to play when equipped
+  * `equipModel`: (Optional) custom model for the equipped item (e.g., "mynamespace:mymodel")
+  * `cameraOverlay`: (Optional) custom camera overlay when the item is equipped
+  * `damageableOnHurt`: Boolean that selects if the item loses durability when the wearer is hurt
+  * `dispensable`: Boolean that selects if the item can be disposed of (removed/dropped)
+  * `swappable`: Boolean that selects if the item can be swapped with another item
+  * `allowedEntities`: List of entities permitted to equip this item
 * Example:
 
 ```yaml
@@ -259,11 +259,11 @@ equippableFeatures:
      - PLAYER
 ```
 
-### Repairable features
+### Repairable features <CustomTag type="version" version="1.21.2" />
 
 * Info: Features related to when the ExecutableItem is reppaired.
-  * enable: Boolean value that selects if the feature is enabled or not
-  * repairCost: Integer value that represents the cost of repairing it on the Anvil
+  * `enable`: Boolean value that selects if the feature is enabled or not
+  * `repairCost`: Integer value that represents the cost of repairing it on the Anvil
 * Example:
 
 ```yaml
@@ -272,7 +272,7 @@ repairableFeatures:
     repairCost: 2 
 ```
 
-### Glider
+### Glider <CustomTag type="version" version="1.21.2" />
 
 * Info: Feature to allow gliding with the item as you would normally do with the vanilla item "elytra".
 * Example:
@@ -281,7 +281,7 @@ repairableFeatures:
 glider: false
 ```
 
-### itemModel 
+### itemModel <CustomTag type="version" version="1.21.2" />
 
 * Info: Path of a custom item model on texture pack in the format of \<mynamespace:model\_id> that will target inside assets/\<mynamespace>/models/item/\<model\_id>.
 * Example:
@@ -290,7 +290,7 @@ glider: false
 itemModel: "" # "mynamespace:mymodel"
 ```
 
-### ⭐tooltipModel
+### tooltipModel <CustomTag type="premium" /> <CustomTag type="version" version="1.21.2" />
 
 * Info: Path of a custom tooltip model on texture pack in the format of \<mynamespace:model\_id> that will target inside /assets/\<mynamespace>/textures/gui/sprites/tooltip/\<id>\_frame
 * Example:
@@ -316,7 +316,7 @@ dropFeatures:
 #### Glowing color when dropped
 
 * Info: If the item has glowEffect enabled then its possible to select the color of the glowing effect when dropped.
-* Possible colours: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)
+* Possible colours: [Color reference](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)
 * Example:
 
 ```yaml
@@ -337,15 +337,16 @@ dropFeatures:
 
 ###  NBT Tags
 
-* Info: Requires the plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/) available on Spigo&#x74;**.** This features allows you to add your custom nbt tags inside your ExecutableItem.
-  * type: The type of value you are storing e.g:
+* Info: Requires the plugin [**NBTAPI**](https://www.spigotmc.org/resources/nbt-api.7939/) available on Spigot.
+This features allows you to add your custom nbt tags inside your ExecutableItem.
+  * `type`: The type of value you are storing e.g:
     * BOOLEAN: true | false
     * STRING: car
     * INTEGER: 6
     * DOUBLE: 17.6
     * COMPOUND: Example below, it will depend on your needs and what you want to add.
-  * key: The string key that represents that nbt storage
-  * value: Value of the NBT Tag you are adding
+  * `key`: The string key that represents that nbt storage
+  * `value`: Value of the NBT Tag you are adding
 * Example:
 
 ```yaml
@@ -407,20 +408,20 @@ executableitems:myothertag:blabla2
 ### Hiders features
 
 * Info: Settings related to hiding features that are normally shown on your ExecutableItem. All features even though they are hide will still be functional.
-  * hideEnchantments: Boolean value that represents if the enchantments on the ExecutableItem will be displayed in the lore or not.
-  * hideUnbreakable: Boolean value that represents if the unbreakable description will be shown in the lore or not.
-  * hideAttributes: Boolean value that represents if the attributes of the ExecutableItem will be displayed in the lore or not.
-  * hidePotionEffects: Boolean value that represents if the potion effects of the ExecutableItem will be displayed in the lore or not. In versions 1.20.5 or + use hideAdditionalTooltip.
+  * `hideEnchantments`: Boolean value that represents if the enchantments on the ExecutableItem will be displayed in the lore or not.
+  * `hideUnbreakable`: Boolean value that represents if the unbreakable description will be shown in the lore or not.
+  * `hideAttributes`: Boolean value that represents if the attributes of the ExecutableItem will be displayed in the lore or not.
+  * `hidePotionEffects`: Boolean value that represents if the potion effects of the ExecutableItem will be displayed in the lore or not. In versions 1.20.5 or + use hideAdditionalTooltip.
   *   hideAdditionalTooltip (Only available in 1.20.5++) 
 
       Setting to show/hide potion effects, book and firework information, map tooltips, patterns of banners, and enchantments of enchanted books. It replaces the old hidePotionEffects
-  * hideUsage: Boolean value that represents if the Usage custom feature from ExecutableItem plugin of the item itself will be displayed in the lore or not.
+  * `hideUsage`: Boolean value that represents if the Usage custom feature from ExecutableItem plugin of the item itself will be displayed in the lore or not.
     * You can display manually the usage using %usage% placeholder adding it when editing your lore.
-  * hideDye: Boolean value that represents if the dye color (#\<color>) of the ExecutableItem will be displayed in the lore or not.
-  * hideArmorTrim: Boolean value that represents if the armor trim of the ExecutableItem will be displayed in the lore or not.
-  * hidePlacedOn: Boolean value that represents if the NBT Tag of "Can be placed on: \[...]" of the ExecutableItem will be displayed in the lore or not.
-  * hideDestroys: Boolean value that represents if the NBT Tag of "Can destroy: \[...]" of the ExecutableItem will be displayed in the lore or not.
-  * hideToolTip: Boolean value that represents if the tooltip is hide or not. (Only available in 1.20.5++)
+  * `hideDye`: Boolean value that represents if the dye color (#\<color>) of the ExecutableItem will be displayed in the lore or not.
+  * `hideArmorTrim`: Boolean value that represents if the armor trim of the ExecutableItem will be displayed in the lore or not.
+  * `hidePlacedOn`: Boolean value that represents if the NBT Tag of "Can be placed on: \[...]" of the ExecutableItem will be displayed in the lore or not.
+  * `hideDestroys`: Boolean value that represents if the NBT Tag of "Can destroy: \[...]" of the ExecutableItem will be displayed in the lore or not.
+  * `hideToolTip`: Boolean value that represents if the tooltip is hide or not. (Only available in 1.20.5++)
 * Example:
 
 ```yaml
@@ -457,7 +458,7 @@ This section will explain what usage is and its features.
       usage: -1
       ```
 
-#### ⭐Usage limit
+#### Usage limit <CustomTag type="premium" />
 
 * Info: Integer value that limits the upper amount the usage can reach. (Value cannot be 0)
 * Example: 
@@ -475,14 +476,14 @@ usageLimit: 600 #Usage will not be able to go up more than this value, -1 to don
 usePerDay: 200 # -1 to ignore it
 ```
 
-### Food features (1.20.5++)
+### Food features <CustomTag type="version" version="1.20.5" />
 
 * Info: This feature allows you to customize food settings related to your ExecutableItem
-  * nutrition: Integer value that represent amount of "half-food" it will fill the player once the item is eaten
+  * `nutrition`: Integer value that represent amount of "half-food" it will fill the player once the item is eaten
     * For better understanding the player has 20 of nutrition max, and it is shown in-game as 10 hunger icons wich each icon able to split in 2.
-  * saturation: Integer value that represents the saturation that the player will receive once the item is eaten.
-  * isMeat: Boolean value that will make the item to be considered as food. This will be forced applied, that means, if you set this value to true, any item even the ones that can't be eaten will be considered as food, and so they will be consumable.
-  * canAlwaysEat: Boolean value that represents if the item can always be eaten even when the player has his food bar full filled.
+  * `saturation`: Integer value that represents the saturation that the player will receive once the item is eaten.
+  * `isMeat`: Boolean value that will make the item to be considered as food. This will be forced applied, that means, if you set this value to true, any item even the ones that can't be eaten will be considered as food, and so they will be consumable.
+  * `canAlwaysEat`: Boolean value that represents if the item can always be eaten even when the player has his food bar full filled.
 *  Example:
 
 ```yaml
@@ -493,14 +494,14 @@ foodFeatures:
   canAlwaysEat: true
 ```
 
-### Consumable features
+### Consumable features <CustomTag type="version" version="1.21.4" />
 
 * Info: Features related to consumable, it allows you to customize the consumable options, is closer to the food feature.
-  * enable: Boolean that represents enabling or disabling the consumable features
-  * animation: ANIMATION\_TYPE that will be reproduced when eating/consuming the ExecutableItem
-  * sound: SOUND that will be played when the item is being eaten/consumed
-  * hasConsumeParticles: Boolean value that represents if the item will drop particles of being eaten
-  * consumeSeconds: Amount of seconds the item gets to be eaten/consumed.
+  * `enable`: Boolean that represents enabling or disabling the consumable features
+  * `animation`: ANIMATION\_TYPE that will be reproduced when eating/consuming the ExecutableItem
+  * `sound`: SOUND that will be played when the item is being eaten/consumed
+  * `hasConsumeParticles`: Boolean value that represents if the item will drop particles of being eaten
+  * `consumeSeconds`: Amount of seconds the item gets to be eaten/consumed.
 * Example:
 
 ```yaml
@@ -528,7 +529,7 @@ potionFeatures:
 
 #### Potion type
 
-* Info: Potion Type  you want the potion item to be. Its only visibility feature, it doesn't affect the real behavior of the potion. The list is available here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html)
+* Info: Potion Type  you want the potion item to be. Its only visibility feature, it doesn't affect the real behavior of the potion. The list is available here [Potion types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionType.html)
 * Example:
 
 ```yaml
@@ -539,12 +540,12 @@ potionFeatures:
 #### Potion effects
 
 * Info: Here you can create the potion effects your option will have
-  * potionEffectType: PotionEffectType selected, list available here [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
-  * isAmbient: Boolean value that makes the potion to be ambient, that makes potion effect produce more, translucent, particles.
-  * duration: Integer value of ticks (20 ticks = 1 second) which represents the duration of the potion effect.
-  * amplifier: Integer value that represents the level/grade/strength of the potion effect. Amplifier 0 means level 1, amplifier 1 means level 2 and so on.
-  * hasParticles: Boolean value that enables or disables showing effect particles around the player.
-  * hasIcon: Boolean value that enables or disables showing the icon effect on the top right of the player screen.
+  * `potionEffectType`: PotionEffectType selected, list available here [Potion effects](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
+  * `isAmbient: Boolean value that makes the potion to be ambient, that makes potion effect produce more, translucent, particles.
+  * `duration`: Integer value of ticks (20 ticks = 1 second) which represents the duration of the potion effect.
+  * `amplifier`: Integer value that represents the level/grade/strength of the potion effect. Amplifier 0 means level 1, amplifier 1 means level 2 and so on.
+  * `hasParticles`: Boolean value that enables or disables showing effect particles around the player.
+  * `hasIcon`: Boolean value that enables or disables showing the icon effect on the top right of the player screen.
 * Example:
 
 ```yaml
@@ -574,7 +575,7 @@ armorColor: 7702341
 
 Here you can select configuration for the head settings, that means the custom head from a player head value or from a database.
 
-#### If you don't have a plugin for head database (1.13++)
+#### If you don't have a plugin for head database <CustomTag type="version" version="1.13" />
 
 * If you want to add a custom head for 1.13++ without having a plugin data base you can follow the next steps:
   * Set the material of the ExecutableItem to PLAYER\_HEAD
@@ -588,7 +589,7 @@ Here you can select configuration for the head settings, that means the custom h
     headValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19
     ```
 
-#### If you have the plugin Head Database (1.12++)
+#### If you have the plugin Head Database <CustomTag type="version" version="1.12" />
 
 * If you want to add a custom head for 1.12++ and you have the plugin head databases you can follow the next steps:
   * Open the GUI of your plugin and get the ID of the head you want
@@ -598,8 +599,8 @@ Here you can select configuration for the head settings, that means the custom h
     headDBID: 44328
     ```
 * Here you have the links in case you don't have it and you want it.
-  * Premium version: [https://www.spigotmc.org/resources/head-database.14280/](https://www.spigotmc.org/resources/head-database.14280/)
-  * Free version: [https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/](https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/)
+  * Premium version: [Head Database](https://www.spigotmc.org/resources/head-database.14280/)
+  * Free version: [Head DB](https://www.spigotmc.org/resources/headdb-head-menu-auto-update-free.84967/)
 
 ### whitelistedWorlds
 
@@ -676,7 +677,7 @@ keepItemOnDeath: true
 Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory gamerule
 :::
 
-###  ⭐Disable stack
+### Disable stack <CustomTag type="premium" />
 
 * Info: Boolean value that represents preventing or not for the ExecutableItem to be stacked. Setting this feature to true will make the customStackSize of this item to be 1.
 * Example: 
@@ -685,7 +686,7 @@ Its compatible with WorldGuard keepInventory feature and Vanilla keepInventory g
 disableStack: true
 ```
 
-### ⭐customStackSize (1.20.5 ++)
+### customStackSize <CustomTag type="premium" /> <CustomTag type="version" version="1.20.5" />
 
 * Info: Integer value to set the size of the stack of this item. It will override the current stack amount.
 * To understand it better, the vanilla diamond\_sword has a stack size of 1, since it can't be stacked, with this feature you can increase this value. On other side, dirt has a stack size of 64, but with this you can decrease it, to for example, stack size of 20.
@@ -698,12 +699,12 @@ customStackSize: 32
 ### Variables Settings
 
 * Info: Variables are a way to store information inside your ExecutableItem. This allows to track amount, store positions, actually, you can store whatever you want. They help to create dynamic and customizable item behaviors, by that we mean that variables allow you to create unique behaviors for each item by storing and tracking data specific to that item. For example, you can track how many times a player has used a particular item or how many players they have killed with it.
-  * variableName: Name of the variable, it will be used as reference with %var\_\<name>% to use it in the lore, inside commands, etc. This name can't be "id" or "usage" or have spaces.
-  * type: VariableType of the variable, it can be the next types within examples of uses:
+  * `variableName`: Name of the variable, it will be used as reference with %var\_\<name>% to use it in the lore, inside commands, etc. This name can't be "id" or "usage" or have spaces.
+  * `type`: VariableType of the variable, it can be the next types within examples of uses:
     * STRING: With this variable type you can store STRING values, such as words, numbers, letters, characters, etc. For example you can store the name of the last player hit. This type of variable doesn't support variableModification(type:MODIFICATION) increasing or decreasing the value. Its static unless its replaced with a variableModification(type:SET) which will override the old value.
     * NUMBER: With this variable type you can store FLOAT values, such as numbers. For example if you want to store the amount of blocks broken, the amount of kills, track the seconds before something happens, etc. This type of variable support variableModification(type:MODIFICATION) and variableModification(type:SET).
     * LIST: This variable is a list type variable that stores STRING values. Its useful to store a list of things, for example, have track of the clicked blocks and append them to this list, or append the killed players here, etc.
-  * isRefreshableClean: Boolean value that enables the refresh clean. This allows to add custom lore lines and not being removed when the variable updates. Its recommended to have it on true.
+  * `isRefreshableClean`: Boolean value that enables the refresh clean. This allows to add custom lore lines and not being removed when the variable updates. Its recommended to have it on true.
 * Example
   * ```yaml
     variables:
@@ -725,7 +726,7 @@ customStackSize: 32
         - '2'
     ```
 * You can check more information on the next page about other type of variables:
-  * [https://docs.ssomar.com/tools-for-all-plugins-score/score-variables](https://docs.ssomar.com/tools-for-all-plugins-score/score-variables)
+  * [SCore variables](/docs/tools-for-all-plugins-score/score-variables)
 
 ### Custom give first join features
 
@@ -742,7 +743,7 @@ giveFirstJoinFeatures:
   giveFirstJoinSlot: 0
 ```
 
-### ⭐Item Recognition feature
+### Item Recognition feature <CustomTag type="premium" />
 
 * Info: This features allows to make other items that are not the ExecutableItem as they were the ExecutableItem you are editing. Basically the idea is to work with recognitions, its a list of type of recognitions that if one of them matches between your ExecutableItem and another item (even if its not ExecutableItem) the features that the ExecutableItem has will be on the another item too. This works as long as its recognized following the recognitions requirements.
   * Available recognitions options:
@@ -771,9 +772,9 @@ recognitions:
 ### Container Features
 
 * Info: Here you can customize the container features if the block is an instance of container such as the chest and the barrel.
-  * isLocked: Boolean value that represents if the container is locked or not
-  * lockedName: String value that represents the key name if the container is locked. Its a feature of minecraft, if you have an item with the same name as the lockedName then you will be able to open the chest, otherwise not.
-  * containerContent: List of materials inside the container when placed using the format of slot:\<slot>;\<material>
+  * `isLocked`: Boolean value that represents if the container is locked or not
+  * `lockedName`: String value that represents the key name if the container is locked. Its a feature of minecraft, if you have an item with the same name as the lockedName then you will be able to open the chest, otherwise not.
+  * `containerContent`: List of materials inside the container when placed using the format of slot:\<slot>;\<material>
 * Example:
 
 ```yaml
@@ -784,7 +785,7 @@ containerFeatures:
   - slot:0;minecraft:loom
 ```
 
-### Tool Rules (1.20.5++)
+### Tool Rules <CustomTag type="version" version="1.20.5" />
 
 Info: Here you can select the rules of the tools.
 
@@ -823,9 +824,9 @@ toolRules:
 #### Specific tool rules
 
 * Info: You can select the mining speed, droppable for certain blocks with the ExecutableItem, in order of tool customization.
-  * miningSpeed: Float value to set the minig speed of the ExecutableItem for the selected blocks on the tool rule.
-  * correctForDrops: Boolean value that represents if the block will be dropped or not using the ExecutableItems.
-  * blocks: List of BLOCKS to apply the tool rules to.
+  * `miningSpeed`: Float value to set the minig speed of the ExecutableItem for the selected blocks on the tool rule.
+  * `correctForDrops`: Boolean value that represents if the block will be dropped or not using the ExecutableItems.
+  * `blocks`: List of BLOCKS to apply the tool rules to.
 * Example:
 
 ```yaml
@@ -889,24 +890,24 @@ fireworkFeatures:
       hasTwinkle: true
 ```
 
-For the colors, you can either use the regular [color names](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)  or `RGB-<0-255>-<0-255>-<0-255>`
+For the colors, you can either use the regular [Color names](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/ChatColor.html)  or `RGB-<0-255>-<0-255>-<0-255>`
 
-### Spawner features
+### Spawner features <CustomTag type="version" version="1.20.5" />
 
 * Info: Feature that allows to create custom spawner with ExecutableItems
 * Settings:
-  * spawnCount: Define how many entities appear at each spawn
-  * spawnDelay: Define the delay of the first spawn after placing the spawner (in ticks, 20 ticks = 1 second)
-  * spawnRange: The spawn range
-  * requiredPlayerRange: Define at which maximum distance the player must be to activate the spawner
-  * minSpawnDelay: The minimum delay between each spawn  (in ticks, 20 ticks = 1 second)
-  * minSpawnDelay: The maximum delay between each spawn  (in ticks, 20 ticks = 1 second)
-  * maxNearbyEntities: Maximum entities around the spawner
-  * addSpawnerNbtToItem: If its adds or the the spawner components tag into the item (It's better to let it false) When it's false the plugin will only add the tags when the spawner will be placed.
-  * potentialSpawns: Define the potentialSpawns of your spawner with weight
+  * `spawnCount`: Define how many entities appear at each spawn
+  * `spawnDelay`: Define the delay of the first spawn after placing the spawner (in ticks, 20 ticks = 1 second)
+  * `spawnRange`: The spawn range
+  * `requiredPlayerRange`: Define at which maximum distance the player must be to activate the spawner
+  * `minSpawnDelay`: The minimum delay between each spawn  (in ticks, 20 ticks = 1 second)
+  * `minSpawnDelay`: The maximum delay between each spawn  (in ticks, 20 ticks = 1 second)
+  * `maxNearbyEntities`: Maximum entities around the spawner
+  * `addSpawnerNbtToItem`: If its adds or the the spawner components tag into the item (It's better to let it false) When it's false the plugin will only add the tags when the spawner will be placed.
+  * `potentialSpawns`: Define the potentialSpawns of your spawner with weight
 
 :::tip
-It's better to create your spawner in [MCSTAKER ](https://mcstacker.net/?cmd=give)first, then give it to you in-game and finally hold it + do /ei create.\
+It's better to create your spawner in [MCStaker](https://mcstacker.net/?cmd=give) first, then give it to you in-game and finally hold it + do /ei create.\
 It will automatically imports the spawner features into your ExecutableItems.
 :::
 

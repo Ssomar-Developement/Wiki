@@ -6,7 +6,7 @@
 Best versions to run the plugin !
 :::
 
-All features available !
+Most part of the features are available, to be sure check the wiki.
 
 ### For the versions 1.13 and less
 

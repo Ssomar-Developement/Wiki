@@ -14,7 +14,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
-  "keywords": ["documentation", "minecraft", "plugins"],
+  "keywords": ["documentation", "minecraft", "plugins", "spigot", "paper", "custom items"],
   "author": "",
   "license": "ISC",
   "dependencies": {

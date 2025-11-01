@@ -422,3 +422,73 @@ code {
     background: rgba(18, 21, 36, 0.92);
   }
 }
+
+/* Enhanced syntax highlighting for code blocks */
+/* YAML/YML syntax highlighting */
+.token.atrule,
+.token.attr-name {
+  color: #0ea5e9; /* Bright cyan for keys */
+}
+
+.token.property {
+  color: #06b6d4; /* Cyan for properties */
+}
+
+.token.string,
+.token.attr-value {
+  color: #10b981; /* Green for strings */
+}
+
+.token.number {
+  color: #f59e0b; /* Orange for numbers */
+}
+
+.token.boolean {
+  color: #8b5cf6; /* Purple for booleans */
+}
+
+.token.null,
+.token.keyword {
+  color: #ec4899; /* Pink for keywords/null */
+}
+
+.token.comment {
+  color: #6b7280; /* Gray for comments */
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #64748b; /* Muted for punctuation */
+}
+
+/* Dark theme specific overrides */
+[data-theme='dark'] .token.atrule,
+[data-theme='dark'] .token.attr-name {
+  color: #38bdf8; /* Brighter cyan for dark mode */
+}
+
+[data-theme='dark'] .token.property {
+  color: #22d3ee; /* Brighter cyan for dark mode */
+}
+
+[data-theme='dark'] .token.string,
+[data-theme='dark'] .token.attr-value {
+  color: #34d399; /* Brighter green for dark mode */
+}
+
+[data-theme='dark'] .token.number {
+  color: #fbbf24; /* Brighter orange for dark mode */
+}
+
+[data-theme='dark'] .token.boolean {
+  color: #a78bfa; /* Brighter purple for dark mode */
+}
+
+[data-theme='dark'] .token.null,
+[data-theme='dark'] .token.keyword {
+  color: #f472b6; /* Brighter pink for dark mode */
+}
+
+[data-theme='dark'] .token.comment {
+  color: #9ca3af; /* Lighter gray for dark mode */
+}
