@@ -11,16 +11,32 @@
 * If you would like to create folder you have to go to plugins/ExecutableItems/items/\<here> and create a folder with the name you want
 * After that, just type /ei reload to reload the plugin inside Minecraft.
 
-:::info
-You can add a custom item as icon folder using the next format
+:::tip Custom Folder Icons
+You can add a custom material icon to your folder using this format:
 
-ThisIsTheNameOfMyFolder\[icon-GOLDEN\_SWORD]
+**Format:** `FolderName[icon-MATERIAL_NAME]`
+
+**Example:** `Weapons[icon-DIAMOND_SWORD]`
+
+This will display a diamond sword icon next to "Weapons" in the `/ei show` menu.
 :::
 
-:::info
-If your server host does not allow you to use special characters such as brackets, the only solution seems to be this, you can try using SFTP to create the folder instead of the file manager, there is help with setting up SFTP here: [https://support.minehut.com/hc/en-us/articles/27126955782291-How-do-I-use-SFTP-on-my-server](https://support.minehut.com/hc/en-us/articles/27126955782291-How-do-I-use-SFTP-on-my-server) assuming the server host allows you to directly access your server files through SFTP\
-\
-Credits: @stxrblxzer  
+:::warning Special Characters on Some Hosts
+**Issue:** Some server hosts (like Minehut) may not allow special characters like brackets `[]` in folder names through their web file manager.
+
+**Solution:** Use SFTP (File Transfer Protocol) instead of the web file manager to create folders with special characters.
+
+**How to use SFTP:**
+- [Minehut SFTP Guide](https://support.minehut.com/hc/en-us/articles/27126955782291-How-do-I-use-SFTP-on-my-server)
+- Most hosts support SFTP through clients like FileZilla or WinSCP
+- SFTP gives direct file system access, bypassing web interface limitations
+
+**OS Compatibility Note:**
+- **Windows:** May have issues with certain special characters (`<>:"|?*`)
+- **Linux/macOS:** More permissive with special characters
+- Brackets `[]` work on most systems if SFTP is used
+
+Credits: @stxrblxzer
 :::
 
 ### Move items to a folder
