@@ -148,10 +148,10 @@ lore:
 
 
 ```yaml
-name: '&#x26;bLeggings'**
+name: '&bLeggings'
 material: DIAMOND_LEGGINGS
 lore:
-  - '&#x26;7Wearing the full set grants Regeneration'
+  - '&7Wearing the full set grants Regeneration'
 ```
 
 
