@@ -74,7 +74,7 @@ activators:
     itemCommands:
     - FORMAT_ENCHANTMENTS
 ```
-![](/img/image (382).png)
+![](</img/image (382).png>)
 
 ### MODIFY\_DURABILITY
 
