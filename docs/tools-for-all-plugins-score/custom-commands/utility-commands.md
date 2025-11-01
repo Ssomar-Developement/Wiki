@@ -45,7 +45,7 @@ CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
   * `{condition_without_spaces}`: The condition for the IF to decide whether it runs or not.
     * Symbols: `=`, `!=`, `>=`, `<=`, `>`, `<`
     * It supports () for priority , && for AND and || for OR
-  * `{command1}`,`{command2}`: The commands that will be executed
+  * `{command(s)}`: The commands that will be executed (use `<+>` as separator for multiple commands)
 * Example:
 
 ```yaml
@@ -78,7 +78,7 @@ activators:**
   * `{condition_without_spaces}`: The condition for the while loop to decide whether it continues or stops
   * `{delay_in_ticks}`: The delay before the next repetition
     * Delay supports decimals value but they are casted to the next integer (20.1 -> 20)
-  * `{command}`,`{command2}`: The commands that will be executed in repeat
+  * `{command(s)}`: The commands that will be executed in repeat (use `<+>` as separator for multiple commands)
 * Example:
 
 ```yaml
