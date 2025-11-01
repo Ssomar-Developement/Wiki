@@ -6,16 +6,16 @@ In case you want to edit these messages just go to the **same place where you ad
 
 Examples:
 
-* ![](<../../../.gitbook/assets/image (151).png>)
-* ![](<../../../.gitbook/assets/image (254).png>)
-* ![](<../../../.gitbook/assets/image (309).png>)
-* ![](<../../../.gitbook/assets/image (113).png>)
+* ![](<../../..//static/img/image (151).png>)
+* ![](<../../..//static/img/image (254).png>)
+* ![](<../../..//static/img/image (309).png>)
+* ![](<../../..//static/img/image (113).png>)
 
 ## Cooldown message
 
 If want to edit this message, just go to the same place where you added the cooldown and you will have an option to edit the message.
 
-* ![](<../../../.gitbook/assets/image (397).png>)
+* ![](<../../..//static/img/image (397).png>)
 
 ## ExecutableItems locale
 

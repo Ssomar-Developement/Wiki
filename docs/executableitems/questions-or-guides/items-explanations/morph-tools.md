@@ -6,7 +6,7 @@
 
 * First of all you'll need to create each item that the ****Morph tool**** will cycle through.
 
-![](<../../../.gitbook/assets/image (297).png>)
+![](<../../..//static/img/image (297).png>)
 
 ### Let's edit the items
 
@@ -16,21 +16,21 @@
 
 ### First, set the item's usage to 0
 
-![](<../../../.gitbook/assets/image (333).png>)
+![](<../../..//static/img/image (333).png>)
 
 ### Plan how the tool will cycle between states
 
-![](<../../../.gitbook/assets/image (196).png>)
+![](<../../..//static/img/image (196).png>)
 
 ### Create the activator
 
 * This will be the activator that will allow us to cycle.
 
-![](<../../../.gitbook/assets/image (91).png>)
+![](<../../..//static/img/image (91).png>)
 
 * Set the **Usage Modification** to -1
 
-![](<../../../.gitbook/assets/image (121).png>)
+![](<../../..//static/img/image (121).png>)
 
 :::info
 When Usage is 0 and it is modified by -1 the item disappears.
@@ -38,15 +38,15 @@ When Usage is 0 and it is modified by -1 the item disappears.
 
 * Set the sneak condition (****In this example we want the cycle starts when SHIFT+RIGHT CLICK****)
 
-![](<../../../.gitbook/assets/image (173).png>)
+![](<../../..//static/img/image (173).png>)
 
-![](<../../../.gitbook/assets/image (103).png>)
+![](<../../..//static/img/image (103).png>)
 
-![](<../../../.gitbook/assets/image (87).png>)
+![](<../../..//static/img/image (87).png>)
 
 * Don't forget that you can remove the condition message.
 
-![](<../../../.gitbook/assets/image (395).png>)
+![](<../../..//static/img/image (395).png>)
 
 ### Add the commands
 

@@ -9,24 +9,24 @@ To add lore to an item (looking for the enchant mechanic) you can use the comman
 ### Let's create our activator
 
 * Creating it:
-  * ![](<../../../.gitbook/assets/image (239).png>)
+  * ![](<../../..//static/img/image (239).png>)
 * Let's create our activator (in this case I will only use PLAYER\_HIT\_ENTITY, if you want this enchantment to work for players too do it)
-  * ![](<../../../.gitbook/assets/image (202).png>)
-  * ![](<../../../.gitbook/assets/image (156).png>)
+  * ![](<../../..//static/img/image (202).png>)
+  * ![](<../../..//static/img/image (156).png>)
 *   Now let's add on commands what we want the "enchantment" to do.
 
     * In this case BURN command and some particles
-    * ![](<../../../.gitbook/assets/image (302).png>)
+    * ![](<../../..//static/img/image (302).png>)
 
 * Now it is working always a player hits an entity, but we want this only works if the item the player is hitting with has in the lore "FIRE SOUL", let's add that condition, to do that we will use CheckItem expansion of PlaceholderAPI.
-  * ![](<../../../.gitbook/assets/image (198).png>)
+  * ![](<../../..//static/img/image (198).png>)
 * And that's it, if want to customize more the placeholder you can read CheckItem expansion of PlaceholderAPI ^^, this events already works, it will fire the commands only if the item has in the lore "FIRE SOUL" :D
 
 ## MINE IN CUBE ENCHANTMENT
 
 Since you already saw the previous one, you already got the idea, so let's do this one faster, let's create our activator and the commands we want (in this case MINEINCUBE)
 
-* ![](<../../../.gitbook/assets/image (180).png>)
-* ![](<../../../.gitbook/assets/image (209).png>)
-* ![](<../../../.gitbook/assets/image (182).png>)
+* ![](<../../..//static/img/image (180).png>)
+* ![](<../../..//static/img/image (209).png>)
+* ![](<../../..//static/img/image (182).png>)
 * And that's it, record time :sunglasses:, now when a player with an item who has MINEINCUBE in their lore  breaks a block, it will break in area of 1, this means, 3x3x3.

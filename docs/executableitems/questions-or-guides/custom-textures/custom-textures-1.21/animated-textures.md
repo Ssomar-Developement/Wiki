@@ -2,7 +2,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IAAj2a2dBQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-\{% file src="../../../../.gitbook/assets/AnimatedTextures1 (1).zip" %\}
+\{% file src="../../../..//static/img/AnimatedTextures1 (1).zip" %\}
 
 :::info
 The same I said before, this requires previous knowledge, check [****General Items****](general-items.md) for basic stuff[https://youtu.be/IAAj2a2dBQo](https://youtu.be/IAAj2a2dBQo)
@@ -18,11 +18,11 @@ The texture size is something important because we must do some maths after crea
 
 * They will have a order, so take care your animation makes sense for you.
 
-![](<../../../../.gitbook/assets/image (373).png>)
+![](<../../../..//static/img/image (373).png>)
 
 In this case they are 16x16, we have to make a texture file where they all are in a row, so it will have 16x(6x16) -> 16x96 , then put all them in row in correct order and it will look like this
 
-![](<../../../../.gitbook/assets/image (233).png>)
+![](<../../../..//static/img/image (233).png>)
 
 ### Files
 
@@ -44,7 +44,7 @@ frametime is how much frames it will show you in 20 ticks, in this case, the swo
 The name of the file .mcmeta should be equals as the name of the png texture, so it will look like this
 :::
 
-![](<../../../../.gitbook/assets/image (128).png>)
+![](<../../../..//static/img/image (128).png>)
 
 :::info
 Both files must be together, so if the animatedtexture**.png** is inside "customtextures" folder, the animatedtexture.png**.mcmeta** must be there too
@@ -52,6 +52,6 @@ Both files must be together, so if the animatedtexture**.png** is inside "custom
 
 * then just save your texture pack and test.
 
-![](<../../../../.gitbook/assets/2022-07-15 16-52-08.gif>)
+![](<../../../..//static/img/2022-07-15 16-52-08.gif>)
 
 * And that's it, make the thing you would want, it is the same for blocks if you want animated blocks. I hope you understood everything and if have any question (that wasn't explained in the last tutorials) feel free to ask it in Discord. Have a nice day !!

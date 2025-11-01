@@ -16,7 +16,7 @@ First of all, to better understanding this tutorial you must read first [****Gen
 
 * First of all, if you pick up a vanilla bow and draw it you will see it has 4 states, so, we will need 4 textures. Let's do it (how to make the texture is explained in [****General Items****](general-items.md))
 
-![](<../../../../.gitbook/assets/image (248).png>)
+![](<../../../..//static/img/image (248).png>)
 
 * So we have the texture, now let's add it to the bow.
 
@@ -150,11 +150,11 @@ As it was said "it requires previous knowledge" -> and don't forget you can use 
 
 * After doing everything, save the jsons, save the texture in the correct folders, and give it to yourself in game + put the texture pack on. 
 
-![We got 'em 😎😎](<../../../../.gitbook/assets/image (112).png>)
+![We got 'em 😎😎](<../../../..//static/img/image (112).png>)
 
 ### Pulling states is working?
 
-![It is 😎😎😎😎](<../../../../.gitbook/assets/image (219).png>)
+![It is 😎😎😎😎](<../../../..//static/img/image (219).png>)
 
 * That's all, if have any question feel free to ask in the discord. Have a nice day
 

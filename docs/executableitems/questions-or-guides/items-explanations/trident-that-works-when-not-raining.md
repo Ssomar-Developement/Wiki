@@ -22,7 +22,7 @@ Depending on the velocity of the snowball your trident will launch you stronger 
 ### Create the activator
 
 * Now create an activator PLAYER\_LAUNCH\_PROJECTILE
-* ![](<../../../.gitbook/assets/image (69).png>)
+* ![](<../../..//static/img/image (69).png>)
 * And add into commands LAUNCH \<id of the projectile created>
 * Enable cancel event so the real trident doesn't disappears.
 

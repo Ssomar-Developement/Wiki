@@ -11,7 +11,7 @@ First of all, this tutorial will be related ONLY to launch the diamond axe, if w
 
 * /ei create diamondaxe -> and setup everything like name, lore, material, etc.
 
-![](<../../../.gitbook/assets/image (100).png>)
+![](<../../..//static/img/image (100).png>)
 
 * In this case I want the axe to be thrown when right clicking so that will be the activator, and in the commands, the needed LAUNCH command to launch it (if don't understand how LAUNCH works check the command in CustomCommands/Player\&Target Commands/LAUNCH)
 * And that's all, save everything and let's test

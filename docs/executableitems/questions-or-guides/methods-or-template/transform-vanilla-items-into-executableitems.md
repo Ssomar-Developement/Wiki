@@ -4,35 +4,35 @@
 First of all you have to know that this method is only available to PREMIUM VERSION
 :::
 
-![](<../../../.gitbook/assets/Executable Items Color3.png>)
+![](<../../..//static/img/Executable Items Color3.png>)
 
 ### Let's create it, first decide what vanilla item you want to transform.
 
 * For this tutorial it will be the **diamond\_sword**
 
-![](<../../../.gitbook/assets/image (96).png>)
+![](<../../..//static/img/image (96).png>)
 
 ### **Then, we have to create the item that it will be replaced for**
 
 * To create an item type `/ei create <id>` command
 
-![](<../../../.gitbook/assets/image (194).png>)
+![](<../../..//static/img/image (194).png>)
 
 * Change the Material of the Item to the vanilla-item you are going to change (In this case diamond\_sword)
 
-![](<../../../.gitbook/assets/image (168).png>)
+![](<../../..//static/img/image (168).png>)
 
 * Let's create an activator
 
-![](<../../../.gitbook/assets/image (92).png>)
+![](<../../..//static/img/image (92).png>)
 
 * For this example it will be `PLAYER_CLICK_ON_ENTITY`
 
-![](<../../../.gitbook/assets/image (213).png>)
+![](<../../..//static/img/image (213).png>)
 
 * Detailed click to left, to only work when hitting
 
-![](<../../../.gitbook/assets/image (272).png>)
+![](<../../..//static/img/image (272).png>)
 
 * And on commands I'll put these commands:
 
@@ -55,7 +55,7 @@ entityCommands:
 It is in plugins/ExecutableItems/items/\<itemID>.yml
 :::
 
-![](<../../../.gitbook/assets/image (195).png>)
+![](<../../..//static/img/image (195).png>)
 
 * Open it and add these lines. (they must be without ident/spaces on the left side)
 
@@ -71,11 +71,11 @@ recognitions:
 
 * If we did every step fine, now we have to take a diamond\_sword from vanilla, get close to a cow, and hit it -> It should burn for 4 seconds, some particle will show up and you will recieve a message.
 
-![](<../../../.gitbook/assets/image (245).png>)
+![](<../../..//static/img/image (245).png>)
 
-![](<../../../.gitbook/assets/image (105).png>)
+![](<../../..//static/img/image (105).png>)
 
-![](<../../../.gitbook/assets/image (73).png>)![](<../../../.gitbook/assets/image (181).png>)
+![](<../../..//static/img/image (73).png>)![](<../../..//static/img/image (181).png>)
 
 * Tested and works ! Yup !!
 

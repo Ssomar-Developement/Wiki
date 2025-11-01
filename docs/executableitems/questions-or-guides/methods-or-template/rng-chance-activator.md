@@ -12,11 +12,11 @@ This tutorial will be related to the example said above, but the idea is you to 
 The **item** itself needs premium version + PlaceholderAPI + RNG Expansion
 :::
 
-![](<../../../.gitbook/assets/image (204).png>)
+![](<../../..//static/img/image (204).png>)
 
 * After adding the name, lore and material..
 
-![](<../../../.gitbook/assets/image (237).png>)
+![](<../../..//static/img/image (237).png>)
 
 ### Let's create the activator that will make the magic
 
@@ -43,19 +43,19 @@ The **item** itself needs premium version + PlaceholderAPI + RNG Expansion
 
 PLAYER\_NUMBER
 
-![](<../../../.gitbook/assets/image (178).png>)
+![](<../../..//static/img/image (178).png>)
 
 And in the first part we will add "%rng\_1,4%" (this require PlaceholderAPI and RNG Expansion)
 
-![](<../../../.gitbook/assets/image (111).png>)
+![](<../../..//static/img/image (111).png>)
 
 EQUALS
 
-![](<../../../.gitbook/assets/image (175).png>)
+![](<../../..//static/img/image (175).png>)
 
 "1" (because we want it to trigger only if the random number between 1 and 4 matches 1)
 
-![](<../../../.gitbook/assets/image (224).png>)
+![](<../../..//static/img/image (224).png>)
 
 And the item is ready
 
@@ -65,7 +65,7 @@ FOR DEBUG PURPOSES I WILL ADD THAT THE ACTIVATOR SAYS "dodge" AND IF THE PLACEHO
 So once we test it, we will know if it is working properly.
 :::
 
-![](<../../../.gitbook/assets/image (378).png>)
+![](<../../..//static/img/image (378).png>)
 
 And it worked, the activator only runs 1 over 4 times.
 

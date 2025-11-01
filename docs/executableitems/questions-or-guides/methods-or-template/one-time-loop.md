@@ -56,11 +56,11 @@ With this explanation should be enough, anyways, if you don't understand, we wil
 * Type: STRING
 * String value: "no"
 
-![](<../../../.gitbook/assets/image (59).png>)
+![](<../../..//static/img/image (59).png>)
 
-![](<../../../.gitbook/assets/image (385).png>)
+![](<../../..//static/img/image (385).png>)
 
-![](<../../../.gitbook/assets/image (386).png>)
+![](<../../..//static/img/image (386).png>)
 
 * Then save and let's go to the next step
 
@@ -70,21 +70,21 @@ With this explanation should be enough, anyways, if you don't understand, we wil
 
 * Variable update
 
-![](<../../../.gitbook/assets/image (328).png>)
+![](<../../..//static/img/image (328).png>)
 
-![](<../../../.gitbook/assets/image (162).png>)
+![](<../../..//static/img/image (162).png>)
 
-![](<../../../.gitbook/assets/image (184).png>)
+![](<../../..//static/img/image (184).png>)
 
 * And this will only work if the variable is "no", so let's create a placeholder condition
 
-![](<../../../.gitbook/assets/image (149).png>)
+![](<../../..//static/img/image (149).png>)
 
-![](<../../../.gitbook/assets/image (68).png>)
+![](<../../..//static/img/image (68).png>)
 
-![](<../../../.gitbook/assets/image (287).png>)
+![](<../../..//static/img/image (287).png>)
 
-![](<../../../.gitbook/assets/image (387).png>)
+![](<../../..//static/img/image (387).png>)
 
 * And the last thing the command to add a scoreboard value to the player, in this case I will only add a command "say ADDED" as a debug command.
 
@@ -92,81 +92,81 @@ With this explanation should be enough, anyways, if you don't understand, we wil
 
 Its the same idea, so this will be faster than the previous one.
 
-![](<../../../.gitbook/assets/image (140).png>)
+![](<../../..//static/img/image (140).png>)
 
 * Working on every slot except mainhand
 
-![](<../../../.gitbook/assets/image (167).png>)
+![](<../../..//static/img/image (167).png>)
 
 * Variable update
 
-![](<../../../.gitbook/assets/image (230).png>)
+![](<../../..//static/img/image (230).png>)
 
-![](<../../../.gitbook/assets/image (63).png>)
+![](<../../..//static/img/image (63).png>)
 
-![](<../../../.gitbook/assets/image (279).png>)
+![](<../../..//static/img/image (279).png>)
 
 * Placeholder condition:
 
-![](<../../../.gitbook/assets/image (410).png>)
+![](<../../..//static/img/image (410).png>)
 
-![](<../../../.gitbook/assets/image (372).png>)
+![](<../../..//static/img/image (372).png>)
 
-![](<../../../.gitbook/assets/image (360).png>)
+![](<../../..//static/img/image (360).png>)
 
-![](<../../../.gitbook/assets/image (415).png>)
+![](<../../..//static/img/image (415).png>)
 
 * The second placeholder, that is a playerCondition (and the condition is on the 2nd page)
 
-![](<../../../.gitbook/assets/image (138).png>)
+![](<../../..//static/img/image (138).png>)
 
-![](<../../../.gitbook/assets/image (317).png>)
+![](<../../..//static/img/image (317).png>)
 
 * In this case the name of my item is asd
 
-![](<../../../.gitbook/assets/image (337).png>)
+![](<../../..//static/img/image (337).png>)
 
-![](<../../../.gitbook/assets/image (187).png>)
+![](<../../..//static/img/image (187).png>)
 
-![](<../../../.gitbook/assets/image (383).png>)
+![](<../../..//static/img/image (383).png>)
 
-![](<../../../.gitbook/assets/image (295).png>)
+![](<../../..//static/img/image (295).png>)
 
 * Then save and delete the error message, it is annoying
 
-![](<../../../.gitbook/assets/image (398).png>)
+![](<../../..//static/img/image (398).png>)
 
 * And the command
 
-![](<../../../.gitbook/assets/image (286).png>)
+![](<../../..//static/img/image (286).png>)
 
 ### Drop activator
 
 * Add another activator
 
-![](<../../../.gitbook/assets/image (74).png>)
+![](<../../..//static/img/image (74).png>)
 
 * Placeholder condition to make it only work if the value is already added
 
-![](<../../../.gitbook/assets/image (207).png>)
+![](<../../..//static/img/image (207).png>)
 
-![](<../../../.gitbook/assets/image (192).png>)
+![](<../../..//static/img/image (192).png>)
 
-![](<../../../.gitbook/assets/image (130).png>)
+![](<../../..//static/img/image (130).png>)
 
-![](<../../../.gitbook/assets/image (305).png>)
+![](<../../..//static/img/image (305).png>)
 
 * The command
 
-![](<../../../.gitbook/assets/image (197).png>)
+![](<../../..//static/img/image (197).png>)
 
 * And the variable update
 
-![](<../../../.gitbook/assets/image (89).png>)
+![](<../../..//static/img/image (89).png>)
 
-![](<../../../.gitbook/assets/image (325).png>)
+![](<../../..//static/img/image (325).png>)
 
-![](<../../../.gitbook/assets/image (428).png>)
+![](<../../..//static/img/image (428).png>)
 
 And that's it, save everything and test
 

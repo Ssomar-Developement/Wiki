@@ -16,19 +16,19 @@ description: >-
 
 * Set the `TYPE` to `NUMBER`
 
-![](<../../../.gitbook/assets/image (12) (1).png>)
+![](<../../..//static/img/image (12) (1).png>)
 
 * Set the `FOR` to `PLAYER`
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../..//static/img/image (13) (1).png>)
 
 * Set the `Default Value` to `0`
 
-![](<../../../.gitbook/assets/image (14) (1).png>)
+![](<../../..//static/img/image (14) (1).png>)
 
 * Save the settings
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../..//static/img/image (15) (1).png>)
 
 ## 4) Create the first EE event
 
