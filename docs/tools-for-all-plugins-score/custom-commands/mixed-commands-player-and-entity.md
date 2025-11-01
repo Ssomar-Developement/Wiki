@@ -229,7 +229,7 @@ Conditions Format:  CONDITIONS(%::\<my\_placeholder\_name>::%\<comparator>\<valu
 * Examples:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -397,9 +397,9 @@ activators:
 * Example 2 | Instance of player - entity | Dash the entity towards the player
 
 ```yaml
-activators:**
-**  activator0: # Activator ID, you can create as many activators on the activators list
-**    option: # Activator instance of player and entity
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and entity
     commands: []
     entityCommands: 
     - CUSTOMDASH1 %player_x% %player_y% %player_z% true
@@ -408,9 +408,9 @@ activators:**
 * Example 3 | Instance of player - block | Dash the player towards the block
 
 ```yaml
-activators:**
-**  activator0: # Activator ID, you can create as many activators on the activators list
-**    option: # Activator instance of player and block
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and block
     commands: 
     - CUSTOMDASH1 %block_x% %block_y% %block_z% true
     blockCommands: []
@@ -487,9 +487,9 @@ activators:
 * Example 2 | Instance of player - entity | Dash the entity away from the player
 
 ```yaml
-activators:**
-**  activator0: # Activator ID, you can create as many activators on the activators list
-**    option: # Activator instance of player and entity
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and entity
     commands: []
     entityCommands: 
     - CUSTOMDASH1 %player_x% %player_y% %player_z% 5
@@ -498,9 +498,9 @@ activators:**
 * Example 3 | Instance of player - block | Dash the player away from the block
 
 ```yaml
-activators:**
-**  activator0: # Activator ID, you can create as many activators on the activators list
-**    option: # Activator instance of player and block
+activators:
+  activator0: # Activator ID, you can create as many activators on the activators list
+    option: # Activator instance of player and block
     commands: 
     - CUSTOMDASH1 %block_x% %block_y% %block_z% 5
     blockCommands: []
