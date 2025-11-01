@@ -8,7 +8,11 @@ This tutorial requires the premium version of the plugin.
 
 In this tutorial I will directly explain how to add custom damages/actions on two different projectiles launched by your ExecutableItem. But you can do exactly the same only for one Custom Projectile.
 
-* [x] Create 2 [Score projectiles](../../../tools-for-all-plugins-score/custom-projectiles.md) or more or less
+:::info Premium Feature
+This feature requires ExecutableItems Premium.
+:::
+
+* [x] Create 2 or more [SCore projectiles](/docs/tools-for-all-plugins-score/custom-projectiles)
 
 Examples
 
