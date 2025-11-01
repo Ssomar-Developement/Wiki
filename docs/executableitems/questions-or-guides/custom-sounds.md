@@ -1,91 +1,393 @@
-# Custom sounds
+# Custom Sounds
 
 :::info
-This method add new sounds with replacing any sound.
+This method adds new custom sounds **without** replacing any existing vanilla sounds. All players can hear these sounds without requiring a resource pack download (when using server resource packs).
 :::
 
-This is related to texture packs, but in difference to "Custom textures" this can be applied by all players, let's do it !
+Custom sounds in Minecraft are managed through resource packs. Unlike custom textures (which require client-side installation), custom sounds can be applied server-wide using server resource packs, making them available to all players automatically.
 
-First let's create our new folder where we will store our sounds
+## Overview
 
-*   As we saw in the previous tutorials, our first look into our texture pack should look like this:
+To add custom sounds to your ExecutableItems, you'll need to:
+1. Create a resource pack with your custom sound files
+2. Configure the sounds.json file to register your sounds
+3. Use the PLAYSOUND command in ExecutableItems to play them
 
-    ```
-    TEXTUREPACK
-        - assets
-        - pack.mcmeta
-        - pack.png
-    ```
-*   Inside assets, we have the folder "minecraft", let's add our own folder, I will call it "customsounds", it should look like this
+## Step-by-Step Guide
 
-    ```
-    TEXTURE PACK
-        - assets
-            - minecraft
-            - customsounds
-        - pack.mcmeta
-        - pack.png
-    ```
-*   And let's add our json where we will manage our sounds
+### Step 1: Create Basic Resource Pack Structure
 
-    ```
-    TEXTURE PACK
-        - assets
-            - minecraft
-            - customsounds
-                - sounds.json
-        - pack.mcmeta
-        - pack.png
-    ```
-*   And inside our sounds.json we will add a format like this
+First, create the basic resource pack folder structure:
 
-    ```
-    {
-      "thisisthenameofmysoundnumberone": {
-        "subtitle": "hello",
-        "sounds": [
-          "customsounds:| "
-        ]
-      },
-      "thisisthenameofmysoundnumbertwo": {
-        "sounds": [
-          "customsounds:| "
-        ]
-      }
-    }
-    ```
-* "customsounds:\| " means it will go on customsounds/sounds/\| 
-* So, it would like this:
-  *   ```
-      TEXTURE PACK
-      ```
+```
+RESOURCE_PACK/
+  ├── assets/
+  ├── pack.mcmeta
+  └── pack.png
+```
 
-      ```
-          - assets
-      ```
+- `pack.mcmeta` - Contains resource pack metadata (version, description)
+- `pack.png` - The resource pack icon (optional, but recommended)
 
-      ```
-              - minecraft
-      ```
+### Step 2: Add Custom Namespace Folder
 
-      ```
-              - customsounds
-      ```
+Inside the `assets` folder, create your custom namespace folder. This should be a unique name to avoid conflicts:
 
-      ```
-                  - sounds.json
-                  - sounds
-                              - | .ogg
-                              - | .ogg
-      ```
+```
+RESOURCE_PACK/
+  ├── assets/
+  │   ├── minecraft/
+  │   └── customsounds/    # Your custom namespace
+  ├── pack.mcmeta
+  └── pack.png
+```
 
-      ```
-          - pack.mcmeta
-      ```
+:::tip Namespace Naming
+Choose a descriptive namespace like your server name or plugin name. Examples: `myserver`, `customitems`, `epicrpg`
+:::
 
-      ```
-          - pack.png
-      ```
+### Step 3: Create sounds.json
 
-And that's it, put on your texture pack and you will be able to play the sound running:
+Inside your custom namespace folder, create a `sounds.json` file:
 
+```
+RESOURCE_PACK/
+  ├── assets/
+  │   ├── minecraft/
+  │   └── customsounds/
+  │       └── sounds.json
+  ├── pack.mcmeta
+  └── pack.png
+```
+
+### Step 4: Configure sounds.json
+
+Edit `sounds.json` to register your custom sounds:
+
+```json
+{
+  "epic_sword_slash": {
+    "subtitle": "Epic Sword Slash",
+    "sounds": [
+      "customsounds:sword_slash1"
+    ]
+  },
+  "magic_spell_cast": {
+    "subtitle": "Magic Spell Cast",
+    "sounds": [
+      "customsounds:spell_cast1",
+      "customsounds:spell_cast2"
+    ]
+  },
+  "boss_roar": {
+    "sounds": [
+      "customsounds:dragon_roar"
+    ]
+  }
+}
+```
+
+#### sounds.json Structure Explained
+
+- **Sound ID** (e.g., `epic_sword_slash`): The name you'll use in commands
+- **subtitle**: Optional text shown when subtitles are enabled
+- **sounds**: Array of sound file paths (without .ogg extension)
+
+:::info Sound Paths
+`"customsounds:sword_slash1"` means the file is located at:
+`assets/customsounds/sounds/sword_slash1.ogg`
+
+The format is: `namespace:path_inside_sounds_folder`
+:::
+
+### Step 5: Add Your Sound Files
+
+Create a `sounds` folder inside your namespace and add your .ogg sound files:
+
+```
+RESOURCE_PACK/
+  ├── assets/
+  │   ├── minecraft/
+  │   └── customsounds/
+  │       ├── sounds.json
+  │       └── sounds/
+  │           ├── sword_slash1.ogg
+  │           ├── spell_cast1.ogg
+  │           ├── spell_cast2.ogg
+  │           └── dragon_roar.ogg
+  ├── pack.mcmeta
+  └── pack.png
+```
+
+:::warning Sound File Requirements
+- **Format**: Must be .ogg format (Ogg Vorbis)
+- **Mono recommended**: Stereo works but mono is better for positional audio
+- **Sample rate**: 44.1 kHz or 48 kHz recommended
+- **File size**: Keep files small for faster downloads
+:::
+
+### Step 6: Create pack.mcmeta
+
+Create your `pack.mcmeta` file with proper version formatting:
+
+```json
+{
+  "pack": {
+    "pack_format": 15,
+    "description": "Custom sounds for MyServer"
+  }
+}
+```
+
+#### Pack Format Versions
+
+| Minecraft Version | pack_format |
+|-------------------|-------------|
+| 1.20.2 - 1.20.4   | 18          |
+| 1.20 - 1.20.1     | 15          |
+| 1.19.4            | 13          |
+| 1.19 - 1.19.3     | 12          |
+| 1.18 - 1.18.2     | 9           |
+
+## Using Custom Sounds in ExecutableItems
+
+Once your resource pack is created and applied, use the PLAYSOUND command:
+
+### Basic Usage
+
+```yaml
+activators:
+  sword_attack:
+    activators:
+    - PLAYER_ATTACK_ENTITY
+
+    commands:
+    - "PLAYSOUND customsounds:epic_sword_slash 1 1"
+```
+
+### Advanced Usage with Volume and Pitch
+
+```yaml
+activators:
+  magic_spell:
+    activators:
+    - PLAYER_RIGHT_CLICK
+
+    commands:
+    - "PLAYSOUND customsounds:magic_spell_cast 1.5 1.2"
+    # Volume: 1.5 (louder than normal)
+    # Pitch: 1.2 (slightly higher pitch)
+```
+
+### Positional Sound
+
+```yaml
+activators:
+  boss_spawn:
+    activators:
+    - CUSTOM_ACTIVATOR
+
+    commands:
+    - "PLAYSOUND customsounds:boss_roar 2 0.8 %block_x% %block_y% %block_z% %world%"
+    # Plays at specific coordinates
+```
+
+## Converting Audio Files to OGG
+
+If you have MP3, WAV, or other audio formats, you need to convert them to OGG:
+
+### Using Audacity (Free)
+
+1. Download Audacity: https://www.audacityteam.org/
+2. Open your audio file
+3. Optional: Convert to mono (Tracks → Mix → Mix Stereo down to Mono)
+4. File → Export → Export as OGG
+5. Choose quality settings (quality 5-7 is good balance)
+
+### Using Online Converters
+
+- CloudConvert: https://cloudconvert.com/mp3-to-ogg
+- Online-Convert: https://audio.online-convert.com/convert-to-ogg
+
+## Deploying Your Resource Pack
+
+### Method 1: Server Resource Pack (Recommended)
+
+Upload your resource pack and configure in `server.properties`:
+
+```properties
+resource-pack=https://your-url.com/resourcepack.zip
+resource-pack-sha1=<SHA1 hash>
+require-resource-pack=true
+```
+
+:::tip Hosting Options
+- Dropbox (get direct link)
+- Google Drive (use download link converter)
+- Self-hosted web server
+- GitHub releases
+:::
+
+### Method 2: Client-Side Installation
+
+Players can manually install by placing the pack in their `resourcepacks` folder.
+
+## Complete Example
+
+Here's a complete example for a custom sword item:
+
+### sounds.json
+```json
+{
+  "legendary_sword_swing": {
+    "subtitle": "Legendary Sword Swings",
+    "sounds": [
+      "customsounds:sword_swing1",
+      "customsounds:sword_swing2",
+      "customsounds:sword_swing3"
+    ]
+  },
+  "legendary_sword_hit": {
+    "subtitle": "Legendary Sword Hits",
+    "sounds": [
+      "customsounds:sword_hit1"
+    ]
+  }
+}
+```
+
+### ExecutableItem Configuration
+```yaml
+material: DIAMOND_SWORD
+displayName: '&6&lLegendary Sword'
+lore:
+- '&7A sword of legendary power'
+- '&7Creates epic sound effects'
+
+activators:
+  on_swing:
+    activators:
+    - PLAYER_ALL_CLICK
+
+    commands:
+    - "PLAYSOUND customsounds:legendary_sword_swing 1 1"
+
+  on_hit:
+    activators:
+    - PLAYER_ATTACK_ENTITY
+
+    commands:
+    - "PLAYSOUND customsounds:legendary_sword_hit 1.2 1"
+    - "DAMAGE 15"
+```
+
+## Troubleshooting
+
+### Sounds Not Playing
+
+**Problem**: Commands execute but no sound plays
+
+**Solutions**:
+1. ✅ Verify resource pack is applied (`/playsound` test with vanilla sound)
+2. ✅ Check sound file is .ogg format (not .mp3, .wav, etc.)
+3. ✅ Verify sounds.json syntax (use JSON validator)
+4. ✅ Check file path matches exactly (case-sensitive)
+5. ✅ Test with `/playsound customsounds:your_sound master @s`
+
+### Resource Pack Not Loading
+
+**Problem**: Server resource pack doesn't download for players
+
+**Solutions**:
+1. ✅ Verify resource pack URL is direct download link
+2. ✅ Check pack.mcmeta format version matches server version
+3. ✅ Ensure pack size is under 100MB (client limit)
+4. ✅ Verify SHA1 hash in server.properties matches the file
+
+### Wrong Sound Plays
+
+**Problem**: Different sound plays than expected
+
+**Solutions**:
+1. ✅ Check for duplicate sound IDs in sounds.json
+2. ✅ Verify namespace is correct (customsounds: vs minecraft:)
+3. ✅ Check for typos in sound file names
+
+### Sound Quality Issues
+
+**Problem**: Sound is distorted, too quiet, or too loud
+
+**Solutions**:
+1. ✅ Re-export with different quality settings (5-7 recommended)
+2. ✅ Normalize audio before converting to OGG
+3. ✅ Adjust volume parameter in PLAYSOUND command
+4. ✅ Convert to mono for better positional audio
+
+## Advanced Tips
+
+### Random Sound Variations
+
+Register multiple sound files for one ID to add variety:
+
+```json
+{
+  "footstep_grass": {
+    "sounds": [
+      "customsounds:grass1",
+      "customsounds:grass2",
+      "customsounds:grass3",
+      "customsounds:grass4"
+    ]
+  }
+}
+```
+
+Minecraft will randomly pick one each time it plays.
+
+### Sound Categories
+
+You can specify sound categories for volume control:
+
+```yaml
+commands:
+- "PLAYSOUND customsounds:epic_music master @a"
+# Categories: master, music, record, weather, block, hostile, neutral, player, ambient, voice
+```
+
+### Subfolder Organization
+
+Organize sounds in subfolders:
+
+```
+sounds/
+  ├── weapons/
+  │   ├── sword1.ogg
+  │   └── sword2.ogg
+  └── magic/
+      ├── spell1.ogg
+      └── spell2.ogg
+```
+
+Reference as:
+```json
+{
+  "sword_hit": {
+    "sounds": ["customsounds:weapons/sword1"]
+  }
+}
+```
+
+## Related Documentation
+
+- [PLAYSOUND Command](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#playsound)
+- [Resource Pack Format (Minecraft Wiki)](https://minecraft.wiki/w/Resource_Pack)
+- [Activators List](/docs/executableitems/configurations/activator-configuration/list-of-the-activators)
+
+## Additional Resources
+
+- **Audacity Download**: https://www.audacityteam.org/
+- **Free Sound Effects**:
+  - Freesound: https://freesound.org/
+  - Zapsplat: https://www.zapsplat.com/
+- **OGG Converters**: https://cloudconvert.com/mp3-to-ogg
+- **JSON Validator**: https://jsonlint.com/
