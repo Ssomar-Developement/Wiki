@@ -264,7 +264,7 @@ For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_f
 Placeholder Source: (PlaceholderAPI](https://factions.support/placeholderapi/))
 :::
 
-### BACKDASH
+### BACK\_DASH
 
 * Info: Launches the player/target at the opposite direction of where they are facing at **(YOU CANNOT BE LAUNCHED IN THE AIR)**
 * Command setting:
@@ -276,15 +276,15 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - BACKDASH 5
+    - BACK_DASH 5
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - BACKDASH 5
+    - BACK_DASH 5
   activator2: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of entity
     entityCommands:
-    - BACKDASH 5
+    - BACK_DASH 5
 ```
 
 ### BURN
@@ -310,7 +310,7 @@ activators:
     - BURN 200
 ```
 
-### CONSOLEMESSAGE
+### CONSOLE\_MESSAGE
 
 * Info: Sends a message to the console
 * Command setting:
@@ -322,22 +322,22 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - CONSOLEMESSAGE This is a debug message sent to the %player%
+    - CONSOLE_MESSAGE This is a debug message sent to the %player%
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - CONSOLEMESSAGE This is a debug message sent to the %player% triggered by %target%
+    - CONSOLE_MESSAGE This is a debug message sent to the %player% triggered by %target%
   activator2: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of entity
     entityCommands:
-    - CONSOLEMESSAGE This is a debug message sent to the %player% triggered by %entity%
+    - CONSOLE_MESSAGE This is a debug message sent to the %player% triggered by %entity%
 ```
 
-### COPYEFFECTS
+### COPY\_EFFECTS
 
 * Info: Copy the effects of the target
 * Command setting:
-  * `{limitDuration}`: it means if the target has for example 3 mins of poison effect, if you limit it to 5 secs, you will only receive a poison effect of 5 seconds
+  * `[limitDuration]`: (Optional) (default = no limit) it means if the target has for example 3 mins of poison effect, if you limit it to 5 secs, you will only receive a poison effect of 5 seconds
 * Example:
 
 ```yaml
@@ -345,15 +345,15 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - COPYEFFECTS 5 # Using this will copy the player's own effects
+    - COPY_EFFECTS 5 # Using this will copy the player's own effects
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
     targetCommands:
-    - COPYEFFECTS 5 # Using this will copy the target effects into the player
+    - COPY_EFFECTS 5 # Using this will copy the target effects into the player
   activator2: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of entity
     entityCommands:
-    - COPYEFFECTS 5 # Using this will copy the entity effects into the player 
+    - COPY_EFFECTS 5 # Using this will copy the entity effects into the player 
 ```
 
 ### CUSTOMDASH1
@@ -729,7 +729,7 @@ activators:
 - EQUIPMENT_VISUAL_CANCEL 39
 ```
 
-### FORCEDROP
+### FORCE\_DROP
 
 * Info: It forces the player to drop the item that he has in a specific slot.
 * Command setting: 
@@ -740,7 +740,7 @@ activators:
 * Example:
 
 ```yaml
-- FORCEDROP -1
+- FORCE_DROP -1
 ```
 
 ### FRONTDASH
@@ -1096,7 +1096,7 @@ first nested command : %around\_target::step1%
 - REGAIN_HEALTH -5
 ```
 
-### REMOVE_BURN
+### REMOVE\_BURN
 
 * Info: Extinguishes you from burning
 * No command setting
@@ -1106,7 +1106,7 @@ first nested command : %around\_target::step1%
 - REMOVE_BURN
 ```
 
-### REMOVE_GLOW
+### REMOVE\_GLOW
 
 * Info: Remove the glowing effect of a specific color to the player | target.
 * Command setting:
@@ -1117,7 +1117,7 @@ first nested command : %around\_target::step1%
 - REMOVE_GLOW BLACK
 ```
 
-### SET_GLOW
+### SET\_GLOW
 
 * Info: Add the glowing effect with a specific color to the player | target.
 * Command setting:
@@ -1132,7 +1132,7 @@ first nested command : %around\_target::step1%
 Compatible with the plugin TAB using -> %score\_cmd-glow%
 :::
 
-### SET_HEALTH
+### SET\_HEALTH
 
 * Info: Sets your health into a specific amount
 * Command setting:
@@ -1143,7 +1143,7 @@ Compatible with the plugin TAB using -> %score\_cmd-glow%
 SET_HEALTH 10
 ```
 
-### SET_PITCH
+### SET\_PITCH
 
 * Info: Forces the player to look in a certain pitch position (-90/90 degrees, up down direction)
 * Command settings:
@@ -1156,7 +1156,7 @@ SET_HEALTH 10
 - SET_PITCH %target_pitch% false
 ```
 
-### SET_YAW
+### SET\_YAW
 
 * Info: Forces the player to look in a certain yaw position (360 degrees, left right direction)
 * Command settings:
@@ -1245,7 +1245,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 - TELEPORT ApocalypseWorld 70 70 70
 ```
 
-### TELEPORT_ON_CURSOR
+### TELEPORT\_ON\_CURSOR
 
 * Info: Teleports you on your cursor
 * Command settings:
@@ -1257,7 +1257,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 - TELEPORTONCURSOR 8 true
 ```
 
-### TRANSFER_ITEM
+### TRANSFER\_ITEM
 
 * Info: It transfer an item on the inventory
 * Command settings:
@@ -1270,7 +1270,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 - TRANSFER_ITEM 38 40
 ```
 
-### UNSAFE_TELEPORT_ON_CURSOR
+### UNSAFE\_TELEPORT\_ON\_CURSOR
 
 * Info: Teleports you on your cursor without considering that you will end up on in impossible places
 * Command setting:
@@ -1281,7 +1281,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 UNSAFE_TELEPORT_ON_CURSOR 20
 ```
 
-### WORLD_TELEPORT
+### WORLD\_TELEPORT
 
 * Info: Teleport to a world at the same location
 * Command setting:
