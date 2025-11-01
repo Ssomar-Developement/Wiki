@@ -111,7 +111,9 @@ activators:
 ### ACTIONBAR
 
 * Info: Display the action bar with your text + the time remaining (59, 58, 57...).
-* Command: ACTIONBAR {Your text} {delay}
+* Command settings:
+  * text: Your text to display
+  * delay: Duration in seconds
 * Example:
 
 ```yaml
@@ -369,12 +371,12 @@ activators:
 ### EICOOLDOWN
 
 * Info: It applys a cooldown to a specific ExecutableItems
-* Command: EICOOLDOWN \{PLAYER\} \{ID\} \{SECONDS\} \{boolean TICKS\} \[optional activator id]
-  * \{PLAYER\}: The player to target the command
-  * \{ID\}: The id of the ExecutableItem or "all" for all ExecutableItems
-  * \{Seconds\}: The amount of time
-  * \{boolean TICKS\}: If you want the time to be in ticks
-  * \[optional activator id]: You can apply it to a specific activator id
+* Command settings:
+  * PLAYER: The player to target the command
+  * ID: The id of the ExecutableItem or "all" for all ExecutableItems
+  * SECONDS: The amount of time
+  * boolean TICKS: If you want the time to be in ticks
+  * optional activator id: You can apply it to a specific activator id
 * Example: 
 
 ```yaml
@@ -389,12 +391,12 @@ activators:
 ### EBCOOLDOWN
 
 * Info: It applys a cooldown to a specific ExecutableBlocks
-* Command: EBCOOLDOWN \{PLAYER\} \{ID\} \{SECONDS\} \{boolean TICKS\} \[optional activator id]
-  * \{PLAYER\}: The player to target the command
-  * \{ID\}: The id of the ExecutableBlocks or "all" for all ExecutableBlocks
-  * \{Seconds\}: The amount of time
-  * \{boolean TICKS\}: If you want the time to be in ticks
-  * \[optional activator id]: You can apply it to a specific activator id
+* Command settings:
+  * PLAYER: The player to target the command
+  * ID: The id of the ExecutableBlocks or "all" for all ExecutableBlocks
+  * SECONDS: The amount of time
+  * boolean TICKS: If you want the time to be in ticks
+  * optional activator id: You can apply it to a specific activator id
 * Example: 
 
 ```yaml
@@ -409,12 +411,12 @@ activators:**
 ### EECOOLDOWN
 
 * Info: It applys a cooldown to a specific ExecutableItems
-* Command: EECOOLDOWN \{PLAYER\} \{ID\} \{SECONDS\} \{boolean TICKS\} \{optional activator\}
-  * \{PLAYER\}: The player to target the command
-  * \{ID\}: The id of the ExecutableEvent  or "all" for all ExecutableEvents
-  * \{Seconds\}: The amount of time
-  * `{boolean TICKS}`: If you want the time to be in ticks
-  * \[optional activator id]: You can apply it to a specific activator id
+* Command settings:
+  * PLAYER: The player to target the command
+  * ID: The id of the ExecutableEvent  or "all" for all ExecutableEvents
+  * SECONDS: The amount of time
+  * boolean TICKS: If you want the time to be in ticks
+  * optional activator id: You can apply it to a specific activator id
 * Example: 
 
 ```yaml
@@ -473,8 +475,8 @@ activators:
 ### FORMAT\_ENCHANTMENTS
 
 * Info: It formats all enchantments in your lore
-* Command: FORMAT\_ENCHANTMENTS \{slot\}
-  * It supports -1 as slot to target the mainhand
+* Command settings:
+  * slot: The slot to target (-1 for mainhand)
 * Example:
 
 ```yaml
@@ -709,8 +711,12 @@ activators:
 ### OPEN\_CHEST
 
 * Info: It opens a chest in the selected location
-* Command: OPENCHEST \{world\} \{x\} \{y\} \{z\} \[bypassProtections]
-  * `{bypassProtections}`: If it will open the chest anyways even if its protected
+* Command settings:
+  * world: World name
+  * x: X coordinate
+  * y: Y coordinate
+  * z: Z coordinate
+  * bypassProtections: (optional) If it will open the chest anyways even if its protected
 * Example:
 
 ```yaml
@@ -1225,7 +1231,8 @@ activators:
 ### SUDO
 
 * Info: Forces you to run a command
-* Command: SUDO (command)
+* Command settings:
+  * command: The command to run
 * Example:
 
 ```yaml
@@ -1241,7 +1248,8 @@ activators:
 
 * Info: Gives the player OP, SUDOs the player and DEOPs it
 * Extra Info: During the OP, the player can only run the specified command after the SUDOOP, all other commands are blocked when the player is OP, and if the server crashes, no problem. The player will be DEOPed when the player reconnects.
-* Command: SUDO\_OP (command)
+* Command settings:
+  * command: The command to run with OP
 * Example:
 
 ```yaml
@@ -1280,15 +1288,17 @@ activators:
 ### TRANSFER\_ITEM
 
 * Info: Swaps 2 items in the inventory by slot
-* Command: TRANSFER\_ITEM \{slot of launcher\} \{slot of receiver\} \[boolean drop]
-  * `{slot of launcher}`: Target slot for slot no.1
-  * `{slot of receiver}`: Target slot for slot no.2
-  * \[boolean drop]: (default = false) Whether `{slot of launcher}` gets dropped during the swap or not
+* Command settings:
+  * slot of launcher: Target slot for slot no.1
+  * slot of receiver: Target slot for slot no.2
+  * boolean drop: (optional, default = false) Whether slot of launcher gets dropped during the swap or not
 
 ### XPBOOST
 
 * Info: Boost the xp gain for a time.
-* Command: XPBOOST \{multiplier\} \{timeinsecs\}
+* Command settings:
+  * multiplier: XP multiplier value
+  * timeinsecs: Duration in seconds
 * Example:
 
 ```yaml
