@@ -794,7 +794,7 @@ activators:
   * `{yShift}`: Same as left,right, except with a different axis. 
   * `{throughEntities}`: Boolean: Whether or not the HITSCAN can go through entities.
   * `{throughBlocks}`: Boolean: Whether or not the HITSCAN can go through blocks. 
-  * `{command(s)}`: The same than AROUND commands, you can type command1 <+>; command2 ... and use the placeholder %around\_target%
+  * `{command(s)}`: The same than AROUND commands, you can type command1 <\+>; command2 ... and use the placeholder %around\_target%
 * Example:
 
 ```yaml
@@ -818,7 +818,7 @@ activators:
   * `{yShift}`: Same as left,right, except with a different axis. 
   * `{throughEntities}`: Boolean: Whether or not the HITSCAN can go through entities.
   * `{throughBlocks}`: Boolean: Whether or not the HITSCAN can go through blocks. 
-  * `{command(5)}`: The same than AROUND commands, you can type command1 <+> command2 ... and use the placeholder %around\_target%
+  * `{command(5)}`: The same than AROUND commands, you can type command1 <\+> command2 ... and use the placeholder %around\_target%
 * Example:
 
 ```yaml
@@ -903,9 +903,9 @@ HITSCAN_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throug
     * WHITELIST(CHICKEN)
 
 :::tip
-You can add **multiple commands** ! Use the separator **<+>**
+You can add **multiple commands** ! Use the separator **<\+>**
 
-Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
+Example: minecraft:effect give .. **<\+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -951,11 +951,11 @@ You can nest MOB\_AROUND with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL\
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : <+>
+base command separator : <\+>
 
-first nested command : <+::step1>
+first nested command : <\+::step1>
 
-... : <+::step2> , <+::step3>, ...
+... : <\+::step2> , <\+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -973,9 +973,9 @@ first nested command : %around\_target::step1%
     * `{command(s)}`: The commands that will be executed
 
 :::tip
-You can add **multiple commands** ! Use the separator **<+>**
+You can add **multiple commands** ! Use the separator **<\+>**
 
-Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
+Example: minecraft:effect give .. **<\+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -997,11 +997,11 @@ You can nest MOB\_NEAREST with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : <+>
+base command separator : <\+>
 
-first nested command : <+::step1>
+first nested command : <\+::step1>
 
-... : <+::step2> , <+::step3>, ...
+... : <\+::step2> , <\+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -1019,9 +1019,9 @@ first nested command : %around\_target::step1%
     * `{command}`: The command that will be executed
 
 :::tip
-You can add **multiple commands** ! Use the separator **<+>**
+You can add **multiple commands** ! Use the separator **<\+>**
 
-Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
+Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<\+>** DELAY 5 **<\+>**  DAMAGE 5
 :::
 
 :::info
@@ -1043,11 +1043,11 @@ You can nest NEAREST with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : <+>
+base command separator : <\+>
 
-first nested command : <+::step1>
+first nested command : <\+::step1>
 
-... : <+::step2> , <+::step3>, ...
+... : <\+::step2> , <\+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -1211,7 +1211,7 @@ A: run **`SPIN {duration} 0`** for example
 ```
 
 :::info
-This is not the same as essential's smite command. If you want to smite your targets, put it on target commands or entity commands along with the proper activators like `PLAYER_CLICK_ON_PLAYER` for exampl&#x65;**.**
+This is not the same as essential's smite command. If you want to smite your targets, put it on target commands or entity commands along with the proper activators like `PLAYER_CLICK_ON_PLAYER` for example.
 :::
 
 ### STUN ENABLE/DISABLE
