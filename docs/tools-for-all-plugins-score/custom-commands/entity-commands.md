@@ -26,6 +26,7 @@ In addition of the following list of commands you can also use:
 
 <LinkPreview
   url="docs/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity"
+  title="Mixed commands (Compatible with Player and Entity)"
 />
 
 These commands can be used in the Player related commands OR Entity related commands.
