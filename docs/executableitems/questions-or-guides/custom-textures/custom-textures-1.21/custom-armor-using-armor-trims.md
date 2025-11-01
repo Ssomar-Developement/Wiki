@@ -1,10 +1,11 @@
 # Custom armor (using armor trims)
 
-Hey ! If you have a server on 1.20 with trims, and don't mind changing them to get new custom armors, this is your place !
+This guide shows you how to create custom armor textures in Minecraft 1.20+ by replacing armor trims.
 
-But.. if you don't want to lose your armor trims AND still want to add custom armors, this is not your place... you should take a look at google/youtube about optifine retexturing ^^
-
-Anyways, for the people who wants it, let's start !
+:::info Version Requirements
+- **Minecraft 1.20+**: This method uses armor trims introduced in 1.20
+- **Pre-1.20**: For older versions, use OptiFine CIT (Custom Item Textures) retexturing instead
+:::
 
 :::warning
 THIS METHOD NEEDS TO REMOVE A CURRENT TRIM TO ADD YOUR CUSTOM ARMOR
@@ -12,11 +13,11 @@ THIS METHOD NEEDS TO REMOVE A CURRENT TRIM TO ADD YOUR CUSTOM ARMOR
 EACH TRIM YOU REMOVE, ONE CUSTOM ARMOR MORE YOU HAVE
 :::
 
-## Video tutorial
+## Video Tutorial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cfef11fQlhY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Create the texture
+## Step 1: Create the Armor Texture
 
 We have to create the texture for our new armor, we can do this here or using another programs up to you.
 
@@ -30,9 +31,9 @@ Having something like this
 
 Well, now we have our armor textures, perfect ! Now let's create the texture pack
 
-## Creating the texture pack
+## Step 2: Create the Texture Pack Structure
 
-I am asumming you already know how texture pack works so I will just make how the path of the stuff should it be
+Create the following folder structure for your texture pack:
 
 ```
 📁ExecutableItemsTexturePack
@@ -47,15 +48,18 @@ I am asumming you already know how texture pack works so I will just make how th
 
 ```
 
-But.. what the name of the images will be ? ,well, for this part we have to select what trim we are going to replace, you have many trims such as "raiser", "host", "eye", etc, in this case I will change the "coast" one.
+## Step 3: Name Your Texture Files
 
-So the name of my files would be
+Choose which armor trim to replace. Available trims include:
+- coast, dune, eye, host, raiser, rib, sentry, shaper, silence, snout, spire, tide, vex, ward, wayfinder, wild
 
-"coast": the texture that has the helmet, chestplate and boots
+For this example, we'll replace the **coast** trim.
 
-"coast\_leggings": texture that has the leggings
+### File Naming Convention:
+- `coast.png` - Helmet, chestplate, and boots texture
+- `coast_leggings.png` - Leggings texture
 
-Having something like this
+Place these files in the armor folder:
 
 ```
 📁ExecutableItemsTexturePack
@@ -70,16 +74,62 @@ Having something like this
                             - 📷coast_leggings.png
 ```
 
-Finally, lets go into our minecraft and test with the coast trim
+## Step 4: Apply the Trim in Minecraft
 
-## Let's test !
+1. Load your texture pack in Minecraft
+2. Get any armor piece (diamond armor recommended)
+3. Apply the **coast** trim using a Smithing Table
+4. Your custom armor texture will appear!
 
-It seems working !
+## Step 5: Create ExecutableItem with Custom Armor
 
-And.. it works 
+Now configure your ExecutableItem to use the custom armor:
 
-Perfect ! Now you can do the same with another trims, until you change all the available trims O.O
+```yaml
+material: DIAMOND_CHESTPLATE
+name: '&6&lCustom Legendary Armor'
+lore:
+- '&7Epic custom armor'
 
-### Texture pack
+armorTrim:
+  material: QUARTZ  # Trim material (color)
+  pattern: COAST    # The trim we replaced
+```
 
-\{% file src="..//img/texture.zip" %\}
+:::tip
+You can replace multiple trims to have multiple custom armor sets! Each trim replacement gives you one new custom armor design.
+:::
+
+## Available Armor Trims
+
+Here are all 16 armor trims you can replace (1.20+):
+
+| Trim Name | Location | Notes |
+|-----------|----------|-------|
+| coast | End City | Common in End |
+| dune | Desert Temple | Desert biome |
+| eye | Stronghold | Stronghold library |
+| host | Trail Ruins | Archaeology |
+| raiser | Trail Ruins | Archaeology |
+| rib | Nether Fortress | Nether |
+| sentry | Pillager Outpost | Overworld |
+| shaper | Trail Ruins | Archaeology |
+| silence | Ancient City | Deep Dark |
+| snout | Bastion Remnant | Nether |
+| spire | End City | Tall structures |
+| tide | Ocean Monument | Ocean |
+| vex | Woodland Mansion | Rare |
+| ward | Ancient City | Deep Dark |
+| wayfinder | Trail Ruins | Archaeology |
+| wild | Jungle Temple | Jungle |
+
+Choose trims you don't use often to replace with custom armor!
+
+## Related Documentation
+
+- [Custom Textures 1.21+](/docs/executableitems/questions-or-guides/custom-textures/custom-texture-1.21+)
+- [Armor Trim Configuration](/docs/executableitems/configurations/item-configuration/item-features#armor-trim)
+
+## Example Texture Pack
+
+{% file src="../img/texture.zip" %}
