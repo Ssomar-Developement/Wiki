@@ -2,10 +2,10 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IAAj2a2dBQo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-\{% file src="..//img/AnimatedTextures1 (1).zip" %\}
+📦 [Download AnimatedTextures1.zip](/img/AnimatedTextures1.zip)
 
 :::info
-The same I said before, this requires previous knowledge, check [****General Items****](general-items.md) for basic stuff[https://youtu.be/IAAj2a2dBQo](https://youtu.be/IAAj2a2dBQo)
+This tutorial requires previous knowledge of custom textures. Check the [General Items](general-items.md) guide for basic texture pack setup before proceeding.
 :::
 
 ## Idea
@@ -18,11 +18,11 @@ The texture size is something important because we must do some maths after crea
 
 * They will have a order, so take care your animation makes sense for you.
 
-![](<..//img/image (373).png>)
+![](</img/image (373).png>)
 
 In this case they are 16x16, we have to make a texture file where they all are in a row, so it will have 16x(6x16) -> 16x96 , then put all them in row in correct order and it will look like this
 
-![](<..//img/image (233).png>)
+![](</img/image (233).png>)
 
 ### Files
 
@@ -37,14 +37,14 @@ In this case they are 16x16, we have to make a texture file where they all are i
 ```
 
 :::info
-frametime is how much frames it will show you in 20 ticks, in this case, the sword will display 1 frame per 5 ticks, I think that's fine, you can set a faster or lower speed as you want.
+`frametime` controls how long each frame displays (in game ticks). With `frametime: 4`, each frame displays for 4 ticks. Since we have 6 frames, the full animation takes 24 ticks (1.2 seconds). Lower values = faster animation, higher values = slower animation.
 :::
 
 :::warning
 The name of the file .mcmeta should be equals as the name of the png texture, so it will look like this
 :::
 
-![](<..//img/image (128).png>)
+![](</img/image (128).png>)
 
 :::info
 Both files must be together, so if the animatedtexture**.png** is inside "customtextures" folder, the animatedtexture.png**.mcmeta** must be there too
@@ -52,6 +52,6 @@ Both files must be together, so if the animatedtexture**.png** is inside "custom
 
 * then just save your texture pack and test.
 
-![](<..//img/2022-07-15 16-52-08.gif>)
+![](</img/2022-07-15 16-52-08.gif>)
 
 * And that's it, make the thing you would want, it is the same for blocks if you want animated blocks. I hope you understood everything and if have any question (that wasn't explained in the last tutorials) feel free to ask it in Discord. Have a nice day !!
