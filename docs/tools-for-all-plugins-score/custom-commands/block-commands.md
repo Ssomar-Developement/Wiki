@@ -269,7 +269,7 @@ DRAININCUBE *12 WATER
   * `{depth}`: How depth the rectangle will be.
   * `{drop}`: Whether the block drops loot or not
   * `{create blockBreakEvent}`: if the plugin will generate a blockBreakEvent for each broken block by the MINEINCUBE (default true)
-  * `{direction}`: If you want to force a direction (Optional).
+  * `[direction]`: (Optional) (default = the player direction) If you want to force a direction.
 * Example:
 
 ```
@@ -560,7 +560,7 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
   * `{world}`: The world you want the Executable Block to be at
   * `{replace}`: Whether you want to replace a block that exists in that location or not
   * `{bypassProtection}`: (Default false) Whether you want to replace the block even if there is a terrain protection from a plugin there. 
-  * `{ownerUUID}`: (Optional) The uuid of the player who would be the owner of the eb
+  * `[ownerUUID]`: (Optional) (default = no owner) The uuid of the player who would be the owner of the eb
 * Example:
 
 ```
@@ -590,7 +590,7 @@ And of course the vanilla spawners.
 
 * Info: It smelts the target block dropping the smelted item, for example iron\_ore -> iron\_ingot it supports fortune, if it can't be smelted nothing will happen
 * Command setting
-  * `{generateEvent}`: (Optional, default true) Whethe or not it generates a block break event
+  * `[generateEvent]`: (Optional) (default = true) Whethe or not it generates a block break event
 * Example:
 
 ```
@@ -612,7 +612,7 @@ And of course the vanilla spawners.
 * Info: Breaks blocks in veins in one block break
 * Command settings
   * `{max_vein_size}`: Max amount of blocks the command can break
-  * `{generateEvent}`: (Optional, default true) Whethe or not it generates a block break event
+  * `[generateEvent]`: (Optional) (default = true) Whether or not it generates a block break event
 * Example:
 
 ```
