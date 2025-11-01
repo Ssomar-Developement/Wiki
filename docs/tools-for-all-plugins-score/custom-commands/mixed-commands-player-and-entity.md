@@ -1,10 +1,9 @@
 # Mixed Commands (Player & Entity)
 
 :::info
-These custom commands work for PLAYER but also for ENTITY
+These custom commands work for Player but also for Entity
 
 So in:
-
 * playerCommands
 * targetCommands
 * entityCommands
@@ -17,13 +16,10 @@ _Sorted by alphabetical order_
 ### ADD\_TEMPORARY\_ATTRIBUTE
 
 * Info: Adds temporary attributes to a player/entity
-* Command:
-  * ```
-    ADD_TEMPORARY_ATTRIBUTE `{attribute}` `{amount}` `{operation}` `{time in ticks}`
-    ```
-    * `{attribute}` : [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html#field-summary](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html#field-summary)
+* Command settings:
+    * `{attribute}` : [Attribute list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html#field-summary)
     * `{amount}` : Double value that the temp attribute will have
-    * `{operation}` : [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html#enum-constant-summary](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html#enum-constant-summary)
+    * `{operation}` : [Operation list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/AttributeModifier.Operation.html#enum-constant-summary)
     * `{time in ticks}` : Amount of time before the attribute expires
 * Example:
   * `ADD_TEMPORARY_ATTRIBUTE GRAVITY 2 ADD_NUMBER 5`
@@ -31,9 +27,8 @@ _Sorted by alphabetical order_
 ### ALL\_PLAYERS
 
 * Info: Targets all players.
-* Command: 
-  * `ALL_PLAYERS {command}`
-    * `{command}`: The command that will be executed
+* Command setting: 
+  * `{command}`: The command that will be executed
 * Example:
 
 ```yaml
@@ -73,9 +68,8 @@ activators:
 ### ALL\_MOBS
 
 * Info: Targets all players.
-* Command: 
-  * `ALL_MOBS {command}`
-    * `{command}`: The command that will be executed
+* Command setting: 
+    * `{command(s)}`: The command that will be executed
 * Example:
 
 ```yaml
@@ -128,16 +122,16 @@ It supports blacklist and whitelist
 
 * Info: Targets players in a specific radius and makes them run commands
 * Command settings:
-  * distance: To how far in radius the command will select players (Default 3)
-  * displayMsgIfNoPlayer: (true or false) To notify the user of the item if it managed to target players or not (Default true)
-  * throughBlocks: it will affect or not the players that are behind blocks (Default true)
-  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected. (Default 0)
-  * commands: The commands that will be executed for the target players.
+  * `{distance}`: To how far in radius the command will select players (Default 3)
+  * `{displayMsgIfNoPlayer}`: (true or false) To notify the user of the item if it managed to target players or not (Default true)
+  * `{throughBlocks}`: it will affect or not the players that are behind blocks (Default true)
+  * `{safeDistance}`: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected. (Default 0)
+  * `{commands}`: The commands that will be executed for the target players.
 
 :::tip
-You can add **multiple commands** ! Use the separator **&lt;+&gt;**
+You can add **multiple commands** ! Use the separator **<+>**
 
-Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **&lt;+&gt;** DELAY 5 **&lt;+&gt;**  DAMAGE 5
+Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -173,11 +167,11 @@ You can nest AROUND with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : &lt;+&gt;
+base command separator : <+>;
 
-first nested command : &lt;+::step1&gt;
+first nested command : <+::step1>;
 
-... : &lt;+::step2&gt; , &lt;+::step3&gt;, ...
+... : <+::step2>; , <+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -267,13 +261,13 @@ activators:
 Placeholders that came from plugins like ExecutableItems, ExecutableBlocks will be parsed not by the player affected by the AROUND command.
 
 For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_faction\_name::%) works through checking if the block's factions variable value is equal to the targetted player's faction\
-Placeholder Source: ([https://factions.support/placeholderapi/](https://factions.support/placeholderapi/))
+Placeholder Source: (PlaceholderAPI](https://factions.support/placeholderapi/))
 :::
 
 ### BACKDASH
 
 * Info: Launches the player/target at the opposite direction of where they are facing at **(YOU CANNOT BE LAUNCHED IN THE AIR)**
-* Command: BACKDASH \{number\}
+* Command setting:
   * `{amount}`: The value to how strong the launch will be
 * Example:
 
@@ -296,7 +290,8 @@ activators:
 ### BURN
 
 * Info: Burns the player/target
-* Command: BURN \{timeinsecs\}
+* Command setting:
+ * `{timeinsecs}`: Time of burn in seconds
 * Example:
 
 ```yaml
@@ -318,7 +313,7 @@ activators:
 ### CONSOLEMESSAGE
 
 * Info: Sends a message to the console
-* Command: CONSOLEMESSAGE \{text\}
+* Command setting:
   * `{text}`: Text to send tho the console
 * Example:
 
@@ -341,8 +336,8 @@ activators:
 ### COPYEFFECTS
 
 * Info: Copy the effects of the target
-* Command: COPYEFFECTS \[limitDuration]
-  * \[limitDuration]: it means if the target has for example 3 mins of poison effect, if you limit it to 5 secs, you will only receive a poison effect of 5 seconds
+* Command setting:
+  * `{limitDuration}`: it means if the target has for example 3 mins of poison effect, if you limit it to 5 secs, you will only receive a poison effect of 5 seconds
 * Example:
 
 ```yaml
@@ -359,13 +354,12 @@ activators:
     option: # Here goes an activator that is at least instance of entity
     entityCommands:
     - COPYEFFECTS 5 # Using this will copy the entity effects into the player 
-
 ```
 
 ### CUSTOMDASH1
 
 * Info: Launches you to a specific location
-* Command: CUSTOMDASH1 \{x\} \{y\} \{z\} \{fallDamage\}
+* Command settings:
   * `{x}`: X-Coordinate
   * `{y}`: Y-Coordinate
   * `{z}`: Z-Coordinate
@@ -455,7 +449,7 @@ activators:
 ### CUSTOMDASH2
 
 * Info: Launches you away from a specific location
-* Command: CUSTOMDASH2 \{x\} \{y\} \{z\} \{strength\}
+* Command settings:
   * `{x}`: X-Coordinate
   * `{y}`: Y-Coordinate
   * `{z}`: Z-Coordinate
@@ -516,8 +510,8 @@ activators:**
 ### CUSTOMDASH3
 
 * Info: Dashes the target following a specific math function
-* Command: CUSTOMDASH3 \{function\} \{max x value\} \{front z default true\}
-  * `{function}`: The math function to follow
+* Command settings:
+  * `{function}`: The math function to follow. [Function calculator website](https://www.geogebra.org/calculator)
   * `{max x value}`: Max x value of the function
   * `{front z}`: If the dash is frontward or backwardsti
 * Example:
@@ -538,10 +532,6 @@ activators:
     - CUSTOMDASH3 cosx 10 true
 ```
 
-:::info
-You can see how function works here [https://www.geogebra.org/calculator](https://www.geogebra.org/calculator)
-:::
-
 ### DAMAGE
 
 * Info: Damages the player with a specific amount. (Damage dealt with the help of this command is counted as player damage)
@@ -549,11 +539,11 @@ You can see how function works here [https://www.geogebra.org/calculator](https:
   *   The spigot damage type is ENTITY\_ATTACK if there is a player involved on the activator.
 
       Otherwise, the spigot damage type is CUSTOM
-* Command: DAMAGE \{amount\} \{amplified If Strength Effect\} \{amplified with attack attribute\} \[damageType]
+* Command settings:
   * `{amount}`: Amount of damage in hitpoints (Not in hearts)
   * `{amplified If Strength Effect}`: true or false, Strength 1 -> + 1.5 damage, ....
   * `{amplified with attack attribute}`: true or false, player with 500% bonus damage, the command will do 5 x "\<damage>".
-  * \[damageType]: The type of damage -> [List](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/damage/DamageType.html)
+  * `{damageType}`: The type of damage -> [DamageType List](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/damage/DamageType.html)
 * Example:
 
 ```yaml
@@ -603,7 +593,7 @@ minecraft:damage %target% 10 by %player%\
   *   The spigot damage type is ENTITY\_ATTACK if there is a player involved on the activator.
 
       Otherwise, the spigot damage type is CUSTOM
-* Command: DAMAGE\_NO\_KNOCKBACK \{amount\} \{amplified If Strength Effect\} \{amplified with attack attribute\}
+* Command settings:
   * `{amount}`: Amount of damage in hitpoints (Not in hearts)
   * `{amplified If Strength Effect}`: true or false, Strength 1 -> + 1.5 damage, ....
   * `{amplified with attack attribute}`: true or false, player with 500% bonus damage, the command will do 5 x "\<damage>".
@@ -646,7 +636,7 @@ activators:
 * Info: Allows you to give yourself custom damage boost
   * This command boost the damage of custom commands too e.g. (DAMAGE, DAMAGE\_NO\_KNOCKBACK)
   * This command doesn't boost the damage for projectiles
-* Command: DAMAGE\_BOOST \{modification in percentage example 100\} \{timeinticks\}
+* Command settings:
   * `{modification in percentage example 100}`: Amount of the boost. Example below:
     * 50 = Makes you deal +50% damage
     * -80 = Makes you deal -80% damage
@@ -685,22 +675,22 @@ activators:
 ### DAMAGE\_RESISTANCE
 
 * Info: Allows you to give yourself custom damage resistance by giving yourself customized damage intake magnifications
-* Command: DAMAGE\_RESISTANCE \{modification in percentage example 100\} \{timeinticks\}
+* Command settings:
   * `{modification in percentage example 100}`: Amount of the magnification. Example below:
     * 50 = Makes you take +50% damage\
       -80 = Makes you take -80% damage
   * `{timeinticks}`: The duration of the custom damage resistance
 * Example: (The command below gives you +50% damage taken for 10s)
 
-```
+```yaml
 - DAMAGE_RESISTANCE 50 200
 ```
 
 ### EQUIPMENT\_VISUAL\_REPLACE
 
 * Info: Replaces VISUALLY (there is no risk for losing items) a equipment slot with certain material
-* Command: EQUIPMENT\_VISUAL\_REPLACE \{EquipmentSlot\} \{material or EI:\} \{amount\} \{timeinticks\}
-  * \{EquipmentSlot\}: The slot
+* Command settings:
+  * `{EquipmentSlot}`: The slot
     * Options:
       * -1
       * 40
@@ -710,58 +700,67 @@ activators:
       * 39
   * `{material}`: The item id of the material you want to replace with or the EI id
   * `{amount}`: The stack amount 
-  * `{timeinticks}`: How long the disguise is gonna last for
+  * `{timeinticks}`: How long the disguise is gonna last for. (20 ticks = 1 sec)
 *   Example: 
 
-```
+```yaml
 - EQUIPMENT_VISUAL_REPLACE 39 CARVED_PUMPKIN 1 100
 ```
 
-```
+```yaml
 - EQUIPMENT_VISUAL_REPLACE 39 EI:test 1 100
 ```
 
 ### EQUIPMENT\_VISUAL\_CANCEL
 
 * Info: Cancel the EQUIPMENT\_VISUAL\_REPLACE command
-* Command: EQUIPMENT\_VISUAL\_CANCEL \{EquipementSlot\}
+* Command setting:
+  * `{EquipmentSlot}`: The slot
+    * Options:
+      * -1
+      * 40
+      * 36
+      * 37
+      * 38
+      * 39
 * Example:
 
-```
+```yaml
 - EQUIPMENT_VISUAL_CANCEL 39
 ```
 
 ### FORCEDROP
 
 * Info: It forces the player to drop the item that he has in a specific slot.
-* Command: FORCEDROP \{slot\} 
+* Command setting: 
   * `{slot}`: number, -1 for main hand
 
-![](https://i.imgur.com/KAwW8N0.png)
+![](</img/slots_info.png>)
 
 * Example:
 
-```
+```yaml
 - FORCEDROP -1
 ```
 
 ### FRONTDASH
 
 * Info: Launches the player/target at the direction of where they are facing at
-* Command: FRONTDASH \{number\} \[custom\_y] \[falldamage]
+* Command settings:
   * `{number}`: The value to how strong the launch will be
-  * \[custom\_y] : To set a vertical boost (I advice you to set a little value like 0.5 - 1 if you dont want a big jump.)
-  * \[falldamage]: set to enable or disable the fall damage
+  * `{custom_y}` : To set a vertical boost (I advice you to set a little value like 0.5 - 1 if you dont want a big jump.)
+  * `{falldamage}`: set to enable or disable the fall damage
 * Example:
 
-```
+```yaml
 - FRONTDASH 5 0.5 false
 ```
 
 ### GLACIAL\_FREEZE
 
 * Info: It applies the freeze of Minecraft 1.18 snow
-* Command: GLACIAL\_FREEZE \{time in ticks\}
+* Command setting:
+ * `{time in ticks}`: Time of the freeze in ticks. (20 ticks = 1 sec)
 * Example:
 
 ```yaml
@@ -771,100 +770,103 @@ activators:
 ### GLOWING
 
 * Info: Applies glowing to the player
-* Command: \{time in ticks\} \[color]
+* Command settings:
   * `{time in ticks}`: Duration of the glow in ticks
-  * \[color]: To what color will the glow have
-    * Color Reference: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Color.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Color.html)
+  * `{color}`: To what color will the glow have. [Color Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Color.html)
 * Example:
 
-```
+```yaml
 - GLOWING 100 BLUE
 ```
 
 ### HITSCAN\_PLAYERS
 
 * Info: It allows to run a command at certain direction to players
-* Command: HITSCAN\_PLAYERS range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
-  * Range: how far an entity can be to be targetted by the HITSCAN command
-  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
-  * Pitch: What direction to shoot it in, relative to player pitch
-  * Yaw: Same thing as Pitch but with yaw
-  * leftRightShift:
+* Command settings:
+  * `{range}`: how far an entity can be to be targetted by the HITSCAN command
+  * `{radiusOfHitscan}`: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * `{pitch}`: What direction to shoot it in, relative to player pitch
+  * `{yaw}`: Same thing as Pitch but with yaw
+  * `{leftRightShift}`:
     * -5 = the hitscan STARTS from 5 blocks to the left.
     * 0 = Hitscan is centered where the player is.
     * 5 = hitscan STARTS from 5 blocks to the right of the player. 
-  * yShift: Same as left,right, except with a different axis. 
-  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
-  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks. 
-  * Commands: The same than AROUND commands, you can type command1 &lt;+&gt; command2 ... and use the placeholder %around\_target%
-* Image to understand:
-  *
+  * `{yShift}`: Same as left,right, except with a different axis. 
+  * `{throughEntities}`: Boolean: Whether or not the HITSCAN can go through entities.
+  * `{throughBlocks}`: Boolean: Whether or not the HITSCAN can go through blocks. 
+  * `{command(s)}`: The same than AROUND commands, you can type command1 <+>; command2 ... and use the placeholder %around\_target%
+* Example:
 
-      
+```yaml
+- HITSCAN_PLAYERS range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true DAMAGE 5 <+> JUMP 5
+```
+* Image to understand:
+![](</img/hitscan_players.png>)
 
 ### HITSCAN\_ENTITIES
 
 * Info: It allows to run a command at certain direction to entities
-* Command: HITSCAN\_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true COMMANDS HERE
-  * Range: how far an entity can be to be targetted by the HITSCAN command
-  * RadiusOfHitscan: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
-  * Pitch: What direction to shoot it in, relative to player pitch
-  * Yaw: Same thing as Pitch but with yaw
-  * leftRightShift:
+* Command settings:
+  * `{range}`: how far an entity can be to be targetted by the HITSCAN command
+  * `{radiusOfHitscan}`: How WIDE the cylinder is. It's basically the difference of shooting a bullet vs shooting a cannonball.
+  * `{pitch}`: What direction to shoot it in, relative to player pitch
+  * `{yaw}`: Same thing as Pitch but with yaw
+  * `{leftRightShift}`:
     * -5 = the hitscan STARTS from 5 blocks to the left.
     * 0 = Hitscan is centered where the player is.
     * 5 = hitscan STARTS from 5 blocks to the right of the player. 
-  * yShift: Same as left,right, except with a different axis. 
-  * throughEntities: Boolean: Whether or not the HITSCAN can go through entities.
-  * throughBlocks: Boolean: Whether or not the HITSCAN can go through blocks. 
-  * Commands: The same than AROUND commands, you can type command1 &lt;+&gt; command2 ... and use the placeholder %around\_target%
-* Image to understand:
-  *
+  * `{yShift}`: Same as left,right, except with a different axis. 
+  * `{throughEntities}`: Boolean: Whether or not the HITSCAN can go through entities.
+  * `{throughBlocks}`: Boolean: Whether or not the HITSCAN can go through blocks. 
+  * `{command(5)}`: The same than AROUND commands, you can type command1 <+> command2 ... and use the placeholder %around\_target%
+* Example:
 
-      
+```yaml
+HITSCAN_ENTITIES range:5 radius:0 pitch:0 yaw:0 leftRightShift:0 yShift:0 throughBlocks:true throughEntities:true HEAL 10 <+> BACKDASH 5
+```
+* Image to understand:
+![](</img/hitscan_entities.png>)
 
 ### INVULNERABILITY
 
 * Info: Sets the player invulnerable for a certain amount of time
-* Command: INVULNERABILITY \{ticks\}
+* Command setting:
+ * `{ticks}`: Time of the invulnerability in ticks. (20 ticks = 1 sec)
   * It supports negative values to decrease the invulnerability time, such as the one after being hit.
 * Example:
 
-```
+```yaml
 - INVULNERABILITY 60
 ```
 
 ### JUMP
 
 * Info: Launches the player in the air
-* Command: JUMP \{number\} \[fall damage]
+* Command setting:
   * `{number}`: To how strong the launch will be
-  * \[fall damage]: Select if want the command to have fall damage. Default -> false
+  * `{fall damage}`: (Optional) (default = false) Select if want the command to have fall damage.
 * Example:
 
-```
+```yaml
 - JUMP 20
 ```
 
 ### LAUNCH\_ENTITY
 
 * Info: Launches an entity to your direction
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
-
-* Command: LAUNCH\_ENTITY \{entityType\} \{speed\} \[angle rotation y]
-  * `{entityType}`: Mob ID of the launched entity (ALL CAPS)
+* Command settings:
+  * `{entityType}`: Mob ID of the launched entity (ALL CAPS) [EntityType list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
   * `{speed}`: (number, Double) Define the speed of the entity
-  * \[angle rotation y]: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
+  * `[angle rotation y]`: (only for 1.14 and +) (Optional) (default = 0) (in degrees) Define the direction where the entity will be launched
 * Example:
 
-```
+```yaml
 - LAUNCH_ENTITY PIG 2
 ```
 
 * Example to make tri-shoot:
 
-```
+```yaml
 - LAUNCH_ENTITY PIG 2
 - LAUNCH_ENTITY PIG 2 15
 - LAUNCH_ENTITY PIG 2 -15
@@ -873,37 +875,37 @@ activators:
 ### MLIB\_DAMAGE
 
 * Info: Deals damage to target but the damage type is mainly from MythicLib plugin
-* Command: MLIB\_DAMAGE \{number\} \{damageType\} \{knockback\} \[element]
+* Command settings:
   * `{number}`: Damage dealt to targets
-  * `{damage\_type}`: Damage type inflicted
+  * `{damage_type}`: Damage type inflicted
     * Example: MAGIC, PHYSICAL, WEAPON, SKILL, PROJECTILE, UNARMED, ON\_HIT, MINION, DOT;
   * `{knockback}`: true/false whether it knocks back the target
-  * \[element]: Specified what kind of element the attack is
-    * Reference: [https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref\_type=heads](https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref_type=heads)
+  * `{element}`: Specified what kind of element the attack is
+    * Reference: [Element list of MythicLib](https://gitlab.com/phoenix-dvpmt/mythiclib/-/blob/master/mythiclib-plugin/src/main/resources/default/elements.yml?ref_type=heads)
 * Example:
 
-```
+```yaml
 - MLIB_DAMAGE 10 PHYSICAL false FIRE
 ```
 
 ### MOB\_AROUND
 
 * Info: Targets entities in a specific radius and makes them run commands
-  * Available entities -> [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
+  * Available entities -> [LivingEntity list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/LivingEntity.html)
 * Command settings:
-  * distance: To how far in radius the command will select entities
-  * displayMsgIfNoEntity: (true or false) To notify the user of the item if it didn't manage to target any mobs.
+  * `{distance}`: To how far in radius the command will select entities
+  * `{displayMsgIfNoEntity}`: (true or false) To notify the user of the item if it didn't manage to target any mobs.
     * **Set to false to hide the message**
-  * throughBlocks: it will affect or not the mobs that are behind blocks
-  * safeDistance: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
+  * `{throughBlocks}`: it will affect or not the mobs that are behind blocks
+  * `{safeDistance}`: If the distance between the target and the launcher are below or equals to the safeDistance value then the target will not be affected.
   * You can BLACKLIST or WHITELIST entities adding one of these ones in anyplace of the command:
     * BLACKLIST(ZOMBIE,ARMOR\_STAND)
     * WHITELIST(CHICKEN)
 
 :::tip
-You can add **multiple commands** ! Use the separator **&lt;+&gt;**
+You can add **multiple commands** ! Use the separator **<+>**
 
-Example: minecraft:effect give .. **&lt;+&gt;** DELAY 5 **&lt;+&gt;**  DAMAGE 5
+Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -949,11 +951,11 @@ You can nest MOB\_AROUND with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL\
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : &lt;+&gt;
+base command separator : <+>
 
-first nested command : &lt;+::step1&gt;
+first nested command : <+::step1>
 
-... : &lt;+::step2&gt; , &lt;+::step3&gt;, ...
+... : <+::step2> , <+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -966,15 +968,14 @@ first nested command : %around\_target::step1%
 ### MOB\_NEAREST
 
 * Info: Targets the nearest mob from the player/target.
-* Command: 
-  * `MOB_NEAREST {max accepted distance} {command}`
+* Command settings:
     * `{max accepted distance}`:  Max distance accepted that the "entity" can be.
-    * `{command}`: The command that will be executed
+    * `{command(s)}`: The commands that will be executed
 
 :::tip
-You can add **multiple commands** ! Use the separator **&lt;+&gt;**
+You can add **multiple commands** ! Use the separator **<+>**
 
-Example: minecraft:effect give .. **&lt;+&gt;** DELAY 5 **&lt;+&gt;**  DAMAGE 5
+Example: minecraft:effect give .. **<+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -987,7 +988,7 @@ Example: %around\_target%, %around\_target\_uuid%
 
 Damages nearest player
 
-```
+```yaml
 - MOB_NEAREST 10 DAMAGE 5
 ```
 
@@ -996,11 +997,11 @@ You can nest MOB\_NEAREST with the commands : MOB\_AROUND, IF, MOB\_NEAREST, ALL
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : &lt;+&gt;
+base command separator : <+>
 
-first nested command : &lt;+::step1&gt;
+first nested command : <+::step1>
 
-... : &lt;+::step2&gt; , &lt;+::step3&gt;, ...
+... : <+::step2> , <+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -1013,15 +1014,14 @@ first nested command : %around\_target::step1%
 ### NEAREST
 
 * Info: Targets the nearest player from the player/target.
-* Command: 
-  * `NEAREST {max accepted distance} {command}`
+* Command settings:
     * `{max accepted distance}`: Max distance accepted that the "target" can be.
     * `{command}`: The command that will be executed
 
 :::tip
-You can add **multiple commands** ! Use the separator **&lt;+&gt;**
+You can add **multiple commands** ! Use the separator **<+>**
 
-Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **&lt;+&gt;** DELAY 5 **&lt;+&gt;**  DAMAGE 5
+Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
 :::
 
 :::info
@@ -1034,7 +1034,7 @@ Example: %around\_target%, %around\_target\_uuid%
 
 Damages nearest player
 
-```
+```yaml
 - NEAREST 8 DAMAGE 5
 ```
 
@@ -1043,11 +1043,11 @@ You can nest NEAREST with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
 
 If you do that the separator and the placeholders will evolve depending of the nested step.\
 
-base command separator : &lt;+&gt;
+base command separator : <+>
 
-first nested command : &lt;+::step1&gt;
+first nested command : <+::step1>
 
-... : &lt;+::step2&gt; , &lt;+::step3&gt;, ...
+... : <+::step2> , <+::step3>, ...
 
 \
 base placeholder : %around\_target%
@@ -1060,127 +1060,123 @@ first nested command : %around\_target::step1%
 ### OPMESSAGE
 
 * Info: It sends a message to OP online players and the console
-* Command: OPMESSAGE \{text\} 
+* Command setting:
   * `{text}`: Text to send
 * Example:
 
-```
+```yaml
 - OPMESSAGE This is my debug message
 ```
 
 ### PARTICLE
 
-* Info: Spawns particles in the player/target's location
+* Info: Spawns particles in the player/target's location. [Particles list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html)
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Particle.html)
-
-* Command: PARTICLE \{type\} \{quantity\} \{offset\} \{speed\}
+* Command settings:
   * `{type}`: The type of particle (ALL CAPS)
   * `{quantity}`: The amount of particles that will spawn
   * `{offset}`: The radius of the area where the particles may spawn in the player/target's location
   * `{speed}`: To how fast or how big particles will be
 * Example:
 
-```
+```yaml
 - PARTICLE FIREWORKS_SPARK 10 0.1 0.5
 ```
 
-### REGAIN HEALTH
+### REGAIN\_HEALTH
 
 * Info: Gives you a specific amount of HP
-* Command: REGAIN HEALTH \{amount\}
+* Command setting:
   * `{amount}`: The amount of HP you want to gain
+   * It suports negative values in case of you want to do "true damage". 
 * Example:
 
-```
-- REGAIN HEALTH 10
+```yaml
+- REGAIN_HEALTH 10
+- REGAIN_HEALTH -5
 ```
 
-:::info
-It suports negative values in case of you want to do "true damage".
-:::
-
-### REMOVEBURN
+### REMOVE_BURN
 
 * Info: Extinguishes you from burning
-* Command: REMOVEBURN
+* No command setting
 * Example:
 
-```
-- REMOVEBURN
+```yaml
+- REMOVE_BURN
 ```
 
-### REMOVEGLOW
+### REMOVE_GLOW
+
+* Info: Remove the glowing effect of a specific color to the player | target.
+* Command setting:
+ * `[color]`: (Optional) (default = WHITE) The color to remove. [Color Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html)
+* Example:
+
+```yaml
+- REMOVE_GLOW BLACK
+```
+
+### SET_GLOW
 
 * Info: Add the glowing effect with a specific color to the player | target.
-* Command: REMOVEGLOW \[color]
+* Command setting:
+ * `[color]`: (Optional) (default = WHITE) The color to remove. [Color Reference](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html)
 * Example:
 
-```
-- REMOVEGLOW BLACK
-```
-
-### SETGLOW
-
-* Info: Add the glowing effect with a specific color to the player | target.
-* Command: SETGLOW \[color]
-* Example:
-
-```
-- SETGLOW BLACK
+```yaml
+- SET_GLOW BLACK
 ```
 
 :::info
 Compatible with the plugin TAB using -> %score\_cmd-glow%
 :::
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html)
-
-### SETHEALTH
+### SET_HEALTH
 
 * Info: Sets your health into a specific amount
-* Command: SETHEALTH \{amount\}
+* Command setting:
   * `{amount}`: The amount of health you want it to set to
 * Example:
 
-```
-SETHEALTH 10
+```yaml
+SET_HEALTH 10
 ```
 
-### SETPITCH
+### SET_PITCH
 
 * Info: Forces the player to look in a certain pitch position (-90/90 degrees, up down direction)
-* Command: SETPITCH \{pitch\_number\} \[keepVelocity]
-  * `{pitch\_number}`: The number that you want to input. Placeholders work too
-  * \[keepVelocity]: It allows to keep the velocity of the player
+* Command settings:
+  * `{pitch_number}`: The number that you want to input. Placeholders work too
+  * `{keepVelocity}`: It allows to keep the velocity of the player
 * Example:
 
-```
-- SETPITCH 0 false
-- SETPITCH %target_pitch% false
+```yaml
+- SET_PITCH 0 false
+- SET_PITCH %target_pitch% false
 ```
 
-### SETYAW
+### SET_YAW
 
 * Info: Forces the player to look in a certain yaw position (360 degrees, left right direction)
-* Command: SETYAW \{yaw\_number\} \[keepVelocity]
-  * `{yaw\_number}`: The number that you want to input. Placeholders work too
-  * \[keepVelocity]: It allows to keep the velocity of the player
+* Command settings:
+  * `{yaw_number}`: The number that you want to input. Placeholders work too
+  * `{keepVelocity}`: It allows to keep the velocity of the player
 * Example:
 
-```
-- SETYAW 10 false
+```yaml
+- SET_YAW 10 false
 ```
 
 ### SPIN
 
 * Info: Spin the target
-* Command: SPIN \{duration ticks\} \{velocity\}
+* Command settings:
   * `{duration ticks}`: The duration of the spin
   * `{velocity}`: The velocity of the spin
 * Example:
 
-```
+```yaml
 - SPIN 20 1
 ```
 
@@ -1193,21 +1189,24 @@ A: run **`SPIN {duration} 0`** for example
 ### STEAL
 
 * Info: Steal an item from the target inventory
-* Command: STEAL \[slot] \{remove item default true\}
-  * \[slot] => -1 to mainhand
+* Command settings:
+  * `{slot}`: -1 to mainhand. Check slots reference bellow.
+  * `[remove item]`: (Optional) (default = true)
 * Example:
 
-```
+```yaml
 - STEAL 10
 ```
+
+![](</img/slots_info.png>)
 
 ### STRIKELIGHTNING
 
 * Info: Strikes a lightning bolt with no damage to the one that runs the command
-* Command: STRIKELIGHTNING
+* No command setting 
 * Example:
 
-```
+```yaml
 - STRIKELIGHTNING
 ```
 
@@ -1223,7 +1222,7 @@ This is not the same as essential's smite command. If you want to smite your tar
   * STUN\_DISABLE
 * Example:
 
-```
+```yaml
 - STUN_ENABLE
 - DELAY 5
 - STUN_DISABLE
@@ -1232,68 +1231,65 @@ This is not the same as essential's smite command. If you want to smite your tar
 ### TELEPORT
 
 * Info: Teleports the player/entity to the location
-* Command: TELEPORT \{world\} \{x\} \{y\} \{z\} \[pitch] \[yaw] \[keepVelocity]
+* Command settings:
   * `{world}`: The world of the location to teleport
   * `{x}`: The coordinate x of the location to teleport.
   * `{y}`: The coordinate y of the location to teleport.
   * `{z}`: The coordinate z of the location to teleport.
-  * \[pitch]: Optional pitch of the teleport location
-  * \[yaw]: Optional yaw of the teleport location
-  * \[keepVelocity]: Allows to not stop the player velocity.
+  * `[pitch]`: (Optional) (default = keep the player pitch) pitch of the teleport location
+  * `[yaw]`: (Optional) (default = keep the player yaw) yaw of the teleport location
+  * `[keepVelocity]`: (Optional) (default = true) Allows to not stop the player velocity.
 * Example:
 
-```
+```yaml
 - TELEPORT ApocalypseWorld 70 70 70
 ```
 
-### TELEPORTONCURSOR
+### TELEPORT_ON_CURSOR
 
 * Info: Teleports you on your cursor
-* Command: TELEPORTONCURSOR \{range\} \{acceptAir\}
+* Command settings:
   * `{range}`: To how far you want to teleport
   * `{acceptAir}`: To be able to teleport even in air, you need to set this to true
 * Example:
 
-```
+```yaml
 - TELEPORTONCURSOR 8 true
 ```
 
-### TRANSFER\_ITEM
+### TRANSFER_ITEM
 
 * Info: It transfer an item on the inventory
-* Command: TRANSFER\_ITEM \{slot of launcher\} \{slot of receiver\}
+* Command settings:
   * `{slot of launcher}`: Slot of the item who is going to move
   * `{slot of receiver}`: Slot where the item will land
-
-:::info
-[Slots information](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
-:::
-
+  ![](</img/slots_info.png>)
 * Example:
 
-```
+```yaml
 - TRANSFER_ITEM 38 40
 ```
 
-### UNSAFE\_TELEPORTONCURSOR
+### UNSAFE_TELEPORT_ON_CURSOR
 
 * Info: Teleports you on your cursor without considering that you will end up on in impossible places
-* Command: UNSAFE\_TELEPORTONCURSOR \{maxRange\}
-  * `{maxRange}`: To how far you want to teleport
+* Command setting:
+  * `[maxRange]`: (Optional) (default = 200) To how far you want to teleport
 * Example:
 
-```
-UNSAFE_TELEPORTONCURSOR 20
+```yaml
+UNSAFE_TELEPORT_ON_CURSOR 20
 ```
 
-### WORLDTELEPORT
+### WORLD_TELEPORT
 
-* Info: Teleport to a world
-* Command: WORLDTELEPORT \{world\}
+* Info: Teleport to a world at the same location
+* Command setting:
+ * `{world}`: The world name where you want to teleport the player/target.
 * Example:
 
-```
-- WORLDTELEPORT spawn_end
+```yaml
+- WORLD_TELEPORT spawn_end
 ```
 
 ## Animation Commands
