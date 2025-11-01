@@ -93,19 +93,30 @@ Then the APP will ask you where to save it, do it in a safe place, we are going 
 
 #### CustomModelData
 
-The JSON will be selected from the custom model data line, since my Blockbench model was called Sword.json I will change it to 1.json (just changed the name), in the line of custom model data the path will be the folder path and the name will be 1 (since I changed it to that)
+The JSON will be selected from the custom model data line, since my Blockbench model was called Sword.json I will change it to 1.json (just changed the name), in the line of custom model data the path will be the folder path and the name will be 1 (since I changed it to that).
 
-:::info
-\{ "parent": "minecraft:item/handheld", "textures": \{ "layer0": "minecraft:item/diamond\_sword" \},
+Example of the complete diamond_sword.json file with custom model data:
 
+```json
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/diamond_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "item/diamond_sword/1"
+    }
+  ]
+}
 ```
-"overrides": [
-	{"predicate": {"custom_model_data":1}, "model": "item/diamond_sword/1"}
-]
-```
 
-\}
-:::
+In this example:
+- `custom_model_data: 1` - The custom model data value you'll set in ExecutableItems
+- `model: "item/diamond_sword/1"` - Path to your custom 3D model JSON (the file you exported from Blockbench and renamed to 1.json)
 
 #### JSON file texture path
 
