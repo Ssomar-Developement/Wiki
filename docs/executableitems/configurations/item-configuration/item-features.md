@@ -767,7 +767,25 @@ recognitions:
   * If an EI item only has the item recognition of `MATERIAL` and `NAME`, the items must have the EXACT NAME and MATERIAL of the EI item for the item to be considered as an EI item.
 * Keep in mind that if one of your ExecutableItems has item recognitions enabled on MATERIAL, then you shouldn't use more item recognitions based on MATERIAL for another ExecutableItem with the same MATERIAL. The reason is because if there are 2 ExecutableItems items with the recognition of MATERIAL enabled and both are DIAMOND\_BLOCK, only the first one in the alphabetic order will be the one who will have the most priority in case someone triggers a DIAMOND\_BLOCK.
 
-## Depending on the type of block
+## Use cooldown features <CustomTag type="version" version="1.21.2" />
+
+* Info: Feature that adds a vanilla-style use cooldown to the item, similar to the cooldown on ender pearls or chorus fruit.
+  * `cooldownGroup`: String value that defines a cooldown group. Items with the same cooldown group will share the same cooldown. Must be in lowercase and follow the NamespacedKey format (e.g., "mygroup" or "namespace:mygroup")
+  * `vanillaUseCooldown`: Integer value that represents the cooldown duration in seconds
+* Example:
+
+```yaml
+useCooldown:
+  cooldownGroup: "custom_weapon_group"
+  vanillaUseCooldown: 5
+```
+
+:::info
+This cooldown is different from the activator cooldown system. This is a vanilla Minecraft cooldown that shows the item being "grayed out" in the hotbar during the cooldown period.
+:::
+
+
+## Depending on the item type
 
 ### Container Features
 
@@ -933,16 +951,7 @@ spawnerFeatures:
 
 * Info: Feature that allows you to customize the goat horn sound for items. This feature only works for GOAT_HORN material items.
   * `enable`: Boolean value that enables or disables the instrument features
-  * `instrument`: The music instrument sound that will be played when the goat horn is used
-* Available instruments:
-  * PONDER_GOAT_HORN
-  * SING_GOAT_HORN
-  * SEEK_GOAT_HORN
-  * FEEL_GOAT_HORN
-  * ADMIRE_GOAT_HORN
-  * CALL_GOAT_HORN
-  * YEARN_GOAT_HORN
-  * DREAM_GOAT_HORN
+  * `instrument`: The music instrument sound that will be played when the goat horn is used. [Music Instruments](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/MusicInstrument.html)
 * Example:
 
 ```yaml
@@ -952,26 +961,9 @@ instrumentFeatures:
   instrument: DREAM_GOAT_HORN
 ```
 
-### Use cooldown features <CustomTag type="version" version="1.21.2" /> <CustomTag type="premium" />
+### Weapon features <CustomTag type="version" version="1.21.5" /> <CustomTag type="paper" />
 
-* Info: Feature that adds a vanilla-style use cooldown to the item, similar to the cooldown on ender pearls or chorus fruit.
-  * `cooldownGroup`: String value that defines a cooldown group. Items with the same cooldown group will share the same cooldown. Must be in lowercase and follow the NamespacedKey format (e.g., "mygroup" or "namespace:mygroup")
-  * `vanillaUseCooldown`: Integer value that represents the cooldown duration in seconds
-* Example:
-
-```yaml
-useCooldown:
-  cooldownGroup: "custom_weapon_group"
-  vanillaUseCooldown: 5
-```
-
-:::info
-This cooldown is different from the activator cooldown system. This is a vanilla Minecraft cooldown that shows the item being "grayed out" in the hotbar during the cooldown period.
-:::
-
-### Weapon features <CustomTag type="version" version="1.21.5" />
-
-* Info: Feature that allows you to configure weapon-specific combat settings for items. Only available on Paper/Folia servers running Minecraft 1.21.5+.
+* Info: Feature that allows you to configure weapon-specific combat settings for items.
   * `enable`: Boolean value that enables or disables the weapon features
   * `disableBlockingTime`: Integer value representing how long (in seconds) the target's shield will be disabled after being hit by this weapon
   * `damagePerAttack`: Integer value representing the durability damage this weapon takes per attack (default: 5)
@@ -984,13 +976,10 @@ weaponFeatures:
   damagePerAttack: 2
 ```
 
-:::info
-This feature requires Paper or a Paper fork (such as Folia, Purpur) running Minecraft 1.21.5 or later. It will not work on Spigot servers.
-:::
 
-### Blocks attacks features <CustomTag type="version" version="1.21.5" />
+### Blocks attacks features <CustomTag type="version" version="1.21.5" /> <CustomTag type="paper" />
 
-* Info: Feature that allows you to configure how items block attacks, similar to shields. This allows you to make any item capable of blocking damage. Only available on Paper/Folia servers running Minecraft 1.21.5+.
+* Info: Feature that allows you to configure how items block attacks, similar to shields. This allows you to make any item capable of blocking damage.
   * `enable`: Boolean value that enables or disables the block attacks features
   * `blockDelay`: Integer value representing the delay in seconds before the item can block again after being used
   * `blockSound`: Sound that plays when successfully blocking an attack
@@ -1030,11 +1019,7 @@ Each damage reduction entry has the following settings:
 * `baseDamageBlocked`: Base amount of damage blocked (flat reduction)
 * `factorDamageBlocked`: Percentage of damage blocked (0.5 = 50% reduction)
 * `horizontalBlockingAngle`: The angle in degrees from which attacks can be blocked (90 = front quarter, 180 = front half, 360 = all directions). Must be greater than 0.
-* `damageTypes`: List of damage types this reduction applies to. See [Damage Types](https://minecraft.wiki/w/Damage_type) for available types.
-
-:::info
-This feature requires Paper or a Paper fork (such as Folia, Purpur) running Minecraft 1.21.5 or later with the BlocksAttacks API available. Early builds of Paper 1.21.5 may not support this feature.
-:::
+* `damageTypes`: List of damage types this reduction applies to. See [Damage Types](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/damage/DamageType.html) for available types.
 
 :::tip
 You can create custom "shields" with different materials using this feature. For example, you could make a book that blocks magic damage or a diamond that blocks physical attacks!
