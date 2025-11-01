@@ -39,19 +39,19 @@ The reason why it says "Outdated" is because since the version 5.0 of EI it can 
 
 * Go to the conditions editor
 
-![](<../../..//static/img/image (253).png>)
+![](</img/image (253).png>)
 
 * Select placeholders conditions
 
-![](<../../..//static/img/image (246).png>)
+![](</img/image (246).png>)
 
 * Create a new placeholder
 
-![](<../../..//static/img/image (125).png>)
+![](</img/image (125).png>)
 
 * Select the PLAYER\_STRING type
 
-![](<../../..//static/img/image (166).png>)
+![](</img/image (166).png>)
 
 And let's set the placeholder, first, read this:
 

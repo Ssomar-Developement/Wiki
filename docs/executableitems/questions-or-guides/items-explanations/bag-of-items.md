@@ -14,35 +14,35 @@ In this case the bag will store COBBLESTONE and ANDESITE (2 items for you to see
 
 *   Create the EI with /ei create \<id>
 
-    * ![](<../../..//static/img/image (343).png>)
+    * ![](</img/image (343).png>)
 
 * Set the material, name, lore, etc
-  * ![](<../../..//static/img/image (396).png>)
+  * ![](</img/image (396).png>)
 
 :::info
 In this case I already know that the "stuff" stored will be stored in a variable, that's why I wrote it instantly as variable in the lore.
 :::
 
 * Now let's create the variables (I will create both instantly, the cobblestone and andesite)
-  * ![](<../../..//static/img/image (144).png>)
-    * ![](<../../..//static/img/image (369).png>)
-    * ![](<../../..//static/img/image (414).png>)
+  * ![](</img/image (144).png>)
+    * ![](</img/image (369).png>)
+    * ![](</img/image (414).png>)
 
 ### ACTIVATOR OF STORING COBBLESTONE
 
 *   Now let's create the activator that will store the cobblestone, in this case RIGHT CLICK activator
 
-    * ![](<../../..//static/img/image (407).png>)
+    * ![](</img/image (407).png>)
 
     * Let's add the modification of the variable
-      * ![](<../../..//static/img/image (269).png>)
-      * ![](<../../..//static/img/image (238).png>)
-      * ![](<../../..//static/img/image (280).png>)
+      * ![](</img/image (269).png>)
+      * ![](</img/image (238).png>)
+      * ![](</img/image (280).png>)
     * Let's add the placeholder condition so this only works if the player has at least 1 cobblestone
-      * ![](<../../..//static/img/image (214).png>)
+      * ![](</img/image (214).png>)
     *   And now the commands (the first one to display how many cobblestone he stored and the second to remove the cobblestones.)
 
-        * ![](<../../..//static/img/image (259).png>)
+        * ![](</img/image (259).png>)
 
 *   And that's it, now our bucket pickups the cobblestone perfectly, but we need a way to take out the cobblestone, there are many ways to achieve this:
 
@@ -59,19 +59,19 @@ In this case I already know that the "stuff" stored will be stored in a variable
 
 *   Activator LEFT CLICK
 
-    * ![](<../../..//static/img/image (402).png>)
+    * ![](</img/image (402).png>)
 
 *   Condition the player has at least 32 cobblestone stored in the variable
 
-    * ![](<../../..//static/img/image (211).png>)
+    * ![](</img/image (211).png>)
 
 *   Let's modify the variable
 
-    * ![](<../../..//static/img/image (95).png>)
+    * ![](</img/image (95).png>)
 
 *   And let's give the player the cobblestone
 
-    * ![](<../../..//static/img/image (324).png>)
+    * ![](</img/image (324).png>)
 
 * Now everything is done, we just need to test it.
 

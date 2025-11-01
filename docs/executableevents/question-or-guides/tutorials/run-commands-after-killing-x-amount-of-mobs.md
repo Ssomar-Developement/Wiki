@@ -16,19 +16,19 @@ description: >-
 
 * Set the `TYPE` to `NUMBER`
 
-![](<../../..//static/img/image (12) (1).png>)
+![](</img/image (12) (1).png>)
 
 * Set the `FOR` to `PLAYER`
 
-![](<../../..//static/img/image (13) (1).png>)
+![](</img/image (13) (1).png>)
 
 * Set the `Default Value` to `0`
 
-![](<../../..//static/img/image (14) (1).png>)
+![](</img/image (14) (1).png>)
 
 * Save the settings
 
-![](<../../..//static/img/image (15) (1).png>)
+![](</img/image (15) (1).png>)
 
 ## 4) Create the first EE event
 

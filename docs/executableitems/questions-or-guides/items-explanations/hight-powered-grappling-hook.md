@@ -54,13 +54,13 @@ particlesDelay: 1
 * In this example the projectile above is named as **MANEUVER\_PROJ**, you can name the projectile  file's name as you want.
 * In the EI Item's activator add the command **`LAUNCH <projectile file name>`**, in this case it will be **LAUNCH MANEUVER\_PROJ**
 
-![](<../../..//static/img/image (299).png>)
+![](</img/image (299).png>)
 
 ### 5) Create another activator
 
 * Ok, we already made the item to launch a projectile, now let's work with it, first of all create a **`PROJECTILE_HIT_BLOCK`**
 
-![](<../../..//static/img/image (260).png>)
+![](</img/image (260).png>)
 
 ### 6) Add the commands
 

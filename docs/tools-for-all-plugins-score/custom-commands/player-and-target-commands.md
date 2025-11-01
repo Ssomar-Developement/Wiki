@@ -487,7 +487,7 @@ activators:
     - FORMAT_ENCHANTMENTS %slot%
 ```
 
-![](<../..//static/img/image (393).png>) -> ![](<../..//static/img/image (382).png>)
+![](<..//img/image (393).png>) -> ![](<..//img/image (382).png>)
 
 ### GIVE\_MONEY
 

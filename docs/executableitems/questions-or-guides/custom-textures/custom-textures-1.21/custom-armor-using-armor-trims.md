@@ -82,4 +82,4 @@ Perfect ! Now you can do the same with another trims, until you change all the a
 
 ### Texture pack
 
-\{% file src="../../../..//static/img/texture.zip" %\}
+\{% file src="..//img/texture.zip" %\}
