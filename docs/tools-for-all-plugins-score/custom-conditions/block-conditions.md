@@ -1,12 +1,5 @@
 # Block Conditions
 
-:::info
-For conditions that require numerical values, you can assign 2 conditions.
-
-Example: "I want to create a condition that only activates if the value is greater than 50 but less than 250"\
-So what you would type in the config will be **`50 < CONDITION < 250`**
-:::
-
 ## Condition settings
 All conditions are formated the same, you have:
 * `{theCondition}`
@@ -23,6 +16,13 @@ blockConditions:
      ifBlockAgeCmds:
      - say how sad
 ```
+
+:::info
+For numerical conditions, you can assign 2 conditions at the same time.
+Example: 
+"I want to create a condition that only activates if the value is greater than 50 but less than 250"
+`{theCondition}: 50 < CONDITION < 250`
+:::
 
 ### ifContainerEmpty - Not
 
