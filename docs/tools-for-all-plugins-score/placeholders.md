@@ -31,7 +31,7 @@ If %around\_target% ever fails to properly return the AROUND/MOB\_AROUND around 
 :::info
 %activator\_id% : Returns the id of the activator. \
 Can be found at:\
-![](<../.gitbook/assets/image (438).png>)\
+![](</img/image (438).png>)\
 %activator\_name% : Returns the name of the activator that's listed at the DisplayName field of the activator editor
 :::
 

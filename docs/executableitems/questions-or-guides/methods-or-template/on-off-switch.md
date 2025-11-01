@@ -32,7 +32,7 @@ description: >-
 
 * In this case it will be a PLAYER\_ALL\_CLICK
 
-![](<../../../.gitbook/assets/image (94).png>)
+![](</img/image (94).png>)
 
 ### Commands
 
@@ -54,11 +54,11 @@ description: >-
 
 * This is needed to control what activator is going to run 
 
-![First we go to conditions](<../../../.gitbook/assets/image (419).png>)
+![First we go to conditions](</img/image (419).png>)
 
-![Then to placeholder conditions](<../../../.gitbook/assets/image (303).png>)
+![Then to placeholder conditions](</img/image (303).png>)
 
-![Of course, we have to create a placeholder condition](<../../../.gitbook/assets/image (429).png>)
+![Of course, we have to create a placeholder condition](</img/image (429).png>)
 
 ![PLAYER\_STRING is an option too](https://imgur.com/NXUYpmm.png)
 
@@ -100,7 +100,7 @@ This is suggested to be set to true if you want the item to be spammable. One ti
 
 * We will use again **`PLAYER_ALL_CLICK`**
 
-![](<../../../.gitbook/assets/image (165).png>)
+![](</img/image (165).png>)
 
 ###
 
@@ -124,11 +124,11 @@ This is suggested to be set to true if you want the item to be spammable. One ti
 
 * This is needed to control what activator is going to run 
 
-![First we go to conditions](<../../../.gitbook/assets/image (419).png>)
+![First we go to conditions](</img/image (419).png>)
 
-![Then to placeholder conditions](<../../../.gitbook/assets/image (303).png>)
+![Then to placeholder conditions](</img/image (303).png>)
 
-![Of course, we have to create a placeholder condition](<../../../.gitbook/assets/image (429).png>)
+![Of course, we have to create a placeholder condition](</img/image (429).png>)
 
 ![PLAYER\_STRING is an option too](https://imgur.com/NXUYpmm.png)
 

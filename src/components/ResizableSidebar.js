@@ -5,6 +5,9 @@ let startX = 0;
 let startWidth = 0;
 const minWidth = 200;
 const maxWidth = 500;
+let isInitialized = false;
+let retryCount = 0;
+const maxRetries = 50; // Max 5 seconds of retries (50 * 100ms)
 
 // Global event handlers (only set up once)
 function handleMouseMove(e) {
@@ -59,6 +62,7 @@ function initResizableSidebar() {
   // Check if handle already exists
   if (sidebar.querySelector('.sidebar-resize-handle')) {
     console.log('[ResizableSidebar] Handle already exists');
+    isInitialized = true;
     return true;
   }
 
@@ -94,18 +98,27 @@ function initResizableSidebar() {
     console.log('[ResizableSidebar] Reset to default width');
   });
 
+  isInitialized = true;
   return true;
 }
 
 // Try multiple initialization methods
 function tryInit() {
+  // Don't try if already initialized
+  if (isInitialized) {
+    return;
+  }
+
   console.log('[ResizableSidebar] Attempting initialization...');
 
   const success = initResizableSidebar();
 
-  // If failed, retry after a short delay
-  if (!success) {
+  // If failed, retry after a short delay (but not forever)
+  if (!success && retryCount < maxRetries) {
+    retryCount++;
     setTimeout(tryInit, 100);
+  } else if (retryCount >= maxRetries) {
+    console.log('[ResizableSidebar] Max retries reached, giving up');
   }
 }
 
@@ -124,6 +137,11 @@ if (typeof document !== 'undefined') {
 
   // Watch for sidebar appearance using MutationObserver
   const observer = new MutationObserver(() => {
+    // Don't observe if already initialized
+    if (isInitialized) {
+      return;
+    }
+
     const sidebar = document.querySelector('.theme-doc-sidebar-container');
     if (sidebar && !sidebar.querySelector('.sidebar-resize-handle')) {
       tryInit();

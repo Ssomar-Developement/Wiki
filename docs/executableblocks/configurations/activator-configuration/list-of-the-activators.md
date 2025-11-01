@@ -35,13 +35,13 @@
 
 * Description: Activates when Executable Block is a crop and it grows.
 
-![](<../../../.gitbook/assets/image (406).png>)
+![](</img/image (406).png>)
 
 ### CROP\_PLACE\_BLOCK 
 
 * Description: Activates when Executable Block is a crop that places block
 
-![](<../../../.gitbook/assets/image (381).png>)
+![](</img/image (381).png>)
 
 ### ENTITY\_WALK\_ON  
 

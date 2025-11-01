@@ -16,35 +16,35 @@ If you are using premium, there is a easy way to do this using the GUI, so you c
 
 * Let's use the right click activator for example
 
-![](<../../../.gitbook/assets/image (65).png>)
+![](</img/image (65).png>)
 
 ### 2) Create a placeholder condition
 
 * We will use the placeholder condition to check the required amount of mana
 
-![](<../../../.gitbook/assets/image (420).png>)
+![](</img/image (420).png>)
 
-![](<../../../.gitbook/assets/image (313).png>)
+![](</img/image (313).png>)
 
-![](<../../../.gitbook/assets/image (114).png>)
+![](</img/image (114).png>)
 
 ### 3) Type the placeholder that will be used
 
 * We will use the `PLAYER_NUMBER` type
 
-![](<../../../.gitbook/assets/image (416).png>)
+![](</img/image (416).png>)
 
 * In this case (**AureliumSkills**) we will use the placeholder `%aureliumskills_mana%` to check the amount of mana.
 
-![](<../../../.gitbook/assets/image (265).png>)
+![](</img/image (265).png>)
 
 * Then we will use the SUPERIOR\_OR\_EQUALS comparator to make it so it will run the activator if your mana has equal or more than the value written in the 2dn part.
 
-![](<../../../.gitbook/assets/image (135).png>)
+![](</img/image (135).png>)
 
 * In the 2nd part we will write the amount of mana needed for the item (In this example it will be 5 of mana)
 
-![](<../../../.gitbook/assets/image (422).png>)
+![](</img/image (422).png>)
 
 ### 4) Add the commands
 
@@ -52,7 +52,7 @@ If you are using premium, there is a easy way to do this using the GUI, so you c
   * The `mana remove %player% 5` command is important as it's task is to remove mana assuming you added a cost to the activation of the activator. If you just want it to make sure the player has the required amount of mana and not take away mana, there's no need to add this command.
   * Just add the commands you want to add after the `mana remove %player% 5` command
 
-![](<../../../.gitbook/assets/image (232).png>)
+![](</img/image (232).png>)
 
 * And ready !! Now you can add more commands in that section to complete your item ! :D
 
