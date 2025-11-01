@@ -129,9 +129,9 @@ It supports blacklist and whitelist
   * `{commands}`: The commands that will be executed for the target players.
 
 :::tip
-You can add **multiple commands** ! Use the separator **<+>**
+You can add **multiple commands** ! Use the separator `<+>`
 
-Example: SEND\_MESSAGE \&cYou will be damaged in 5 seconds **<+>** DELAY 5 **<+>**  DAMAGE 5
+Example: `SEND_MESSAGE &cYou will be damaged in 5 seconds <+> DELAY 5 <+> DAMAGE 5`
 :::
 
 :::info
@@ -165,15 +165,14 @@ activators:
 :::warning
 You can nest AROUND with the commands : AROUND, IF, NEAREST, ALL\_PLAYERS
 
-If you do that the separator and the placeholders will evolve depending of the nested step.\
+If you do that the separator and the placeholders will evolve depending of the nested step.
 
-base command separator : <+>;
+base command separator : `<+>`
 
-first nested command : <+::step1>;
+first nested command : `<+::step1>`
 
-... : <+::step2>; , <+::step3>, ...
+... : `<+::step2>`; , `<+::step3>`, ...
 
-\
 base placeholder : %around\_target%
 
 first nested command : %around\_target::step1%
@@ -261,7 +260,7 @@ activators:
 Placeholders that came from plugins like ExecutableItems, ExecutableBlocks will be parsed not by the player affected by the AROUND command.
 
 For example, with ExecutableBlocks, CONDITIONS(%var\_faction%=%::factionsuuid\_faction\_name::%) works through checking if the block's factions variable value is equal to the targetted player's faction\
-Placeholder Source: (PlaceholderAPI](https://factions.support/placeholderapi/))
+Placeholder Source: [PlaceholderAPI](https://factions.support/placeholderapi/))
 :::
 
 ### BACK\_DASH
