@@ -1,17 +1,17 @@
 # Custom Sounds
 
 :::info
-This method adds new custom sounds **without** replacing any existing vanilla sounds. All players can hear these sounds without requiring a resource pack download (when using server resource packs).
+This method adds new custom sounds **without** replacing any existing vanilla sounds.
 :::
 
-Custom sounds in Minecraft are managed through resource packs. Unlike custom textures (which require client-side installation), custom sounds can be applied server-wide using server resource packs, making them available to all players automatically.
+Custom sounds in Minecraft are managed through resource packs.
 
 ## Overview
 
 To add custom sounds to your ExecutableItems, you'll need to:
 1. Create a resource pack with your custom sound files
 2. Configure the sounds.json file to register your sounds
-3. Use the PLAYSOUND command in ExecutableItems to play them
+3. Use the /playsound command in ExecutableItems to play them
 
 ## Step-by-Step Guide
 
@@ -149,6 +149,8 @@ Create your `pack.mcmeta` file with proper version formatting:
 | 1.19 - 1.19.3     | 12          |
 | 1.18 - 1.18.2     | 9           |
 
+Check on google for the other versions
+
 ## Using Custom Sounds in ExecutableItems
 
 Once your resource pack is created and applied, use the PLAYSOUND command:
@@ -158,37 +160,20 @@ Once your resource pack is created and applied, use the PLAYSOUND command:
 ```yaml
 activators:
   sword_attack:
-    activators:
-    - PLAYER_ATTACK_ENTITY
-
+    option: PLAYER_ALL_CLICK
     commands:
-    - "PLAYSOUND customsounds:epic_sword_slash 1 1"
+    - "minecraft:playsound customsounds:epic_sword_slash master @a"
 ```
 
-### Advanced Usage with Volume and Pitch
-
-```yaml
-activators:
-  magic_spell:
-    activators:
-    - PLAYER_RIGHT_CLICK
-
-    commands:
-    - "PLAYSOUND customsounds:magic_spell_cast 1.5 1.2"
-    # Volume: 1.5 (louder than normal)
-    # Pitch: 1.2 (slightly higher pitch)
-```
 
 ### Positional Sound
 
 ```yaml
 activators:
   boss_spawn:
-    activators:
-    - CUSTOM_ACTIVATOR
-
-    commands:
-    - "PLAYSOUND customsounds:boss_roar 2 0.8 %block_x% %block_y% %block_z% %world%"
+    option: PROJECTILE_HIT_BLOCK
+    blockCommands:
+    - "minecraft:playsound customsounds:boss_roar master @a %block_x% %block_y% %block_z% %world%"
     # Plays at specific coordinates
 ```
 
@@ -228,59 +213,6 @@ require-resource-pack=true
 - GitHub releases
 :::
 
-### Method 2: Client-Side Installation
-
-Players can manually install by placing the pack in their `resourcepacks` folder.
-
-## Complete Example
-
-Here's a complete example for a custom sword item:
-
-### sounds.json
-```json
-{
-  "legendary_sword_swing": {
-    "subtitle": "Legendary Sword Swings",
-    "sounds": [
-      "customsounds:sword_swing1",
-      "customsounds:sword_swing2",
-      "customsounds:sword_swing3"
-    ]
-  },
-  "legendary_sword_hit": {
-    "subtitle": "Legendary Sword Hits",
-    "sounds": [
-      "customsounds:sword_hit1"
-    ]
-  }
-}
-```
-
-### ExecutableItem Configuration
-```yaml
-material: DIAMOND_SWORD
-displayName: '&6&lLegendary Sword'
-lore:
-- '&7A sword of legendary power'
-- '&7Creates epic sound effects'
-
-activators:
-  on_swing:
-    activators:
-    - PLAYER_ALL_CLICK
-
-    commands:
-    - "PLAYSOUND customsounds:legendary_sword_swing 1 1"
-
-  on_hit:
-    activators:
-    - PLAYER_ATTACK_ENTITY
-
-    commands:
-    - "PLAYSOUND customsounds:legendary_sword_hit 1.2 1"
-    - "DAMAGE 15"
-```
-
 ## Troubleshooting
 
 ### Sounds Not Playing
@@ -310,76 +242,12 @@ activators:
 
 **Solutions**:
 1. ✅ Check for duplicate sound IDs in sounds.json
-2. ✅ Verify namespace is correct (customsounds: vs minecraft:)
+2. ✅ Verify namespace is correct and in lowercases (customsounds: vs minecraft:)
 3. ✅ Check for typos in sound file names
 
-### Sound Quality Issues
-
-**Problem**: Sound is distorted, too quiet, or too loud
-
-**Solutions**:
-1. ✅ Re-export with different quality settings (5-7 recommended)
-2. ✅ Normalize audio before converting to OGG
-3. ✅ Adjust volume parameter in PLAYSOUND command
-4. ✅ Convert to mono for better positional audio
-
-## Advanced Tips
-
-### Random Sound Variations
-
-Register multiple sound files for one ID to add variety:
-
-```json
-{
-  "footstep_grass": {
-    "sounds": [
-      "customsounds:grass1",
-      "customsounds:grass2",
-      "customsounds:grass3",
-      "customsounds:grass4"
-    ]
-  }
-}
-```
-
-Minecraft will randomly pick one each time it plays.
-
-### Sound Categories
-
-You can specify sound categories for volume control:
-
-```yaml
-commands:
-- "PLAYSOUND customsounds:epic_music master @a"
-# Categories: master, music, record, weather, block, hostile, neutral, player, ambient, voice
-```
-
-### Subfolder Organization
-
-Organize sounds in subfolders:
-
-```
-sounds/
-  ├── weapons/
-  │   ├── sword1.ogg
-  │   └── sword2.ogg
-  └── magic/
-      ├── spell1.ogg
-      └── spell2.ogg
-```
-
-Reference as:
-```json
-{
-  "sword_hit": {
-    "sounds": ["customsounds:weapons/sword1"]
-  }
-}
-```
 
 ## Related Documentation
 
-- [PLAYSOUND Command](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#playsound)
 - [Resource Pack Format (Minecraft Wiki)](https://minecraft.wiki/w/Resource_Pack)
 - [Activators List](/docs/executableitems/configurations/activator-configuration/list-of-the-activators)
 
