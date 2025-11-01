@@ -96,7 +96,7 @@ So checking what we have, should be this:
                 - 📁item
 ```
 
-* So, in the folder of 📁custo&#x6D;_\__&#x74;extures we will save all the custom textures that we have, in this case, the pickaxe photo we made before. (the file will be -> "pickaxeimage.png")
+* So, in the folder of 📁custom_textures we will save all the custom textures that we have, in this case, the pickaxe photo we made before. (the file will be -> "pickaxeimage.png")
 
 ```
 📁ExecutableItemsTexturePack
