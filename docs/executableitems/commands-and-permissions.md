@@ -368,7 +368,10 @@ Items with custom recognition can impact performance. The command will show you 
 * Permission: `ei.cmd.download-default-pack`
 
 :::info
-If `selfHostPack` is not enabled in config.yml, the pack will be downloaded and unzipped, but you'll need to manually host it or set `selfHostPack: true` in the configuration.
+**Hosting Options:**
+- **Self-hosting on your server**: Set `selfHostPack: true` in config.yml - the pack will be hosted directly by the plugin
+- **External hosting**: If you want to host the pack yourself (on a website, CDN, etc.), set the download URL in `texturesPackUrl` in config.yml
+- **No hosting**: If neither option is enabled, the pack will be downloaded and unzipped locally but not distributed to players
 :::
 
 ### Custom triggers
