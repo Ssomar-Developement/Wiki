@@ -12,14 +12,14 @@ _Sorted by alphabetical order_
 
 * Info: It adds an attribute to an item as sum or rest operation.
 * Command: settings
-  * attribute: The attribute you want to add
-  * value: The value for the operation
-  * equipmentSlot: The slot where the attribute will be enabled
-  * mode: select the mode of addition
+  * `{attribute}`: The attribute you want to add. [Attributes list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
+  * `{value}`: The value for the operation
+  * `{equipmentSlot}`: The slot where the attribute will be enabled. [EquipmentSlot list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
+  * `{mode}`: select the mode of addition
     * mode:ADD # Add the attribute to the item 
     * mode:OVERRIDE # Remove the current attributes of the same type of the item + Add the attribute to the item 
     * mode:STACK # Stack with the attribute present on the item, if no one exist it adds it
-  * affectDefaultAttributes: true or false # When it's true the mode OVERRIDE will also override the default attributes, and for the MODE stack it allows to stack with the default attributes (green)
+  * `{affectDefaultAttributes}`: true or false # When it's true the mode OVERRIDE will also override the default attributes, and for the MODE stack it allows to stack with the default attributes (green)
 * Example:
 
 ```yaml
@@ -30,20 +30,12 @@ activators:
     - ADD_ITEM_ATTRIBUTE attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND mode:ADD # Add this attribute to the player
 ```
 
-:::info
-You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
-
-And the slots here
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
-:::
-
 ### ADD\_ITEM\_ENCHANTMENT
 
 * Info: It adds an enchantment on an item on a specific slot with certain level
 * Command: settings
-  * enchantment: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones.
-  * level: The level for the enchantment
+  * `{enchantment}`: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones. [Enchantments list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html)
+  * `{level}`: The level for the enchantment
 * Example:
 
 ```yaml
@@ -54,17 +46,11 @@ activators:
     - ADD_ITEM_ENCHANTMENT enchantment:unbreaking level:1 
 ```
 
-:::info
-You can find the enchantments here
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html)
-:::
-
 ### ADD\_ITEM\_LORE
 
 * Info: Adds a line of lore
-* Command settings
-  * text: The text for the new lore line
+* Command setting
+  * `{text}`: The text for the new lore line
 * Example:
 
 ```yaml
@@ -78,7 +64,7 @@ activators:
 ### FORMAT\_ENCHANTMENTS
 
 * Info: It formats all enchantments in your lore
-* Command: FORMAT\_ENCHANTMENTS 
+* No command setting 
 * Example:
 
 ```yaml
@@ -88,15 +74,14 @@ activators:
     itemCommands:
     - FORMAT_ENCHANTMENTS
 ```
-
-![](<../../.gitbook/assets/image (393).png>) -> ![](<../../.gitbook/assets/image (382).png>)
+![](/img/image (382).png)
 
 ### MODIFY\_DURABILITY
 
 * Modifies the durability of the item
 * Command settings:
-  * modification: Positive value to increase the durability. Negative value to decrease the durability
-  * supportUnbreaking: (true or false) If it supports the unbreaking enchantment or not
+  * `{modification}`: Positive value to increase the durability. Negative value to decrease the durability
+  * `{supportUnbreaking}`: (true or false) If it supports the unbreaking enchantment or not
 * Example:
 
 ```yaml
@@ -110,8 +95,8 @@ activators:
 ### REMOVE\_ENCHANTMENT
 
 * Info: Remove an enchantment from the item
-* Command settings:
-  * enchantment: Enchantment to remove (ALL for every enchantment)
+* Command setting:
+  * `{enchantment}`: Enchantment to remove (ALL for every enchantment)
 * Example:
 
 ```yaml
@@ -125,7 +110,7 @@ activators:**
 ### REMOVE\_LORE
 
 * Info: Remove a lore line
-* Command settings:
+* Command setting:
   * `{line}`: The line that you want to remove
 * Example:
 
@@ -141,8 +126,8 @@ activators:
 
 * Info: Set the specific armor trim with the specific pattern for the specified slot
 * Command settings:
-  * pattern: The pattern of the trim (if 'null' or 'remove' it will remove the current pattern)
-  * patternMaterial: The material of the pattern
+  * `{pattern}`: The pattern of the trim (if 'null' or 'remove' it will remove the current pattern). [TrimPattern list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html)
+  * `{patternMaterial}`: The material of the pattern. [TrimMaterial list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html)
 * Example:
 
 ```yaml
@@ -154,21 +139,11 @@ activators:
     - SET_ARMOR_TRIM pattern:null #to clear the armor trim
 ```
 
-:::info
-You can find all trim pattern here:
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html)
-
-You can find all trim material here:
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html)
-:::
-
 ### SET\_ITEM\_NAME
 
 * Info: Sets a custom name for your item in a specific slot
-* Command settings:
-  * name: the new name of the item
+* Command setting:
+  * `{name}`: the new name of the item
 * Example:
 
 ```yaml
@@ -182,8 +157,8 @@ activators:
 ### SET\_ITEM\_COLOR
 
 * Info: Sets a specific color for the item (item colorables as leather armor)
-*  Command settings:
-  * color: number value of the color
+*  Command setting:
+  * `{color}`: number value of the color [Color Picker Website](https://www.tydac.ch/color/)
 * Example:
 
 ```yaml
@@ -195,10 +170,6 @@ activators:
 ```
 
 :::info
-Use the website: [https://www.tydac.ch/color/](https://www.tydac.ch/color/) for the leather color
-:::
-
-:::info
 It supports FIREWORK\_STAR
 :::
 
@@ -206,9 +177,9 @@ It supports FIREWORK\_STAR
 
 * Info: It sets an attribute to an item.
 * Command settings:
-  * attribute: The attribute you want to add
-  * value: The value for the operation
-  * equipmentSlot: The slot for the attribute
+  * `{attribute}`: The attribute you want to add. [Attribute list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
+  * `{value}`: The value for the operation
+  * `{equipmentSlot}`: The slot for the attribute. [EquipmentSlot list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
 * Example:
 
 ```yaml
@@ -219,15 +190,11 @@ activators:
     - SET_ITEM_ATTRIBUTE attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
 ```
 
-:::info
-You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
-:::
-
 ### SET\_ITEM\_CUSTOM\_MODEL\_DATA
 
 * Info: Sets a specific custom model data to the specific item
-* Command settings:
-  * customModelData: value of the customModelData
+* Command setting:
+  * `{customModelData}`: value of the customModelData
 * Example:
 
 ```yaml
@@ -245,8 +212,8 @@ Only works at 1.20.5 and above
 :::
 
 * Replaces the material of the item with a different material while keeping the nbt of the target item
-* Commands settings:
-  * material: The material you want the item to become into
+* Commands setting:
+  * `{material}`: The material you want the item to become into
 * Example:
 
 ```yaml
@@ -261,8 +228,8 @@ activators:
 
 * Info: Sets a line of lore
 * Command settings:
-  * line : If you want to set the lore of the first type 1
-  * text: The new line text
+  * `{line}` : If you want to set the lore of the first type 1
+  * `{text}`: The new line text
 * Example:
 
 ```yaml
