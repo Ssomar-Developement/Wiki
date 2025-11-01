@@ -5,8 +5,8 @@ If you edit the commands in-game don't add the **-** that is before all examples
 ### DELAY
 
 * Info: Delays a command line for seconds
-* Command: DELAY \{amount\}
-  * \{amount\}: To how long you want commands to be delayed (In seconds)
+* Command settings:
+  * `{amount}`: To how long you want commands to be delayed (In seconds)
 * Example:
 
 ```yaml
@@ -21,8 +21,8 @@ activators:**
 ### DELAY\_TICK
 
 * Info: Delays a command line for game ticks (20 ticks = 1 second)
-* Command: DELAY\_TICK \{amount\}
-  * \{amount\}: To how long you want commands to be delayed (In ticks)
+* Command settings:
+  * `{amount}`: To how long you want commands to be delayed (In ticks)
 * Example:
 
 ```yaml
@@ -41,11 +41,11 @@ CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
 :::
 
 * Info: Executes commands if condition is met
-* Command: IF \{condition\_without\_spaces\} \{command1\} &lt;+&gt; \{command2\} &lt;+&gt; ...
-  * \{condition\_without\_spaces\}: The condition for the IF to decide whether it runs or not.
+* Command settings:
+  * `{condition_without_spaces}`: The condition for the IF to decide whether it runs or not.
     * Symbols: `=`, `!=`, `>=`, `<=`, `>`, `<`
     * It supports () for priority , && for AND and || for OR
-  * \{command1\},\{command2\}: The commands that will be executed
+  * `{command1}`,`{command2}`: The commands that will be executed
 * Example:
 
 ```yaml
@@ -74,11 +74,11 @@ activators:**
 ## **WHILE**
 
 * Info: Repeats indefinitely as long as the condition is met. It is also running in async
-* Command: WHILE \{condition\_without\_spaces\} \{delay\_in\_ticks\} \{command1\} &lt;+&gt; \{command2\} &lt;+&gt; ...
-  * \{condition\_without\_spaces\}: The condition for the while loop to decide whether it continues or stops
-  * \{delay\_in\_ticks\}: The delay before the next repetition
+* Command settings:
+  * `{condition_without_spaces}`: The condition for the while loop to decide whether it continues or stops
+  * `{delay_in_ticks}`: The delay before the next repetition
     * Delay supports decimals value but they are casted to the next integer (20.1 -> 20)
-  * \{command\},\{command2\}: The commands that will be executed in repeat
+  * `{command}`,`{command2}`: The commands that will be executed in repeat
 * Example:
 
 ```yaml
@@ -100,11 +100,11 @@ The command will be stopped if the player is offline
 
 * LOOP\_START
   * Info: First part of the command
-  * Command: LOOP\_START loopCount:\{number\}
+  * Command settings:
     * `{number}`: Number of times a command gets repeated. Placeholders are supported
 * LOOP\_END
   * Info: Last part of the command
-  * Command: LOOP\_END
+  * No settings required
 * Example: (This is what you will see on config)
 
 ```yaml
@@ -280,7 +280,8 @@ It supports placeholders
 ### NOTHING*
 
 * Info: Mainly used for RANDOM\_RUN commands as a "dummy" command for RNG adjustments
-* Command: NOTHING*\{amount\}
+* Command settings:
+  * `{amount}`: Number of dummy commands to generate
 * Example of usage:
 
 ```yaml
