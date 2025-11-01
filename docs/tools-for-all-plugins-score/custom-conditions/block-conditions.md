@@ -7,75 +7,22 @@ Example: "I want to create a condition that only activates if the value is great
 So what you would type in the config will be **`50 < CONDITION < 250`**
 :::
 
-:::info
-If a condition fails to be met, **you can enable cancelEvent** so if a specific condition isn't completed, cancelEvent will run.  You can also customize the error message !
-
-You can also run commands if the condition has failed to execute!
-
-Example:
-:::
+## Condition settings
+All conditions are formated the same, you have:
+* `{theCondition}`
+* `{theCondition}Msg`: The message to send if the condition is invalid
+* `{theCondition}Cancel`: Whether or not the event should be cancelled if the condition is invalid
+* `{theCondition}Cmds`: The command(s) to run if the condition is invalid
+* Example:
 
 ```yaml
 blockConditions:
      ifBlockAge: <2
      ifBlockAgeMsg: "héhéhé you can custom your message here"
      ifBlockAgeCancel: true
-     ifBlockAgeCancelCmds:
+     ifBlockAgeCmds:
      - say how sad
 ```
-
-<details>
-
-<summary>Example</summary>
-
-```yaml
-name: '&7MyPickaxe'
-lore:
-- '&7&oDefault desc'
-material: DIAMOND_PICKAXE
-headDBID: ''
-glow: false
-glowDrop: false
-disableStack: false
-keepItemOnDeath: false
-give-first-join: false
-give-slot: 0
-usage: 0
-usePerDay: -1
-usageLimit: -1
-disable-world: []
-unbreakable: false
-isSpecialProjectile: false
-canBeUsedOnlyByTheOwner: false
-storeItemInfos: false
-activators:
-  activator1:
-    activator: PLAYER_ALL_CLICK
-    displayName: Activator name
-    usageModification: 0
-    usePerDay: -1
-    cancelEventIfMaxUsePerDay: false
-    autoUpdateItem: false
-    commands: []
-    silenceOutput: false
-    blockCommands:
-    - BREAK
-    detailedBlocks:
-      - WHEAT
-      - CARROTS
-    cancelEventIfNotDetailedBlocks: false
-    onlyAirClick: false
-    onlyBlockClick: true
-    cancelEventIfInvalidRequiredExecutableItems: false
-    cancelEvent: false
-    conditions:
-      targetBlockConditions:
-        ifPlantFullyGrown: true
-        ifPlantFullyGrownMsg: '&cError the plant clicked must be fully grown !'
-
-```
-
-</details>
 
 ### ifContainerEmpty - Not
 
