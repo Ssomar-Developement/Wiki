@@ -2,6 +2,9 @@
   "collapsed": true,
   "label": "MyFurniture",
   "position": 6,
+  "customProps": {
+    "icon": "/img/ChatGPT Image 29 mars 2025, 22_44_46(1).png"
+  },
   "link": {
     "type": "doc",
     "id": "myfurniture/information-mf"

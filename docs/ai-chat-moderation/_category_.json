@@ -1,5 +1,8 @@
 {
   "collapsed": true,
   "label": "AI Chat Moderation",
-  "position": 8
+  "position": 8,
+  "customProps": {
+    "icon": "/img/logo_aicm.png"
+  }
 }

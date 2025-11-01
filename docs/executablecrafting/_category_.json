@@ -2,6 +2,9 @@
   "collapsed": true,
   "label": "ExecutableCrafting",
   "position": 7,
+  "customProps": {
+    "icon": "/img/ChatGPT_Image_5_mai_2025__14_54_10-removebg-preview(1).png"
+  },
   "link": {
     "type": "doc",
     "id": "executablecrafting/information-ec"

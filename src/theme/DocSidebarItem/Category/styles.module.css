@@ -1,0 +1,17 @@
+.categoryIcon {
+  height: 1.2em;
+  width: 1.2em;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  object-fit: contain;
+}
+
+/* Ensure icon doesn't break layout on smaller screens */
+@media (max-width: 996px) {
+  .categoryIcon {
+    height: 1em;
+    width: 1em;
+    margin-right: 0.4rem;
+  }
+}

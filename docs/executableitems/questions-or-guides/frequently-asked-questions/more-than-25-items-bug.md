@@ -1,5 +1,5 @@
 ---
-hidden: true
+unlisted: true
 ---
 
 # More than 25 items bug ??

@@ -1,5 +1,8 @@
 {
   "collapsed": true,
   "label": "CustomPiglinsTrades",
-  "position": 9
+  "position": 9,
+  "customProps": {
+    "icon": "/img/logo_cpt.png"
+  }
 }

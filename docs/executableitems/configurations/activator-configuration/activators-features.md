@@ -4,11 +4,13 @@ description: >-
   complex items
 ---
 
+import CustomTag from '@site/src/components/CustomTag';
+
 # Activators features
 
 All this features are inside the activator, as reminder the activators allow you to execute custom actions on your ExecutableItem, it can have conditions, run commands, have cooldown, etc.
 
-Starred features ⭐ are for premium version.
+Premium features are labeled with the tag:  <CustomTag type="premium" />
 
 ## General features of an activator
 
@@ -18,12 +20,12 @@ Starred features ⭐ are for premium version.
 * Example: 
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    name: '&#x26;eThor activator'
+    name: '&eThor activator'
 ```
 
-### ⭐Usage modification of the activator
+### Usage modification of the activator <CustomTag type="premium" />
 
 * Info: Very important feature, the value of the usage of the item will be modified by this integer value. That means, if this value is positive then usage will increase and if this value is negative then the usage will decrease.
 * Example: (Increasing the value of the usage by 1 each time this activator is triggered)
@@ -148,7 +150,7 @@ activators:
 * Example: 
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: PLAYER_BLOCK_BREAK
     cancelEvent: true
@@ -314,13 +316,13 @@ activators:
 
 * Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config](https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config) .
 
-## ⭐Required features
+## Required features <CustomTag type="premium" />
 
 This section is for setting up features related to required things in order to be able to trigger the activator. This means that if the event happens, the activator will only run if the player matches this required setup. The items will be consumed in the process.
 
 * If you would like the items not to get consumed then not use "required" feature but use conditions which are just conditions and doesn't consume.
 
-### ⭐requiredExecutableItems
+### requiredExecutableItems <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement an ExecutableItem(s). If the player meets this requirement the requirement will be consumed and the activator will run.
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -347,7 +349,7 @@ activators:
       errorMessage: '&c You dont meet the requirement'
 ```
 
-### ⭐requiredItems
+### requiredItems <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement vanilla item(s). If the player meets this requirement the requirement will be consumed and the activator will run.
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -371,7 +373,7 @@ activators:
       errorMessage: '&c You dont meet the requirement'
 ```
 
-### ⭐requiredMoney 
+### requiredMoney <CustomTag type="premium" />
 
 * Info: This feature needs the plugin called "Vault". This feature allows the activator to have as requirement money from Vault. If the player meets this requirement the requirement will be consumed and the activator will run.
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -389,7 +391,7 @@ activators:
       errorMessage: '&c You dont meet the requirement'
 ```
 
-### ⭐requiredLevel
+### requiredLevel <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement vanilla experience levels. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience levels with experience, more info here [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -407,7 +409,7 @@ activators:
       cancelEventIfError: true
 ```
 
-### ⭐requiredExperience
+### requiredExperience <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement minecraft vanilla experiencei. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience with experience levels, they are different things, more info at [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -425,7 +427,7 @@ activators:
       cancelEventIfError: true
 ```
 
-### ⭐RequiredMana
+### RequiredMana <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement mana from **AureliumSkills**, **MMOCore** and **AuraSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -446,7 +448,7 @@ activators:
 Compatible with AureliumSkills, MMOCore and AuraSkills
 :::
 
-### ⭐RequiredMagic (EcoSkills)
+### RequiredMagic (EcoSkills) <CustomTag type="premium" />
 
 * Info: This feature allows the activator to have as requirement magic from **EcoSkills**. If the player meets this requirement the requirement will be consumed and the activator will run.
   * cancelEventIfError: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
@@ -469,52 +471,52 @@ activators:
 
 To make the features more understandable on where activators do they work, we will create 5 types of categories to group activators, so if one of the features say one of this categories then you'll know the feature works for all the activators on that category.  
 
-* PLAYER\_NONE: This type of activators are exclusive to the player who triggered the activator of the ExecutableItem and don't involve anything else. Abbreviaton \[P\_N]
-* PLAYER\_BLOCK: This type of activators are involved with the player who triggered the activator of the ExecutableItem and the block involved in the activator. Abbreviaton \[P\_B]
-  * 🔹PLAYER\_ALL\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * ⭐PLAYER\_BLOCK\_BREAK
-  * ⭐PLAYER\_BLOCK\_PLACE
-  * ⭐PLAYER\_BRUSH\_BLOCK
-  * ⭐PLAYER\_FERTILIZE\_BLOCK
-  * ⭐PLAYER\_FISH\_BLOCK
-  * 🔹PLAYER\_HARVEST\_BLOCK
-  * 🔹PLAYER\_LEFT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * 🔹PLAYER\_RIGHT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
-  * ⭐PROJECTILE\_HIT\_BLOCK
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* PLAYER\_ENTITY: This type of activators are involved with the player who triggered the activator of the ExecutableItem and an entity involved in the activator. Abbreviaton \[P\_E]
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
-  * 🔹PLAYER\_BUCKET\_ENTITY
-  * ⭐PLAYER\_CLICK\_ON\_ENTITY
-  * ⭐PLAYER\_CUSTOM\_LAUNCH (The entity is the projectile that is being launched)
-  * ⭐PLAYER\_DISMOUNT
-  * ⭐PLAYER\_FISH\_ENTITY
-  * ⭐PLAYER\_HIT\_ENTITY
-  * ⭐PLAYER\_KILL\_ENTITY
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
-  * ⭐PLAYER\_SHEAR\_ENTITY
-  * ⭐PLAYER\_TARGETED\_BY\_AN\_ENTITY
-  * ⭐PROJECTILE\_HIT\_ENTITY
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* PLAYER\_TARGET: This type of activators are involved with the player who triggered the activator of the ExecutableItem and another player called "target" which is considered as target/enemy. Abbreviation \[P\_T]
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
-  * ⭐PLAYER\_BREAK\_SHIELD\_OF\_PLAYER
-  * 🔹🔹PLAYER\_CLICK\_ON\_PLAYER
-  * ⭐PLAYER\_FISH\_PLAYER
+* <CustomTag type="player_none" />: This type of activators are exclusive to the player who triggered the activator of the ExecutableItem and don't involve anything else. Abbreviaton \[P\_N]
+* <CustomTag type="player_block" />: This type of activators are involved with the player who triggered the activator of the ExecutableItem and the block involved in the activator. Abbreviaton \[P\_B]
+  * PLAYER\_ALL\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * PLAYER\_BLOCK\_BREAK <CustomTag type="premium" compact />
+  * PLAYER\_BLOCK\_PLACE <CustomTag type="premium" compact />
+  * PLAYER\_BRUSH\_BLOCK <CustomTag type="premium" compact />
+  * PLAYER\_FERTILIZE\_BLOCK <CustomTag type="premium" compact />
+  * PLAYER\_FISH\_BLOCK <CustomTag type="premium" compact />
+  * PLAYER\_HARVEST\_BLOCK
+  * PLAYER\_LEFT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * PLAYER\_RIGHT\_CLICK (with feature typeTarget: ONLY\_BLOCK)
+  * PROJECTILE\_HIT\_BLOCK <CustomTag type="premium" compact />
+  * Etc, more information on [Activators info](list-of-the-activators)
+* <CustomTag type="player_entity" />: This type of activators are involved with the player who triggered the activator of the ExecutableItem and an entity involved in the activator. Abbreviaton \[P\_E]
+  * PLAYER\_BLOCK\_HIT\_OF\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_BUCKET\_ENTITY
+  * PLAYER\_CLICK\_ON\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_CUSTOM\_LAUNCH (The entity is the projectile that is being launched) <CustomTag type="premium" compact />
+  * PLAYER\_DISMOUNT <CustomTag type="premium" compact />
+  * PLAYER\_FISH\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_HIT\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_KILL\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_RECEIVE\_HIT\_BY\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_SHEAR\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_TARGETED\_BY\_AN\_ENTITY <CustomTag type="premium" compact />
+  * PROJECTILE\_HIT\_ENTITY <CustomTag type="premium" compact />
+  * Etc, more information on [Activators info](list-of-the-activators)
+* <CustomTag type="player_target" />: This type of activators are involved with the player who triggered the activator of the ExecutableItem and another player called "target" which is considered as target/enemy. Abbreviation \[P\_T]
+  * PLAYER\_BLOCK\_HIT\_OF\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_BREAK\_SHIELD\_OF\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_CLICK\_ON\_PLAYER
+  * PLAYER\_FISH\_PLAYER <CustomTag type="premium" compact />
   * PLAYER\_HIT\_PLAYER
-  * ⭐PLAYER\_KILL\_PLAYER
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
-  * ⭐PLAYER\_SHIELD\_BREAK\_BY\_PLAYER
-  * 🔹PROJECTILE\_HIT\_PLAYER
-  * Etc, more information on [https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators](https://docs.ssomar.com/executableitems/configurations/activator-configuration/list-of-the-activators)
-* Specific activator list: If there is a feature that contains different activators across the  categories then its better for understanding creating a new temporal list, which will be mentioned on the feature. Abbreviation \[S\_A\_L]  
+  * PLAYER\_KILL\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_RECEIVE\_HIT\_BY\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_SHIELD\_BREAK\_BY\_PLAYER <CustomTag type="premium" compact />
+  * PROJECTILE\_HIT\_PLAYER
+  * Etc, more information on [Activators info](list-of-the-activators)
+* <CustomTag type="specific_activators" /> If there is a feature that contains different activators across the categories then its better for understanding creating a new temporal list, which will be mentioned on the feature. Abbreviation \[S\_A\_L]  
 
-### \[P\_B] blockCommands
+### \[P\_B] blockCommands <CustomTag type="player_block" />
 
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 * There are three type of entity targets on commands
   * Player: Its the player/user who triggered the activator on the ExecutableItem
   * Target: Its the player targeted/enemy involved in an activator.
@@ -523,11 +525,11 @@ Commands are a list of commands that are run from the console when the activator
 * Info: List of commands that are normally run against the block when the activator triggers.
   * This means, the activator must have involved with a block, for example PLAYER\_HIT\_PLAYER is an activator, but it doesn't involve a block, so blockCommands are not available here. With the activator PLAYER\_BLOCK\_BREAK there is a block involved so blockCommands are available here.
   * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so blockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features blockCommands, more info here -> \<IF I FORGOT PLS PING VAYK>
-  * You can check the list of blockCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands)
+  * You can check the list of blockCommands here -> [Block commands](/docs/tools-for-all-plugins-score/custom-commands/block-commands)
 * Example:
 
 ```yaml
-activators:  **
+activators: 
   activator0: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_BLOCK_BREAK
     blockCommands:
@@ -537,23 +539,23 @@ activators:  **
 * Its important to understand that having blockCommands doesn't mean don't having player commands, on the activator PLAYER\_BLOCK\_BREAK there is two target involved, the player and the block, so we can have for example:
 
 ```yaml
-activators:  **
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_BLOCK_BREAK
     commands:
-    - SEND_MESSAGE &#x26;eYou have broken a block, it will explode in 5 seconds !
+    - SEND_MESSAGE &6You have broken a block, it will explode in 5 seconds !
     blockCommands:
     - DELAY 5
     - EXPLODE
 ```
 
-### \[P\_B] detailedBlocks
+### \[P\_B] detailedBlocks <CustomTag type="player_block" />
 
 * Type of activator category: PLAYER\_BLOCK
 * Info: Feature for activators that involves a block, here you can select as condition the type of block(s) where this activator will trigger by using this feature.
   * You can select blocks from Minecraft Vanilla like:
     * "STONE"
-  * ⭐You can select blocks from Minecraft Vanilla with NBT (info: [https://minecraft.fandom.com/wiki/Block\_states](https://minecraft.fandom.com/wiki/Block_states)) like: 
+  * <CustomTag type="premium" /> <CustomTag type="version" version="1.13" /> You can select blocks from Minecraft Vanilla with NBT (info: [Block\_states](https://minecraft.fandom.com/wiki/Block_states)) like: 
     * `FURNACE{lit:true}`
   * You can select blocks from ItemsAdder like:
     * "ITEMSADDER:\<id>"
@@ -613,7 +615,7 @@ activators:
       - STONE
       - COBBLESTONE
       - ANDESITE
-      - FURNACE{lit:true} (🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
+      - FURNACE{lit:true} #(🎇 **BLOCK STATE FEATURE IS PREMIUM EXCLUSIVE ONLY AND FOR 1.13+** 🎇)
       - ITEMSADDER:turquoise_block
       - EXECUTABLEBLOCKS:CUSTOMDIRT
       - !DIRT
@@ -622,18 +624,18 @@ activators:
       cancelEventIfNotValid: false
 ```
 
-### \[P\_B] blockConditions
+### \[P\_B] blockConditions <CustomTag type="player_block" />
 
 * Type of activator category: PLAYER\_BLOCK
 * Info: Feature for activators that involves a block, here you can setup conditions for the block involved.
-* [Block conditions](../../../tools-for-all-plugins-score/custom-conditions/block-conditions.md)
+* [Block conditions](/docs/tools-for-all-plugins-score/custom-conditions/block-conditions.md)
 
-### \[P\_E] entityCommands
+### \[P\_E] entityCommands <CustomTag type="player_entity" />
 
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders](/docs/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 * There are three type of entity targets on commands
   * Player: Its the player/user who triggered the activator on the ExecutableItem
   * Target: Its the player targeted/enemy involved in an activator.
@@ -642,11 +644,11 @@ Commands are a list of commands that are run from the console when the activator
 * Info: List of commands that are normally run agaisnt the entity when the activator triggers.
   * By entity it means entity/mob/enemy involved in an activator.
   * We know the player is considered as entity, but the entity involved in activators is only the mob/enemy involved in the event.
-  * You can check the list of entity commands here [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands)
+  * You can check the list of entity commands here [Entity commands](/docs/tools-for-all-plugins-score/custom-commands/entity-commands)
 * Example:
 
 ```yaml
-activators:  **
+activators:
   activator1: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_HIT_ENTITY
     entityCommands:
@@ -657,7 +659,7 @@ activators:  **
 * Its important to understand that having entityCommands doesn't mean don't having player commands, on the activator PLAYER\_HIT\_ENTITY there is two target involved, the player and the entity, so we can have for example: 
 
 ```yaml
-activators:  **
+activators:
   activator1: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_HIT_ENTITY
     commands:
@@ -668,13 +670,13 @@ activators:  **
     - BURN 2
 ```
 
-### \[P\_E] detailedEntities
+### \[P\_E] detailedEntities <CustomTag type="player_entity" />
 
 * Type of activator category: PLAYER\_ENTITY
 * Info:  For activators that involves an entity you can select as condition the type of entity(es) where this activator will trigger by using this feature.
-  * You can select a vanilla Minecraft entity (info: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)) like:
+  * You can select a vanilla Minecraft entity (info: [EntityType list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)) like:
     * "ZOMBIE"
-  * ⭐\[Requires NBTAPI Plugin] You can select a vanilla Minecraft mob with NBT (info: [https://minecraft.fandom.com/wiki/Tutorials/Command\_NBT\_tags#Entities](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities)) like:
+  * <CustomTag type="premium" /> It requires [NBTAPI Plugin](https://modrinth.com/plugin/nbtapi) You can select a vanilla Minecraft mob with NBT (info: [NBT Tags of entities](https://minecraft.fandom.com/wiki/Tutorials/Command_NBT_tags#Entities)) like:
     *  `ZOMBIE{isBaby:1}`
     * `ZOMBIE{CustomName:"*"}`
   * You can select a MythicMob mob like:
@@ -694,18 +696,18 @@ activators:
     - ZOMBIE{IsBaby:1}
 ```
 
-### \[P\_E] entityConditions
+### \[P\_E] entityConditions <CustomTag type="player_entity" />
 
 * Type of activator category: PLAYER\_ENTITY
 * Info: Feature for activators that involves a entity, here you can setup conditions for the entity involved.
-* [Entity conditions](../../../tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
+* [Entity conditions](/docs/tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
 
-### \[P\_T] targetCommands
+### \[P\_T] targetCommands <CustomTag type="player_entity" />
 
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders](/docs/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 * There are three type of entity targets on commands
   * Player: Its the player/user who triggered the activator on the ExecutableItem
   * Target: Its the player targeted/enemy involved in an activator.
@@ -713,8 +715,8 @@ Commands are a list of commands that are run from the console when the activator
 * Type of activator category: PLAYER\_TARGET
 * Info: Target commands is a list commands that are normally run against the target when the activator triggers.
   * This means if it has an SCore command of DAMAGE 5, if its on targetCommands then the damage will be applied to the target/enemy involved in the activator.
-  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "effect give %player% strength 5 5" even though its on targetCommands, the parse of placeholders will apply the cooldown to %player%. If you would like to apply this command to target then use %target%. More information on [https://docs.ssomar.com/tools-for-all-plugins-score/placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders)
-  * You can check the list of targetCommands here -> [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
+  * Its "normally run against the player" because this works for SCore commands, remember you can use another plugin commands or vanilla commands, so if you add "effect give %player% strength 5 5" even though its on targetCommands, the parse of placeholders will apply the cooldown to %player%. If you would like to apply this command to target then use %target%. More information on [Placeholders](/docs/tools-for-all-plugins-score/placeholders)
+  * You can check the list of targetCommands here -> [Player & Target commands](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
 * Example:
 
 ```yaml
@@ -740,13 +742,13 @@ activators:
     - CANCEL_PICKUP time:100
 ```
 
-### \[P\_T] targetConditions
+### \[P\_T] targetConditions  <CustomTag type="player_target" />
 
 * Type of activator category: PLAYER\_TARGET
 * Info: Feature for activators that involves a player target, here you can setup conditions for the player target involved.
-* [Target conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* [Target conditions](/docs/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
 
-### \[S\_A\_L] detailedItems
+### \[S\_A\_L] detailedItems <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific activator list
   * 🔹PLAYER\_DROP\_ITEM
@@ -772,36 +774,36 @@ activators:
       messageIfNotValid: '&4&l[Error] &cthe item is not correct !'
 ```
 
-### \[S\_A\_L] detailedDamageCauses
+### \[S\_A\_L] detailedDamageCauses <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_ENTITY
-  * ⭐PLAYER\_BLOCK\_HIT\_OF\_PLAYER
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
-  * ⭐PLAYER\_RECEIVE\_HIT\_BY\_PLAYER
-  * ⭐PLAYER\_RECEIVE\_HIT\_GLOBAL
-  * 🔹PLAYER\_DEATH
-  * 🔹PLAYER\_HIT\_PLAYER
+  * PLAYER\_BLOCK\_HIT\_OF\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_BLOCK\_HIT\_OF\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_RECEIVE\_HIT\_BY\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_RECEIVE\_HIT\_BY\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_RECEIVE\_HIT\_GLOBAL <CustomTag type="premium" compact />
+  * PLAYER\_DEATH
+  * PLAYER\_HIT\_PLAYER
 * Info: Feature for activators that involves damage, here you can select as condition the type of damage that is either received or dealt depending on the activator you are using.
 * Example:
 
 ```yaml
-activators:  **
+activators:
   activator1: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_DEATH
     detailedDamageCauses:
     - ENTITY_EXPLOSION
 ```
 
-### \[S\_A\_L] detailedEffects
+### \[S\_A\_L] detailedEffects <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PLAYER\_RECEIVE\_EFFECT
+  * PLAYER\_RECEIVE\_EFFECT <CustomTag type="premium" compact />
 * Info: Feature for activators that involves effects, here you can select as condition the type of effect involved to trigger the activator.
 * Example:
 
 ```yaml
-activators:  **
+activators:
   activator1: # Activator ID, you can create as many activator on the activators list    
     option: PLAYER_RECEIVE_EFFECT
     detailedEffects:
@@ -812,10 +814,10 @@ activators:  **
         condition'
 ```
 
-### \[S\_A\_L] detailedCommands
+### \[S\_A\_L] detailedCommands <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PLAYER\_WRITE\_COMMAND
+  * PLAYER\_WRITE\_COMMAND <CustomTag type="premium" compact />
 * Info: Feature for activators that involves commands, here you can select as condition the command the activator should run with.
 * Example:
 
@@ -830,13 +832,13 @@ activators:
     - REGAIN HEALTH 10
 ```
 
-### \[S\_A\_L] desactiveDrops
+### \[S\_A\_L] desactiveDrops <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PLAYER\_KILL\_ENTITY
-  * ⭐PLAYER\_BLOCK\_BREAK
-  * ⭐PLAYER\_KILL\_PLAYER
-  * ⭐PLAYER\_FISH\_FISH
+  * PLAYER\_KILL\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_BLOCK\_BREAK <CustomTag type="premium" compact />
+  * PLAYER\_KILL\_PLAYER <CustomTag type="premium" compact />
+  * PLAYER\_FISH\_FISH <CustomTag type="premium" compact />
 * Info: Boolean value that allows or prevents the vanilla loot to be dropped when breaking blocks or killing mobs. Since its vanilla drops, custom drops from custom mobs e.g. (MythicMobs) will not get affected by this.
 * Example: 
 
@@ -847,12 +849,12 @@ activators:
     desactiveDrops: true
 ```
 
-### \[S\_A\_L] typeTarget
+### \[S\_A\_L] typeTarget <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * 🔹PLAYER\_ALL\_CLICK
-  * 🔹PLAYER\_RIGHT\_CLICK
-  * 🔹PLAYER\_LEFT\_CLICK
+  * PLAYER\_ALL\_CLICK
+  * PLAYER\_RIGHT\_CLICK
+  * PLAYER\_LEFT\_CLICK
 * Info: Feature that restricts the activator so it will only get activated/triggered when the event occurred with certain type of clicking
   * typeTarget
     * ONLY\_AIR: Restricts the activator so it will only get activated/triggered when the event occurred when clicking only in the air, it means if you clicked on a block the activator won't get triggered. Don't get confuse ! You may think, what happens if I click on a player ? which will not be a block so its on the "air" well.. that even is outside the instance of PLAYER\_(CLICK) type activators, that event is instance of PLAYER\_CLICK\_ON\_PLAYER so the activator won't trigger too, it must be instance of PLAYER\_(CLICK).
@@ -862,7 +864,7 @@ activators:
 * Example: 
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: PLAYER_ALL_CLICK
     typeTarget: NO_TYPE_TARGET
@@ -878,11 +880,11 @@ activators:
     blockCommands: [] # Added because of typeTarget: ONLY_BLOCK which enables the instance of the activator to block instance
 ```
 
-### \[S\_A\_L] detailedClick
+### \[S\_A\_L] detailedClick <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PLAYER\_CLICK\_ON\_ENTITY
-  * 🔹PLAYER\_CLICK\_ON\_PLAYER
+  * PLAYER\_CLICK\_ON\_ENTITY <CustomTag type="premium" compact />
+  * PLAYER\_CLICK\_ON\_PLAYER
 * Info: Feature that restricts the activator triggers only if the correct click is involved in the event.
   * detailedClick
     * RIGHT: Restricts the activator only work when the even occurred with the right click
@@ -897,13 +899,13 @@ activators:
     detailedClick: LEFT
 ```
 
-### \[S\_A\_L] mustBeAProjectileLaunchWithTheSameEI
+### \[S\_A\_L] mustBeAProjectileLaunchWithTheSameEI <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐PROJECTILE\_ENTER\_IN\_LIQUID
-  * ⭐PROJECTILE\_HIT\_BLOCK
-  * ⭐PROJECTILE\_HIT\_ENTITY
-  * 🔹PROJECTILE\_HIT\_PLAYER
+  * PROJECTILE\_ENTER\_IN\_LIQUID <CustomTag type="premium" compact />
+  * PROJECTILE\_HIT\_BLOCK <CustomTag type="premium" compact />
+  * PROJECTILE\_HIT\_ENTITY <CustomTag type="premium" compact />
+  * PROJECTILE\_HIT\_PLAYER
 * Info: Feature for the activator that are related to projectile, it affects if the activator should run with projectiles not launched by the same EI.
   * Example, there is an activator PROJECTILE\_HIT\_ENTITY, detailedSlots: \[all slots] and on commands: \["say hi"]
     * If the feature is enabled, then it will only work if this ExecutableItem has another activator that has LAUNCH command, so, the projectile will be launched from the EI and then the condition will met
@@ -917,10 +919,10 @@ activators:
     mustBeAProjectileLaunchWithTheSameEI: true
 ```
 
-### \[S\_A\_L] delay and delayTick
+### \[S\_A\_L] delay and delayTick <CustomTag type="specific_activators" />
 
 * Type of activator category: Specific Activator List
-  * ⭐LOOP
+  * LOOP <CustomTag type="premium" compact />
 * Info: Features of the activator that changes the interval time where this activator triggers, it affects the behavior of the loop repetitions of the activator.
   * delay: Integer value that represents how many seconds will the loop be. This means, each \<delay> \[time] the loop will trigger again. e.g. (If the delay is 30 seconds then each 30 seconds the activator will trigger)
   * delayTick: Boolean value to set the delay time in ticks, otherwise it is in seconds. (20 ticks = 1 second)

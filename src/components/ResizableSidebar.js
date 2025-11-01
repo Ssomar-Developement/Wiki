@@ -135,16 +135,25 @@ if (typeof document !== 'undefined') {
   // Try on load
   window.addEventListener('load', () => setTimeout(tryInit, 100));
 
-  // Watch for sidebar appearance using MutationObserver
+  // Watch for sidebar appearance/disappearance using MutationObserver
   const observer = new MutationObserver(() => {
-    // Don't observe if already initialized
-    if (isInitialized) {
-      return;
-    }
-
     const sidebar = document.querySelector('.theme-doc-sidebar-container');
+
+    // If sidebar exists but has no resize handle, initialize
     if (sidebar && !sidebar.querySelector('.sidebar-resize-handle')) {
+      // Reset state if sidebar was remounted (SPA navigation)
+      if (isInitialized) {
+        console.log('[ResizableSidebar] Sidebar remounted, resetting initialization state');
+        isInitialized = false;
+        retryCount = 0;
+      }
       tryInit();
+    }
+    // If sidebar doesn't exist and we were initialized, reset state
+    else if (!sidebar && isInitialized) {
+      console.log('[ResizableSidebar] Sidebar unmounted, resetting state');
+      isInitialized = false;
+      retryCount = 0;
     }
   });
 

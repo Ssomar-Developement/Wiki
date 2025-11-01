@@ -121,6 +121,16 @@ body .footer {
   padding-left: 0.2rem;
 }
 
+/* Add spacing between main sidebar categories */
+.menu__list > .theme-doc-sidebar-item-category-level-1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Remove extra margin from the last category */
+.menu__list > .theme-doc-sidebar-item-category-level-1:last-child {
+  margin-bottom: 0;
+}
+
 .theme-doc-toc-desktop {
   background: var(--doc-sidebar-bg);
   border-left: 1px solid var(--doc-border);
@@ -198,9 +208,38 @@ body .footer {
 
 .theme-admonition {
   border-radius: 16px;
-  border: 1px solid rgba(91, 94, 230, 0.16);
   box-shadow: none;
-  background: rgba(91, 94, 230, 0.06);
+}
+
+/* Note admonition - Blue/Purple */
+.theme-admonition-note {
+  border: 1px solid rgba(91, 94, 230, 0.3);
+  background: rgba(91, 94, 230, 0.08);
+}
+
+/* Info admonition - Cyan */
+.theme-admonition-info {
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  background: rgba(14, 165, 233, 0.08);
+}
+
+/* Tip admonition - Green */
+.theme-admonition-tip {
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+/* Warning admonition - Orange */
+.theme-admonition-warning {
+  border: 1px solid rgba(251, 146, 60, 0.3);
+  background: rgba(251, 146, 60, 0.08);
+}
+
+/* Danger/Caution admonition - Red */
+.theme-admonition-danger,
+.theme-admonition-caution {
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.08);
 }
 
 [data-theme='dark'] .theme-doc-markdown {

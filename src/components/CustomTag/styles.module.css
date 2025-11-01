@@ -1,0 +1,172 @@
+.customTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  vertical-align: middle;
+  border: 1.5px solid;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Compact variant - smaller height */
+.customTag.compact {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  gap: 0.3rem;
+  border-width: 1px;
+}
+
+.customTag.compact .tagIcon {
+  height: 0.9em;
+  width: 0.9em;
+}
+
+.customTag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tagIcon {
+  height: 1.1em;
+  width: 1.1em;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.tagLabel {
+  white-space: nowrap;
+}
+
+/* Paper Tag - Orange/Red */
+.paperTag {
+  background: rgba(234, 88, 12, 0.1);
+  border-color: rgba(234, 88, 12, 0.4);
+  color: #ea580c;
+}
+
+[data-theme='dark'] .paperTag {
+  background: rgba(251, 146, 60, 0.15);
+  border-color: rgba(251, 146, 60, 0.5);
+  color: #fb923c;
+}
+
+/* Version Tag - Green */
+.versionTag {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #16a34a;
+}
+
+[data-theme='dark'] .versionTag {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.5);
+  color: #4ade80;
+}
+
+/* Premium Tag - Purple/Gold */
+.premiumTag {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(217, 119, 6, 0.1));
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #9333ea;
+}
+
+[data-theme='dark'] .premiumTag {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(217, 119, 6, 0.15));
+  border-color: rgba(168, 85, 247, 0.5);
+  color: #c084fc;
+}
+
+/* Spigot Tag - Yellow/Orange */
+.spigotTag {
+  background: rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.4);
+  color: #ca8a04;
+}
+
+[data-theme='dark'] .spigotTag {
+  background: rgba(234, 179, 8, 0.15);
+  border-color: rgba(234, 179, 8, 0.5);
+  color: #fbbf24;
+}
+
+/* Default Tag */
+.defaultTag {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.4);
+  color: #64748b;
+}
+
+[data-theme='dark'] .defaultTag {
+  background: rgba(148, 163, 184, 0.15);
+  border-color: rgba(148, 163, 184, 0.5);
+  color: #94a3b8;
+}
+
+/* Player None Tag - Gray */
+.playerNoneTag {
+  background: rgba(107, 114, 128, 0.1);
+  border-color: rgba(107, 114, 128, 0.4);
+  color: #4b5563;
+}
+
+[data-theme='dark'] .playerNoneTag {
+  background: rgba(107, 114, 128, 0.15);
+  border-color: rgba(107, 114, 128, 0.5);
+  color: #9ca3af;
+}
+
+/* Player Block Tag - Brown */
+.playerBlockTag {
+  background: rgba(120, 53, 15, 0.1);
+  border-color: rgba(120, 53, 15, 0.4);
+  color: #78350f;
+}
+
+[data-theme='dark'] .playerBlockTag {
+  background: rgba(180, 83, 9, 0.15);
+  border-color: rgba(180, 83, 9, 0.5);
+  color: #fdba74;
+}
+
+/* Player Entity Tag - Blue */
+.playerEntityTag {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.4);
+  color: #2563eb;
+}
+
+[data-theme='dark'] .playerEntityTag {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.5);
+  color: #60a5fa;
+}
+
+/* Player Target Tag - Pink/Magenta */
+.playerTargetTag {
+  background: rgba(219, 39, 119, 0.1);
+  border-color: rgba(219, 39, 119, 0.4);
+  color: #be185d;
+}
+
+[data-theme='dark'] .playerTargetTag {
+  background: rgba(219, 39, 119, 0.15);
+  border-color: rgba(219, 39, 119, 0.5);
+  color: #f9a8d4;
+}
+
+/* Specific Activators Tag - Teal/Cyan */
+.specificActivatorsTag {
+  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(20, 184, 166, 0.4);
+  color: #0d9488;
+}
+
+[data-theme='dark'] .specificActivatorsTag {
+  background: rgba(20, 184, 166, 0.15);
+  border-color: rgba(20, 184, 166, 0.5);
+  color: #5eead4;
+}

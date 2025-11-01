@@ -1,3 +1,5 @@
+import LinkPreview from '@site/src/components/LinkPreview';
+
 # Player & Target Commands
 
 :::warning
@@ -50,9 +52,12 @@ Example:
 
 ## Mixed Commands
 
-In addition of the following list of commands you can also use
+In addition of the following list of commands you can also use:
 
-* [https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity)
+<LinkPreview
+  url="docs/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity"
+  title="Mixed commands (Compatible with Player and Entity)"
+/>
 
 These commands can be used in the Player related commands OR Entity related commands.
 

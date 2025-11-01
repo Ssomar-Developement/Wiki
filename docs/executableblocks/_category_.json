@@ -2,6 +2,9 @@
   "collapsed": true,
   "label": "ExecutableBlocks",
   "position": 4,
+  "customProps": {
+    "icon": "/img/ExecutableBlocks (64x64)px.png"
+  },
   "link": {
     "type": "doc",
     "id": "executableblocks/information-eb"
