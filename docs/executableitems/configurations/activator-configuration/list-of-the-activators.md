@@ -390,9 +390,6 @@ Activator features are features that are exclusive to that activator.
   * Lucky Catch – When successfully fishing with a specific rod, there's a chance to receive additional custom loot items from the CustomFishing plugin.
   * Fishing Skill Progression – Track successful catches and increase player fishing skill levels based on the rarity of fish caught.
 
-:::info
-This activator only works if you have the **CustomFishing** plugin installed. It integrates with CustomFishing's FishingResultEvent to provide enhanced fishing mechanics.
-:::
 
 ### PLAYER\_HARVEST\_BLOCK
 
