@@ -117,6 +117,7 @@ const config = {
             label: 'Discord',
           },
           {
+            to: '/ssomar-services',
             position: 'left',
             label: 'Products for developers',
           },
