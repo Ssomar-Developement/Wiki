@@ -278,21 +278,6 @@ trigger_1:
   - "ei run-custom-trigger trigger:trigger_3"
 ```
 
-### Conditional Execution
-Use placeholders and conditions to control execution:
-
-```yaml
-conditional_trigger:
-  option: CUSTOM_TRIGGER
-  placeholdersConditions:
-    condition1:
-      type: PLAYER_NUMBER
-      comparator: SUPERIOR_OR_EQUALS
-      number: 10
-  commands:
-  - "say There are 10+ players online!"
-```
-
 ### Global Events
 Combine ExecutableEvents triggers with other plugin triggers for server-wide events:
 
@@ -308,7 +293,4 @@ server_event:
 
 ## Related Documentation
 
-- [Activator Configuration](/docs/tools-for-all-plugins-score/activators)
-- [Command System](/docs/tools-for-all-plugins-score/commands)
-- [Schedule Features](/docs/tools-for-all-plugins-score/schedules)
 - [Placeholders](/docs/tools-for-all-plugins-score/placeholders)
