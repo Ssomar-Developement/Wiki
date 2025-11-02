@@ -1,4 +1,5 @@
 import LinkPreview from '@site/src/components/LinkPreview';
+import CustomTag from '@site/src/components/CustomTag';
 
 # Player & Target Commands
 
@@ -69,8 +70,8 @@ _Sorted by alphabetical order_
 
 * Info: Gives absorption effect to the player
 * Command settings:
-  * amount: amount of absorption half hearts. Supports negative values to remove.
-  * time: time of the effect in ticks. Set it empty or "0" if want to be infinite.
+  * `{amount}`: amount of absorption half hearts. Supports negative values to remove.
+  * `{time}`: time of the effect in ticks. Set it empty or "0" if want to be infinite.
 * Example:
 
 ```yaml
@@ -99,7 +100,7 @@ activators:
     option: # Here goes an activator that is at least instance of player
     commands:
     # You can do that to temporary up the max_absorption value of the player
-**    - minecraft:attribute %player% minecraft:max_absorption base set 5**
+    - minecraft:attribute %player% minecraft:max_absorption base set 5**
     - ABSORPTION amount:5 time:200
     - DELAY_TICK 200
     - minecraft:attribute PLAYER_NAME minecraft:max_absorption base set 0
@@ -137,11 +138,11 @@ activators:
 
 * Info: It adds an attribute to an item as sum or rest operation.
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * attribute: The attribute you want to add
-  * value: The value for the operation
-  * equipmentSlot: The slot where the attribute will be enabled
-  * mode: select the mode of addition
+  * `{slot}`: The slot where it will be applied. -1 for mainhand
+  * `{attribute}`: The attribute you want to add. [Attributes list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
+  * `{value}`: The value for the operation
+  * `{equipmentSlot}`: The slot where the attribute will be enabled. [EquipmentSlot list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
+  * `{mode}`: select the mode of addition
     * mode:ADD # Add the attribute to the item 
     * mode:OVERRIDE # Remove the current attributes of the same type of the item + Add the attribute to the item 
     * mode:STACK # Stack with the attribute present on the item, if no one exist it adds it
@@ -160,21 +161,13 @@ activators:
     - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND mode:STACK affectDefaultAttributes: true # Add this attribute to the target
 ```
 
-:::info
-You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
-
-And the slots here
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
-:::
-
 ### ADD\_ITEM\_ENCHANTMENT
 
 * Info: It adds an enchantment on an item on a specific slot with certain level
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * enchantment: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones.
-  * level: The level for the enchantment
+  * `{slot}`: The slot where it will be applied. -1 for mainhand
+  * `{enchantment}`: The enchantment that you want to be applied, don't use spaces, use the minecraft enchantments not the display ones. [Enchantments](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html)
+  * `{level}`: The level for the enchantment
 * Example:
 
 ```yaml
@@ -189,18 +182,12 @@ activators:
     - ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1
 ```
 
-:::info
-You can find the enchantments here
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html)
-:::
-
 ### ADD\_ITEM\_LORE
 
 * Info: Adds a line of lore
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * text: The text for the new lore line
+  * `{slot}`: The slot where it will be applied. -1 for mainhand
+  * `{text}`: The text for the new lore line
 * Example:
 
 ```yaml
@@ -233,16 +220,16 @@ activators:
 
 * Info: Creates a bossbar text for a certain duration time.
 * Command settings:
-  * time: The duration of the bossbar in ticks
-  * color: Color of bossbar text
-  * text: text on the bossbar
-  * count: how many times you want it to count
+  * `{time}`: The duration of the bossbar in ticks
+  * `{color}`: Color of bossbar text
+  * `{text}`: text on the bossbar
+  * `{count}`: how many times you want it to count
     * if this option is present, the time argument will not matter anymore
-  * countTicks: true/false whether you want it to count in ticks or in seconds instead
-  * countOrder: 
+  * `{countTicks}`: true/false whether you want it to count in ticks or in seconds instead
+  * `{countOrder}`: 
     * ascending: makes the timer count from 0
     * descending: makes the timer count from the given
-  * overrideMode:
+  * `{overrideMode}`:
     * NO\_OVERRIDE: It doesn't override the other Bossbars
     * OVERRIDE\_ALL: It will override all other BossBars sent by SCore
     * OVERRIDE\_SAME\_TEXT: It will override the other Bossbars sent by SCore that contain the same text
@@ -262,8 +249,8 @@ activators:
 
 * Info: Disables pickup on a player for a set amount of time
 * Command settings:
-  * time: The duration in ticks of how long till the player can pickup items again
-  * material: If set the player cant pickup only the material specified, if null he can't pickup everything
+  * `{time}`: The duration in ticks of how long till the player can pickup items again
+  * `{material}`: If set the player cant pickup only the material specified, if null he can't pickup everything
 * Example:
 
 ```yaml
@@ -272,7 +259,7 @@ activators:
     option: # Here goes an activator that is at least instance of player
     commands:
     - CANCEL_PICKUP time:600
-**    - CANCEL_PICKUP time:600 material:stone
+    - CANCEL_PICKUP time:600 material:stone
 ```
 
 :::info
@@ -283,7 +270,7 @@ The only way to RESET this command after setting a time in ticks is reloading or
 
 * Info: Send a message from the player to the chat
 * Command settings:
-  * text: Text to send
+  * `{text}`: Text to send
 * Example:
 
 ```yaml
@@ -326,10 +313,10 @@ activators:
 
 * Info: It boost the growth of the crops around you
 * Command settings:
-  * radius: The radius of the boost (Default 5)
-  * delay: The delay in ticks between each growth boost
-  * duration: The duration in ticks of the total boost
-  * chance: The chance of growth the blocks have when the boost is applied
+  * `{radius}`: The radius of the boost (Default 5)
+  * `{delay}`: The delay in ticks between each growth boost
+  * `{duration}`: The duration in ticks of the total boost
+  * `{chance}`: The chance of growth the blocks have when the boost is applied
 * Example:
 
 The following command will generate 20 growth boost every 10 ticks.\
@@ -346,8 +333,8 @@ activators:
 ### DISABLE\_FLY\_ACTIVATION
 
 * Info: Deny the usage of the fly for a player (Gliding in Elytra is not considered as flying)
-* Command settings:
-  * time: The duration in seconds of the effect
+* Command setting:
+  * `{time}`: The duration in seconds of the effect
 * Example: (The command below disable the activation of the fly during 1 minute)
 
 ```yaml
@@ -362,7 +349,7 @@ activators:
 
 * Info: Deny the use of elytra for a period of time
 * Command settings:
-  * time: The duration in seconds of the effect
+  * `{time}`: The duration in seconds of the effect
 * Example: (the command below disable the use of elytra for 20 secs)
 
 ```yaml
@@ -440,7 +427,7 @@ activators:
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -450,8 +437,8 @@ activators:**
 ### FLY OFF
 
 * Info: Disables creative flight on the player and if the player's flight get's disabled midair, the player will be teleported on the possible block under the player.
-* Command settings:
-  * teleportOnTheGround: (true or false) Whether the player would get teleported to the ground or not (Default true)
+* Command setting:
+  * `[teleportOnTheGround]`: (Optional) (default = true) Whether the player would get teleported to the ground or not
 * Example:
 
 ```yaml
@@ -466,7 +453,7 @@ activators:
 
 * Info: It drops all the EI in your inventory with the id specified
 * Command settings:
-  * ei\_id: Specify the EI that you want to be force dropped by the player
+  * `{ei_id}`: Specify the EI that you want to be force dropped by the player
 * Example: 
 
 ```yaml
@@ -492,7 +479,7 @@ activators:
     - FORMAT_ENCHANTMENTS %slot%
 ```
 
-![](<..//img/image (393).png>) -> ![](<..//img/image (382).png>)
+![](</img/image (393).png>) -> ![](</img/image (382).png>)
 
 ### GIVE\_MONEY
 
@@ -549,7 +536,7 @@ activators:
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -558,14 +545,10 @@ activators:**
 
 ### JOBS\_MONEY\_BOOST
 
-:::info
-It supports "Jobs reborn"
-:::
-
-* Info: Increases the money gained temporarily
+* Info: Increases the money gained temporarily. For [Jobs reborn](https://www.spigotmc.org/resources/jobs-reborn.4216/)
 * Command settings:
-  * multiplier: Multiplier value
-  * time: Duration in seconds of the boost in seconds
+  * `{multiplier}`: Multiplier value
+  * `{time}`: Duration in seconds of the boost in seconds
 * Example:
 
 ```yaml
@@ -578,13 +561,10 @@ activators:
 
 ### LAUNCH
 
-* Info: Launches a custom projectile. [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type)
+* Info: Launches a custom projectile. [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type)
 * List: 
-
 <details>
-
 <summary>Projectile Types</summary>
-
 * ARROW
 * DRAGONFIREBALL
 * EGG
@@ -598,14 +578,13 @@ activators:
 * SNOWBALL
 * TRIDENT
 * WITHERSKULL
-
 </details>
 
 * Command settings:
-  * projectile: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
-  * angleRotationVertical: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
-  * angleRotationHorizontal: (only for 1.14 and +) (not necessary) (default = 0) (in degrees) Define the direction where the entity will be launched
-  * velocity: To customize the velocity of the projectile
+  * `{projectile}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * `[angleRotationVertical]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> (in degrees) Define the direction where the entity will be launched
+  * `[angleRotationHorizontal]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> (in degrees) Define the direction where the entity will be launched
+  * `[velocity]`: (Optional) (default = 1) To customize the velocity of the projectile
 * Example:
 
 ```yaml
@@ -650,13 +629,13 @@ activators:
 
 * Info: Launches a projectile at a specific location
 * Command settings:
-  * projectileType: the type of the projectile or the custom projectile ID from SCore ( [Reference](https://github.com/ssomar1607/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
-  * frontValue: positive=front , negative=back - Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
-  * rightValue: right=positive, negative=left - Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
-  * yValue: To how high up from your Y position will the projectile will spawn.
-  * velocity: To how fast will the projectile fly. Set the value to 0 for the projectile to fall downwards upon spawning the projectile.
-  *  angleRotationVertical: (Optional) you can add a vetical rotation for your projectile (in degrees)
-  *  angleRotationHorizontal: (Optional) you can add a horizontal rotation for your projectile (in degrees)
+  * `{projectileType}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * `[frontValue]`: (Optional) (default = 0) positive=front , negative=back - Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
+  * `[rightValue]`: (Optional) (default = 0) right=positive, negative=left - Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
+  * `[yValue]`: (Optional) (default = 0) To how high up from your Y position will the projectile will spawn.
+  * `[velocity]`: (Optional) (default = 1) To how fast will the projectile fly. Set the value to 0 for the projectile to fall downwards upon spawning the projectile.
+  * `[angleRotationVertical]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> you can add a vetical rotation for your projectile (in degrees)
+  * `[angleRotationHorizontal]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> you can add a horizontal rotation for your projectile (in degrees)
 * Example:
 
 ```yaml
@@ -670,8 +649,8 @@ activators:
 ### MINECART\_BOOST
 
 * Info: It boost you when riding a minecart (Effect close to when you go up of a powered rail)
-* Command settings:
-  * boost: The boost speed
+* Command setting:
+  * `{boost}`: The boost speed
 * Example:
 
 ```yaml
@@ -700,9 +679,10 @@ activators:
 
 * Modifies the durability of a specific item in a specific slot
 * Command settings:
-  * modification: Positive value to increase the durability. Negative value to decrease the durability
-  * slot: The slot number of the item (-1 for the held slot)
-  * supportUnbreaking: (true or false) If it supports the unbreaking enchantment or not
+  * `{modification}`: Positive value to increase the durability. Negative value to decrease the durability
+  * `{slot}`: The slot number of the item (-1 for the held slot)
+![](</img/slots_info.png>)
+  * `{supportUnbreaking}`: (true or false) If it supports the unbreaking enchantment or not
 * Example:
 
 ```yaml
@@ -715,13 +695,13 @@ activators:
 
 ### OPEN\_CHEST
 
-* Info: It opens a chest in the selected location
+* Info: It opens a chest or barrel in the selected location
 * Command settings:
   * `{world}`: World name
   * `{x}`: X coordinate
   * `{y}`: Y coordinate
   * `{z}`: Z coordinate
-  * `[bypassProtections]`: (Optional) If it will open the chest anyways even if its protected
+  * `[bypassProtections]`: (Optional) (default = false) If it will open the chest anyways even if its protected
 * Example:
 
 ```yaml
@@ -732,10 +712,6 @@ activators:
     - OPENCHEST VanillaWorld 100 100 100
 ```
 
-:::info
-It supports barrels
-:::
-
 ### OPEN\_ENDERCHEST
 
 * Info: It opens the ender chest for the player that runs the activator
@@ -743,7 +719,7 @@ It supports barrels
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -767,8 +743,8 @@ activators:
 ### OXYGEN
 
 * Info: It gives oxygen to the target
-* Command settings:
-  * time: The duration in ticks of oxygen you want to give
+* Command setting:
+  * `{time}`: The duration in ticks of oxygen you want to give
 * Example:
 
 ```yaml
@@ -783,7 +759,7 @@ activators:
 
 * Info: Similar to CUSTOMDASH1 but the xyz will be replaced with the xyz coords of the nearest projectile from you.
 * Command settings:
-  * fallDamage: Whether you will get fall damage or not (If you forgot to set whether it's true or false, the default will be false. To get fall damage, set this to true)
+  * `{fallDamage}`: Whether you will get fall damage or not (If you forgot to set whether it's true or false, the default will be false. To get fall damage, set this to true)
 * Example:
 
 ```yaml
@@ -798,7 +774,7 @@ activators:
 
 * Info: Gives you a specific amount of food/saturation
 * Command settings:
-  * amount: The amount of saturation points you want to gain. Use negative values to reduce hunger points
+  * `{amount}`: The amount of saturation points you want to gain. Use negative values to reduce hunger points
 * Example:
 
 ```yaml
@@ -811,10 +787,10 @@ activators:
 
 ### REGAIN\_MAGIC
 
-* Info: Gives the player specific values of a specific magic 
+* Info: Gives the player specific values of a specific [Ecoskills](https://www.spigotmc.org/resources/ecoskills-%E2%AD%95-addictive-mmorpg-skills-%E2%9C%85-create-skills-stats-effects-mana-%E2%9C%A8-plug-play.95541/)'s magic.  
 * Command settings:
-  * ecoSkillsMagicID: The ID of the Ecoskills's magic.
-  * amount: The amount to get.
+  * `{ecoSkillsMagicID}`: The ID of the Ecoskills's magic.
+  * `{amount}`: The amount to get.
 * Example:
 
 ```yaml
@@ -833,7 +809,7 @@ It supports negative values.
 
 * Info: Gives you a specific amount of saturation
 * Command settings:
-  * amount: The amount of saturation you can to give
+  * `{amount}`: The amount of saturation you can to give
 * Example:
 
 ```yaml
@@ -848,12 +824,13 @@ activators:
 
 * Info: Remove an enchantment from a slot
 * Command settings:
-  * slot: Slot to remove the enchantment from
-  * enchantment: Enchantment to remove (ALL for every enchantment)
+  * `{slot}`: Slot to remove the enchantment from (-1 for held slot)
+![](</img/slots_info.png>)
+  * `{enchantment}`: Enchantment to remove (ALL for every enchantment)
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -864,7 +841,8 @@ activators:**
 
 * Info: Remove a lore line
 * Command settings:
-  * `{slot}`: Slot to remove the lore from
+  * `{slot}`: Slot to remove the lore from (-1 for held slot)
+![](</img/slots_info.png>)
   * `{line}`: The line that you want to remove
 * Example:
 
@@ -909,8 +887,9 @@ activators:
 ### SEND\_MESSAGE
 
 * Info: Sends you a message
+  * [MiniMessage](https://docs.papermc.io/adventure/minimessage/format/) supported
 * Command settings:
-  * message: the message you want to send
+  * `{message}`: the message you want to send
 * Example:
 
 ```yaml
@@ -918,19 +897,15 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     commands:
     - SEND_MESSAGE text:&fThis is a somewhat random text.
+    - SEND_MESSAGE text:<yellow>Hello </yellow><blue>World</blue><yellow>!</yellow> # MiniMessage Suported, but dont use MiniMessage + vanilla at the same time
 ```
-
-:::info
-You can use minimessages color codes, like using gradient and stuff from this site: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html)\
-\
-You can only use one type of formatting at once in the same SENDMESSAGE command, either the classic color codes format or minimessage format.
-:::
 
 ### SEND\_CENTERED\_MESSAGE
 
 * Info: Sends you a message centered in the chat
+  * [MiniMessage](https://docs.papermc.io/adventure/minimessage/format/) supported
 * Command settings:
-  * message: the message you want to send
+  * `{message}`: the message you want to send
 * Example:
 
 ```yaml
@@ -939,21 +914,18 @@ activators:
     option: # Here goes an activator that is at least instance of player
     commands:
     - SEND_CENTERED_MESSAGE text:&fThis is a somewhat random text.
+    - SEND_CENTERED_MESSAGE text:<yellow>Hello </yellow><blue>World</blue><yellow>!</yellow> # MiniMessage Suported, but dont use MiniMessage + vanilla at the same time
 ```
 
-:::info
-You can use minimessages color codes, like using gradient and stuff from this site: [https://docs.adventure.kyori.net/minimessage/format.html](https://docs.adventure.kyori.net/minimessage/format.html)\
-\
-You can only use one type of formatting at once in the same SENDMESSAGE command, either the classic color codes format or minimessage format.
-:::
 
 ### SET\_ARMOR\_TRIM
 
 * Info: Set the specific armor trim with the specific pattern for the specified slot
 * Command settings:
-  * slot: The slot to apply the command (slot -1 for main hand)
-  * pattern: The pattern of the trim (if 'null' or 'remove' it will remove the current pattern)
-  * patternMaterial: The material of the pattern
+  * `{slot}`: The slot to apply the command (slot -1 for main hand)
+![](</img/slots_info.png>)
+  * `{pattern}`: The pattern of the trim (if 'null' or 'remove' it will remove the current pattern). [TrimPattern list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html)
+  * `{patternMaterial}`: The material of the pattern. [TrimMaterial list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html)
 * Example:
 
 ```yaml
@@ -965,23 +937,14 @@ activators:
     - SET_ARMOR_TRIM slot:38 pattern:null #to clear the armor trim
 ```
 
-:::info
-You can find all trim pattern here:
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimPattern.html)
-
-You can find all trim material here:
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/meta/trim/TrimMaterial.html)
-:::
 
 ### SET\_BLOCK
 
 * Info: Place a block on the block targeted by the player
 * Command settings:
-  * blockface: You can specify or not a blockFace to force the placement above for example
-  * material: Block ID (Block states are supported) 
-  * bypassProtection: Whether or not it will place the block even if the player doesnt have the permission
+  * `{blockface}`: You can specify or not a blockFace to force the placement above for example. [BlockFaces](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html)
+  * `{material}`: Block ID (Block states are supported) 
+  * `{bypassProtection}`: Whether or not it will place the block even if the player doesnt have the permission
 * Example:
 
 ```yaml
@@ -993,26 +956,20 @@ activators:
     - SET_BLOCK material:FURNACE[LIT=TRUE]
 ```
 
-:::info
-You can find all blockface here:
-
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html)
-:::
-
 ### SET\_BLOCK\_POS
 
 * Info: Set a block in a specific position
 * Command settings:
-  * x: X-Coordinate
-  * y: Y-Coordinate
-  * z: Z-Coordinate
-  * material: the material of the block
-  * bypassProtection: true or false, whether or not it bypass region, claim , island protection
-  * replace: true or false, whether or not it replaces the block if one already exists
+  * `{x}`: X-Coordinate
+  * `{y}`: Y-Coordinate
+  * `{z}`: Z-Coordinate
+  * `{material}`: the material of the block
+  * `[bypassProtection]`: (Optional) (default = false), whether or not it bypass region, claim , island protection
+  * `[replace]`: (Optional) (default = true), whether or not it replaces the block if one already exists
 * Example:
 
 ```yaml
-activators:**
+activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
@@ -1023,14 +980,14 @@ activators:**
 
 * Info: Setblock but for Executable Blocks. **(EXECUTABLE BLOCKS MUST BE INSTALLED)**
 * Command settings:
-  * id: ID of the executable block you are trying to place down
-  * x: X-Coordinate
-  * y: Y-Coordinate
-  * z: Z-Coordinate
-  * world: Name of the world
-  * replace: true or false. Whether it will replace the existing block in the said coordinates or not
-  * bypassProtection: if you want bypass the protections like worldguard (default false)
-  * ownerUUID: (Optional) The uuid of the supposed owner of the executable block
+  * `{id}`: ID of the executable block you are trying to place down
+  * `{x}`: X-Coordinate
+  * `{y}`: Y-Coordinate
+  * `{z}`: Z-Coordinate
+  * `{world}`: Name of the world
+  * `[replace]`: (Optional) (default = true). Whether it will replace the existing block in the said coordinates or not
+  * `[bypassProtection]`: (Optional) (default = false) if you want bypass the protections like worldguard
+  * `[ownerUUID]`: (Optional) (default = no owner) The uuid of the supposed owner of the executable block
 * Example:
 
 ```yaml
@@ -1045,8 +1002,9 @@ activators:
 
 * Info: Sets a custom name for your item in a specific slot
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * name: the new name of the item
+  * `{slot}`: The slot where it will be applied. (-1 for mainhand)
+![](</img/slots_info.png>)
+  * `{name}`: the new name of the item
 * Example:
 
 ```yaml
@@ -1059,10 +1017,12 @@ activators:
 
 ### SET\_ITEM\_COLOR
 
-* Info: Sets a specific color for the item (item colorables as leather armor)
+* Info: Sets a specific color for the item (item colorables as leather armor / firework star)
 *  Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * color: number value of the color
+  * `{slot}`: The slot where it will be applied. (-1 for mainhand)
+
+![](</img/slots_info.png>)
+  * `{color}`: number value of the color. [Coloer picker website](https://www.tydac.ch/color/)
 * Example:
 
 ```yaml
@@ -1073,22 +1033,15 @@ activators:
     - SET_ITEM_COLOR slot:1 color:0
 ```
 
-:::info
-Use the website: [https://www.tydac.ch/color/](https://www.tydac.ch/color/) for the leather color
-:::
-
-:::info
-It supports FIREWORK\_STAR
-:::
-
 ### SET\_ITEM\_ATTRIBUTE
 
 * Info: It sets an attribute to an item.
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * attribute: The attribute you want to add
-  * value: The value for the operation
-  * equipmentSlot: The slot for the attribute
+  * `{slot}`: The slot where it will be applied. (-1 for mainhand)
+![](</img/slots_info.png>)
+  * `{attribute}`: The attribute you want to add. [Attributes](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
+  * `{value}`: The value for the operation
+  * `{equipmentSlot}`: The slot for the attribute [EquipmentSlots](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
 * Example:
 
 ```yaml
@@ -1099,16 +1052,14 @@ activators:
     - SET_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
 ```
 
-:::info
-You can find the attributes here [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html)
-:::
 
 ### SET\_ITEM\_CUSTOM\_MODEL\_DATA
 
 * Info: Sets a specific custom model data to the specific item
 * Command settings:
-  * slot: The slot where it will be applied. -1 for mainhand
-  * customModelData: value of the customModelData
+  * `{slot}`: The slot where it will be applied. (-1 for mainhand)
+![](</img/slots_info.png>)
+  * `{customModelData}`: value of the customModelData
 * Example:
 
 ```yaml
@@ -1123,8 +1074,8 @@ activators:
 
 * Gives the player/target cooldown on an item
 * Command settings:
-  * material or group: The type of material or the group
-  * cooldown:: cooldown in seconds
+  * `{material or group}`: The type of material or the group. [More info for group](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2)
+  * `{cooldown}`: cooldown in seconds
 * Example:
 
 ```yaml
@@ -1143,20 +1094,15 @@ activators:
     - SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
 ```
 
-more info for the group arg:
-
-[https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2](https://www.minecraft.net/en-us/article/minecraft-java-edition-1-21-2)
-
 ### SET\_ITEM\_MATERIAL 
 
-:::info
-Only works at 1.20.5 and above
-:::
-
+<CustomTag type="version" version="1.20.5" />
 * Replaces the material of the item with a different material while keeping the nbt of the target item
 * Command settings:
-  * slot: Slot number (-1 for mainhand)
-  * material: The material you want the item to become into
+  * `{slot}`: Slot number (-1 for mainhand)
+
+![](</img/slots_info.png>)
+  * `{material}`: The material you want the item to become into
 * Example:
 
 ```yaml
@@ -1171,9 +1117,11 @@ activators:
 
 * Info: Sets a line of lore
 * Command settings:
-  * slot: Slot number (-1 for mainhand) 
-  * line : If you want to set the lore of the first type 1
-  * text: The new line text
+  * `{slot}`: Slot number (-1 for mainhand)
+
+![](</img/slots_info.png>)
+  * `{line}` : If you want to set the lore of the first type 1
+  * `{text}`: The new line text
 * Example:
 
 ```yaml
@@ -1188,14 +1136,14 @@ activators:
 
 * Info : Set a temporary block
 * Command settings:
-  * x: X-Coordinate
-  * y: Y-Coordinate
-  * z: Z-Coordinate
-  * world: Name of the world
-  * material: Block ID
-  * time: Time in ticks
-  * bypassProtection: (true or false) Whether to ignore 3rd party intervention or not
-  * whitelistCurrentBlock: List of blocks to watch out for
+  * `{x}`: X-Coordinate
+  * `{y}`: Y-Coordinate
+  * `{z}`: Z-Coordinate
+  * `{world}`: Name of the world
+  * `{material}`: Block ID
+  * `{time}`: Time in ticks
+  * `[bypassProtection]`: (Optional) (default = false)Whether to ignore 3rd party intervention or not
+  * `[whitelistCurrentBlock]`: (Optional) (default = can set on every types of block) List of blocks to watch out for
     * Examples:
     * AIR, WATER
     * !STONE, !COBBLESTONE
@@ -1209,20 +1157,17 @@ activators:
     - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
 ```
 
-
 :::warning
 It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 :::
 
 ### SPAWN\_ENTITY\_ON\_CURSOR
 
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html)
-
 * Info: Spawn entities on your cursor
 * Command settings:
-  * entity: Mob ID (ALL CAPS)
-  * amount: The amount of mobs that will spawn in that spot
-  * maxRange: The max range of the spawn (Default 200)
+  * `{entity}`: Mob ID (ALL CAPS) [EntityTypes](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html)
+  * `{amount}`: The amount of mobs that will spawn in that spot
+  * `[maxRange]`: (Optional) (default = 200) The max range of the spawn
 * Example:
 
 ```yaml
@@ -1236,7 +1181,7 @@ activators:
 ### SUDO
 
 * Info: Forces you to run a command
-* Command settings:
+* Command setting:
   * `{command}`: The command to run
 * Example:
 
@@ -1269,11 +1214,9 @@ activators:
 ```
 
 :::danger
-It is not recommended to use this **a lot**. As it is explained on the top of this page, if want to run vanilla commands use the execute command (Explained on the FAQ "How to use vanilla commands").
+It is not recommended to use this **a lot**. As it is explained on the top of this page, if want to run vanilla commands use the execute command (Explained on the FAQ [How to use vanilla commands](/docs/executableitems/questions-or-guides/frequently-asked-questions/how-to-use-vanilla-commands)).
 
-If have another way to achieve what you want use it.
-
-And if you have no other way but using SUDOOP, then use this command. This shouldn't be your first option.
+Only use SUDOOP if there is absolutely no other option — it should be your last resort, not your first choice.
 :::
 
 ### SWAP\_HAND
@@ -1287,7 +1230,7 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - SWAPHAND
+    - SWAP_HAND
 ```
 
 ### TRANSFER\_ITEM
@@ -1296,9 +1239,11 @@ activators:
 * Command settings:
   * `{slot of launcher}`: Target slot for slot no.1
   * `{slot of receiver}`: Target slot for slot no.2
+  
+![](</img/slots_info.png>)
   * `[boolean drop]`: (Optional) (default = false) Whether slot of launcher gets dropped during the swap or not
 
-### XPBOOST
+### XP_BOOST
 
 * Info: Boost the xp gain for a time.
 * Command settings:
@@ -1311,24 +1256,19 @@ activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
     commands:
-    - XPBOOST 2 10
+    - XP_BOOST 2 10
 ```
 
 :::info
 Be careful ! This command can get stacked, so if you run this command multiple times you will get more and more multipliers if the time between them is not enough for the last boost to disappear.\
-\
-XPBOOST 2 5\
-DELAY 1\
-XPBOOST 2 5\
-\
-This means the XP will be boosted in this order:\
-1 second: x2\
-4 seconds: x4 \
-1 second: x2
+```yaml
+- XP_BOOST 2 5
+- DELAY 1
+- XP_BOOST 2 5
+```
+
+This means the XP will be boosted in this order:
+* 1 second: x2
+* 4 seconds: x4
+* 1 second: x2
 :::
-
-## Mixed Commands
-
-In addition of the following list of commands you can also use:
-
-These commands can be used in the Player related commands OR Entity related commands.

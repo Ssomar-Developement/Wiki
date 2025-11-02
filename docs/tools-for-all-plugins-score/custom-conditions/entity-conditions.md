@@ -217,7 +217,7 @@ entityConditions:
 
 ifSheepColor:
 
-* Description: Checks if the entity has the correct sheep color
+* Description: Checks if the entity has the correct sheep color. [DyeColor](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)
 * Example:
 
 ```yaml
@@ -228,7 +228,6 @@ entityConditions:
     - yElloW
 ```
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)
 
 ### ifIsOnTheBlock - Not
 
@@ -271,8 +270,7 @@ entityConditions:
 ### ifNotEntityType
 
 * Description: Checks if the entity type of the entity is not the same as the list of types listed in the condition.
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html)
+[EntityType](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html)
 
 * Example:
 
@@ -294,15 +292,15 @@ entityConditions:
 * Description: Checks if the entity spawned from a spawner
 * Example:
 
-```
-    entityConditions:
-      ifFromSpawner: true
-      ifFromSpawnerMsg: error
-      ifFromSpawnerCancel: true
-      ifNotFromSpawner: true
-      ifHasTagMsg: ''
-      ifNotFromSpawnerMsg: error2
-      ifNotFromSpawnerCancel: true
+```yaml
+entityConditions:
+  ifFromSpawner: true
+  ifFromSpawnerMsg: error
+  ifFromSpawnerCancel: true
+  ifNotFromSpawner: true
+  ifHasTagMsg: ''
+  ifNotFromSpawnerMsg: error2
+  ifNotFromSpawnerCancel: true
 ```
 
 ### ifHasSaddle - Not
@@ -310,10 +308,10 @@ entityConditions:
 * Description: Checks if the entity is equipped with a saddle
 * Example:
 
-```
-    entityConditions:
-      ifHasSaddle: true
-      ifNotHasSaddle: true
+```yaml
+entityConditions:
+  ifHasSaddle: true
+  ifNotHasSaddle: true
 ```
 
 ### ifIsOnTheBlock - Not
@@ -321,14 +319,14 @@ entityConditions:
 * Description: Checks if the entity is standing on the said block
 * Example:
 
-```
-    entityConditions:
-      ifIsOnTheBlock:
-        blocks:
-        - STONE
-      ifIsNotOnTheBlock:
-        material0:
-          material: ACACIA_BUTTON
+```yaml
+entityConditions:
+  ifIsOnTheBlock:
+    blocks:
+    - STONE
+  ifIsNotOnTheBlock:
+    material0:
+      material: ACACIA_BUTTON
 ```
 
 ### ifNotEntityType
@@ -336,8 +334,8 @@ entityConditions:
 * Description: Checks if the target entity is not the said entity
 * Example:
 
-```
-    entityConditions:
-      ifNotEntityType:
-      - ZOMBIE_HORSE
+```yaml
+entityConditions:
+  ifNotEntityType:
+  - ZOMBIE_HORSE
 ```

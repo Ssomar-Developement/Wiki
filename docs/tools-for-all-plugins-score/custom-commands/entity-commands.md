@@ -252,9 +252,3 @@ it only works for 1.16.5+
 ```
 - TELEPORT_POSITION x:%target_x% y:%target_y% z:%target_z%
 ```
-
-## Mixed Commands
-
-In addition of the following list of commands you can also use:
-
-These commands can be used in the Player related commands OR Entity related commands.

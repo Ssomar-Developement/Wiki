@@ -1,11 +1,12 @@
+import CustomTag from '@site/src/components/CustomTag';
+
 # 🏹 Custom Projectiles
 
-### This page will help you to learn about creating Executable Items's custom projectiles 😎
+This page will help you to learn about creating custom projectiles and launch them.\
+We created for you an in-game editor to make the edition simple. **Use it.**
 
-* We created for you an in-game editor to make the edition simple. **Use it.**
-
-:::info
-THIS PROJECTILES ARE USED WITH ****LAUNCH**** AND ****LOCATED\_LAUNCH**** COMMAND, THEY CAN'T BE "GIVEN" TO A PLAYER.
+:::info 
+To launch them, easy, use the [LAUNCH](http://localhost:3003/Wiki/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch) or [LOCATED\_LAUNCH](http://localhost:3003/Wiki/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch) commands. These projectiles cant be given to the players.
 :::
 
 ### Commands:
@@ -67,7 +68,7 @@ customNameVisible: true
 customName: '&eBullet'
 ```
 
-### visualFire
+### Visual fire
 
 * Option to allow visual fire on the projectile
 * Example:
@@ -78,23 +79,19 @@ visualFire: true
 
 ### Invisible
 
-* Whether the projectile will be invisible or not
-
-:::warning
-**It requires PROTOCOLIB plugin !!**
-:::
+* Whether the projectile will be invisible or not. It requires [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/)
+```yaml
+invisible: false
+```
 
 ### Pickup status
 
 * Option to configure if the projectile can be picked up
-* Options:
-  * ALLOWED
-  * DISALLOWED
-  * CREATIVE\_ONLY
+* Options: [Pickup status](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/AbstractArrow.PickupStatus.html)
 * Example:
 
 ```yaml
-pickupStatus: CREATIVE_ONLY
+pickupStatus: CREATIVE_ONLY # DISALLOWED, ALLOWED
 ```
 
 ### Glowing
@@ -151,16 +148,13 @@ Equation: `velocity x 1 = Arrow Damage`
 ### Particles
 
 * This can edit what particles will display the projectile around it.
-
-| config                                                          | explanation                                                                                                                        |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| particlesType                                                   | Type of particle                                                                                                                   |
-| particlesAmount                                                 | How many particles will it emit each time                                                                                          |
-| particlesOffSet                                                 | How close to the projectile will the particles spawn                                                                               |
-| particlesSpeed                                                  | How fast the particles will move                                                                                                   |
-| redstoneColor (ONLY TYPE: REDSTONE)                             | <p>Change the color of redstone particle <br />LIST: <a href="https://helpch.at/docs/1.12.2/org/bukkit/Color.html">Particles</a></p> |
-| blockType (ONLY TYPE: BLOCK\_CRACK, BLOCK\_DUST, BLOCK\_MARKER) | What block the particle displays                                                                                                   |
-| particleDensity                                                 | Density of the particles, useful when want a clean trail of your projectile                                                        |
+ * `particlesType`: Type of particle 
+ * `particlesAmount`: How many particles will it emit each time                                                                 
+ * `particlesOffSet`: How close to the projectile will the particles spawn                                                                
+ * `particlesSpeed`: How fast the particles will move                                                                 
+ * `redstoneColor`: Change the color of redstone particle. [Colors](https://helpch.at/docs/1.12.2/org/bukkit/Color.html)
+ * `blockType`: What block the particle. Only for: BLOCK\_CRACK, BLOCK\_DUST, BLOCK\_MARKER
+ * `particleDensity`: Density of the particles, useful when want a clean trail of your projectile
 
 * Example:
 
@@ -186,22 +180,14 @@ particles:
     blockType: SPONGE
 ```
 
-:::info
-[**Potion types**](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html)
-:::
-
 ### Despawn delay
 
-* How long will be the projectile's life in seconds
+* How long will be the projectile's life in seconds. (It supports decimals)
 * Example:
 
 ```yaml
 despawnDelay: 10
 ```
-
-:::info
-It supports decimals
-:::
 
 ### Knockback strength
 
@@ -209,6 +195,9 @@ It supports decimals
 * Equation:
 
 `Knockback strength x 3` = Amount of blocks the target gets knocked back
+```yaml
+knockbackStrengt: 1
+```
 
 ### Remove when hit block
 
@@ -230,9 +219,9 @@ removeWhenHitBlock: true
 
 * This brings you the ability to disguise a projectile with a item
 * Projectiles available:
-* ****EGG****
-* ****ENDER\_PEARL****
-* ****SNOWBALL****
+* **EGG**
+* **ENDER\_PEARL**
+* **SNOWBALL**
 
 Example:
 
@@ -312,7 +301,7 @@ pierceLevel: 4
 
 #### Active color | Color
 
-* **Active color** in -> **true** allows the edition of Color
+* **Active color** in -> **true** allows the edition of Color. [Colors](https://helpch.at/docs/1.12.2/org/bukkit/Color.html)
 
 ```yaml
 activeColor: true
@@ -323,10 +312,6 @@ activeColor: true
 ```yaml
 color: AQUA
 ```
-
-:::info
-[Click to check all the available colors](https://helpch.at/docs/1.12.2/org/bukkit/Color.html)
-:::
 
 #### Silent
 
@@ -342,13 +327,9 @@ silent: true
 
 #### Hit sound
 
-* Configure the sound it will emit when the arrow hits something
-* Its for Paper or Paper fork only
+<CustomTag type="paper" />
+* Configure the sound it will emit when the arrow hits something. [Sounds](https://jd.papermc.io/paper/1.21.8/org/bukkit/Sound.html)
 * It works for ARROW, TRIDENT and SPECTRAL\_ARROW
-
-:::info
-[Click to check all the available sounds](https://jd.papermc.io/paper/1.21.8/org/bukkit/Sound.html)
-:::
 
 * Example:
 
@@ -410,7 +391,7 @@ lifeTime: 3
 * Example:
 
 ```yaml
-fireworkExplosions:**
+fireworkExplosions:
     explosion_0:
       colors:
       - RGB-94-84-214
@@ -429,6 +410,7 @@ For the colors, you can either use the regular [color names](https://hub.spigotm
 
 ### Enchantments (TRIDENT)
 
+<CustomTag type="version" version="1.16.4" />
 * Allow to enchant tridents.
 
 ```yaml
@@ -443,7 +425,7 @@ enchantments:
 
 ### Potion effects (Splash potion)
 
-* Allow to edit the effects of the splash potion
+* Allow to edit the effects of the splash potion. [Potion effects](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html)
 
 ```yaml
 potionEffects:
@@ -457,7 +439,53 @@ potionEffects:
   amplifier: 4
 ```
 
-:::info
-Here are all the potion effect type -> [****POTION TYPES****](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html)
-:::
+## Full YML Config
 
+```yaml
+type: TRIDENT
+customNameVisible: false
+customName: "Trident2"
+visualFire: true
+invisible: false
+pickupStatus: DISALLOWED
+glowing: true
+critical: false
+bounce: true
+gravity: true
+damage: -1
+velocity: 1
+knockbackStrength: -1
+pierceLevel: -1
+despawnDelay: 3
+removeWhenHitBlock: false
+enchantments:
+  enchantment1:
+    enchantment: unbreaking
+    level: 1
+  enchantment3:
+    enchantment: mending
+    level: 1
+particles:
+  1:
+    particlesType: WATER_BUBBLE
+    particlesAmount: 10
+    particlesOffSet: 0.5
+    particlesSpeed: 0.3
+    particlesDelay: 1
+#visualItem: DIAMOND_SWORD
+#customModelData: 5
+#critical: true
+#charged: true
+#radius: 3
+#incendiary: true
+#lifeTime: 3
+#fireworkExplosions:
+#    explosion_0:
+#      colors:
+#      - RGB-94-84-214
+#      fadeColors:
+#      - RGB-1-2-33
+#      type: BALL_LARGE
+#      hasTrail: true
+#      hasTwinkle: true
+```
