@@ -1,3 +1,5 @@
+import CustomTag from '@site/src/components/CustomTag';
+
 # 📚 Placeholders
 
 Placeholders are dynamic variables that get replaced with actual values when commands execute. They provide access to player data, entity information, block properties, and much more.
@@ -18,14 +20,20 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 
 ### 🎯 Player Placeholders
 
+Player placeholders are available in the activators where a player is involved.
+When the player is secondary in the activator : Replace `player` with `target` (e.g., `%target_health%`)
+
+In ExecutableItems and ExecutableBlock the item/block can have an **Owner**. To get the placeholders of this owner : Replace `player` with `owner` (e.g., `%owner_uuid%`)
+
 | Placeholder | Description |
 |------------|-------------|
 | `%player%` | Player's name |
 | `%player_uuid%` | Player's UUID |
+| `%player_uuid_array%` | Player's UUID  with this format `[I;-1288600659,-373273272,-1897203511,898446696]`|
 | `%player_world%` | World name (`%player_world_lower%` for lowercase) |
 | `%player_x%`, `%player_y%`, `%player_z%` | Coordinates (add `_int` for integers) |
-| `%player_pitch%` | Player's pitch (`_int` for integer) |
-| `%player_yaw%` | Player's yaw (`_int` for integer) |
+| `%player_pitch%`, `%player_pitch_positive%` | Player's pitch (`_int` for integer) |
+| `%player_yaw%`, `%player_yaw_positive%` | Player's yaw (`_int` for integer) |
 | `%player_direction%` | Cardinal direction (N, SW, NE, etc.) |
 | `%player_health%` | Current health |
 | `%player_max_health%` | Maximum health |
@@ -34,7 +42,14 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%player_team%` | Player's team (if any) |
 | `%player_attack_charge%` | Attack cooldown (1.0 = fully charged) |
 | `%last_damage_taken%` | Last damage received (`_int` for integer) |
-| `%last_damage_dealt%` | Last damage inflicted (`_int` for integer) |
+| `%last_damage_dealt%` | Last damage inflicted (`_int` for integer) <CustomTag type="version" version="1.16" /> |
+
+#### 🔄 Initial Player Placeholders
+Captures player values at activator trigger time (won't change during execution):
+- `%player_x_initial%`, `%player_y_initial%`, `%player_z_initial%`
+- `%player_world_initial%`
+- `%player_pitch_initial%`, `%player_yaw_initial%`
+- `%player_direction_initial%`
 
 ### 🗂️ Item Placeholders
 
@@ -44,17 +59,23 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%id%` | ExecutableItem's ID |
 | `%amount%` | Amount in current stack |
 | `%usage%` | Current usage count |
-| `%usage_limit%` | Maximum usage limit |
 | `%usage_roman%` | Usage in Roman numerals |
+| `%usage_bar(amount:30,color1:&d,color2:&5,symbol:I)%` | Visual usage bar, more info bellow |
+| `%usage_limit%` | Maximum usage limit |
 | `%durability%` | Item durability (1.14+) |
 | `%max_use_per_day_item%` | Daily usage limit (item) |
 | `%max_use_per_day_activator%` | Daily usage limit (activator) |
 
 **Special:** `%usage_bar(amount:30,color1:&d,color2:&5,symbol:|)%`
+
+![](</img/usage-bar.jpg>)
 - Creates a visual usage bar
 - Parameters: amount (bar count), color1 (used), color2 (unused), symbol
 
 ### 🐾 Entity Placeholders
+
+Entity placeholders are available in the activators where an entity is involved.
+When the entity is secondary in the activator : Replace `entity` with `target` (e.g., `%target_x%`)
 
 | Placeholder | Description |
 |------------|-------------|
@@ -62,6 +83,7 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%entity_lower_case%` | Entity type (lowercase) |
 | `%entity_name%` | Entity's custom name |
 | `%entity_uuid%` | Entity's UUID |
+| `%entity_uuid_array%` | Entity's UUID  with this format `[I;-1288600659,-373273272,-1897203511,898446696]`|
 | `%entity_x%`, `%entity_y%`, `%entity_z%` | Coordinates (add `_int` for integers) |
 | `%entity_health%` | Current health |
 | `%entity_max_health%` | Maximum health |
@@ -70,15 +92,18 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%entity_pitch%`, `%entity_yaw%` | Rotation values |
 | `%entity_team%` | Entity's team (if any) |
 | `%entity_serialized%` | Full entity definition |
-| `%entity_last_damage_taken%` | Last damage received |
+| `%entity_last_damage_taken%`, `%entity_last_damage_taken_final%`, `%entity_last_damage_taken_final_with_booster%`  | Last damage received (add `_int` for integers) |
 
 ### 🧱 Block Placeholders
+
+Block placeholders are available in the activators where a block is involved.
+When the block is secondary in the activator : Replace `block` with `target_block` (e.g., `%target_block_x%`)
 
 | Placeholder | Description |
 |------------|-------------|
 | `%block%` | Block type (UPPERCASE) |
 | `%block_lower%` | Block type (lowercase) |
-| `%block_live%` | Current block type |
+| `%block_live%`, `%block_live_lower%` | Current block type |
 | `%block_item_material%` | Item form of block |
 | `%block_x%`, `%block_y%`, `%block_z%` | Coordinates (add `_int` for integers) |
 | `%blockface%` | Selected block face |
@@ -86,10 +111,13 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%block_biome%` | Biome name |
 | `%block_dimension%` | World type (nether, normal, end) |
 | `%block_spawnertype%` | Spawner mob type |
+| `%block_is_ageable%` | Returns if the block is ageable or not |
 | `%block_eb_id%` | ExecutableBlock ID (if applicable) |
 | `%block_data%` | Block data value |
 
 ### 🏹 Projectile Placeholders
+
+Projectile placeholders are available in the activators where a projectile is involved.
 
 | Placeholder | Description |
 |------------|-------------|
@@ -97,18 +125,10 @@ You can also use [PlaceholderAPI math placeholders](https://github.com/Placehold
 | `%projectile_lower_case%` | Projectile type (lowercase) |
 | `%projectile_name%` | Custom projectile name |
 | `%projectile_uuid%` | Projectile's UUID |
+| `%projectile_uuid_array%` | Projectile's UUID  with this format `[I;-1288600659,-373273272,-1897203511,898446696]`|
 | `%projectile_x%`, `%projectile_y%`, `%projectile_z%` | Coordinates |
 | `%projectile_world%` | World name |
 | `%bow_force%` | Bow shot force (0-1) |
-
-## Target Placeholders
-
-Target placeholders reference secondary entities/players/blocks in an interaction.
-
-### 🎯 Target Types
-- **Target Player:** Replace `player` with `target` (e.g., `%target_health%`)
-- **Target Entity:** Replace `entity` with `target` (e.g., `%target_x%`)
-- **Target Block:** Replace `block` with `target_block` (e.g., `%target_block_x%`)
 
 ## Special Placeholders
 
@@ -116,12 +136,14 @@ Target placeholders reference secondary entities/players/blocks in an interactio
 
 | Placeholder | Description |
 |------------|-------------|
-| `%rand:MIN|MAX%` | Random number between MIN and MAX |
+| `%rand:MIN\|MAX%` | Random number between MIN and MAX |
 | `%timestamp%` | Current timestamp |
 | `%activator_id%` | ID of current activator |
 | `%activator_name%` | Name of current activator |
 
-### 📊 Variables
+### 📊 SCore Variables
+
+Click here to have more info abotu [SCore Variables](/docs/tools-for-all-plugins-score/score-variables)
 
 **Item/Block Variables:**
 - `%var_X%` - Value of variable X
@@ -188,33 +210,14 @@ For PLAYER_WRITE_COMMAND and PLAYER_SEND_MESSAGE:
 - `%executableblocks_checkamount_slot:0,2,3%` - EB in specific slots
 - `%executableblocks_checkamount_id:block1,block2_slot:0,2%` - Specific blocks in slots
 
-## Advanced Features
-
-### 🔄 Initial Player Placeholders
-Captures player values at activator trigger time (won't change during execution):
-- `%player_x_initial%`, `%player_y_initial%`, `%player_z_initial%`
-- `%player_world_initial%`
-- `%player_pitch_initial%`, `%player_yaw_initial%`
-- `%player_direction_initial%`
-
-### 🏆 Owner Placeholders
-For items/blocks with assigned owners, use `owner` prefix:
-- `%owner_health%`
-- `%owner_x%`, `%owner_y%`, `%owner_z%`
-- `%owner_world%`
-
 ## Tips & Best Practices
 
 :::warning Important Notes
 - **%around_target%**: If it fails, use `%around_target::step1%`
-- **UUID Arrays**: Use `_array` suffix for 4-array integer form
 - **World Names**: Use `<<%player_world%>>` for vanilla commands
 - **Attack Charge**: Resets after DAMAGE command, check value before using
 :::
 
 ## Related Documentation
 
-- [Custom Commands](/docs/tools-for-all-plugins-score/custom-commands)
-- [Conditions](/docs/tools-for-all-plugins-score/custom-conditions)
-- [Variables System](/docs/tools-for-all-plugins-score/variables)
 - [PlaceholderAPI Integration](https://www.spigotmc.org/resources/placeholderapi.6245/)
