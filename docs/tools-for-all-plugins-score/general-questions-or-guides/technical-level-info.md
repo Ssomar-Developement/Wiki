@@ -1,4 +1,5 @@
 ---
+unlisted: true
 description: >-
   Only useful for people who pay attention on the tiniest
   info/function/mechanics about how plugins such as ExecutableItems,

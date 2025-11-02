@@ -64,11 +64,11 @@ itemConditions:
 * Also it supports to work in intervals
 
 ```yaml
-      itemConditions:
-        ifUsage: 4 < CONDITION <= 8
-        ifUsageMsg: '&4&l&o[ExecutableItems] &cThis item must have the valid usage
-          to active the activator: &6%activator% &cof this item!'
-        ifUsageCancel: false
+itemConditions:
+  ifUsage: 4 < CONDITION <= 8
+  ifUsageMsg: '&4&l&o[ExecutableItems] &cThis item must have the valid usage
+    to active the activator: &6%activator% &cof this item!'
+  ifUsageCancel: false
 ```
 
 ### ifUseCooldown
@@ -94,10 +94,7 @@ itemConditions:
 
 ### ifHasEnchant
 
-* Description: Checks if the item has the whitelisted enchantment.
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)
-
+* Description: Checks if the item has the whitelisted enchantment.[Enchantments](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)
 * Example:
 
 ```yaml
@@ -113,10 +110,7 @@ itemConditions:
 
 ### ifHasNotEnchant
 
-* Description: Checks if the item has the blacklisted enchantment.
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)
-
+* Description: Checks if the item has the blacklisted enchantment.[Enchantments](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)
 * Example:
 
 ```yaml

@@ -578,9 +578,7 @@ playerConditions:
   * As long as the player is not more than 1 block higher from the block the player is in, the activator will activate
 * Required: NO (Default: false)
 
-For tags specifications, refer to this list:
-
-[https://minecraft.fandom.com/wiki/Block_states](https://minecraft.fandom.com/wiki/Block_states)
+For tags specifications, refer to this list: [Block_states](https://minecraft.fandom.com/wiki/Block_states)
 
 ### ifIsOnTheBlock - Not
 
@@ -592,6 +590,7 @@ playerConditions:
     ifIsOnTheBlock:
         blocks:
         - EXECUTABLEBLOCKS:FREE_HUT
+        - ITEMSADDER:MyCustomBlock
         - DIAMOND_BLOCK
 ```
 
@@ -633,13 +632,7 @@ playerConditions:
 
 </details>
 
-For tags specifications, refer to this list:
-
-[https://minecraft.fandom.com/wiki/Block_states](https://minecraft.fandom.com/wiki/Block_states)
-
-:::info
-It supports IA and EB blocks
-:::
+For tags specifications, refer to this list: [Block_states](https://minecraft.fandom.com/wiki/Block_states)
 
 ### ifPlayerMounts - Not
 
@@ -677,10 +670,7 @@ playerConditions:
 ```
 
 *   Example Situations:
-
-    * If the player is in the Birch Forest Biome and the Birch Forest Biome is listed in the list of worlds in the `ifInBiome:` condition, the activator will acitvate.
-
-[https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html)
+    * If the player is in the Birch Forest Biome and the Birch Forest Biome is listed in the list of worlds in the `ifInBiome:` condition, the activator will activate. [Biome](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html)
 
 * Required: NO
 

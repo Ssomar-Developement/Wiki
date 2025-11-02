@@ -185,7 +185,7 @@ blockConditions:
 
 ### ifUsage
 
-* It checks the usage of the clicked ****ExecutableBlock****, if the usage is valid, the activator will work, otherwise an error message is displayed.
+* It checks the usage of the clicked **ExecutableBlock**, if the usage is valid, the activator will work, otherwise an error message is displayed.
 * Example:
 
 ```yaml
@@ -213,7 +213,7 @@ blockConditions:
 * Example:
 
 ```yaml
-blockConditions:**
+blockConditions:
       blockAroundCdts:
         blockAround0:
           southValue: 0
@@ -225,7 +225,7 @@ blockConditions:**
           errorMsg: '&#x26;c&#x26;oA block is not placed correctly !'
           blockTypeMustBe:
           - STONE
-**          - COBBLESTONE**
+          - COBBLESTONE
           - ANDESITE
           - ITEMSADDER:turquoise_block
           - EXECUTABLEBLOCKS:CUSTOMDIRT
@@ -234,9 +234,9 @@ blockConditions:**
 ```
 
 ```yaml
-blockConditions:**
-      requiredItems: \{\}
-      requiredExecutableItems: \{\}
+blockConditions:
+      requiredItems: {}
+      requiredExecutableItems: {}
       blockAroundCdts:
         blockAround0:
           southValue: 0

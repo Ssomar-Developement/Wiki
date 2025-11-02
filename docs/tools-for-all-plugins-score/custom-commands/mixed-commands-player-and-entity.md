@@ -1253,7 +1253,7 @@ This is not the same as essential's smite command. If you want to smite your tar
 * Example:
 
 ```yaml
-- TELEPORTONCURSOR 8 true
+- TELEPORT_ON_CURSOR 8 true
 ```
 
 ### TRANSFER\_ITEM

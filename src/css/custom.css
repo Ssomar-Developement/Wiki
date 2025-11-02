@@ -300,8 +300,12 @@ code {
 .markdown table {
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--doc-border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid var(--doc-border);
   box-shadow: 0 24px 55px rgba(28, 36, 48, 0.12);
+  display: table;
+  width: 100%;
 }
 
 .markdown table th {
@@ -311,8 +315,31 @@ code {
 
 .markdown table td,
 .markdown table th {
-  border: none;
+  border: none !important;
+  border-right: 1px solid var(--doc-border) !important;
   padding: 1rem 1.25rem;
+}
+
+.markdown table td:last-child,
+.markdown table th:last-child {
+  border-right: none !important;
+}
+
+/* Fix table border-radius on all corners */
+.markdown table thead tr:first-child th:first-child {
+  border-top-left-radius: 16px;
+}
+
+.markdown table thead tr:first-child th:last-child {
+  border-top-right-radius: 16px;
+}
+
+.markdown table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+
+.markdown table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
 }
 
 .theme-doc-footer-edit-meta-row {
