@@ -4,6 +4,10 @@
 You want keep the brut HEX form in your command ? add the tag **BRUT\_HEX** in your command. It works anywhere in the command line but it's recommended to put it in the first part of the cmd to make it less confusing
 :::
 
+:::info
+If running any of these Item Commands fail to perform their intended operations, try adding `DELAYTICK 1` or `DELAYTICK 2` before the Item Command.
+:::
+
 ## Custom commands
 
 _Sorted by alphabetical order_
