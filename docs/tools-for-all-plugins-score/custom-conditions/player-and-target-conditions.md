@@ -514,7 +514,7 @@ playerConditions:
 * Required: NO
 
 :::warning
-**BEST TESTED WITHOUT OP BECAUSE IF YOU ARE OPPED, YOU HAVE ACCESS TO ANY TYPE OF PERM WHICH MAKES THIS PERMISSION USELESS**
+**To test it, it'es better to not be OP because if you are OP, you have all permissions**
 :::
 
 ![](https://media.giphy.com/media/Iti1B991tSkAaVjoy7/giphy.gif)
@@ -578,7 +578,9 @@ playerConditions:
   * As long as the player is not more than 1 block higher from the block the player is in, the activator will activate
 * Required: NO (Default: false)
 
-For tags specifications, refer to this list: [Block_states](https://minecraft.fandom.com/wiki/Block_states)
+For tags specifications, refer to this list:
+
+[https://minecraft.fandom.com/wiki/Block_states](https://minecraft.fandom.com/wiki/Block_states)
 
 ### ifIsOnTheBlock - Not
 
@@ -590,7 +592,6 @@ playerConditions:
     ifIsOnTheBlock:
         blocks:
         - EXECUTABLEBLOCKS:FREE_HUT
-        - ITEMSADDER:MyCustomBlock
         - DIAMOND_BLOCK
 ```
 
@@ -632,7 +633,13 @@ playerConditions:
 
 </details>
 
-For tags specifications, refer to this list: [Block_states](https://minecraft.fandom.com/wiki/Block_states)
+For tags specifications, refer to this list:
+
+[https://minecraft.fandom.com/wiki/Block_states](https://minecraft.fandom.com/wiki/Block_states)
+
+:::info
+It supports IA and EB blocks
+:::
 
 ### ifPlayerMounts - Not
 
@@ -670,7 +677,10 @@ playerConditions:
 ```
 
 *   Example Situations:
-    * If the player is in the Birch Forest Biome and the Birch Forest Biome is listed in the list of worlds in the `ifInBiome:` condition, the activator will activate. [Biome](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html)
+
+    * If the player is in the Birch Forest Biome and the Birch Forest Biome is listed in the list of worlds in the `ifInBiome:` condition, the activator will acitvate.
+
+[Biome](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/block/Biome.html)
 
 * Required: NO
 
@@ -734,10 +744,9 @@ playerConditions:
 
 * Example Situations:
   * If the player has speed with **at least an amplifier of 0**, the activator will activate
-* List of all effects: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+* List of all effects: [PotionEffectType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
 * Required: NO
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
 
 ### ifPlayerNotHasEffect
 
@@ -774,16 +783,15 @@ Support GriefPrevention, IridiumSkyblock, SuperiorSkyblock, BentoBox, Lands, Wor
 ```yaml
 playerConditions:
     ifPlayerHasEffectEquals:
-    - "SPEED:1"        <- (Format: "EFFECT:REQUIRED_AMPLIFIER") 
+    - "SPEED:1"        #<- (Format: "EFFECT:REQUIRED_AMPLIFIER") 
     ifPlayerHasEffectEqualsMsg: '' #<- Here is where you will add the custom message.
 ```
 
 * Example Situations:
   * If the player has speed with **an amplifier of 1**, the activator will activate
-* List of all effects: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+* List of all effects: [PotionEffectType](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
 * Required: NO
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html)
 
 ### ifPlayerHasExecutableItems - Not
 
