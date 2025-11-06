@@ -9,7 +9,6 @@ import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
-import Unlisted from '@theme/Unlisted';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import GiscusComments from '@site/src/components/GiscusComments';
@@ -37,7 +36,6 @@ function useDocTOC() {
 export default function DocItemLayout({children}) {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
-  const {unlisted} = metadata;
 
   // Check if comments should be hidden for this specific page
   const {frontMatter} = useDoc();
@@ -49,7 +47,6 @@ export default function DocItemLayout({children}) {
   return (
     <div className="row">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
-        {unlisted && <Unlisted />}
         <DocVersionBanner />
         <div className={styles.docItemContainer}>
           <article>
