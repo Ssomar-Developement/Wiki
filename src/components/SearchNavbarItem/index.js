@@ -32,7 +32,7 @@ function cleanContent(text) {
     return '';
   }
 
-  return text
+  const cleaned = text
     // Remove all backslash escape characters
     .replace(/\\/g, '')
     // Remove custom tags with content like <Custom>...</Custom>
@@ -44,6 +44,13 @@ function cleanContent(text) {
     // Clean up multiple spaces
     .replace(/\s+/g, ' ')
     .trim();
+
+  // Debug logging
+  if (text !== cleaned && text.includes('\\')) {
+    console.log('Cleaned text:', { original: text, cleaned });
+  }
+
+  return cleaned;
 }
 
 function highlightMatches(text, queryLower) {
