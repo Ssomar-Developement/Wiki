@@ -70,14 +70,14 @@ Feel free to test the commenting system below. You can:
 
 ---
 
-<GiscusComments />
+<GiscusComments enabled={true} />
 
 ## Implementation Notes
 
 To add this to any documentation page, simply:
 
 1. Import the component: `import GiscusComments from '@site/src/components/GiscusComments';`
-2. Add it where you want comments: `<GiscusComments />`
+2. Add it where you want comments: `<GiscusComments enabled={true} />`
 
 The component automatically:
 - Detects the current color mode (light/dark)
