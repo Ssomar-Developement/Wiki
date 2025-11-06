@@ -128,7 +128,8 @@ function buildContentMap() {
   if (searchIndex?.items?.length) {
     searchIndex.items.forEach((entry) => {
       if (entry?.source) {
-        const content = entry.content ?? '';
+        // Clean the content when loading it
+        const content = cleanContent(entry.content ?? '');
         map.set(entry.source, content);
 
         // Extract headings from search index and generate anchor IDs
@@ -151,7 +152,8 @@ function buildDocsIndex(allDocsData) {
     pluginData?.versions?.forEach((version) => {
       version?.docs?.forEach((doc) => {
         const title = doc.title ?? doc.id;
-        const description = doc.description ?? '';
+        // Clean description to remove markdown escapes and tags
+        const description = cleanContent(doc.description ?? '');
         const label = doc.frontMatter?.sidebar_label ?? '';
         const permalink = doc.path ?? doc.permalink;
 
@@ -391,9 +393,8 @@ export default function DocsSearchBar({mobile, className}) {
         // Create highlighted snippet
         const highlightedSnippet = highlightMatches(snippet, queryLower);
 
-        // Clean and highlight description
-        const cleanedDescription = cleanContent(doc.description);
-        const highlightedDescription = highlightMatches(cleanedDescription, queryLower);
+        // Highlight description (already cleaned when building index)
+        const highlightedDescription = highlightMatches(doc.description, queryLower);
 
         const permalink = matchedHeading
           ? `${doc.permalink}#${matchedHeading.anchorId}`
@@ -404,7 +405,6 @@ export default function DocsSearchBar({mobile, className}) {
           score,
           snippet,
           highlightedSnippet,
-          cleanedDescription,
           highlightedDescription,
           permalink,
           matchedHeading,
@@ -535,7 +535,7 @@ export default function DocsSearchBar({mobile, className}) {
                           <span key={i}>{part.text}</span>
                         )
                       ))
-                      : (doc.snippet || doc.cleanedDescription)
+                      : (doc.snippet || doc.description)
                     }
                   </span>
                 )}
