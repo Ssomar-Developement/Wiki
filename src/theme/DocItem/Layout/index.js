@@ -1,6 +1,7 @@
 import React from 'react';
+import clsx from 'clsx';
 import {useWindowSize} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import {useDocSidebarItemsExpandedState} from '@docusaurus/theme-common/internal';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
@@ -9,9 +10,9 @@ import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
-import clsx from 'clsx';
 import styles from './styles.module.css';
 import GiscusComments from '@site/src/components/GiscusComments';
+import {useDoc} from '@docusaurus/plugin-content-docs/client';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
