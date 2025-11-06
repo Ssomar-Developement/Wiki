@@ -131,9 +131,9 @@ export default function GiscusComments({ enabled = false }) {
       <Giscus
         id="comments"
         repo="Ssomar-Developement/Wiki"
-        repoId="R_kgDOLlIo_Q"
-        category="General"
-        categoryId="DIC_kwDOLlIo_c4CfGxN"
+        repoId="R_kgDONZod_A"
+        category="Announcements"
+        categoryId="DIC_kwDONZod_M4CkU96"
         mapping="pathname"
         strict="0"
         reactionsEnabled="1"
