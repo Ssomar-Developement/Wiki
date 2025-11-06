@@ -35,8 +35,11 @@ function cleanContent(text) {
   return text
     // Remove all backslash escape characters
     .replace(/\\/g, '')
-    // Remove custom tags like <sup>, <Badge>, <Custom>, etc. and their content
-    .replace(/<Custom[^>]*>.*?<\/Custom>/g, '')
+    // Remove custom tags with content like <Custom>...</Custom>
+    .replace(/<\w+[^>]*>.*?<\/\w+>/g, '')
+    // Remove self-closing tags like <CustomTag ... /> or <Badge ... />
+    .replace(/<[^>]+\/>/g, '')
+    // Remove any remaining HTML tags
     .replace(/<[^>]+>/g, '')
     // Clean up multiple spaces
     .replace(/\s+/g, ' ')
