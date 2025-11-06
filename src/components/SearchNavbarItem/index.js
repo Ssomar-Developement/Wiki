@@ -429,9 +429,11 @@ export default function DocsSearchBar({mobile, className}) {
                   navigateToDoc(doc.permalink);
                 }}>
                 <span className={styles.resultTitle}>
-                  {doc.title}
+                  <span className={styles.resultTitleMain}>
+                    {doc.title}
+                  </span>
                   {doc.matchedHeading && (
-                    <span style={{opacity: 0.7, fontSize: '0.9em'}}>
+                    <span className={styles.resultTitleHeading}>
                       {' › '}
                       {doc.matchedHeading.text}
                     </span>
