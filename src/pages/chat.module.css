@@ -1,0 +1,204 @@
+.container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, rgba(91, 94, 230, 0.05) 0%, rgba(91, 94, 230, 0.02) 100%);
+}
+
+.chatHeader {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #5b5ee6 0%, #7b7ee8 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(91, 94, 230, 0.2);
+}
+
+.chatHeader h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.chatHeader p {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.95;
+  font-size: 1.1rem;
+}
+
+.chatContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.chatIframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(91, 94, 230, 0.2);
+  border-top-color: #5b5ee6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Access Denied / Subscription Required */
+.accessDenied {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.accessDenied h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #5b5ee6 0%, #7b7ee8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(91, 94, 230, 0.1);
+}
+
+.featureCard h2 {
+  color: #5b5ee6;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.featureCard ul {
+  text-align: left;
+  max-width: 400px;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+}
+
+.featureCard li {
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.featureCard li:last-child {
+  border-bottom: none;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: #444;
+  margin: 2rem 0;
+  font-weight: 500;
+}
+
+.subscribeButton {
+  background: linear-gradient(135deg, #5b5ee6 0%, #7b7ee8 100%);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(91, 94, 230, 0.3);
+}
+
+.subscribeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(91, 94, 230, 0.4);
+  background: linear-gradient(135deg, #6b6ee7 0%, #8b8ee9 100%);
+}
+
+.subscribeButton:active {
+  transform: translateY(0);
+}
+
+/* No Script Fallback */
+.noScript {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 193, 7, 0.1);
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatHeader h1 {
+    font-size: 2rem;
+  }
+
+  .chatHeader p {
+    font-size: 1rem;
+  }
+
+  .chatContainer {
+    padding: 1rem;
+  }
+
+  .chatIframe {
+    height: 500px;
+    border-radius: 12px;
+  }
+
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .subscribeButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Dark mode support */
+[data-theme='dark'] .container {
+  background: linear-gradient(135deg, rgba(91, 94, 230, 0.08) 0%, rgba(91, 94, 230, 0.03) 100%);
+}
+
+[data-theme='dark'] .featureCard {
+  background: var(--ifm-background-surface-color);
+  border-color: rgba(91, 94, 230, 0.2);
+}
+
+[data-theme='dark'] .chatIframe {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .ctaText {
+  color: var(--ifm-color-content);
+}

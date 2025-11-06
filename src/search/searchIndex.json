@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-06T17:49:54.322Z",
+  "generatedAt": "2025-11-06T20:20:03.268Z",
   "items": [
     {
       "source": "@site/docs/ai-chat-moderation/commands-and-permissions.md",
@@ -83,6 +83,22 @@
         "Need help, report a bug or submit a suggestion? Something is not in the wiki or poorly explained ?",
         "Premium version",
         "[Support the development](https://buy.stripe.com/aEU7sX66l3O82MUdQT)"
+      ]
+    },
+    {
+      "source": "@site/docs/demo/giscus-demo.md",
+      "content": "import GiscusComments from '@site/src/components/GiscusComments'; 💬 Giscus Comments Demo Welcome to the Giscus comments demo This page demonstrates how we can integrate GitHub-based discussions directly into our documentation. What is Giscus? Giscus is a comments system powered by GitHub Discussions. It enables visitors to leave comments and reactions on your website via GitHub. Features ✨ Key Benefits - 🔐 No Database Required : All comments are stored in GitHub Discussions - 🎨 Theme Support : Automatically adapts to light/dark mode - 💬 Rich Text : Supports Markdown, syntax highlighting, and more - 👍 Reactions : Users can react with emojis - 🔒 Moderation : Uses GitHub's built-in moderation tools - 🌍 Multiple Languages : Supports many languages - ♿ Accessible : Follows accessibility best practices 📝 How It Works 1. User visits the page : The comments section loads below the content 2. User signs in with GitHub : One-click authentication 3. User posts a comment : Creates or adds to a GitHub Discussion 4. Real-time updates : Comments appear instantly for all viewers Example Use Cases This commenting system is perfect for: - 📚 Documentation Feedback : Users can ask questions or suggest improvements - 🐛 Bug Reports : Quick way to report issues without leaving the docs - 💡 Feature Requests : Collect user suggestions directly on relevant pages - 🎓 Tutorials : Q&A section for learning materials - 📢 Announcements : Gather community feedback on updates Configuration Options The component supports various customization options: Try It Out Feel free to test the commenting system below. You can: - ✏️ Post a comment - 👍 React to existing comments - 💬 Reply to discussions - 🎨 Use Markdown formatting - 📝 Edit or delete your own comments --- Implementation Notes To add this to any documentation page, simply: 1. Import the component: 2. Add it where you want comments: The component automatically: - Detects the current color mode (light/dark) - Creates a discussion thread for each page - Handles authentication via GitHub OAuth Privacy & Security - ✅ No tracking or analytics - ✅ No ads - ✅ All data stored on GitHub - ✅ Users control their own content - ✅ GDPR compliant --- :::tip Want to add comments to your pages? This feature can be added to any documentation page. It's especially useful for: - Getting feedback on complex configurations - Answering user questions - Building community engagement ::: :::info GitHub Account Required Users need a GitHub account to comment. This helps reduce spam and ensures accountability. :::",
+      "headings": [
+        "💬 Giscus Comments Demo",
+        "What is Giscus?",
+        "Features",
+        "✨ Key Benefits",
+        "📝 How It Works",
+        "Example Use Cases",
+        "Configuration Options",
+        "Try It Out!",
+        "Implementation Notes",
+        "Privacy & Security"
       ]
     },
     {

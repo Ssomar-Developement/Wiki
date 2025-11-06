@@ -127,6 +127,12 @@ const config = {
             label: 'Discord',
           },
           {
+            to: '/chat',
+            position: 'left',
+            label: '🤖 AI Chat',
+            className: 'navbar-ai-chat',
+          },
+          {
             to: '/ssomar-services',
             position: 'left',
             label: 'Products for developers',

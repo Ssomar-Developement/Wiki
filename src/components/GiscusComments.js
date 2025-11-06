@@ -131,14 +131,14 @@ export default function GiscusComments({ enabled = false }) {
       <Giscus
         id="comments"
         repo="Ssomar-Developement/Wiki"
-        repoId="R_kgDONZod_A"
-        category="Announcements"
-        categoryId="DIC_kwDONZod_M4CkU96"
+        repoId="R_kgDOQJdyyg"
+        category="General"
+        categoryId="DIC_kwDOQJdyys4CxgsL"
         mapping="pathname"
         strict="0"
         reactionsEnabled="1"
         emitMetadata="0"
-        inputPosition="top"
+        inputPosition="bottom"
         theme={colorMode === 'dark' ? 'dark_dimmed' : 'light'}
         lang="en"
         loading="lazy"
