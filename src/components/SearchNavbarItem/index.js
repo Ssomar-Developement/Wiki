@@ -33,10 +33,13 @@ function cleanContent(text) {
   }
 
   return text
-    // Remove markdown escape characters
-    .replace(/\\([_*`#[\](){}])/g, '$1')
-    // Remove custom tags like <sup>, <Badge>, etc.
+    // Remove all backslash escape characters
+    .replace(/\\/g, '')
+    // Remove custom tags like <sup>, <Badge>, <Custom>, etc. and their content
+    .replace(/<Custom[^>]*>.*?<\/Custom>/g, '')
     .replace(/<[^>]+>/g, '')
+    // Clean up multiple spaces
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
