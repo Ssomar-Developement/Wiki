@@ -121,8 +121,12 @@ function buildDocsIndex(allDocsData) {
           ...contentTokens,
         ]);
 
+        // Use the first heading as display title if available, otherwise use doc title
+        const displayTitle = headings.length > 0 ? headings[0].text : title;
+
         docs.push({
           title,
+          displayTitle,
           description,
           permalink,
           titleLower,
@@ -430,7 +434,7 @@ export default function DocsSearchBar({mobile, className}) {
                 }}>
                 <span className={styles.resultTitle}>
                   <span className={styles.resultTitleMain}>
-                    {doc.title}
+                    {doc.displayTitle}
                   </span>
                   {doc.matchedHeading && (
                     <span className={styles.resultTitleHeading}>
