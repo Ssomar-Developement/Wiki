@@ -85,6 +85,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      announcementBar: {
+        id: 'welcome_announcement',
+        content: '🎉 <strong>Welcome to our new Wiki!</strong> 🚀 Explore our completely redesigned documentation with improved search, better navigation, and enhanced readability.',
+        backgroundColor: '#5b5ee6',
+        textColor: '#ffffff',
+        isCloseable: true,
+      },
       colorMode: {
         defaultMode: 'dark',
         disableSwitch: false,
