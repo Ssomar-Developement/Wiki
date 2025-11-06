@@ -27,25 +27,83 @@ function uniqueTokens(value) {
   );
 }
 
+function cleanContent(text) {
+  if (!text) {
+    return '';
+  }
+
+  return text
+    // Remove markdown escape characters
+    .replace(/\\([_*`#[\](){}])/g, '$1')
+    // Remove custom tags like <sup>, <Badge>, etc.
+    .replace(/<[^>]+>/g, '')
+    .trim();
+}
+
+function highlightMatches(text, queryLower) {
+  if (!text || !queryLower) {
+    return text;
+  }
+
+  const textLower = normalize(text);
+  const parts = [];
+  let lastIndex = 0;
+
+  // Find all occurrences of the query
+  let index = textLower.indexOf(queryLower);
+  while (index !== -1) {
+    // Add text before match
+    if (index > lastIndex) {
+      parts.push({
+        text: text.slice(lastIndex, index),
+        highlight: false,
+      });
+    }
+
+    // Add matched text
+    parts.push({
+      text: text.slice(index, index + queryLower.length),
+      highlight: true,
+    });
+
+    lastIndex = index + queryLower.length;
+    index = textLower.indexOf(queryLower, lastIndex);
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push({
+      text: text.slice(lastIndex),
+      highlight: false,
+    });
+  }
+
+  return parts;
+}
+
 function buildSnippet(content, contentLower, queryLower) {
   if (!content) {
     return '';
   }
 
-  const index = contentLower.indexOf(queryLower);
+  // Clean the content first
+  const cleanedContent = cleanContent(content);
+  const cleanedContentLower = normalize(cleanedContent);
+
+  const index = cleanedContentLower.indexOf(queryLower);
   if (index === -1) {
-    return content.length > 180 ? `${content.slice(0, 180).trim()}…` : content;
+    return cleanedContent.length > 180 ? `${cleanedContent.slice(0, 180).trim()}…` : cleanedContent;
   }
 
   const radius = 90;
   const start = Math.max(0, index - radius);
   const end = Math.min(
-    content.length,
+    cleanedContent.length,
     index + queryLower.length + radius,
   );
   const prefix = start > 0 ? '…' : '';
-  const suffix = end < content.length ? '…' : '';
-  return `${prefix}${content.slice(start, end).trim()}${suffix}`;
+  const suffix = end < cleanedContent.length ? '…' : '';
+  return `${prefix}${cleanedContent.slice(start, end).trim()}${suffix}`;
 }
 
 function generateAnchorId(text) {
@@ -324,11 +382,27 @@ export default function DocsSearchBar({mobile, className}) {
           queryLower,
         );
 
+        // Create highlighted snippet
+        const highlightedSnippet = highlightMatches(snippet, queryLower);
+
+        // Clean and highlight description
+        const cleanedDescription = cleanContent(doc.description);
+        const highlightedDescription = highlightMatches(cleanedDescription, queryLower);
+
         const permalink = matchedHeading
           ? `${doc.permalink}#${matchedHeading.anchorId}`
           : doc.permalink;
 
-        return {...doc, score, snippet, permalink, matchedHeading};
+        return {
+          ...doc,
+          score,
+          snippet,
+          highlightedSnippet,
+          cleanedDescription,
+          highlightedDescription,
+          permalink,
+          matchedHeading,
+        };
       })
       .filter(Boolean)
       .sort(
@@ -443,9 +517,20 @@ export default function DocsSearchBar({mobile, className}) {
                     </span>
                   )}
                 </span>
-                {(doc.snippet || doc.description) && (
+                {(doc.highlightedSnippet || doc.highlightedDescription) && (
                   <span className={styles.resultDescription}>
-                    {doc.snippet || doc.description}
+                    {(doc.highlightedSnippet || doc.highlightedDescription)?.map ?
+                      (doc.highlightedSnippet || doc.highlightedDescription).map((part, i) => (
+                        part.highlight ? (
+                          <strong key={i} className={styles.highlight}>
+                            {part.text}
+                          </strong>
+                        ) : (
+                          <span key={i}>{part.text}</span>
+                        )
+                      ))
+                      : (doc.snippet || doc.cleanedDescription)
+                    }
                   </span>
                 )}
               </button>
