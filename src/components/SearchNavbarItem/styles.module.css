@@ -130,11 +130,32 @@
 .resultTitle {
   font-weight: 600;
   font-size: 0.98rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.resultTitleMain {
+  display: block;
+}
+
+.resultTitleHeading {
+  opacity: 0.7;
+  fontSize: 0.9em;
+  font-weight: 500;
 }
 
 .resultDescription {
   font-size: 0.85rem;
   color: var(--doc-text-muted);
+}
+
+.highlight {
+  font-weight: 700;
+  color: rgba(91, 94, 230, 1);
+  background: rgba(91, 94, 230, 0.1);
+  padding: 0.1em 0.2em;
+  border-radius: 3px;
 }
 
 @media (max-width: 996px) {
