@@ -60,6 +60,8 @@ body .footer {
 /* Mobile sidebar should be on top when open */
 .navbar-sidebar {
   z-index: 1200 !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 /* Navbar backdrop */
@@ -71,6 +73,12 @@ body .footer {
 .navbar-sidebar__item {
   overflow-y: auto !important;
   max-height: 100%;
+  width: 100vw !important;
+}
+
+/* Ensure sidebar items container fills the height */
+.navbar-sidebar__items {
+  height: calc(100vh - var(--ifm-navbar-height)) !important;
 }
 
 /* Ensure desktop navbar toggle is clickable */
