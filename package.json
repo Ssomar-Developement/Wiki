@@ -4,9 +4,11 @@
   "description": "Documentation for Score Plugins - ExecutableItems, ExecutableBlocks, ExecutableEvents, and more",
   "scripts": {
     "docusaurus": "docusaurus",
-    "generate:search-index": "node scripts/build-search-index.cjs",
+    "generate:search-index": "node --max-old-space-size=512 scripts/build-search-index.cjs",
     "start": "npm run generate:search-index && docusaurus start",
+    "start:low-memory": "node --max-old-space-size=1536 node_modules/@docusaurus/core/bin/docusaurus.mjs start",
     "build": "npm run generate:search-index && docusaurus build",
+    "build:low-memory": "node --max-old-space-size=1536 node_modules/@docusaurus/core/bin/docusaurus.mjs build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

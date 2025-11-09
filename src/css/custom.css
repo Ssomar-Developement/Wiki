@@ -57,6 +57,23 @@ body .footer {
   border-bottom: 1px solid var(--doc-border);
 }
 
+/* Ensure mobile navbar elements are clickable and on top */
+.navbar__item,
+.navbar__brand {
+  position: relative;
+  z-index: 1100;
+}
+
+/* Mobile sidebar should be on top when open */
+.navbar-sidebar {
+  z-index: 1200 !important;
+}
+
+/* Navbar backdrop */
+.navbar-sidebar__backdrop {
+  z-index: 1150 !important;
+}
+
 [data-theme='dark'] .navbar,
 [data-theme='dark'] .footer {
   background: rgba(18, 21, 36, 0.8);
@@ -76,6 +93,8 @@ body .footer {
 
 .navbar__toggle {
   border-radius: 12px;
+  position: relative;
+  z-index: 1100;
 }
 
 .main-wrapper {

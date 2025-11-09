@@ -97,7 +97,7 @@
   border: 1px solid var(--doc-border);
   box-shadow: 0 24px 50px rgba(28, 36, 48, 0.14);
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .searchContainerMobile .results {
