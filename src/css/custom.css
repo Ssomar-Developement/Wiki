@@ -76,6 +76,14 @@ body .footer {
   width: 100vw !important;
 }
 
+/* Ensure search bar in mobile menu displays properly */
+.navbar-sidebar .menu__list-item:has(.searchContainer_YppQ) {
+  display: block;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 /* Ensure sidebar items container fills the height */
 .navbar-sidebar__items {
   height: calc(100vh - var(--ifm-navbar-height)) !important;

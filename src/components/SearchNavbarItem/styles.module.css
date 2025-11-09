@@ -9,6 +9,12 @@
   width: 100%;
   min-width: unset;
   margin: 0.5rem 0;
+  display: block;
+}
+
+/* Remove default list item styling when search is inside */
+:global(.menu__list-item) .searchContainerMobile {
+  padding: 0;
 }
 
 .inputWrapper {
