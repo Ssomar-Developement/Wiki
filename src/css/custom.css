@@ -67,6 +67,12 @@ body .footer {
   z-index: 1150 !important;
 }
 
+/* Fix mobile sidebar content overflow */
+.navbar-sidebar__item {
+  overflow-y: auto !important;
+  max-height: 100%;
+}
+
 /* Ensure desktop navbar toggle is clickable */
 .navbar:not(.navbar-sidebar__backdrop) .navbar__toggle {
   position: relative;
