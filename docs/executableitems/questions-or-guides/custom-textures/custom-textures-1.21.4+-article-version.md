@@ -117,7 +117,7 @@ For this one, you really need to be careful because when specifying the texture,
 
 ### Step 9: Add the texture file
 
-Go to the textures folder then the items folder and add the png that will represent your custom texture.
+Go to the `textures` folder, then create the `item` folder and add the png that will represent your custom texture.
 
 :::info
 As of this writing, I have no clue if it works for other file types but to play it safe, use png file types instead.
