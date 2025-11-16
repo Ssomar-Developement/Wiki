@@ -6,6 +6,12 @@ List of item features, these are the first thing you should set up on your item.
 
 Premium features are labeled with the tag:  <CustomTag type="premium" />
 
+### Activators
+
+* Very important features that allow you to add abilities on your item
+* Dedicated Wiki for this feature : [EI Activators list](/docs/executableitems/configurations/activator-configuration/list-of-the-activators.md) and [EI Activators features](/docs/executableitems/configurations/activator-configuration/activators-features.md)
+
+
 ### Material of the item
 
 * Info: The material of the Minecraft item of the Executable Item

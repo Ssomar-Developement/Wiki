@@ -4,5 +4,9 @@
   "position": 8,
   "customProps": {
     "icon": "/img/logo_aicm.png"
+  },
+  "link": {
+    "type": "doc",
+    "id": "ai-chat-moderation/information-acm"
   }
 }

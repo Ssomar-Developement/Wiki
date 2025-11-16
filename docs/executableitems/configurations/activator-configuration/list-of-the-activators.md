@@ -644,9 +644,13 @@ The event is only triggered when someone force the player to open its inventory 
 * Info: Activator that can be executed by running a command, or it can be scheduled. 
   * This activator is for all plugins, because of that its explained on [Custom triggers](/docs/tools-for-all-plugins-score/custom-triggers)
 
-### EI\_CLICK\_ON\_ANOTHER\_INVENTORY\_ITEM <CustomTag type="premium" />
+### EI\_CLICK\_ON\_ANOTHER\_INVENTORY\_ITEM 
 
 * Info: Activator that gets triggered when the ExecutableItem is placed on top of another item in the inventory.
+
+### EI\_CLICKED\_BY\_ANOTHER\_INVENTORY\_ITEM
+
+* Info: Activator that gets triggered when an item is planced on top of the ExecutableItem in the inventory.
 
 ### EI\_ENTER\_IN\_THE\_PLAYER\_INVENTORY <CustomTag type="premium" />
 

@@ -10,9 +10,7 @@ The free version of ExecutableCrafting is like a free-trial of it, to know how i
 
 ## Support our work
 
-* Ssomar and vayk, developer of ExecutableCrafting, have taken a lot of time to develop this plugin bringing you all this time **ALL-IN-GUI menu** to add every possible feature, **Fix all the bugs** reported in #suggestion-bugs fastest as possible, adding the **suggestions** that people would like to see in the plugin, and he still doing it until today.
-* Supporters, Special70, Vayk and Ssomar too (unstoppable !), answer every question asked in the supports channels (even if they are already asked in the wiki 🤨🤨 , we link you there), studying the possibilities of the plugin, knowing how it works, spending a lot of time into developing recipes to get better and better, and with that, get a best experience to answer your questions.
-* Also the answer wait time is crazy, looks like a race 🚗, we are always attentive to new messages, so, your message will not leave there alone days until someone answers, you will literally be answered as fast as we can. 💪
+* We have taken a lot of time to develop this plugin bringing you all this time **ALL-IN-GUI menu** to add every possible feature, **Fix all the bugs** reported in #suggestion-bugs fastest as possible, adding the **suggestions** that people would like to see in the plugin, and he still doing it until today.
 
 Anyways, the fact is that there is a lot of hard work behind, with acquiring the premium version you, and your server, will win in terms of features and also you will support all our hard work behind of it all this time.
 

@@ -27,6 +27,18 @@ Premium activators are labelled with the tag: <CustomTag type="premium" />
 
 Activator features are features that are exclusive to that activator.
 
+### BLOCK\_DRY <CustomTag type="premium" />
+
+* Info: Activates when corals or farmlands got dried.
+
+### BREAK
+
+* Info: Activates when the block is broken.
+
+### BREAK\_BLOCK\_ABOVE\_THE\_EB
+
+* Info: Activates when the block above the eb is broken
+
 ### CUSTOM\_TRIGGER
 
 * Info: Activator that can be executed by running a command, or it can be scheduled. 
@@ -66,7 +78,7 @@ Activator features are features that are exclusive to that activator.
 
 ![](https://camo.githubusercontent.com/38cfef8cc1aa06c72b4ebf9bc570f5fa2c9f045dca0851822166efa46edc1251/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f75523573415137734567554f6e6c443743382f67697068792e676966)
 
-### LOOP  
+### LOOP <CustomTag type="premium" /> 
 
 * Info: Activates in repeat as long as the block is placed.
 
@@ -91,6 +103,10 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_BREAK\_BLOCK\_UNDER\_THE\_EB
 
 * Info: Activates when a player breaks the block under the Executable Block.
+
+### PLAYER\_BRUSH\_BLOCK
+
+* Info: Activates when a player brush the block.
 
 ### PLAYER\_DEATH\_ON <CustomTag type="premium" /> 
 
@@ -179,11 +195,3 @@ Activator features are features that are exclusive to that activator.
 ### REDSTONE\_SIGNAL\_DISABLE <CustomTag type="premium" />
 
 * Info: Activates when the EB is a block that can create / store power (redstone tripwire, trapdoor, button, lever, etc) and stop receiving signal.
-
-### BLOCK\_DRY <CustomTag type="premium" />
-
-* Info: Activates when corals or farmlands got dried.
-
-### BREAK\_BLOCK\_ABOVE\_THE\_EB
-
-* Info: Activates when the block above the eb is broken

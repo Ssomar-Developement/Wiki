@@ -95,6 +95,22 @@ activators:
     cancelEvent: true
 ```
 
+### silenceOutput
+
+* Info: Boolean value that makes all commands run from commands features such as (playerCommands, blockCommands, entityCommands and targetCommands) will not have an output on the **console**.
+  * For example, using the minecraft vanilla command effect give \[...] normally has an output on the console with this format: "Applied effect strength to \<playerName>", well, to disable this output you can enable this feature    
+* Example: 
+
+```yaml
+activators:
+  activator1: # Activator ID, you can create as many activators on the activator    
+    commands:
+    - effect give %player% strength 5 5
+    silenceOutput: true
+```
+
+* Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config](https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config).
+
 ## Cooldown
 
 ### Player cooldown
@@ -157,25 +173,6 @@ activators:
       cancelEventIfInCooldown: false
       enableVisualCooldown: false
 ```
-
-### silenceOutput
-
-* Info: Boolean value that makes all commands run from commands features such as (playerCommands, blockCommands, entityCommands and targetCommands) will not have an output on the **console**.
-  * For example, using the minecraft vanilla command effect give \[...] normally has an output on the console with this format: "Applied effect strength to \<playerName>", well, to disable this output you can enable this feature
-    *
-
-        
-* Example: 
-
-```yaml
-activators:
-  activator1: # Activator ID, you can create as many activators on the activator    
-    commands:
-    - effect give %player% strength 5 5
-    silenceOutput: true
-```
-
-* Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config](https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config) .
 
 ## Required features <CustomTag type="premium" />
 

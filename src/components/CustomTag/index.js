@@ -53,6 +53,30 @@ export default function CustomTag({ type, version, children, compact = false }) 
           label: children || 'PLAYER_TARGET',
           className: styles.playerTargetTag
         };
+      case 'block_none':
+        return {
+          icon: null,
+          label: children || 'BLOCK_NONE',
+          className: styles.blockNoneTag
+        };
+      case 'block_block':
+        return {
+          icon: null,
+          label: children || 'BLOCK_BLOCK',
+          className: styles.blockBlockTag
+        };
+      case 'block_entity':
+        return {
+          icon: null,
+          label: children || 'BLOCK_ENTITY',
+          className: styles.blockEntityTag
+        };
+      case 'block_player':
+        return {
+          icon: null,
+          label: children || 'BLOCK_PLAYER',
+          className: styles.blockPlayerTag
+        };
       case 'specific_activators':
         return {
           icon: null,

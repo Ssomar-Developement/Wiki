@@ -158,6 +158,58 @@
   color: #f9a8d4;
 }
 
+/* Player None Tag - Gray */
+.blockNoneTag {
+  background: rgba(107, 114, 128, 0.1);
+  border-color: rgba(107, 114, 128, 0.4);
+  color: #4b5563;
+}
+
+[data-theme='dark'] .blockNoneTag {
+  background: rgba(107, 114, 128, 0.15);
+  border-color: rgba(107, 114, 128, 0.5);
+  color: #9ca3af;
+}
+
+/* Player Block Tag - Brown */
+.blockBlockTag {
+  background: rgba(120, 53, 15, 0.1);
+  border-color: rgba(120, 53, 15, 0.4);
+  color: #78350f;
+}
+
+[data-theme='dark'] .blockBlockTag {
+  background: rgba(180, 83, 9, 0.15);
+  border-color: rgba(180, 83, 9, 0.5);
+  color: #fdba74;
+}
+
+/* Player Entity Tag - Blue */
+.blockEntityTag {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.4);
+  color: #2563eb;
+}
+
+[data-theme='dark'] .blockEntityTag {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.5);
+  color: #60a5fa;
+}
+
+/* Player Target Tag - Pink/Magenta */
+.blockPlayerTag {
+  background: rgba(219, 39, 119, 0.1);
+  border-color: rgba(219, 39, 119, 0.4);
+  color: #be185d;
+}
+
+[data-theme='dark'] .blockPlayerTag {
+  background: rgba(219, 39, 119, 0.15);
+  border-color: rgba(219, 39, 119, 0.5);
+  color: #f9a8d4;
+}
+
 /* Specific Activators Tag - Teal/Cyan */
 .specificActivatorsTag {
   background: rgba(20, 184, 166, 0.1);

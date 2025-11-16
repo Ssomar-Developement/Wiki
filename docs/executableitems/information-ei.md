@@ -4,7 +4,6 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KvhC9YYnB4U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 Many new features / default items appeared after this video, I let you discover them directly in-game :smile:
-\{% endembed %\}
 
 ## Support
 
@@ -125,5 +124,3 @@ Executable Items Premium:
 * Weapons that deals more damage depending on your distance towards your target
 
 </details>
-
-### [Support the development](https://buy.stripe.com/aEU7sX66l3O82MUdQT)

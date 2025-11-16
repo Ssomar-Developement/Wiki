@@ -1,5 +1,12 @@
 # Block Features
 
+
+## Activators
+
+* Very important features that allow you to add abilities on your blocks
+* Dedicated Wiki for this feature : [EB Activators list](/docs/executableblocks/configurations/activator-configuration/list-of-the-activators.md) and [EB Activators features](/docs/executableblocks/configurations/activator-configuration/activators-features.md)
+
+
 ## Basic Settings
 
 ### CreationType
@@ -13,24 +20,21 @@
 
 ### MATERIAL
 
-* Info: The base minecraft item of the executable block.
+* Info: The base minecraft item of the executable block. [Material](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
   * Extra Info: The item has to be a placeable block.
 
 ```yaml
 material: DIRT
 ```
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
-
-* Required: YES
-
 :::info
 It support spawners ! so if you want define a type for your spawner add:
 
 `spawnerType: CHICKEN`
+
+[EntityType list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
 :::
 
-[https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/EntityType.html)
 
 ### DISPLAYNAME
 
@@ -40,9 +44,6 @@ It support spawners ! so if you want define a type for your spawner add:
 ```yaml
 name: '&cEpic Sword'
 ```
-
-* Required: YES
-  * **(IT IS A MUST IN 1.12 AS YOU CANNOT HAVE A NULL NAME)**
 
 ### LORE
 
@@ -58,8 +59,6 @@ lore:
 - §6>> §e----------- §6<<
 ```
 
-* Required: YES
-  * **(IT IS A MUST IN 1.12 AS YOU CANNOT HAVE A NULL LORE)**
 * Placeholders that you can use in the lore, %player%, [%usage%](block-features.md#hide-usage-1.14+), etc.
 
 ### DROP BLOCK IF IT IS BROKEN

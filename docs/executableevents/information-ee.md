@@ -35,5 +35,3 @@ Premium ExecutableEvents:
 * Purchase on [BuiltByBit](https://builtbybit.com/resources/executable-events.30657/)
 * Purchase using RUB on Boosty (Contact Ssomar on the discord)
 * Purchase on Ssomar Website (then go on the discord to get the plugin.[ Download Premium](https://discord.com/channels/701066025516531753/1134158681769005076))
-
-### [Support the development](https://buy.stripe.com/aEU7sX66l3O82MUdQT)

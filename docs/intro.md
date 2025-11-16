@@ -18,7 +18,7 @@ Here you'll find detailed information about:
 
 ## 🛠️ Tools for All Plugins
 
-All Score plugins share a common set of powerful tools:
+All plugins use SCore that has a set of powerful tools:
 
 - **Custom Commands** - Execute complex command sequences
 - **Custom Conditions** - Create conditional logic for your items and blocks
@@ -38,4 +38,4 @@ Select a plugin from the sidebar to begin exploring its documentation. Each plug
 
 ## 📞 Support
 
-Need help? Check out the [Team & Donations](team-and-donations/contact-support-us) page for information on how to contact us and support the project.
+Need help? Join our Discord !

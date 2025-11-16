@@ -228,35 +228,5 @@ storageFeatures:
 ## Activators
 
 * Very important features that allow you to add abilities on your furniture
-* Dedicated Wiki for this feature : 
-
-* Example
-
-```yaml
-activators:
-  activator0:
-    name: '&eActivator'
-    option: PLAYER_ALL_CLICK_ON
-    usageModification: -1
-    cancelEvent: false
-    requiredItems: {}
-    requiredExecutableItems: {}
-    requiredMagics: {}
-    displayConditions: {}
-    displayCommands: []
-    worldConditions: {}
-    placeholdersConditions: {}
-    variablesModification: {}
-    ownerCommands: []
-    ownerConditions: {}
-    playerCommands:
-    - say &eHello
-    playerConditions: {}
-    playerCooldownFeatures:
-      cooldown: 0
-      pausePlaceholdersConditions: {}
-    globalCooldownFeatures:
-      cooldown: 0
-    customConditions: {}
-```
+* Dedicated Wiki for this feature : [MF Activators list](/docs/myfurniture/configurations/activator-configuration/list-of-the-activators.md) and [MF Activators features](/docs/myfurniture/configurations/activator-configuration/activators-features.md)
 

@@ -4,5 +4,9 @@
   "position": 9,
   "customProps": {
     "icon": "/img/logo_cpt.png"
+  },
+  "link": {
+    "type": "doc",
+    "id": "custompiglinstrades/information-cpt"
   }
 }
