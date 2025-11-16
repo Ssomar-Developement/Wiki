@@ -1,3 +1,5 @@
+import CustomTag from '@site/src/components/CustomTag';
+
 ### Display name of the activator
 
 * Info: String value of the display name of the activator, it doesn't have much use, its used for the developer to recognize one activator from another. It also appears on the default message "timeLeft" inside the locale.yml file.
