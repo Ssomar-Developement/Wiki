@@ -8,8 +8,8 @@ export default function ChatPage() {
   const [userEmail, setUserEmail] = useState('');
 
   // Configuration - Update these when you have your chat app ready
-  const CHAT_APP_URL = process.env.CHAT_APP_URL || 'https://chat.score-plugins.com'; // Replace with your actual chat app URL
-  const AUTH_CHECK_URL = process.env.AUTH_CHECK_URL || null; // Optional: Add authentication check endpoint
+  const CHAT_APP_URL = 'http://localhost:3025'; // Replace with your actual chat app URL when deployed
+  const AUTH_CHECK_URL = null; // Optional: Add authentication check endpoint
 
   useEffect(() => {
     // Check if user has access (placeholder for authentication)

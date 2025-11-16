@@ -1,6 +1,7 @@
 ---
 description: Requires Protocol Lib
 unlisted: true
+not-for-ai: true
 ---
 
 # ⛏️   Blocks Hardnesses
