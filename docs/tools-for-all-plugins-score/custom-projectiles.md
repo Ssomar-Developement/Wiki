@@ -439,7 +439,7 @@ potionEffects:
   amplifier: 4
 ```
 
-## Full YML Config
+## Full YAML Config
 
 ```yaml
 type: TRIDENT

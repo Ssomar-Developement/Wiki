@@ -1,4 +1,4 @@
-# Custom texture \[1.21+]
+# Custom texture 1.21+
 
 You can check this tutorial
 

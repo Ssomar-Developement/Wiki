@@ -233,7 +233,3 @@ Add more cases to support multiple custom textures:
 - [Minecraft Wiki: Model Format](https://minecraft.wiki/w/Model)
 - [Minecraft Wiki: Resource Pack](https://minecraft.wiki/w/Resource_pack)
 - [Blockbench - 3D Modeling Software](https://www.blockbench.net/)
-
----
-
-**Credits:** Guide based on [Special70's YouTube Tutorial](https://youtu.be/K39U55l4-O0)
