@@ -1,6 +1,6 @@
 # 🎆 Contact / Support us ?
 
-## The team
+## The Team
 
 <details>
 
@@ -12,11 +12,7 @@ Or if you want go further and motivate me to continue you can donate with the li
 
 Thank you ! :heart:
 
-Mail: SsomarDev2@gmail.com
-
-Discord: Ssomar#2000
-
-[****Stripe Donation****](https://donate.ssomar.com)
+[**Stripe Donation**](https://donate.stripe.com/3csdRlamBgAUdry14g)
 
 </details>
 
@@ -57,8 +53,6 @@ I play Minecraft since a long time, so I have knowledge about:
 * // etc //
 
 So.. if you need any help with something, or want item pack commission, you can ask it in the Discord of EI, or write me privately -> vayk#1404
-
-If you want to support me ^^ -> paypal.me/ImVayk
 
 </details>
 
