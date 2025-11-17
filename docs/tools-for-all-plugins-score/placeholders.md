@@ -43,6 +43,7 @@ In ExecutableItems and ExecutableBlock the item/block can have an **Owner**. To 
 | `%player_attack_charge%` | Attack cooldown (1.0 = fully charged) |
 | `%last_damage_taken%` | Last damage received (`_int` for integer) |
 | `%last_damage_dealt%` | Last damage inflicted (`_int` for integer) <CustomTag type="version" version="1.16" /> |
+| `%player_x_velocity%`, `%player_y_velocity%`, `%player_z_velocity%` | Current X, Y, Z Velocity (`_int` for integer) |
 
 #### 🔄 Initial Player Placeholders
 Captures player values at activator trigger time (won't change during execution):
@@ -93,6 +94,7 @@ When the entity is secondary in the activator : Replace `entity` with `target` (
 | `%entity_team%` | Entity's team (if any) |
 | `%entity_serialized%` | Full entity definition |
 | `%entity_last_damage_taken%`, `%entity_last_damage_taken_final%`, `%entity_last_damage_taken_final_with_booster%`  | Last damage received (add `_int` for integers) |
+| `%entity_x_velocity%`, `%entity_y_velocity%`, `%entity_z_velocity%` | Current X, Y, Z Velocity (`_int` for integer) |
 
 ### 🧱 Block Placeholders
 
@@ -197,6 +199,7 @@ For PLAYER_WRITE_COMMAND and PLAYER_SEND_MESSAGE:
 | **BROADCAST_MESSAGE** | `%message%`, `%is_async%` |
 | **PLUGIN_ENABLE/DISABLE** | `%plugin_name%` |
 | **PLAYER_ADVANCEMENT** | `%advancement%` |
+| **PLAYER_RECEIVE_HIT_GLOBAL** | `%last_damage_taken_final%`, `%last_damage_taken_final%` |
 
 ## Plugin-Specific Counts
 
