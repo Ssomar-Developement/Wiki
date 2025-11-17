@@ -179,9 +179,24 @@ To add more custom textures for the same item, add more override entries:
 
 ```json
 "overrides": [
-    {"predicate": {"custom_model_data": 1}, "model": "item/diamond_pickaxe/1"},
-    {"predicate": {"custom_model_data": 2}, "model": "item/diamond_pickaxe/2"},
-    {"predicate": {"custom_model_data": 3}, "model": "item/diamond_pickaxe/3"}
+    {
+        "predicate": {
+            "custom_model_data": 1
+        },
+        "model": "item/diamond_pickaxe/1"
+    },
+    {
+        "predicate": {
+            "custom_model_data": 2
+        },
+        "model": "item/diamond_pickaxe/2"
+    },
+    {
+        "predicate": {
+            "custom_model_data": 3
+        },
+        "model": "item/diamond_pickaxe/3"
+    }
 ]
 ```
 :::
