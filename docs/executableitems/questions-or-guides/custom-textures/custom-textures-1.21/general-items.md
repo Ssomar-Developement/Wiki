@@ -326,7 +326,7 @@ To use custom textures on a server, you'll need to host the resource pack online
 
 If you're having trouble following the steps, download this example pack to see the correct structure:
 
-{% file src="..//img/ExecutableItemsTexturePackExample.zip" %}
+[Download ExecutableItemsTexturePackExample.zip](..//img/ExecutableItemsTexturePackExample.zip)
 
 ## Additional Resources
 
