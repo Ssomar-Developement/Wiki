@@ -34,6 +34,13 @@ If you want to donate me to support my service here as a plugin support, feel fr
 
 <details>
 
+<summary>Tidal Flame</summary>
+
+</details>
+
+
+<details>
+
 <summary>Vayk</summary>
 
 Hi ! I am Vayk 😎\
