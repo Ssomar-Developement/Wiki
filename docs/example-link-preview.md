@@ -1,3 +1,7 @@
+---
+unlisted: true
+---
+
 # Link Preview Component Example
 
 This page demonstrates how to use the LinkPreview component to create Gitbook-style link cards.
