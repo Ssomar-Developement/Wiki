@@ -1,261 +1,340 @@
-# General items
+# Custom Item Textures (Minecraft 1.13 - 1.21.3)
 
-:::warning
-**This tutorial DOESNT WORK for ARMOR RETEXTURING.** In case you want it, use optifine retexturing (that isn't explained here, search on google/youtube)
+This comprehensive guide will teach you how to create custom textures for items in Minecraft versions 1.13 through 1.21.3 using Custom Model Data and resource packs.
+
+:::warning Armor Textures
+This tutorial does **not** cover armor retexturing. For armor, you'll need to use OptiFine CIT (Custom Item Textures). Search for "OptiFine armor retexturing" for tutorials on that method.
 :::
 
-:::danger
-****FILES IN YOUR TEXTURE PACK MUST BE AT ALL LOWERCASE OR THERE WILL BE ISSUES SUCH AS TEXTURES NOT LOADING****
+:::danger Important Naming Rules
+**ALL file and folder names MUST be lowercase only.**
+
+Using uppercase characters will cause textures to fail loading. Always use `custom_sword` instead of `CustomSword`.
 :::
 
-:::info
-Since some people have asked, we suggest you to use ****Notepad++**** to edit the files, ****NONE OF THE FILES ARE .txt****, EVERY FILE HAS THEIR OWN TYPE OF FILE, so use a program that allows you to save your texts as specific file type.
+## Video Tutorial
 
-If you don't know how to save specific file types, you can see how its done in the video tutorial.
-:::
-
-This page will guide you how to add new textures to the game (without modifying the actual ones) from the start making the item, the texture pack, linking everything, until your EI Item has the texture inside the game, so let's begin ! 😎
-
-First of all tell you that all this tutorial is based on the next video:
+If you prefer video format, this tutorial is based on the following video:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y-t1YMslFLM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Here you can learn more deeply about the texture pack, how it works, and if you didn't get at all this tutorial, check the video, its made to understand everything. 🥳😈
+## Prerequisites
 
-### Setting up the item
+- **Text Editor**: Use Notepad++, VS Code, or similar (NOT regular Notepad)
+- **Image Editor**: Photoshop, Paint.NET, GIMP, or Paint 3D
+- **Compression Tool**: WinRAR, 7-Zip, or built-in OS compression
+- **Basic JSON knowledge** (helpful but not required)
 
-* Well, first of all let's create the item we want to have the custom texture, use:
-  * `/ei create <id>`
-* I'll set up just some visual things, such as the name and the lore.
+:::tip File Extensions
+None of the files you create are `.txt` files. Make sure your editor can save specific file types like `.json`, `.mcmeta`, and `.png`.
+:::
 
-![](<..//img/image (412).png>)
+## Part 1: Setting Up Your ExecutableItem
 
-### Let's create the textures
+### Step 1: Create Your Item
 
-* Ok, so the item is ready (you could add activators, mechanics, whatever you want to that item, in this case it will be simple, the main part is the textures.)
-* Now the textures.. they don't appear from nothing, you have to do them.. how? You'll need a photo editor, such as: Photoshop, Paint 3D, Paint.net, Paint, etc. The download part is from your side, so use the one you want, in this case, this will be made using Paint.net
-  * The image needs to be:
-    * 16x16 pixels (or any power of 2, like 16x16 - 32x32 - 64x64 - etc)
-    * PNG
-
-Once you have it, we are ready to create the texture pack
-
-![Texture of the pickaxe (I couldn't zoom more 😫)](<..//img/image (116).png>)
-
-### Now the Texture Pack
-
-* Well, let's part from the beggining, create a folder, let's call it "ExecutableItemsTexturePack"
+First, create the ExecutableItem that will use the custom texture:
 
 ```
-📁ExecutableItemsTexturePack
+/ei create my_custom_pickaxe
 ```
 
-* Then add another folder inside it called "assets"
+### Step 2: Configure Basic Properties
+
+Set up the item's display name, lore, and any other features you want:
 
 ```
-📁ExecutableItemsTexturePack
-    - 📁assets
+/ei edit my_custom_pickaxe
 ```
 
-* Besides that folder we also need to add a custom text here, it will be called "pack.mcmeta" (it need to be MCMETA type) and will have the next code:
+Example configuration:
+- **Name**: `&b&lCustom Pickaxe`
+- **Material**: `DIAMOND_PICKAXE`
+- **Lore**: Add any descriptive text
 
-```yaml
+## Part 2: Creating Your Texture
+
+### Step 3: Design Your Texture Image
+
+Create your custom texture using an image editor:
+
+**Requirements:**
+- **Format**: PNG with transparency support
+- **Resolution**: 16x16 pixels (or power of 2: 32x32, 64x64, 128x128, etc.)
+- **File name**: Use lowercase with underscores (e.g., `custom_pickaxe.png`)
+
+:::tip Image Resolution
+While 16x16 is standard, you can use higher resolutions like 32x32 or 64x64 for more detailed textures. Just keep it as a power of 2.
+:::
+
+Save your texture file - you'll need it in the next section.
+
+## Part 3: Building the Resource Pack
+
+### Step 4: Create Folder Structure
+
+Create the following folder structure:
+
+```
+ExecutableItemsTexturePack/
+├── pack.mcmeta
+├── pack.png (optional)
+└── assets/
+    └── minecraft/
+        ├── textures/
+        │   └── item/
+        │       └── custom_textures/
+        │           └── custom_pickaxe.png
+        └── models/
+            └── item/
+                ├── diamond_pickaxe/
+                │   └── 1.json
+                └── diamond_pickaxe.json
+```
+
+### Step 5: Create pack.mcmeta
+
+In the root folder, create `pack.mcmeta`:
+
+```json
 {
   "pack": {
-    "pack_format": 8,
-    "description": "§eExecutableItems texture pack"
+    "pack_format": 15,
+    "description": "§eExecutableItems Custom Textures"
   }
 }
 ```
 
-:::info
-The pack\_format means the version of the Minecraft it will have, 8 means 1.18, 7 means 1.17, 6 -> 1.16, and so on. \
-\
-More info -> [https://minecraft.fandom.com/wiki/Pack\_format](https://minecraft.fandom.com/wiki/Pack_format)
+:::info Pack Format by Version
+Choose the correct `pack_format` for your Minecraft version:
+- **15** = 1.20.5 - 1.21.1
+- **34** = 1.20.2 - 1.20.4
+- **18** = 1.20 - 1.20.1
+- **15** = 1.19.4
+- **13** = 1.19.3
+- **12** = 1.19 - 1.19.2
+- **9** = 1.18 - 1.18.2
+- **8** = 1.17 - 1.17.1
+- **6** = 1.16.2 - 1.16.5
+
+See the [full pack format list](https://minecraft.wiki/w/Pack_format) for all versions.
 :::
 
-So checking what we have, should be this:
+### Step 6: Add Your Texture File
 
-```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta ✅
-    - 📁assets 
-```
+1. Navigate to `assets/minecraft/textures/item/custom_textures/`
+2. Place your texture PNG file here (e.g., `custom_pickaxe.png`)
 
-* To don't tell EVERY folder that you have to create I'll leave the format right here, create all the folders.
+### Step 7: Identify the Base Item Material
 
-```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta
-    - 📁assets 
-        - 📁minecraft
-            - 📁textures
-                - 📁item
-                    - 📁custom_textures
-            - 📁models
-                - 📁item
-```
+You need to know the Minecraft ID of the base item:
 
-* So, in the folder of 📁custom_textures we will save all the custom textures that we have, in this case, the pickaxe photo we made before. (the file will be -> "pickaxeimage.png")
+1. Press **F3 + H** in Minecraft to enable Advanced Tooltips
+2. Hover over the item to see its ID (e.g., `minecraft:diamond_pickaxe`)
+3. Use the part after the colon for file names (e.g., `diamond_pickaxe`)
 
-```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta
-    - 📁assets 
-        - 📁minecraft
-            - 📁textures
-                - 📁item
-                    - 📁custom_textures
-                        - 📷pickaxeimage.png
-            - 📁models
-                - 📁item
-```
+![Item ID shown with Advanced Tooltips](<..//img/image (185).png>)
 
-* Now, inside the models/item we have to create one folder and one file.yml for each item, in this case, I will edit the diamond\_pickaxe, so I will create them
-
-```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta
-    - 📁assets 
-        - 📁minecraft
-            - 📁textures
-                - 📁item
-                    - 📁custom_textures
-                        - 📷pickaxeimage.png
-            - 📁models
-                - 📁item
-                    - 📁diamond_pickaxe
-                    - 📃diamond_pickaxe.json
-```
-
-* The name of "diamond\_pickaxe" is because of that is the nbttag inside the minecraft
-
-![minecraft:diamond\_pickaxe](<..//img/image (185).png>)
-
-:::info
-The name of the json is the ID ON MINECRAFT
-
-It is ****NOT**** the name of the item\
-It is ****NOT**** the name of the texture\
-It is ****NOT**** the name of your minecraft player
-
-It is the ID OF THE ITEM INSIDE MINECRAFT. 
-
-You can see the ID enabling Advanced Item Tooltips (press f3+h)
+:::warning Critical: Use the Minecraft ID
+The file name MUST match the Minecraft item ID, not:
+- ❌ Your item's display name
+- ❌ Your texture file name
+- ❌ Your ExecutableItem ID
+- ✅ The Minecraft material ID (e.g., `diamond_pickaxe`)
 :::
 
-* Inside diamond\_pickaxe.json we will add this code:
+### Step 8: Create the Base Model File
+
+In `assets/minecraft/models/item/`, create `diamond_pickaxe.json`:
 
 ```json
 {
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "minecraft:item/diamond_pickaxe"
-	},
-  
-	"overrides": [
-		{"predicate": {"custom_model_data":1}, "model": "item/diamond_pickaxe/1"}
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/diamond_pickaxe"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "custom_model_data": 1
+            },
+            "model": "item/diamond_pickaxe/1"
+        }
     ]
 }
 ```
 
-:::info
-**JUST IN CASE the item doesn't look good in your hand when holding (holding it in a weird way), change instead of "generated" -> "handheld"**
+**Understanding the fields:**
+
+- `"parent"`: Base model type
+  - Use `"generated"` for most items
+  - Use `"handheld"` if item looks wrong when held
+- `"layer0"`: Default vanilla texture
+- `"overrides"`: Array of custom model data mappings
+- `"custom_model_data"`: The number you'll set in ExecutableItems
+- `"model"`: Path to your custom model file
+
+:::tip Multiple Custom Textures
+To add more custom textures for the same item, add more override entries:
+
+```json
+"overrides": [
+    {"predicate": {"custom_model_data": 1}, "model": "item/diamond_pickaxe/1"},
+    {"predicate": {"custom_model_data": 2}, "model": "item/diamond_pickaxe/2"},
+    {"predicate": {"custom_model_data": 3}, "model": "item/diamond_pickaxe/3"}
+]
+```
 :::
 
-* If you want to do it with another item, just change the file name, then the layer0, and the predicate.
-* And if you want to add more than one custom model data, just add a "," and add another line, for example:
+### Step 9: Create the Custom Model File
 
-```yaml
-{"predicate": {"custom_model_data":1}, "model": "item/diamond_pickaxe/1"},
-{"predicate": {"custom_model_data":2}, "model": "item/diamond_pickaxe/2"}
-```
+1. Create folder: `assets/minecraft/models/item/diamond_pickaxe/`
+2. Create file: `1.json` inside that folder
 
-Where it says "model" : "item/diamond\_pickaxe/2" its calling the folder created before "📁diamond\_pickaxe", inside it we will add as many \<number>.json as custom model data we set in the file above. In this case I am just setting one custom model data so it will have 1 file called "1.json", if they were two custom model data they will be two files called "1.json" and "2.json"
-
-```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta
-    - 📁assets 
-        - 📁minecraft
-            - 📁textures
-                - 📁item
-                    - 📁custom_textures
-                        - 📷pickaxeimage.png
-            - 📁models
-                - 📁item
-                    - 📁diamond_pickaxe
-                        - 📃1.json
-                    - 📃diamond_pickaxe.json ✅
-```
-
-* Inside this 1.json we will add this:
+Content of `1.json`:
 
 ```json
 {
-	"parent": "item/handheld",
-	"textures": {
-	  "layer0": "item/custom_textures/pickaxeimage"
-	}
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "item/custom_textures/custom_pickaxe"
+    }
 }
 ```
 
-Where the "layer0" part is the folder where is the customTexture, in this case, assets/minecraft/textures/**item/custom\_textures/\<nameoftexture>** (In this case pickaxeimage, remember)
+**Understanding the texture path:**
 
-:::info
-**PLEASE DOUBLE CHECK THE PATH OF YOUR TEXTURE, MOST OF THE ERRORS ARE BECAUSE PEOPLE SET THE layer0 IN A PATH THAT DOESN'T EXIST, CHECK LITERALLY THE TEXT ABOVE TO KNOW HOW THE PATH WORKS,** ********THIS GOES IN THE TEXTURE FOLDER INSIDE ASSETS******.**
+The `"layer0"` value is a path relative to `assets/minecraft/textures/`:
+- Path: `item/custom_textures/custom_pickaxe`
+- Full path: `assets/minecraft/textures/item/custom_textures/custom_pickaxe.png`
+
+:::danger Common Error: Incorrect Texture Path
+The most common mistake is setting the wrong path in `layer0`. Double-check that:
+1. The path matches your folder structure
+2. You don't include `.png` extension
+3. The path starts from inside the `textures/` folder
 :::
 
+### Step 10: Package the Resource Pack
+
+#### For Windows (WinRAR/7-Zip):
+1. Select `pack.mcmeta` and `assets` folder
+2. Right-click → Add to archive / Compress
+3. Choose `.zip` format
+4. Name it `ExecutableItemsTexturePack.zip`
+
+#### For Mac/Linux:
+1. Select `pack.mcmeta` and `assets` folder
+2. Compress to ZIP using built-in compression
+3. Or place in a folder and use as-is for local testing
+
+![Creating ZIP file](<..//img/image (244).png>)
+
+![Change to .ZIP format](<..//img/image (158).png>)
+
+### Step 11: Install the Resource Pack
+
+1. Place the `.zip` file in `.minecraft/resourcepacks/`
+2. Launch Minecraft
+3. Go to Options → Resource Packs
+4. Enable your pack by clicking the arrow
+
+## Part 4: Connecting ExecutableItems to the Texture
+
+### Step 12: Set Custom Model Data
+
+Edit your ExecutableItem:
+
 ```
-📁ExecutableItemsTexturePack
-    - 📃pack.mcmeta
-    - 📁assets 
-        - 📁minecraft
-            - 📁textures
-                - 📁item
-                    - 📁custom_textures
-                        - 📷pickaxeimage.png
-            - 📁models
-                - 📁item
-                    - 📁diamond_pickaxe
-                        - 📃1.json ✅
-                    - 📃diamond_pickaxe.json ✅
+/ei edit my_custom_pickaxe
 ```
 
-And that would be all, now grab the pack.mcmeta and the assets folder and create a .zip using **Winrar**
+Navigate to the `customModelData` configuration and set it to match your override:
 
-:::info
-If you can't use winrar (as mac users) just create a new folder and drag everything there, that folder will be your ".zip file", then add it to .minecraft/resourcepacks/\<here> and you will be able to use it for local testing. (for server purposes like uploading it, you'd need to check the tutorial about uploading texture pack)
-:::
+![Custom Model Data setting](<..//img/image (163).png>)
 
-![](<..//img/image (244).png>)
+Set the value to `1` (or whatever number you used in the override):
 
-![Remember to change it to .ZIP](<..//img/image (158).png>)
+![Setting value to 1](<..//img/image (61).png>)
 
-* And now let's put it into minecraft (go to resourcepacks and leave it there)
+**In the config file, it looks like:**
 
-### Linking the EI with textures
+```yaml
+customModelData: 1
+```
 
-* Now it is supposed that it is working, so, we are going to edit our item
+### Step 13: Test Your Custom Texture
 
-![](<..//img/image (163).png>)
+Give yourself the item:
 
-* And in the customModelData config we are going to set it to "1" (In the files we set it to 1)
+```
+/ei give my_custom_pickaxe
+```
 
-![](<..//img/image (61).png>)
+You should now see your custom texture!
 
-* And kaboom !! 💥💥, now the item will have the texture we set before
+![Custom texture in inventory](<..//img/image (364).png>)
 
-![](<..//img/image (364).png>)
+![Custom texture when held](<..//img/image (392).png>)
 
-![](<..//img/image (392).png>)
+## Troubleshooting
 
-And that would be all !! If have any question or feel this tutorial needs to explain something better, just tell us in the Discord of EI !! ^^
+| Problem | Solution |
+|---------|----------|
+| **Texture not showing** | Check that file names are all lowercase |
+| **Purple/black texture** | Verify the `layer0` path matches your texture location |
+| **Pack not loading** | Check `pack_format` matches your Minecraft version |
+| **Wrong item appearance** | Change `"generated"` to `"handheld"` in the model parent |
+| **Item looks vanilla** | Verify `customModelData` in EI matches your override number |
 
-I hope you understood everything, nice day ! 😀😀
+## Advanced Tips
 
-\==========================================
+### Organizing Multiple Textures
 
-Since a lot of people don't follow the steps correctly, here is the file for you to check if you everything right
+Create subfolders for different item types:
 
-\{% file src="..//img/ExecutableItemsTexturePackExample.zip" %\}
+```
+custom_textures/
+├── weapons/
+│   ├── sword_fire.png
+│   └── sword_ice.png
+├── tools/
+│   └── pickaxe_emerald.png
+└── misc/
+    └── wand_magic.png
+```
+
+Update your paths accordingly:
+```json
+"layer0": "item/custom_textures/weapons/sword_fire"
+```
+
+### Using 3D Models
+
+For 3D models created in [Blockbench](https://www.blockbench.net/):
+
+1. Create your model in Blockbench
+2. Export as "Java Block/Item"
+3. Replace the content of your `1.json` with the exported model
+4. Make sure texture paths match your pack structure
+
+### Server Deployment
+
+To use custom textures on a server, you'll need to host the resource pack online. See our [Uploading Texture Pack Guide](./uploading-texture-pack.md) for instructions.
+
+## Download Example Pack
+
+If you're having trouble following the steps, download this example pack to see the correct structure:
+
+{% file src="..//img/ExecutableItemsTexturePackExample.zip" %}
+
+## Additional Resources
+
+- [Minecraft Wiki: Resource Pack](https://minecraft.wiki/w/Resource_pack)
+- [Minecraft Wiki: Model Format](https://minecraft.wiki/w/Model)
+- [Pack Format Version History](https://minecraft.wiki/w/Pack_format)
+- [Blockbench - Free 3D Model Editor](https://www.blockbench.net/)
+
+---
+
+Need help? Join our [Discord community](https://discord.gg/ExecutableItems) and ask in the support channels!
