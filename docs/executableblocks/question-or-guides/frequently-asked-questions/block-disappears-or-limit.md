@@ -21,7 +21,3 @@
 * And set this value to "-1"
 * ![](</img/image (403).png>)
 * Once did that, the block won't disappear after triggering the activator.
-
-## Discord
-
-In case this didn't help you to achieve what you wanted or doesn't work for you, feel free to ask in the Discord of Ssomar plugins your question.

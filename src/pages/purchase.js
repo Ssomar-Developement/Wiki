@@ -35,13 +35,13 @@ export default function Purchase() {
             <a href="https://polymart.org/user/ssomar.14534" target="_blank" rel="noopener noreferrer">
               <i className="fa-solid fa-p"></i> Polymart
             </a>
-            <a href="https://builtbybit.com/resources/authors/ssomar.15296/" target="_blank" rel="noopener noreferrer">
+            <a href="https://builtbybit.com/creators/ssomar.152843/" target="_blank" rel="noopener noreferrer">
               <i className="fa-solid fa-hammer"></i> BuiltByBit
             </a>
             <a href="https://modrinth.com/user/Ssomar" target="_blank" rel="noopener noreferrer">
               <i className="fa-solid fa-cube"></i> Modrinth
             </a>
-            <a href="https://mcmodels.net/model-author/ssomar/" target="_blank" rel="noopener noreferrer">
+            <a href="https://mcmodels.net/vendors/249/ssomar-plugins" target="_blank" rel="noopener noreferrer">
               <i className="fa-solid fa-box"></i> MCModels
             </a>
           </div>

@@ -4,7 +4,7 @@ description: >-
   projectile when right-clicking it.
 ---
 
-# \[Complex] Moving Particle Projectile
+# [Complex] Moving Particle Projectile
 
 1\) Create an EI Item
 

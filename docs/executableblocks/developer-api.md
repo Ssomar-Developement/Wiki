@@ -6,7 +6,7 @@
 
 To use the API, you need download the ExecutableBlocks jar (given when you download ExecutableBlocks on Spigot)
 
-\{% embed url="https://www.spigotmc.org/resources/custom-blocks-free-executable-blocks-1-14-1-18.93406" %\}
+[ExecutableBlocks Free](https://www.spigotmc.org/resources/custom-blocks-free-executable-blocks-1-14-1-18.93406)
 
 ### Maven dependency
 

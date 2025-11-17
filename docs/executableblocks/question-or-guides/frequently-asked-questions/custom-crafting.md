@@ -1,11 +1,8 @@
-# Custom crafting
+# Custom Crafting
 
-Commonly we receive questions related to Custom Crafting, ¿Does Ssomar plugins supports it?, well, the answer first of all is that Ssomar plugins doesn't have a mechanic inside of it related to Custom Crafting, so you should download another plugin to achieve this.
+## Does ExecutableItems Support Custom Crafting?
 
-We suggest you to try the most popular Custom crafting plugin. Some will work for some minecraft version some not , so its better if you make your choice yourself, If you know another plugin tell us so we can guide people to use another plugins.
+ExecutableItems does **not** have built-in custom crafting mechanics. To create custom recipes for ExecutableItems, you need to use a third-party custom crafting plugin.
 
-ExecutableCrafting in dev
-
-## Discord
-
-In case this didn't help you to achieve what you wanted or doesn't work for you, feel free to ask in the Discord of Ssomar plugins your question.
+You can use our plugin [ExecutableCrafting](https://modrinth.com/plugin/executablecrafting)
+But if you want to use another you can, generally they are compatible with ExecutableItems.
