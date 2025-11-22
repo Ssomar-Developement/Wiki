@@ -17,6 +17,7 @@ import EffectFeatures from '@site/docs/_partials/effect-features.md';
 import DamageCauseFeatures from '@site/docs/_partials/damagecause-features.md';
 import DelayFeatures from '@site/docs/_partials/delay-features.md';
 import ClickFeatures from '@site/docs/_partials/click-features.md';
+import InputFeatures from '@site/docs/_partials/input-features.md';
 import TypeTargetFeatures from '@site/docs/_partials/typetarget-features.md';
 
 
@@ -254,3 +255,7 @@ activators:
 <DelayFeatures />
 * For:
   * LOOP
+
+<InputFeatures />
+* For:
+  * PLAYER_INPUT

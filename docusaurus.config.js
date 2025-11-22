@@ -14,7 +14,7 @@ const config = {
   // Set the production url of your site here
   url: 'https://ssomar-developement.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/Wiki/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'Ssomar-Developement', // Usually your GitHub org/user name.

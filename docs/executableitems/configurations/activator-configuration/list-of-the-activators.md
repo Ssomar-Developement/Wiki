@@ -422,6 +422,10 @@ This activator only works if you have the **CustomFishing** plugin installed. It
   * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
   * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
+### PLAYER\_INPUT <CustomTag type="premium" />
+
+* Info: Activator that gets triggered when the player input a key. (forward, backward, left, right, jump, sprint, sneak)
+
 ### PLAYER\_ITEM\_BREAK <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player breaks the ExecutableItem by making it lose all its durability. 
