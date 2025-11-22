@@ -67,7 +67,7 @@ Trim Materials: [Trim material](https://hub.spigotmc.org/javadocs/bukkit/org/buk
 
 ## Related Documentation
 
-- [Item Configuration](/docs/executableitems/configurations/item-configuration/basic-configuration)
+- [Item Configuration](/executableitems/configurations/item-configuration/basic-configuration)
 - [Minecraft Wiki - Armor Trim](https://minecraft.wiki/w/Armor_Trim)
 
 ## Additional Tips

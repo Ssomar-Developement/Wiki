@@ -7,9 +7,9 @@ description: >-
 # Raycast
 
 :::danger
-****WARNING:****
+**WARNING:**
 
-****THIS GUIDE CONTAINS A LOT OF MATH AND REQUIRES YOU TO HAVE BASIC KNOWLEDGE ABOUT YAW PITCH VALUES OF A PLAYER****
+**THIS GUIDE CONTAINS A LOT OF MATH AND REQUIRES YOU TO HAVE BASIC KNOWLEDGE ABOUT YAW PITCH VALUES OF A PLAYER**
 :::
 
 Dependencies:
@@ -40,7 +40,7 @@ This method is mostly reliant on commands, math and gathering user yaw pitch val
 Explanation for the code:
 
 * The FOR loop represents the distance from the user. As you can see, the for loop shows an increasing value by 0.5 meaning that we're trying to form a line with these distance values. If you want the beam to be longer, add more numbers to the for1 loop
-* Using the math formula from [https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/math-formulas#particle-related-math-formulas](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/math-formulas#particle-related-math-formulas), by replacing the distance value with the %for1% placeholder, we can 
+* Using the math formula from [particle-related-math-formulas](/tools-for-all-plugins-score/general-questions-or-guides/math-formulas#particle-related-math-formulas), by replacing the distance value with the %for1% placeholder, we can 
 * Same will be applied with the `score run-block-command` . The reason why this command is used is to be able to declare where the AROUND command should come from. 
 
 With all of these information, we're practically just organizing a line of circles to create a "ray".

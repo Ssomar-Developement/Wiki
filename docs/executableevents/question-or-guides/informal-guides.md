@@ -59,7 +59,7 @@ HOW TO IMPLEMENT "BONUS STAMINA WHEN EATING GOLDEN APPLE":
 - add the commands
 
 (config format)
-commands:
+playerCommands:
 - score variables modification player BONUS-STAMINA 20 %player%
 - DELAY 180
 - score variables modification player BONUS-STAMINA -20 %player%
@@ -77,7 +77,7 @@ HOW TO IMPLEMENT "STAMINA IS NOT CONSUMED WHEN EATING A SPECIAL ITEM"
 - add the commands
 
 (config format)
-commands:
+playerCommands:
 - score variables modification player INFINITE-STAMINA 1 %player%
 - DELAY 60
 - score variables modification player INFINITE-STAMINA -1 %player%

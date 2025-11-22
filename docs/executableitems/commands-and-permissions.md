@@ -141,7 +141,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 #### Inspect the ExecutableItem that is in your main hand
 
 * Command: **/ei inspect**
-  * In order to use this command the ExecutableItem must have the feature of store item info enabled. [Store item info](/docs/executableitems/configurations/item-configuration/item-features#store-item-info)
+  * In order to use this command the ExecutableItem must have the feature of store item info enabled. [Store item info](/executableitems/configurations/item-configuration/item-features#store-item-info)
   * Output:
     * Usage
     * Owner UUID
@@ -153,7 +153,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 #### Remove the owner of the EI that is in your hand
 
 * Command: **/ei unowned**
-  * In order to un-own an item it must have an owner before, to do that the feature of [Store item info](/docs/executableitems/configurations/item-configuration/item-features#store-item-info) must be enabled on that ExecutableItem
+  * In order to un-own an item it must have an owner before, to do that the feature of [Store item info](/executableitems/configurations/item-configuration/item-features#store-item-info) must be enabled on that ExecutableItem
   * After running this command, the next player who interact with this item will be the next owner. (He must not be operator/op/admin)
 * Permission: `ei.cmd.unowned`
 
@@ -170,7 +170,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 
 * Info: This command refresh the ExecutableItemID(s) to their last version on its/their config, that means, if a player has an ExecutableItem on old version for example with attribute of GENERIC\_ARMOR to 10, and then you change the value of the attribute on the config of the ExecutableItem, it will not be update on the player side, to allow this update you can use this command so its refreshed and he will have instead of 10 the new updated value.
   * In order to make this process of refresh the ExecutableItem(s) selected must be on the players inventory, otherwise they won't be refreshed
-  * As a tip, another way to make this refresh is using [Auto update item](/docs/executableitems/configurations/activator-configuration/activators-features#auto-update-item)
+  * As a tip, another way to make this refresh is using [Auto update item](/executableitems/configurations/activator-configuration/activators-features#auto-update-item)
 * Command: **/ei refresh \{player\} \{ExecutableItemID\}** **\{resetUsage\} \{resetDurability\}**
   * `player`: Name of a specific player or "all" to target all players online.
   * `ExecutableItemID`: Name of a specific ExecutableItem or "all" to target all ExecutableItems created.
@@ -285,7 +285,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
       * modification: Useful for add modifications, it increases or decrease by the \{value\} to the original value
     * `player`: Name of the player who will be the target of this command
     * `slot`: Player slot where this item will be given to.
-      * More information about slots here [Slots info](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots) 
+      * More information about slots here [Slots info](/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots) 
     * `value`: Value used for the modification.
 * Permission: `ei.cmd.modification`
 
@@ -300,7 +300,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
       * modification: Useful for add modifications, it increases or decrease by the \{value\} to the original value
     * `player`: Name of the player who will be the target of this command
     * `slot`: Player slot where this item will be given to.
-      * More information about slots here [Slots info](/docs/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots) 
+      * More information about slots here [Slots info](/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots) 
     * `variableName`: The name of the variable you want to apply the typeOfModication with the selected value to.
     * `value`: Value used for the modification.
 * Permission: `ei.cmd.modification`
@@ -376,4 +376,4 @@ Items with custom recognition can impact performance. The command will show you 
 
 ### Custom triggers
 
-* Info: ExecutableItems has commands for running custom triggers, if want to know what they are and how to use them check the info here [Custom triggers](/docs/tools-for-all-plugins-score/custom-triggers) 
+* Info: ExecutableItems has commands for running custom triggers, if want to know what they are and how to use them check the info here [Custom triggers](/tools-for-all-plugins-score/custom-triggers) 

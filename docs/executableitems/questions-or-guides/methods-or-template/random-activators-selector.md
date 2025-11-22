@@ -3,10 +3,10 @@
 :::warning
 ONLY for one type of activator.
 
-Example, you have 3 PLAYER\_AL&#x4C;_\__&#x43;LICK activator and you want to activate only one.
+Example, you have 3 PLAYER\_ALL\_CLICK activator and you want to activate only one.
 :::
 
-* [x] So, first create your different activators ! (3 activator PLAYER\_AL&#x4C;_\__&#x43;LICK in my example)
+* [x] So, first create your different activators ! (3 activator PLAYER\_ALL\_CLICK in my example)
 * [x] Then go out the activators editor and return to the item editor.
 * [x] Go in the **Variables part**.
 
@@ -16,7 +16,7 @@ Example, you have 3 PLAYER\_AL&#x4C;_\__&#x43;LICK activator and you want to act
 
 ![](https://camo.githubusercontent.com/9c2355e1bbe1aeee76bec50f0bb209ed5ff165aba59a82a402216978b2ca9443/68747470733a2f2f692e696d6775722e636f6d2f736b32573369482e706e67)
 
-* [x] Okay now that you have have configured your variable, you will need to initialize it. So you need to create a new activator with the same option that the activators created in the step 1. for my example its a PLAYER\_AL&#x4C;_\__&#x43;LICK activator.
+* [x] Okay now that you have have configured your variable, you will need to initialize it. So you need to create a new activator with the same option that the activators created in the step 1. for my example its a PLAYER\_ALL\_CLICK activator.
 * [x] In the part of this activator, go in the **Variables modification** part.
 
 ![](https://camo.githubusercontent.com/d9116f00f1fde942d98d90f7cd11a5539f56fdd4166b64f5561ecd44657058f9/68747470733a2f2f692e696d6775722e636f6d2f6645516a44655a2e706e67)
@@ -55,7 +55,3 @@ Example, you have 3 PLAYER\_AL&#x4C;_\__&#x43;LICK activator and you want to act
 :::tip
 FINISH ! I hope you understand now a bit how it works,
 :::
-
-If the guide wasn't clear enough or there was a mistake, please contact me (Ssomar) 
-
-\{% embed url="https://discord.com/invite/TRmSwJaYNv" %\}

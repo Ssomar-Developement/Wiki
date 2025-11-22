@@ -20,7 +20,7 @@ HEX COLORS are supported by ExecutableItems so if it doesn't work is because of 
 **Solution:** Use `BRUT_HEX` for commands that send colored messages:
 
 ```yaml
-commands:
+playerCommands:
 - "SEND_MESSAGE &#FF5733This text will be orange!"
 - "ACTIONBAR &#00FF00This text will be green! 20"
 - "custom_command_from_another_plugin #00FF00This text will be green! BRUT_HEX"
@@ -63,7 +63,7 @@ lore:
 activators:
   activator1:
     option: PLAYER_ALL_CLICK
-    commands:
+    playerCommands:
     - "SEND_MESSAGE &#FF5733&lYou clicked the item!"
     - "ACTIONBAR &#00FF00Success! 20"
 ```
@@ -77,6 +77,6 @@ lore:
 
 ## Related Documentation
 
-- [How to use vanilla commands](/docs/executableitems/questions-or-guides/frequently-asked-questions/how-to-use-vanilla-commands)
-- [Custom Commands - SEND_MESSAGE](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
-- [Item Features - Display Name](/docs/executableitems/configurations/item-configuration/item-features#display-name)
+- [How to use vanilla commands](/executableitems/questions-or-guides/frequently-asked-questions/how-to-use-vanilla-commands)
+- [Custom Commands - SEND_MESSAGE](/tools-for-all-plugins-score/custom-commands/player-and-target-commands)
+- [Item Features - Display Name](/executableitems/configurations/item-configuration/item-features#display-name)

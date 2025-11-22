@@ -5,7 +5,7 @@ import CustomTag from '@site/src/components/CustomTag';
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders](/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 * There are three type of entity targets on commands
   * Player: Its the player/user who triggered the activator on the ExecutableItem
   * Target: Its the player targeted/enemy involved in an activator.
@@ -14,7 +14,7 @@ Commands are a list of commands that are run from the console when the activator
 * Info: List of commands that are normally run against the block when the activator triggers.
   * This means, the activator must have involved with a block, for example PLAYER\_HIT\_PLAYER is an activator, but it doesn't involve a block, so blockCommands are not available here. With the activator PLAYER\_BLOCK\_BREAK there is a block involved so blockCommands are available here.
   * Another example PLAYER\_RIGHT\_CLICK has an activatorFeature called typeTarget, by default its ONLY\_AIR so blockCommands are not available due the activator is not involved with a block, but, typeTarget can be changed to ONLY\_BLOCK and then the activator will have as available features blockCommands, more info here -> \<IF I FORGOT PLS PING VAYK>
-  * You can check the list of blockCommands here -> [Block commands](/docs/tools-for-all-plugins-score/custom-commands/block-commands)
+  * You can check the list of blockCommands here -> [Block commands](/tools-for-all-plugins-score/custom-commands/block-commands)
 * Example:
 
 ```yaml
@@ -115,8 +115,8 @@ activators:
 ### blockConditions
 
 * Info: Here you can setup conditions for the block involved.
-* [Block conditions](/docs/tools-for-all-plugins-score/custom-conditions/block-conditions.md)
+* [Block conditions](/tools-for-all-plugins-score/custom-conditions/block-conditions.md)
 
 ### Block placeholders
 
-When the main actor of the event is a block then you can use in your activator config (commands, conditions, other..) [the block placeholders](/docs/tools-for-all-plugins-score/placeholders#-block-placeholders)
+When the main actor of the event is a block then you can use in your activator config (commands, conditions, other..) [the block placeholders](/tools-for-all-plugins-score/placeholders#-block-placeholders)

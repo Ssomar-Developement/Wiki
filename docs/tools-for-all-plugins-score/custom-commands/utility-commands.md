@@ -1,6 +1,6 @@
 # Utility Commands
 
-If you edit the commands in-game don't add the **-** that is before all examples.
+The utility commands can be places in all type of commands, so in entity , player, block commands ...
 
 ### DELAY
 
@@ -12,7 +12,8 @@ If you edit the commands in-game don't add the **-** that is before all examples
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands: #There will be a delay of 10 seconds between the command1 and the command2.
+    playerCommands: # It can be other commands than playerCommands 
+    #There will be a delay of 10 seconds between the command1 and the command2.
     - command1
     - DELAY 10
     - command2
@@ -28,7 +29,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - command1
     - DELAY_TICK 5 # (0.25 seconds)
     - command2
@@ -51,21 +52,21 @@ CURRENTLY ONLY WORKS IN PLAYER RELATED AND ENTITY RELATED COMMANDS
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - IF %player_health%>20 say cool
 ```
 
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - IF %entity%=PIG say I'm a pig <+> SETBABY <+> say I'm now a baby pig
 ```
 
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - IF 1=1||2=3 BACKDASH 1 # 1=1 OR 2=3 -> YES because 1=1
     - IF 1=1&#x26;&#x26;2=2||2=3 BACKDASH 1 # 1=1 and 2=2 or 2=3 -> YES because 1=1 and 2=2
     - IF (1=1&#x26;&#x26;2=2)||(2=3||3=2) BACKDASH 1 # (1=1 and 2=2) or (2=3 or 3=2) -> YES because 1=1 and 2=2
@@ -84,7 +85,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - WHILE %player_health%>10 20 SEND_MESSAGE &eHello &6While <+> minecraft:effect give %player% speed 1 1
 ```
 
@@ -110,7 +111,7 @@ The command will be stopped if the player is offline
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - 'LOOP_START loopCount:5' # (50%)
     - SEND_MESSAGE &cYOU GOT AN APPLE! +++ minecraft:give %player% apple 1
@@ -129,7 +130,7 @@ This is what the ExecutableItems plugin sees when it runs
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - SEND_MESSAGE &cYOU GOT AN APPLE! +++ minecraft:give %player% apple 1
     - SEND_MESSAGE &cYOU GOT AN APPLE! +++ minecraft:give %player% apple 1
@@ -163,7 +164,7 @@ It supports placeholders
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - FOR [Special70, Ssomar, Vayk] > for1
     - effect give %for1% speed 60 2
     - END_FOR for1
@@ -183,7 +184,7 @@ Don't overthink about the `>` symbol.
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - FOR [Special70, Ssomar, Vayk] > for2
     - FOR [5,4,3,2,1] > for3
     - SEND_MESSAGE >> &e%for2% &a%for3%
@@ -204,7 +205,7 @@ If you're gonna focus on the SEND\_MESSAGE command, the reason it ran 15 times b
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - FOR %score_variables_myList% > for4
     - minecraft:effect give %for4% speed 60 2
     - END_FOR for4
@@ -234,7 +235,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - minecraft:give %player% coal 1
     - minecraft:give %player% iron_ingot 1
@@ -247,7 +248,7 @@ This means that you have a 1/3 chance of getting coal, iron or gold
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:2'
     - minecraft:give %player% diamond 1 +++ SEND_MESSAGE &aYou receive &b1 Diamond
     - minecraft:give %player% emerald 1 +++ SEND_MESSAGE &aYou receive &21 Emerald
@@ -260,7 +261,7 @@ This means that from the 3 give commands, 2 of the randomly chosen command lines
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - NOTHING*9
     - minecraft:give %player% diamond_block 1
@@ -287,7 +288,7 @@ It supports placeholders
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - NOTHING*99
     - minecraft:give %player% diamond 1
@@ -305,7 +306,7 @@ This command line means that there is a 1/100 chance it will give you a diamond
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'LOOP_START loopCount:99' 
     - minecraft:give %player% dirt 1
     - LOOP_END
@@ -317,7 +318,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - minecraft:give %player% dirt 1
     - minecraft:give %player% dirt 1
     - minecraft:give %player% dirt 1
@@ -341,7 +342,7 @@ The (5%) percentage stuff is not part of the command. It's written here in the w
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - minecraft:give %player% dirt #(1/2 = 50%)
     - minecraft:give %player% diamond #(1/2 = 50%)
@@ -351,7 +352,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - minecraft:give %player% dirt #(1/3 = 33%)
     - minecraft:give %player% diamond #(1/3 = 33%)
@@ -362,7 +363,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - minecraft:give %player% dirt #(1/4 = 25%)
     - minecraft:give %player% dirt #(1/4 = 25%)
@@ -376,7 +377,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands: # It can be other commands than playerCommands
     - 'RANDOM_RUN selectionCount:1'
     - 'LOOP_START loopCount:99' 
     - minecraft:give %player% dirt 1  #(99/100 = 99%)

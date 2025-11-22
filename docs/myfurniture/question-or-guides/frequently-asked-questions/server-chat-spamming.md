@@ -21,7 +21,7 @@ The file "server.properties" is in inside the server folder.
 :::
 
 :::danger
-****broadcast-console-to-ops**** IS NOT THE SAME THAN **broadcast-rcon-to-ops**
+**broadcast-console-to-ops** IS NOT THE SAME THAN **broadcast-rcon-to-ops**
 :::
 
 ## Second type of spam

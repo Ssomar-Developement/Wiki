@@ -3,7 +3,7 @@
 Hey ! If you would like your item to have on the lore the date received here is the correct place !!
 
 * First of all you need PlaceholderAPI and Localtime expansion
-  * [https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#localtime](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#localtime)
+  * [Placeholders#localtime](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#localtime)
 * Then the basic placeholder would be 
   * %localtime\_time%
 * If would like to change the format check the docs of LocalTime format

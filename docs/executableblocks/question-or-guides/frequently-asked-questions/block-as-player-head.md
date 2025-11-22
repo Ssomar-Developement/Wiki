@@ -6,7 +6,7 @@
   * Set the material to PLAYER\_HEAD
   * Use the features related to it to add a texture to it (link below)
 
-[Head Settings](/docs/executableitems/configurations/item-configuration/item-features#head-settings)
+[Head Settings](/executableitems/configurations/item-configuration/item-features#head-settings)
 
 * And once the EI Item is ready, create your EB Block. And inside the MAIN GUI
 * On CreationType select IMPORT\_FROM\_EXECUTABLE\_ITEMS

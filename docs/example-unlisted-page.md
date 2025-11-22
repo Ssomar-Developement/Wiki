@@ -1,6 +1,7 @@
 ---
 description: This is an example of an unlisted page that won't appear in navigation
 unlisted: true
+not-for-ai: true
 ---
 
 # Example Unlisted Page

@@ -154,7 +154,7 @@ The formula currently has `*-(<multiplier>)` at where it is at. The higher the n
 Example Usage:
 
 ```
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %math_(%block_x%)+(((%block_x%)-({player_x}))*-2)% %math_(%block_y%)+(((%block_y%)-({player_y}))*-2)%
       %math_(%block_z%)+(((%block_z%)-({player_z}))*-2)%
 ```
@@ -183,7 +183,7 @@ The detailed explanation goes like this. in the IF() formula, it first checks if
 Example Usage:
 
 ```
-    commands:
+    playerCommands:
     - FOR [0.500 ,1.000 ,1.500 ,2.000 ,2.500 ,3.000 ,3.500 ,4.000 ,4.500 ,5.000 ,5.500
       ,6.000 ,6.500 ,7.000 ,7.500 ,8.000 ,8.500 ,9.000 ,9.500 ,10.000 ] > for1
     - execute at %player% run particle end_rod ~%math_(%for1%)*SIN({player_yaw}*-1)*COS({player_pitch}*-1)%

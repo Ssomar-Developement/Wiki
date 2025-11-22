@@ -4,7 +4,7 @@
 
 ### Create the individual tool items
 
-* First of all you'll need to create each item that the ****Morph tool**** will cycle through.
+* First of all you'll need to create each item that the **Morph tool** will cycle through.
 
 ![](</img/image (297).png>)
 
@@ -36,7 +36,7 @@
 When Usage is 0 and it is modified by -1 the item disappears.
 :::
 
-* Set the sneak condition (****In this example we want the cycle starts when SHIFT+RIGHT CLICK****)
+* Set the sneak condition (**In this example we want the cycle starts when SHIFT+RIGHT CLICK**)
 
 ![](</img/image (173).png>)
 
@@ -51,7 +51,7 @@ When Usage is 0 and it is modified by -1 the item disappears.
 ### Add the commands
 
 * We have the condition ready, now let's add the commands.\
-  For this you will need ****/ei giveslot****  command for this to work properly 
+  For this you will need **/ei giveslot**  command for this to work properly 
 * And now we have to take a look at the order of the cycle we wanted, in this case it will be\
   `AXE -> PICKAXE -> HOE`\
   If you are editing the Axe we will have to give the pickaxe:
@@ -60,7 +60,7 @@ When Usage is 0 and it is modified by -1 the item disappears.
 ei giveslot %player% (item id of the Pickaxe state) 1 %slot%
 ```
 
-* Then for the pickaxe item, we will have to create the same activator, usageModification, set the conditions and on commands:
+* Then for the pickaxe item, we will have to create the same activator, usageModification, set the conditions and on playerCommands:
 
 ```yaml
 ei giveslot %player% (item id of the Hoe state) 1 %slot%

@@ -34,10 +34,10 @@ First of all you have to know that this method is only available to PREMIUM VERS
 
 ![](</img/image (272).png>)
 
-* And on commands I'll put these commands:
+* And on commands I'll put this:
 
 ```yaml
-commands:
+playerCommands:
 - SENDMESSAGE §6This is not a normal sword..
 - PARTICLE FLAME 50 0.5 0
 entityCommands:

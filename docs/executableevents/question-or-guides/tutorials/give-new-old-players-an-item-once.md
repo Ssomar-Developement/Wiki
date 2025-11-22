@@ -119,7 +119,7 @@ activators:
     requiredExecutableItems: {}
     worldConditions: {}
     playerConditions: {}
-    commands:
+    playerCommands:
     - score variables set player playerjoin 1 %player%
     - ei give %player% kickback 1
     placeholdersConditions:

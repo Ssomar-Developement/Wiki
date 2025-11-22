@@ -32,11 +32,11 @@ There are Hostings that allows you to install quickly some plugins that are down
 
 1. Download the plugin from spigot
 2. You get a file .zip (this is like a folder, you have to open it using Winrar)
-3. You open it and you see that there are 2 files inside, **ExecutableEvents.jar** and **Score.jar**, ****both of them are needed****
+3. You open it and you see that there are 2 files inside, **ExecutableEvents.jar** and **Score.jar**, **both of them are needed**
 4. Pick up both **plugins** and drag them into plugins folder. (the zip is nothing so don't drag that file into plugins folder, you only need the two plugins inside the jar)
 
 :::warning
-If its the case you are using a webpage host server, it is ****highly recommended**** to ****don't drop it instantly into plugins folder****, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
+If its the case you are using a webpage host server, it is **highly recommended** to **don't drop it instantly into plugins folder**, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 :::
 
 Once done, you can start your server.

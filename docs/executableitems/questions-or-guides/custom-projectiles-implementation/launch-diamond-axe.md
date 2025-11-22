@@ -52,13 +52,13 @@ activators:
     activators:
     - PLAYER_RIGHT_CLICK
 
-    commands:
+    playerCommands:
     - "LAUNCH projectile:axe velocity:1.5"
     # Then you can add particles, sound ...
 ```
 
 :::tip
-For detailed LAUNCH command options, see [LAUNCH Command Documentation](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+For detailed LAUNCH command options, see [LAUNCH Command Documentation](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
 :::
 
 ## Step 3: Test Your Axe
@@ -98,7 +98,7 @@ activators:
 
 ## Related Documentation
 
-- [Custom Projectiles System](/docs/tools-for-all-plugins-score/custom-projectiles)
-- [LAUNCH Command](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
-- [PLAYER_RIGHT_CLICK Activator](/docs/executableitems/configurations/activator-configuration/list-of-the-activators#player_right_click)
-- [Projectile Activators](/docs/tools-for-all-plugins-score/custom-projectiles#projectile-activators)
+- [Custom Projectiles System](/tools-for-all-plugins-score/custom-projectiles)
+- [LAUNCH Command](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+- [PLAYER_RIGHT_CLICK Activator](/executableitems/configurations/activator-configuration/list-of-the-activators#player_right_click)
+- [Projectile Activators](/tools-for-all-plugins-score/custom-projectiles#projectile-activators)

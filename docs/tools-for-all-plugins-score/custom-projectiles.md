@@ -6,7 +6,7 @@ This page will help you to learn about creating custom projectiles and launch th
 We created for you an in-game editor to make the edition simple. **Use it.**
 
 :::info 
-To launch them, easy, use the [LAUNCH](http://localhost:3003/Wiki/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch) or [LOCATED\_LAUNCH](http://localhost:3003/Wiki/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch) commands. These projectiles cant be given to the players.
+To launch them, easy, use the [LAUNCH](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch) or [LOCATED\_LAUNCH](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch) commands. These projectiles cant be given to the players.
 :::
 
 ### Commands:

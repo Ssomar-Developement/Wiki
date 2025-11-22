@@ -35,7 +35,7 @@ _Sorted by alphabetical order_
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ALL_PLAYERS SEND_MESSAGE Hello %parseother_`{%around_target%}`_`{player_name}`%
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -53,7 +53,7 @@ Run multiple commands : Give a random item to all player, all players will not h
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ALL_PLAYERS RANDOM_RUN selectionCount:1 <+> ei give %around_target% candy1 1 <+> ei give %around_target% candy2 1 <+> ei give %around_target% candy3 1 <+> RANDOM_END
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -76,7 +76,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ALL_MOBS DAMAGE 5
     - ALL_MOBS BLACKLIST(ZOMBIE,ARMORSTAND) DAMAGE 20
     - ALL_MOBS WHITELIST(ZOMBIE) DAMAGE 20
@@ -95,13 +95,13 @@ activators:
 
 ```
 
-Run multiple commands:
+Run multiple playerCommands:
 
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ALL_MOBS DAMAGE 5 <+> effect give %around_target_uuid% strength 10 1
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -148,7 +148,7 @@ This summons lightning at players in a 20 block radius
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND distance:20 displayMsgIfNoPlayer:false execute at %around_target% run summon lightning_bolt
 ```
 
@@ -158,7 +158,7 @@ Send a message to players between 5 and 10 blocks
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND distance:10 displayMsgIfNoPlayer:true throughBlocks:true safeDistance:5 SENDMESSAGE &eIt is a test !
 ```
 
@@ -186,7 +186,7 @@ Examples:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND distance:5 displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% <+::step1> DELAY 3 <+::step1> AROUND distance:5 displayMsgIfNoPlayer:false say &a(2)&e%around_target::step2%
 ```
 
@@ -194,7 +194,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND say &a(0)&e%around_target% <+> DELAY 3 <+> NEAREST 10 say &a(1)&e%around_target::step1%
 ```
 
@@ -202,7 +202,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND distance:10 throughBlocks:false displayMsgIfNoPlayer:false say &a(0)&e%around_target% <+> DELAY 3 <+> AROUND distance:5 displayMsgIfNoPlayer:false say &a(1)&e%around_target::step1% and x &c%around_target_x::step1% <+::step1> IF %around_target_x::step1%>10 say &aThe target &e%around_target_x::step2% <+::step2> effect give %around_target::step2% slowness 20
 ```
 
@@ -232,7 +232,7 @@ Conditions Format:  CONDITIONS(%::\<my\_placeholder\_name>::%\<comparator>\<valu
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - 'AROUND distance:10 CONDITIONS(%::player_health::%>10&#x26;&#x26;%::player_name::%=2Ssomar) SEND_MESSAGE &#x26;eclick'
 ```
 
@@ -244,7 +244,7 @@ Keep in mind that the CONDITIONS() part parses the placeholders in it with the p
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - AROUND distance:10 displayMsgIfNoPlayer:false CONDITIONS(%::parseother_`{%player%}`_`{betterteams_name}`::%!=%::betterteams_name::%) effect give %around_target% weakness 10 10 true
 ```
 
@@ -252,7 +252,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - 'AROUND distance:2 CONDITIONS(%::player_name::%!=%player%) DAMAGE 15'
 ```
 
@@ -274,7 +274,7 @@ Placeholder Source: [PlaceholderAPI](https://factions.support/placeholderapi/))
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - BACK_DASH 5
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -297,7 +297,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - BURN 200
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -320,7 +320,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CONSOLE_MESSAGE This is a debug message sent to the %player%
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -343,7 +343,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - COPY_EFFECTS 5 # Using this will copy the player's own effects
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -369,7 +369,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -389,7 +389,7 @@ If you have activators that are related between two type of targets then you can
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and entity
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %entity_x% %entity_y% %entity_z% true
     entityCommands: []
 ```
@@ -400,7 +400,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and entity
-    commands: []
+    playerCommands: []
     entityCommands: 
     - CUSTOMDASH1 %player_x% %player_y% %player_z% true
 ```
@@ -411,7 +411,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and block
-    commands: 
+    playerCommands: 
     - CUSTOMDASH1 %block_x% %block_y% %block_z% true
     blockCommands: []
 ```
@@ -424,7 +424,7 @@ You can increase the strength of the command running many times the command (but
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
     - DELAYTICK 1
     - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
@@ -438,7 +438,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - 'LOOP START: 3'
     - CUSTOMDASH1 %player_x% %player_y%+5 %player_z% true # This will dash up the player
     - DELAYTICK 1
@@ -459,7 +459,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CUSTOMDASH2 %player_x% %player_y%+5 %player_z% 5 # This will dash down the player with strength 5
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -479,7 +479,7 @@ If you have activators that are related between two type of targets then you can
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and entity
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %entity_x% %entity_y% %entity_z% 5
     entityCommands: []
 ```
@@ -490,7 +490,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and entity
-    commands: []
+    playerCommands: []
     entityCommands: 
     - CUSTOMDASH1 %player_x% %player_y% %player_z% 5
 ```
@@ -501,7 +501,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Activator instance of player and block
-    commands: 
+    playerCommands: 
     - CUSTOMDASH1 %block_x% %block_y% %block_z% 5
     blockCommands: []
 ```
@@ -519,7 +519,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CUSTOMDASH3 cosx 10 true
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -549,7 +549,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE 20 true true # Apply 20 of damage to the player
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -565,7 +565,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE 25% # Will apply 25% of the max health of the player as damage
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -602,7 +602,7 @@ minecraft:damage %target% 10 by %player%\
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE_NO_KNOCKBACK 20 true true # Apply 20 of damage to the player
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -618,7 +618,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE_NO_KNOCKBACK 25% # Will apply 25% of the max health of the player as damage
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -646,7 +646,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE_BOOST 50 200 # This will boost the damage of the player
   activator1: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -665,7 +665,7 @@ This command can be used many time and the boost will get stacked, on this examp
 activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DAMAGE_BOOST 50 200 # This will boost the damage of the player by 50% for 200 ticks (10 seconds)
     - DELAY 10 # Delay of 10 seconds
     - DAMAGE_BOOST 50 200 # This will boost the damage of the player by 50% for 200 ticks (10 seconds)
@@ -919,7 +919,7 @@ Example: %around\_target%, %around\_target\_uuid%
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - MOB_AROUND distance:3 displayMsgIfNoEntity:true throughBlocks:true safeDistance:0 [conditions] COMMAND1 <+> COMMAND2 <+> ...
     - MOB_AROUND distance:3 displayMsgIfNoEntity:false BURN 10
     - MOB_AROUND distance:5 execute at %around_target_uuid% run summon lightning_bolt
@@ -938,7 +938,7 @@ Examples:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - MOB_AROUND distance:7 BLACKLIST(ZOMBIE`{CustomName:"Test Test"}`,ZOMBIE`{CustomName:"Miyamoto"}`) false BURN 3
     - MOB_AROUND distance:5 WHITELIST(ZOMBIE`{IsBaby:1}`) DAMAGE 20
     - MOB_AROUND distance:9 WHITELIST(WOLF`{Owner:"%player%"}`) HEAL 5
@@ -978,7 +978,7 @@ Example: `minecraft:effect give .. <+> DELAY 5 <+> DAMAGE 5`
 :::
 
 :::info
-**Placeholders:** The placeholders are the same that the [Entity Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity-placeholders) but you need to replace "player" by "around\_target"
+**Placeholders:** The placeholders are the same that the [Entity Placeholders](/tools-for-all-plugins-score/placeholders#entity-placeholders) but you need to replace "player" by "around\_target"
 
 Example: %around\_target%, %around\_target\_uuid%
 :::
@@ -1024,7 +1024,7 @@ Example: `SEND_MESSAGE &cYou will be damaged in 5 seconds <+> DELAY 5 <+> DAMAGE
 :::
 
 :::info
-**Placeholders:** The placeholders are the same that the [Player Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player-placeholders) but you need to replace "player" by "around\_target"
+**Placeholders:** The placeholders are the same that the [Player Placeholders](/tools-for-all-plugins-score/placeholders#player-placeholders) but you need to replace "player" by "around\_target"
 
 Example: %around\_target%, %around\_target\_uuid%
 :::

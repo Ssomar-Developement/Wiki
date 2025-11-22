@@ -13,7 +13,7 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: YOUR_ACTIVATOR_WITH_CLICK # replace that with the correct activator name
     typeTarget: NO_TYPE_TARGET
-    commands: []
+    playerCommands: []
 ```
 
 ```yaml
@@ -21,6 +21,6 @@ activators:
   activator0: # Activator ID, you can create as many activators on the activators list
     option: YOUR_ACTIVATOR_WITH_CLICK # replace that with the correct activator name
     typeTarget: ONLY_BLOCK
-    commands: []
+    playerCommands: []
     blockCommands: [] # Added because of typeTarget: ONLY_BLOCK which enables the instance of the activator to block instance
 ```

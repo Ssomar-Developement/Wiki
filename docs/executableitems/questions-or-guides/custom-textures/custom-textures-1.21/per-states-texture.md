@@ -1,6 +1,6 @@
 # Per states texture
 
-First of all, to better understanding this tutorial you must read first [****General Items****](general-items.md) because I will suppose you already know some basic stuff of Texture pack, after telling this, let's begin.
+First of all, to better understanding this tutorial you must read first [**General Items**](general-items.md) because I will suppose you already know some basic stuff of Texture pack, after telling this, let's begin.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tfiEoQG_qWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -14,9 +14,9 @@ First of all, to better understanding this tutorial you must read first [****Gen
 
 ### Texture
 
-* First of all, if you pick up a vanilla bow and draw it you will see it has 4 states, so, we will need 4 textures. Let's do it (how to make the texture is explained in [****General Items****](general-items.md))
+* First of all, if you pick up a vanilla bow and draw it you will see it has 4 states, so, we will need 4 textures. Let's do it (how to make the texture is explained in [**General Items**](general-items.md))
 
-![](<..//img/image (248).png>)
+![](</img/image (248).png>)
 
 * So we have the texture, now let's add it to the bow.
 
@@ -134,7 +134,7 @@ First of all, to better understanding this tutorial you must read first [****Gen
 #### and so on..
 
 :::info
-I'll repeat, you have to know basic stuff of retexturing to know what I am talking about, this requires some experience before. I suggest you to read [****General Items****](general-items.md) if you don't understand anything here.
+I'll repeat, you have to know basic stuff of retexturing to know what I am talking about, this requires some experience before. I suggest you to read [**General Items**](general-items.md) if you don't understand anything here.
 :::
 
 :::info
@@ -149,11 +149,11 @@ As it was said "it requires previous knowledge" -> and don't forget you can use 
 
 * After doing everything, save the jsons, save the texture in the correct folders, and give it to yourself in game + put the texture pack on. 
 
-![We got 'em 😎😎](<..//img/image (112).png>)
+![We got 'em 😎😎](</img/image (112).png>)
 
 ### Pulling states is working?
 
-![It is 😎😎😎😎](<..//img/image (219).png>)
+![It is 😎😎😎😎](</img/image (219).png>)
 
 * That's all, if have any question feel free to ask in the discord. Have a nice day
 

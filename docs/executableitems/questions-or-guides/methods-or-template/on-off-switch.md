@@ -219,7 +219,7 @@ activators:
       errorMessage: ''
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SENDMESSAGE Toggled On
     playerConditions: {}
     worldConditions: {}
@@ -259,7 +259,7 @@ activators:
       errorMessage: ''
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SENDMESSAGE Toggled Off
     playerConditions: {}
     worldConditions: {}

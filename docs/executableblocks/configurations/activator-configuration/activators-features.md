@@ -32,12 +32,12 @@ Premium features are labeled with the tag:  <CustomTag type="premium" />
 ### worldConditions
 
 * Info: You can use this conditions in all type of activators
-* [World conditions](/docs/tools-for-all-plugins-score/custom-conditions/world-conditions.md)
+* [World conditions](/tools-for-all-plugins-score/custom-conditions/world-conditions.md)
 
 ### placeholdersConditions
 
 * Info: You can use this conditions in all type of activators
-* [Placeholders conditions](/docs/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
+* [Placeholders conditions](/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
 
 
 ## Features exclusive depending on type of activator

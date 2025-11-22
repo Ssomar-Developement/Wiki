@@ -16,7 +16,7 @@ Most part of the features are available, to be sure check the wiki.
 
 Custom textures not available
 
-Activator PLAYER\_FIS&#x48;_\__&#x4E;OTHING _not available_
+Activator PLAYER\_FISH\_NOTHING _not available_
 
 Custom commands not available:
 
@@ -30,9 +30,7 @@ Custom projectiles have less features
 **PLUGIN REQUIRED**
 :::
 
-It requires the plugin NBTAPI
-
-\{% embed url="https://www.spigotmc.org/resources/nbt-api.7939" %\}
+It requires the plugin [NBTAPI](https://www.spigotmc.org/resources/nbt-api.7939)
 
 #### Color of dyes
 
@@ -52,7 +50,7 @@ Generate your item with attributes on a website like that **https://mapmaking.fr
 
 Custom Heads
 
-Custom commands:
+Custom playerCommands:
 
 * LOCATED\_LAUNCH
 * FARMINCUBE
@@ -71,7 +69,7 @@ Custom commands:
 
 Many default items, since their material is not in the 1.8.
 
-Custom commands:
+Custom playerCommands:
 
 * STUN\_ENABLE
 * STUN\_DISABLE
@@ -113,7 +111,7 @@ potionEffects:
     hasParticles: false
 ```
 
-Disable drops for activator like PLAYER\_KIL&#x4C;_\__&#x45;NTITY
+Disable drops for activator like PLAYER\_KILL\_ENTITY
 
 Restrictions:
 
@@ -125,9 +123,9 @@ Custom conditions:
 
 Activators:
 
-* PROJECTILE\_HI&#x54;_\__&#x42;LOCK (Potential problems)
-* PROJECTILE\_HI&#x54;_\__&#x45;NTITY (Potential problems)
-* PROJECTILE\_HI&#x54;_\__&#x50;LAYER (Potential problems)
+* PROJECTILE\_HIT\_BLOCK (Potential problems)
+* PROJECTILE\_HIT\_ENTITY (Potential problems)
+* PROJECTILE\_HIT\_PLAYER (Potential problems)
 * PROJECTILE\_ENTER\_IN\_LIQUID
 
 Features of custom projectile

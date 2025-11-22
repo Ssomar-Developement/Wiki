@@ -155,7 +155,7 @@ activators:
     # l'activateur fonctionnera
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SWING_MAIN_HAND
     - LAUNCH DEFAULT_INVISIBLE_ARROW_NO_GRAVITY_SPEED
   activator5:
@@ -164,7 +164,7 @@ activators:
     # l'activateur fonctionnera
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - 'SENDMESSAGE &7You &cunselected &7the entity: &e%entity_name%'
     - score variables list-remove player myList %player% value:%entity_uuid%
     # Les conditions placeholders
@@ -185,7 +185,7 @@ activators:
     # l'activateur fonctionnera
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - FOR %score_variables_myList% > for1
     - score run-entity-command entity:%for1% JUMP 1
     - END_FOR for1
@@ -222,7 +222,7 @@ activators:
     # l'activateur fonctionnera
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - 'SEND_MESSAGE &7You &aselected &7the entity: &e%entity_name%'
     - score variables list-add player myList %entity_uuid% %player%
     # Les conditions placeholders
@@ -255,7 +255,7 @@ activators:
     # l'activateur fonctionnera
     detailedSlots:
     - -1
-    commands: []
+    playerCommands: []
     detailedEntities: []
     entityCommands: []
 ```

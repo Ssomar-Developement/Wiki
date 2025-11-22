@@ -53,7 +53,7 @@ activators:
 
     cancelEvent: true
 
-    commands:
+    playerCommands:
     - "SETBLOCK air %block_x% %block_y% %block_z% %block_world%"
     - "DROP_ITEM_NATURALLY %block_type% 1 %block_world% %block_x% %block_y% %block_z%"
 ```
@@ -95,7 +95,7 @@ activators:
       blockTags: []
       whitelist: true
 
-    commands:
+    playerCommands:
     - "SETBLOCK air %block_x% %block_y% %block_z% %block_world%"
     - "IF %block_type% == DIAMOND_ORE || %block_type% == DEEPSLATE_DIAMOND_ORE"
     - "  DROP_ITEM_NATURALLY DIAMOND 1 %block_world% %block_x% %block_y% %block_z%"
@@ -157,7 +157,7 @@ activators:
       - DEEPSLATE_COPPER_ORE
       whitelist: true
 
-    commands:
+    playerCommands:
     - "IF %block_type% contains IRON"
     - "  DROP_ITEM_NATURALLY IRON_INGOT 1 %block_world% %block_x% %block_y% %block_z%"
     - "  PARTICLE FLAME 20 0.3 %block_x% %block_y% %block_z% %block_world%"
@@ -181,13 +181,13 @@ When using `cancelEvent: true`, always manually handle block removal and drops t
 ```yaml
 # CORRECT
 cancelEvent: true
-commands:
+playerCommands:
 - "SETBLOCK air %block_x% %block_y% %block_z% %block_world%"
 - "DROP_ITEM_NATURALLY %block_type% 1 %block_world% %block_x% %block_y% %block_z%"
 
 # WRONG - Block will drop twice!
 cancelEvent: false
-commands:
+playerCommands:
 - "SETBLOCK air %block_x% %block_y% %block_z% %block_world%"
 ```
 
@@ -208,7 +208,7 @@ detailedBlocks:
 If you want fortune-like effects:
 
 ```yaml
-commands:
+playerCommands:
 - "IF %random_1_100% <= 25"  # 25% chance
 - "  DROP_ITEM_NATURALLY DIAMOND 2 %block_world% %block_x% %block_y% %block_z%"
 - "ELSE"
@@ -236,10 +236,10 @@ commands:
 
 ## Related Documentation
 
-- [PLAYER_BLOCK_BREAK Activator](/docs/executableitems/configurations/activator-configuration/list-of-the-activators#player_block_break)
-- [Tool Rules Feature](/docs/executableitems/configurations/item-configuration/item-features#tool-rules-group-feature-120-5)
-- [Block Commands](/docs/tools-for-all-plugins-score/custom-commands/block-commands)
-- [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+- [PLAYER_BLOCK_BREAK Activator](/executableitems/configurations/activator-configuration/list-of-the-activators#player_block_break)
+- [Tool Rules Feature](/executableitems/configurations/item-configuration/item-features#tool-rules-group-feature-120-5)
+- [Block Commands](/tools-for-all-plugins-score/custom-commands/block-commands)
+- [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ## Examples in Default Items
 

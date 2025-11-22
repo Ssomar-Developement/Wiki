@@ -4,7 +4,7 @@ If its the case that you already make your items, and want to test with a player
 
 ![](</img/image (109).png>)
 
-That is because they don't have permissions to use the items, since nobody would like to give op to players, you have to give the correct permissions to your default players, for this, just check the section of [****Permissions****](../../commands-and-permissions.md), and read the Tip on the top of the page ^^
+That is because they don't have permissions to use the items, since nobody would like to give op to players, you have to give the correct permissions to your default players, for this, just check the section of [**Permissions**](executableitems/commands-and-permissions), and read the Tip on the top of the page ^^
 
 This image:
 
@@ -12,7 +12,7 @@ This image:
 Just in case **YES** -> It is required to have a perms plugin to manage perms for items to the players.
 
 \
-****If you DON'T HAVE A PERM PLUGIN and DON'T WANT TO ADD ONE the only way is giving op to your players, if you don't want that, just download a perm plugin****
+**If you DON'T HAVE A PERM PLUGIN and DON'T WANT TO ADD ONE the only way is giving op to your players, if you don't want that, just download a perm plugin**
 :::
 
 ## Discord

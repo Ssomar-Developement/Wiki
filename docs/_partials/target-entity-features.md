@@ -5,7 +5,7 @@ import CustomTag from '@site/src/components/CustomTag';
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [Placeholders](/docs/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders](/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 * There are three type of entity targets on commands
   * Player: Its the player/user who triggered the activator on the ExecutableItem
   * Target: Its the player targeted/enemy involved in an activator.
@@ -14,7 +14,7 @@ Commands are a list of commands that are run from the console when the activator
 * Info: List of commands that are normally run agaisnt the entity when the activator triggers.
   * By entity it means entity/mob/enemy involved in an activator.
   * We know the player is considered as entity, but the entity involved in activators is only the mob/enemy involved in the event.
-  * You can check the list of entity commands here [Target entity commands](/docs/tools-for-all-plugins-score/custom-commands/entity-commands)
+  * You can check the list of entity commands here [Target entity commands](/tools-for-all-plugins-score/custom-commands/entity-commands)
 * Example:
 
 ```yaml
@@ -68,8 +68,8 @@ activators:
 ### targetEntityConditions
 
 * Info: Feature for activators that involves a entity, here you can setup conditions for the entity involved.
-* [Target entity conditions](/docs/tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
+* [Target entity conditions](/tools-for-all-plugins-score/custom-conditions/entity-conditions.md)
 
 ### Target entity placeholders
 
-When the main actor of the event is an entity then you can use in your activator config (commands, conditions, other..) [the target entity placeholders](/docs/tools-for-all-plugins-score/placeholders#entity-placeholders)
+When the main actor of the event is an entity then you can use in your activator config (commands, conditions, other..) [the target entity placeholders](/tools-for-all-plugins-score/placeholders#entity-placeholders)

@@ -161,7 +161,7 @@ Once your resource pack is created and applied, use the PLAYSOUND command:
 activators:
   sword_attack:
     option: PLAYER_ALL_CLICK
-    commands:
+    playerCommands:
     - "minecraft:playsound customsounds:epic_sword_slash master @a"
 ```
 
@@ -249,7 +249,7 @@ require-resource-pack=true
 ## Related Documentation
 
 - [Resource Pack Format (Minecraft Wiki)](https://minecraft.wiki/w/Resource_Pack)
-- [Activators List](/docs/executableitems/configurations/activator-configuration/list-of-the-activators)
+- [Activators List](/executableitems/configurations/activator-configuration/list-of-the-activators)
 
 ## Additional Resources
 

@@ -5,10 +5,10 @@
 ### First we have to create the armor set pieces
 
 * For this example, the name of the items will be:\
-  Helmet = ****nameofhelmet.yml****\
-  Chestplate = ****nameofchestplate.yml****\
-  Leggings = ****nameofleggings.yml****\
-  Boots = ****nameofboots.yml****
+  Helmet = **nameofhelmet.yml**\
+  Chestplate = **nameofchestplate.yml**\
+  Leggings = **nameofleggings.yml**\
+  Boots = **nameofboots.yml**
 
 ![](</img/image (145).png>)
 
@@ -21,7 +21,7 @@
 ### Now create the activator we want to activate when having the whole set
 
 :::info
-In this example we will create an armor that gives you strength always you have the whole set, so, we will need a LOOP ACTIVATOR, also you have to choose where part of the armor will be the "main", the one where all commands will run from. In this case the "main" will be the ****helmet****.
+In this example we will create an armor that gives you strength always you have the whole set, so, we will need a LOOP ACTIVATOR, also you have to choose where part of the armor will be the "main", the one where all commands will run from. In this case the "main" will be the **helmet**.
 :::
 
 * So, as told before, the activator will be **LOOP**
@@ -68,7 +68,7 @@ I will explain adding the chestplate as a condition first:
 Remember to disable the main hand and only enable 1 slot, the one that you want.
 :::
 
-* ****And in this case we aren't going to use the usage condition so don't touch it.****
+* **And in this case we aren't going to use the usage condition so don't touch it.**
 * And save.
 
 You have to do the same for the another 2 pieces, once done, we will have 3 conditions in total
@@ -117,7 +117,7 @@ activators:
     delayInTick: false # To specify that the delay need to be in seconds
     detailedSlots:
       - 39
-    commands:
+    playerCommands:
       - minecraft:effect give %player% minecraft:regeneration 1 0
     playerConditions:
       ifHasExecutableItems:

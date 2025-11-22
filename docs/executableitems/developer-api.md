@@ -153,7 +153,3 @@ Bukkit.getPluginManager().callEvent(eventToCall);
 ```
 
 This event is particulary usefull for one of my custom activator/trigger:  EI ENTER IN PLAYER INVENTORY.
-
-### Questions ? Need another method ?
-
-\{% embed url="https://discord.com/invite/TRmSwJaYNv" %\}

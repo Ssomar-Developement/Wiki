@@ -26,7 +26,7 @@ description: >-
     - part1: %projectile_name%
     - comparator: EQUALS
     - part2: tracker
-  - add the commands: 
+  - add the playerCommands: 
   
   [!] ITEM CONFIG FORM
   
@@ -52,10 +52,10 @@ description: >-
     - set the default value to -1
 2) Create the ei item
 3) Create a PLAYER_ENABLE_SNEAK activator
-  - add the commands:
+  - add the playerCommands:
   
   [!] ITEM CONFIG FORM
-  commands:
+  playerCommands:
   - score variables set player sneakCount 0 %player%
   - WHILE %score_variables_sneakCount%<5 20 score variables modification player sneakCount 1 %player% <+> IF %score_variables_sneakCount%=5 say run-command-here
   
@@ -98,7 +98,7 @@ For this guide, it will run commands after looping 30 times.
   - default = 0
 4) create a LOOP activator
   - detailed slots : all slots enabled
-  - add commands:
+  - add playerCommands:
     - Ex: "IF %var_timer%=30 minecraft:give %player% diamond 1"
   - edit variable modification option
     - create a new variable modification option

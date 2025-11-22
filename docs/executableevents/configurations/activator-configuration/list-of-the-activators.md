@@ -48,7 +48,7 @@ Activator features are features that are exclusive to that activator.
 ### CUSTOM\_TRIGGER
 
 * Info: Activator that can be executed by running a command, or it can be scheduled. 
-  * This activator is for all plugins, because of that its explained on [https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers](https://docs.ssomar.com/tools-for-all-plugins-score/custom-triggers)
+  * This activator is for all plugins, because of that its explained on [custom-triggers](/tools-for-all-plugins-score/custom-triggers)
 
 ### HANGING\_PLACE <CustomTag type="premium" />
 
@@ -69,7 +69,7 @@ Activator features are features that are exclusive to that activator.
 ### LIGHTNING\_STRIKE <CustomTag type="premium" />
 
 * Info: Activates when a lightning strike is emitting in the world
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#lightning_strike): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#lightning_strike): 
   * %cause% : List of [causes](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/weather/LightningStrikeEvent.Cause.html)
 
 ### MAP\_INITIALIZE <CustomTag type="premium" />
@@ -114,15 +114,15 @@ Activator features are features that are exclusive to that activator.
 
 ### REMOTE\_SERVER\_COMMAND
 
-* Activates when a command is received over RCON ([https://jd.papermc.io/paper/1.14.4/index.html?org/bukkit/event/server/RemoteServerCommandEvent.html](https://jd.papermc.io/paper/1.14.4/index.html?org/bukkit/event/server/RemoteServerCommandEvent.html))
+* Activates when a command is received over RCON ([RemoteServerCommandEvent.html](https://jd.papermc.io/paper/1.14.4/index.html?org/bukkit/event/server/RemoteServerCommandEvent.html))
 
 ### SERVICE\_REGISTER
 
-* Activates when a service is registered ([https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceRegisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceRegisterEvent.html))
+* Activates when a service is registered ([ServiceRegisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceRegisterEvent.html))
 
 ### SERVICE\_UNREGISTER
 
-* Activates when a service is unregistered ([https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceUnregisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceUnregisterEvent.html))
+* Activates when a service is unregistered ([ServiceUnregisterEvent.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/server/ServiceUnregisterEvent.html))
 
 ### SPAWN_CHANGE <CustomTag type="premium" />
 
@@ -151,7 +151,7 @@ Activator features are features that are exclusive to that activator.
 ### WEATHER\_CHANGE <CustomTag type="premium" />
 
 * Info: Activates when the weather change in a world
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#weather_change)
+* [Placeholders](/tools-for-all-plugins-score/placeholders#weather_change)
 
 ### WORLD\_DAY <CustomTag type="premium" />
 
@@ -286,7 +286,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_ENCHANT\_ITEM
 
 * Info: Activates when a player add enchant to an item
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_enchant_item): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#player_enchant_item): 
   * %enchants%
   * %level\_cost%
 
@@ -309,7 +309,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_EXPERIENCE\_CHANGE
 
 * Info: Activates when the player experience change naturally.
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_experience_change): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#player_experience_change): 
   * %experience%
 
 ### PLAYER\_FERTILIZE\_BLOCK
@@ -369,7 +369,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_INVENTORY\_CLICK
 
 * Info: Activates when the player click an inventory
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_inventory_click): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#player_inventory_click): 
   * %is\_shift\_click%
   * %is\_mouse\_click%
   * %is\_left\_click%
@@ -421,7 +421,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_LEVEL\_CHANGE
 
 * Info: Activates when the player levels change
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_level_change): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#player_level_change): 
   * %new\_level%
   * %old\_level%
 
@@ -468,7 +468,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_RECEIVE\_EFFECT
 
 * Info: Activates when a player receives an effect
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_receive_effect)
+* [Placeholders](/tools-for-all-plugins-score/placeholders#player_receive_effect)
 
 ### PLAYER\_RECEIVE\_HIT\_BY\_ENTITY
 
@@ -501,7 +501,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_SEND\_MESSAGE
 
 * Info: Activates when a player sends a message. 
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
+* [Placeholders](/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
 
 ### PLAYER\_SHEAR\_ENTITY
 
@@ -548,7 +548,7 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_WRITE\_COMMAND
 
 * Info: Activates when a player enters commands.
-* [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
+* [Placeholders](/tools-for-all-plugins-score/placeholders#player_write_command-or-player_send_message)
 
 ## Block activators
 
@@ -612,7 +612,7 @@ Activator features are features that are exclusive to that activator.
 ### CREEPER\_POWER\_CHANGE <CustomTag type="premium" />
 
 * Info: Activates when the creeper is struck by lightning.
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#creeper_power_change): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#creeper_power_change): 
   * %power\_cause%
 
 ### ENDERDRAGON\_CHANGE\_PHASE <CustomTag type="premium" />
@@ -734,7 +734,7 @@ If the entity is just summoned, the activator will be triggered before the entit
 ### ENTITY\_SPAWN\_TRIALSPAWNER <CustomTag type="premium" />
 
 * Info; Activates when an entity is spawned from a trial spawner
-* Specific [Placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner): 
+* Specific [Placeholders](/tools-for-all-plugins-score/placeholders#entity_spawn_trialspawner): 
   * %is\_ominous%
 
 ### ENTITY\_TAME\_BY\_ENTITY <CustomTag type="premium" />

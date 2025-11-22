@@ -1,3 +1,7 @@
+---
+not-for-ai: true
+---
+
 # Cancel a delayed command
 
 If you have an activator with commands like this:
@@ -25,27 +29,27 @@ Activator: RIGHT CLICK ACTIVATOR
 placeholderCondition: timer = 0 (you have to do this using placeholders %var_timer% 
                                  and PLAYER_NUMBER)
 variableModification: (SET) TIMER -> 10
-commands: SENDMESSAGE 'ABILITY CASTED, DON'T MOVE'
+playerCommands: SENDMESSAGE 'ABILITY CASTED, DON'T MOVE'
 
 #Now, the activator that will reduce the timer by 1 each second, simulating DELAY 10
 Activator: LOOP ACTIVATOR
 placeholderCondition: timer > 0
 variableModification: (MODIFICATION) TIMER -> -1
-Commands: SENDMESSAGE Seconds left %var_timer_int%
+playerCommands: SENDMESSAGE Seconds left %var_timer_int%
 
 #Now, the activator that will CANCEL THE ABILITY (in this case we want to cancel it
 #when the player MOVES, so the activator is PLAYER_WALK
 Activator: PLAYER_WALK ACTIVATOR
 placeholderCondition: timer > 0
 variableModification: (SET) TIMER -> 0
-commands: SENDMESSAGE ABILITY CANCELED
+playerCommands: SENDMESSAGE ABILITY CANCELED
 
 #Now, if the player DIDN'T MOVE, the EPIC ABILITY WILL BE EXECUTED, here we will add
 #all that stuff
 Activator: LOOP ACTIVATOR
 placeholderCondition: timer = 1
 variableModification: (SET) TIMER = 0
-commands:
+playerCommands:
 - FIUM FIUM 
 - PUUUM
 - effect give %player% regeneration 10 10

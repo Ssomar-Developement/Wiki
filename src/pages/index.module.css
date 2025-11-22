@@ -63,6 +63,16 @@
 .cardIcon {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 128px;
+}
+
+.pluginIcon {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
 }
 
 .cardTitle {

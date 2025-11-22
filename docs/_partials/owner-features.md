@@ -5,13 +5,13 @@ import CustomTag from '@site/src/components/CustomTag';
 Commands are a list of commands that are run from the console when the activator if it meet all conditions and requirements.  You can use vanilla commands here, SCore commands and another plugin commands.
 
 * All the command lines of this command list are placeholder parsed first with placeholders from Ssomar Plugins and then its parsed through PAPI. 
-  * Its recommended to check [Placeholders list](/docs/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
+  * Its recommended to check [Placeholders list](/tools-for-all-plugins-score/placeholders) to see what placeholders can you run on each activator.
 
 It's available in all activators type since all activators have a player involved.
 
 * Info: Player commands is a list commands that are normally run against the player when the activator triggers.
   * This means if it has an SCore command, example: DAMAGE 5,  the damage will be applied to the user of the ExecutableItem.
-    * Custom [owner commands](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands.md) available from SCore
+    * Custom [owner commands](/tools-for-all-plugins-score/custom-commands/player-and-target-commands.md) available from SCore
   * You can also run commands from other plugins or vanilla commands. These commands will be executed by the console.
     * `minecraft:say Hey`
     * `money give %player% 500`
@@ -30,4 +30,4 @@ activators:
 
 ### Owner placeholders
 
-When the main actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the owner placeholders](https://docs.ssomar.com/tools-for-all-plugins-score/placeholders#player-placeholders)
+When the main actor of the event is a player then you can use in your activator config (commands, conditions, other..) [the owner placeholders](/tools-for-all-plugins-score/placeholders#player-placeholders)

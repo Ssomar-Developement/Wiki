@@ -28,23 +28,15 @@ There are Hostings that allows you to install quickly some plugins that are down
 
 * These are the versions supported by ExecutableCrafting.
   * Free version from 1.16 to 1.21.5+
-*  (More information in [**MC Versions Compatibility**](../../../executableitems/mc-versions-compatibility.md))
 
 ### Correct way of installing
 
 1. Download the plugin (Links are available on the page bellow)
-
-### You get .jar
-* If you only get ExecutableItems.jar, you will need to download also the SCore jar (our lib plugin). You can find it on [Modrinth ](https://modrinth.com/plugin/score)
-* Pick up both **plugins jar** and drag them into plugins folder.
-
-### You get a .zip
-* You get a file .zip (this is like a folder, you have to open it using Winrar)
-* You open it and you see that there are 2 files inside, **ExecutableItems.jar** and **Score.jar**, ****both of them are needed****
-* Pick up both **plugins jar** and drag them into plugins folder. (the zip is nothing so don't drag that file into plugins folder, you only need the two plugins inside the jar)
+2. You also need [SCore](https://modrinth.com/plugin/score) 
+3. Sometimes we package the plugins in .zip so besure sure you unzip it !
 
 :::warning
-If its the case you are using a webpage host server, it is ****highly recommended**** to ****don't drop it instantly into plugins folder****, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
+If its the case you are using a webpage host server, it is **highly recommended** to **don't drop it instantly into plugins folder**, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 :::
 
 Once done, you can start your server.

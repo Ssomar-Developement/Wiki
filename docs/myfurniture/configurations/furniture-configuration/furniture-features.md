@@ -228,5 +228,5 @@ storageFeatures:
 ## Activators
 
 * Very important features that allow you to add abilities on your furniture
-* Dedicated Wiki for this feature : [MF Activators list](/docs/myfurniture/configurations/activator-configuration/list-of-the-activators.md) and [MF Activators features](/docs/myfurniture/configurations/activator-configuration/activators-features.md)
+* Dedicated Wiki for this feature : [MF Activators list](/myfurniture/configurations/activator-configuration/list-of-the-activators.md) and [MF Activators features](/myfurniture/configurations/activator-configuration/activators-features.md)
 

@@ -1,6 +1,7 @@
 ---
 description: Example page demonstrating custom tags with icons
 unlisted: true
+not-for-ai: true
 ---
 
 import CustomTag from '@site/src/components/CustomTag';
@@ -93,7 +94,7 @@ Teleports the player with advanced options including rotation and velocity prese
 
 **Example:**
 ```yaml
-commands:
+playerCommands:
   - ADVANCED_TELEPORT 100 64 200 0 90
 ```
 

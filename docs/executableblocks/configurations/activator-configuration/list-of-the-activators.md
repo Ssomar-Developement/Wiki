@@ -42,7 +42,7 @@ Activator features are features that are exclusive to that activator.
 ### CUSTOM\_TRIGGER
 
 * Info: Activator that can be executed by running a command, or it can be scheduled. 
-  * This activator is for all plugins, because of that its explained on [Custom triggers](/docs/tools-for-all-plugins-score/custom-triggers)
+  * This activator is for all plugins, because of that its explained on [Custom triggers](/tools-for-all-plugins-score/custom-triggers)
 
 ### CROP\_GROW <CustomTag type="premium" />
 

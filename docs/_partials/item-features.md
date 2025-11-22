@@ -4,7 +4,7 @@ import CustomTag from '@site/src/components/CustomTag';
 
 * Info: Item commands is a list commands that run for the item when the activator triggers.
   * This means if it has an SCore command, example: MODIFY_ITEM_DURABILITY modification:-50000, the item will have its durability reduced by 50000.
-    * Custom [Item commands](/docs/tools-for-all-plugins-score/custom-commands/item-commands) available from SCore
+    * Custom [Item commands](/tools-for-all-plugins-score/custom-commands/item-commands) available from SCore
 * Example:
 
 ```yaml

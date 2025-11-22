@@ -20,7 +20,3 @@ To import your own furniture pack, it's simple, here are the few steps to follow
       6. And it should be good
 
 ## Video tutorial
-
-## If you have an issue during the process you can join our discord
-
-\{% embed url="https://discord.com/invite/TRmSwJaYNv" %\}

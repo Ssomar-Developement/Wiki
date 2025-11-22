@@ -9,7 +9,7 @@ activators:
     option: YOUR_ACTIVATOR_WITH_COMMAND # replace that with the correct activator name
     detailedCommands:
     - customHealCommand
-    commands:
+    playerCommands:
     - SEND_MESSAGE &dYou have been healed !
     - REGAIN HEALTH 10
 ```

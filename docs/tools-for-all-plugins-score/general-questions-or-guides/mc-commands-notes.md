@@ -9,7 +9,7 @@ description: >-
 ## Command that drops the target's head in 1.21.4+
 
 
-```
+```yaml
 execute at %player% run summon item %target_x% %target_y% %target_z% {Item:{id:"minecraft:player_head",count:1,components:{"minecraft:profile":{id:%target_uuid_array%}}}}
 ```
 

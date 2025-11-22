@@ -31,10 +31,10 @@ Now we are launching the projectile, but we aren't launching ourselves, the idea
 ### Create another activator
 
 * Now it will be a PLAYER\_CUSTOM\_LAUNCH
-* and in commands:
+* and in playerCommands:
 
 ```
-    commands:
+    playerCommands:
     - CUSTOMDASH1 %projectile_x% %projectile_y% %projectile_z%
     - DELAYTICK 1
     - CUSTOMDASH1 %projectile_x% %projectile_y% %projectile_z%

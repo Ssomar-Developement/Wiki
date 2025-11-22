@@ -93,10 +93,10 @@ The same if you want to run the command when HIT but with PLAYER\_HIT\_PLAYER ac
 
 ### Create a wolf that stays for "x" seconds and then disappears
 
-If want to create like a pet wolf that longs "x" seconds add these commands:
+If want to create like a pet wolf that longs "x" seconds add this:
 
 ```
-commands:
+playerCommands:
 - execute at %player% run summon wolf ~ ~ ~ {Owner: %player%,Tags:["%player%wolf"]}
 - DELAY 10
 - execute run kill @e[tag=%player%wolf]
@@ -149,7 +149,7 @@ just modify the delay depending the time you want the wolf to be alive
 ### Summon lightning on cursor
 
 * First create an activator PLAYER\_ALL\_CLICK or PLAYER\_RIGHT\_CLICK or PLAYER\_LEFT\_CLICK
-* Then in commands use the custom command [SPAWNENTITYONCURSOR](https://docs.ssomar.com/tools-for-all-plugins/custom-commands/player-and-target-commands#spawnentityoncursor) [LIGHTNING](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html#LIGHTNING) 1
+* Then in commands use the custom command [SPAWNENTITYONCURSOR](/tools-for-all-plugins/custom-commands/player-and-target-commands#spawnentityoncursor) [LIGHTNING](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html#LIGHTNING) 1
   * By default it doesn't do damage so in addition you can add the custom command `DAMAGE <number>`
 
 ### How to increase the max life "x" each time the activator gets triggered
@@ -179,7 +179,7 @@ just modify the delay depending the time you want the wolf to be alive
 * You can run the command FREEZE on loop, just like this:
 
 ```
-    commands:
+    playerCommands:
     - 'LOOP START: 20'
     - GLACIAL_FREEZE 1
     - DELAYTICK 1

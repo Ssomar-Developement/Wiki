@@ -41,7 +41,7 @@ The purpose of the uuid variable is to make it so it's spammable just in case yo
 
 ## 1) Simple Moving Particle that damages things that comes in contact with
 
-* Go to [https://docs.ssomar.com/tools-for-all-plugins/general-questions-or-guides/math-formulas#player-direction-offset-formula](https://docs.ssomar.com/tools-for-all-plugins/general-questions-or-guides/math-formulas#player-direction-offset-formula) to get a copy of the math formula for reference
+* Go to [player-direction-offset-formula](/tools-for-all-plugins/general-questions-or-guides/math-formulas#player-direction-offset-formula) to get a copy of the math formula for reference
 * Decide the range and the thickness of the line
   * For example, you want the projectile to travel 20 blocks while spawning 4 particles per block. It would be 20x4 = 80 so the first command in the second PLAYER\_RIGHT\_CLICK will be `LOOP START: 80`
 * Then utilize the math formula
@@ -74,7 +74,7 @@ Now, you want to add effects to your moving projectile. How do we do this?
 End Product (item config version)
 
 ```yaml
-    commands:
+    playerCommands:
     - 'LOOP START: 80'
     - execute at %player% run particle firework ~%math_(%for1%)*SIN(%var_yaw%*-1)*COS(%var_pitch%*-1)% ~%math_(%for1%)*SIN(%var_pitch%*-1)% ~%math_(%for1%)*COS(%var_yaw%*-1)*COS(%var_pitch%*-1)% 0 0 0 0 1
     - score run-block-command block:%world%,%math_(%x%)+((%for1%)*SIN(%var_yaw%*-1)*COS(%var_pitch%*-1))%,%math_1.6+(%y%)+((%for1%)*SIN(%var_pitch%*-1))%,%math_(%z%)+((%for1%)*COS(%var_yaw%*-1)*COS(%var_pitch%*-1))% player:%player% MOB_AROUND 1 DAMAGE 2

@@ -9,7 +9,7 @@ Premium features are labeled with the tag:  <CustomTag type="premium" />
 ### Activators
 
 * Very important features that allow you to add abilities on your item
-* Dedicated Wiki for this feature : [EI Activators list](/docs/executableitems/configurations/activator-configuration/list-of-the-activators.md) and [EI Activators features](/docs/executableitems/configurations/activator-configuration/activators-features.md)
+* Dedicated Wiki for this feature : [EI Activators list](/executableitems/configurations/activator-configuration/list-of-the-activators.md) and [EI Activators features](/executableitems/configurations/activator-configuration/activators-features.md)
 
 
 ### Material of the item
@@ -22,7 +22,7 @@ material: DIAMOND
 ```
 
 * You can check the material list information on this link: [Material list](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)
-* If you want to setup as material of the item a custom head check this link [Head settings](/docs/executableitems/configurations/item-configuration/item-features#head-settings).
+* If you want to setup as material of the item a custom head check this link [Head settings](/executableitems/configurations/item-configuration/item-features#head-settings).
 
 ### Name or DisplayName of the item
 
@@ -217,7 +217,7 @@ customModelData: 1.0;true;hello;5.0;false;true;my text 2
 customModelData: 1.0;true;hello
 ```
 
-* Tutorial: [https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https://docs.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)
+* Tutorial: [https:/.ssomar.com/executableitems/questions-or-guides/premium-custom-textures](https:/.ssomar.com/executableitems/questions-or-guides/premium-custom-textures)
 
 ### Item Rarity features <CustomTag type="version" version="1.20.5" />
 
@@ -732,7 +732,7 @@ customStackSize: 32
         - '2'
     ```
 * You can check more information on the next page about other type of variables:
-  * [SCore variables](/docs/tools-for-all-plugins-score/score-variables)
+  * [SCore variables](/tools-for-all-plugins-score/score-variables)
 
 ### Custom give first join features
 

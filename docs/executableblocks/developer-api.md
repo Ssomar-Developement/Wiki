@@ -91,4 +91,4 @@ public void placeExecutableBlock(String executableBlockId, Location location){
 
 ### Questions ? Need another method ?
 
-\{% embed url="https://discord.com/invite/TRmSwJaYNv" %\}
+Join the discord

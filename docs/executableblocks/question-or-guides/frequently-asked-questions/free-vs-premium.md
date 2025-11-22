@@ -17,8 +17,8 @@ The free version of ExecutableBlocks is like a free-trial of it, to know how it 
 
 ### Activators
 
-* In the free version you can only work with **\~10** ********activators****, but there are ****+25 activators**** to make your items in the **premium version**, so you could trigger a block of commands depending on almost every action the player does.
-* Besides you will unlock every activator, you will also unlock the possibility to have as many ****activators as you want per block****, that means creating multi functional blocks, that does a lot of abilities, mechanics and complex constructor of skills.
+* In the free version you can only work with **\~10** **activators**, but there are **+25 activators** to make your items in the **premium version**, so you could trigger a block of commands depending on almost every action the player does.
+* Besides you will unlock every activator, you will also unlock the possibility to have as many **activators as you want per block**, that means creating multi functional blocks, that does a lot of abilities, mechanics and complex constructor of skills.
 
 ### All features
 

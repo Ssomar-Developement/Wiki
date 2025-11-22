@@ -39,14 +39,14 @@ In this page you will learn how to timer stuff to happen in your block, for exam
 
       * activator RIGHT CLICK
       * placeholderCondition %var\_timer% EQUALS 0
-      * command: 
+      * blockCommands: 
         * `execute in <<%block\_world%>> run summon item %block\_x% %block\_y%+1 %block\_z% \{Item:\{id:"minecraft:IDOFTHEITEM",Count:1b\\}\}`
       * variableModification: timer SET 10
 
   * Each time the timer goes to 0 summon an item
     * activator LOOP
     * placeholderCondition PLAYER\_NUMBER %var\_timer% EQUALS 0
-    * command: 
+    * blockCommands: 
       * `execute in <<%block\_world%>> run summon item %block\_x% %block\_y%+1 %block\_z% \{Item:\{id:"minecraft:IDOFTHEITEM",Count:1b\\}\}`
     * variableModification: timer SET 10
   * Example
@@ -76,7 +76,7 @@ activators:
     requiredItems: {}
     requiredExecutableItems: {}
     requiredMagics: {}
-    commands: []
+    blockCommands: []
     blockConditions: {}
     worldConditions: {}
     placeholdersConditions:
@@ -107,7 +107,7 @@ activators:
     requiredItems: {}
     requiredExecutableItems: {}
     requiredMagics: {}
-    commands:
+    blockCommands:
     - STRIKELIGHTNING
     blockConditions:
       requiredItems: {}

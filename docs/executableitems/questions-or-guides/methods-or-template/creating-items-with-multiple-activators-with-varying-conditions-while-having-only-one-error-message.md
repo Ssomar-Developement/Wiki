@@ -222,7 +222,7 @@ activators:
     requiredExecutableItems: {}
     detailedSlots:
     - -1
-    commands: []
+    playerCommands: []
     playerConditions: {}
     worldConditions: {}
     itemConditions: {}
@@ -263,7 +263,7 @@ activators:
     requiredExecutableItems: {}
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SENDMESSAGE TEST MESSAGE 1
     playerConditions: {}
     worldConditions: {}
@@ -311,7 +311,7 @@ activators:
       errorMessage: ''
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SENDMESSAGE TEST MESSAGE 2
     playerConditions: {}
     worldConditions: {}
@@ -355,7 +355,7 @@ activators:
     requiredExecutableItems: {}
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - SENDMESSAGE Â§cYou don't have the required items.
     playerConditions: {}
     worldConditions: {}
@@ -371,5 +371,4 @@ activators:
         messageIfNotValid: ''
     variablesModification: {}
 attributes: {}
-
 ```

@@ -20,7 +20,7 @@ EACH TRIM YOU REMOVE, ONE CUSTOM ARMOR MORE YOU HAVE
 
 We have to create the texture for our new armor, we can do this here or using another programs up to you.
 
-\{% embed url="https://minecraft.novaskin.me/resourcepacks#default/assets/minecraft/textures/models/armor" %\}
+[Novaskin Program](https://minecraft.novaskin.me/resourcepacks#default/assets/minecraft/textures/models/armor)
 
 What you have to create is the custom armor using diamond files, so in this case, this will be the ones used
 
@@ -82,4 +82,4 @@ Perfect ! Now you can do the same with another trims, until you change all the a
 
 ### Texture pack
 
-\{% file src="..//img/texture.zip" %\}
+[Download the texture pack](/img/texture.zip)

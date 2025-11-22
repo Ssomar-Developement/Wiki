@@ -1,5 +1,6 @@
 ---
 unlisted: true
+not-for-ai: true
 ---
 
 # Link Preview Component Example

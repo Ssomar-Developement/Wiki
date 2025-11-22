@@ -13,7 +13,7 @@
 ![](</img/image (241).png>)
 
 * Now the activator, as I said I wanted right clicking, so let's create that.
-  * In commands we will add the next custom command: [**LAUNCH**](https://docs.ssomar.com/tools-for-all-plugins/custom-commands/player-and-target-commands#launch) (take a look at the wiki if don't know how to add it)
+  * In commands we will add the next custom command: [**LAUNCH**](/tools-for-all-plugins/custom-commands/player-and-target-commands#launch) (take a look at the wiki if don't know how to add it)
   * It will finally look like this:
 
 ```

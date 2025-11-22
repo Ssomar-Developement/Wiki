@@ -19,7 +19,7 @@ To fix this, rename the world to something like New\_World\_9 . Make sure the na
 You have to add DELAYTICK 2 before the SETEXECUTABLEBLOCK command due to technical reasons
 
 ```
-    commands:
+    blockCommands:
     - DELAYTICK 2
     - SETEXECUTABLEBLOCK sampleblock %block_x% %block_y% %block_z% %block_world% true
 ```

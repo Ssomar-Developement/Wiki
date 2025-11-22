@@ -36,7 +36,7 @@ There are Hostings that allows you to install quickly some plugins that are down
 4. Pick up all the **plugins jar** and drag them into plugins folder.
 
 :::warning
-If its the case you are using a webpage host server, it is ****highly recommended**** to ****don't drop it instantly into plugins folder****, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
+If its the case you are using a webpage host server, it is **highly recommended** to **don't drop it instantly into plugins folder**, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 :::
 
 Once done, you can start your server.

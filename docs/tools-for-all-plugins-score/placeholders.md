@@ -145,7 +145,7 @@ Projectile placeholders are available in the activators where a projectile is in
 
 ### 📊 SCore Variables
 
-Click here to have more info abotu [SCore Variables](/docs/tools-for-all-plugins-score/score-variables)
+Click here to have more info abotu [SCore Variables](/tools-for-all-plugins-score/score-variables)
 
 **Item/Block Variables:**
 - `%var_X%` - Value of variable X

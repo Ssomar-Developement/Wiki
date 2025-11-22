@@ -17,7 +17,7 @@ If you would like to only show some recipes to some players and some to others, 
 
 To create your own recipe book you have to edit recipeBooks.yml
 
-![](<..//img/image (445).png>)
+![](</img/image (445).png>)
 
 The format this file works is:
 

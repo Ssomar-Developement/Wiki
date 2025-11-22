@@ -32,11 +32,11 @@ Activator features are features that are exclusive to that activator.
 * Info: Activator that gets triggered when the player either left or right click with the item. 
   * You can't differentiate the clicks, for that use different activators such as PLAYER\_RIGHT\_CLICK or PLAYER\_LEFT\_CLICK.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [TypeTarget](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
+  * [TypeTarget](/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
   * If typeTarget: ONLY\_BLOCK this features will be available.
     * [Block commands
-      ](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-    * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+      ](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+    * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples: 
   * Warping Stone – Instantly teleports the player 5 blocks in the direction they are facing. Cooldown: 10 seconds.
   * Healing Totem – When clicked, heals the player for 4 hearts and grants Regeneration I for 5 seconds.
@@ -77,8 +77,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player breaks a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * Ore Booster Pickaxe – When breaking an ore block, there is a 20% chance to double the drop.
   * Nature’s Wrath Axe – Breaking a log has a 10% chance to summon a hostile tree spirit (custom mob).
@@ -89,9 +89,9 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player blocks a hit that comes from an entity with the shield.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands)
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 * Examples:
   * Thorned Shield – When blocking an attack, the attacker takes 3 hearts of damage.
   * Shockwave Defense – Successfully blocking an attack knocks back all nearby enemies within 5 blocks.
@@ -103,8 +103,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player blocks a hit that comes from a player with the shield.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 * Examples:
   * Retribution Shield – When blocking an attack from a player, the attacker is instantly disarmed, dropping their weapon on the ground.
   * Vampiric Guard – When successfully blocking an attack, the player absorbs a portion of the attacker's health (healing 2 hearts).
@@ -115,8 +115,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player places a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * Living Roots – When placing a sapling, there is a 10% chance for it to instantly grow into a tree.
   * Runic Inscription – Placing a stone block has a 5% chance to turn it into a Runed Stone, emitting particles and providing nearby players Haste I for 10 seconds.
@@ -126,7 +126,7 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player breaks a shield of another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 * Examples:
   * Shatter Strike – When breaking a player’s shield, the attacker gains Strength I for 5 seconds, empowering their next attack.
   * Upon destroying a shield, a small explosion occurs at the target’s location, knocking them back 5 blocks.
@@ -137,8 +137,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player brushes a block.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * Cursed Dust – If the player brushes a suspicious block, there is a 10% chance that they get temporarily blinded as a cloud of cursed dust erupts around them.
   * Buried Riches – Brushing a block has a small chance to reward the player with a gold nugget or emerald, simulating the discovery of lost treasure.
@@ -150,8 +150,8 @@ Activator features are features that are exclusive to that activator.
   * Example is how you store a fish inside a bucket with water.
   * If want to run something when "trying" to bucket an entity that can't be bucketed this activator won't run, you should use PLAYER\_CLICK\_ON\_ENTITY.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 * Examples:
   * Instant Fillet – Instead of capturing a fish in a bucket, the player instantly receives raw fish in their inventory, as if they expertly filleted it on the spot.
   * Essence Extraction – When using a bucket on an axolotl, instead of capturing it, the player receives an "Axolotl Mucus" potion, which grants Regeneration I for 10 seconds.
@@ -170,9 +170,9 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player click on an entity and Citizen NPC(s).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedClick](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedClick](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 * Examples:
   * Beast Tamer’s Bond – Clicking on a Wolf, Cat, or Horse while holding a special item (e.g., a Golden Apple) grants it temporary Speed II and Regeneration for 60 seconds.
   * Hidden Pocket – Clicking on a Zombie Piglin with Gold Ingots has a 5% chance to instantly receive a random Nether loot item instead of needing to barter.
@@ -184,8 +184,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player click on a player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedClick](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [DetailedClick](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 * Examples:
   * Shared Fortune – Clicking on a player while holding an Emerald Block splits your XP levels in half, giving the other player the lost XP instantly.
   * Clicking on a teammate while holding a Potion of Healing instantly transfers half of your health to them, making it a strategic last-second lifesaver.
@@ -204,29 +204,29 @@ Activator features are features that are exclusive to that activator.
 ### PLAYER\_CONSUME
 
 * Info: Activator that gets triggered when the player successfully eat / consume an item.\
-  Be careful, it only works for Minecraft Items that are edible or the ones that are transformed into edible item using the [Consumable Features](/docs/executableitems/configurations/item-configuration/item-features#consumablefeatures).
+  Be careful, it only works for Minecraft Items that are edible or the ones that are transformed into edible item using the [Consumable Features](/executableitems/configurations/item-configuration/item-features#consumablefeatures).
 
 ### PLAYER\_CONSUME\_THE\_EI
 
 * Info: Activator that gets triggered when the player successfully eat/consume the ExecutableItem itself. \
-  Be careful, it only works for Executable Items that are edible or the ones that are transformed into edible item using the [Consumable Features](/docs/executableitems/configurations/item-configuration/item-features#consumablefeatures).
+  Be careful, it only works for Executable Items that are edible or the ones that are transformed into edible item using the [Consumable Features](/executableitems/configurations/item-configuration/item-features#consumablefeatures).
 
 ### PLAYER\_CUSTOM\_LAUNCH
 
 * Info: Activator that gets triggered when the player launch a projectile with an SCore command such as:
-  * [LAUNCH](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
-  * [LOCATED\_LAUNCH](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch)
-  * [LAUNCH\_ENTITY](/docs/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity#launchentity)
+  * [LAUNCH](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+  * [LOCATED\_LAUNCH](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#located_launch)
+  * [LAUNCH\_ENTITY](/tools-for-all-plugins-score/custom-commands/mixed-commands-player-and-entity#launchentity)
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [entityCommands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands) (In this activator the entity is the projectile)
-  * [Projectile placeholders](/docs/tools-for-all-plugins-score/placeholders#projectile-placeholders)
-  * [detailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities) (To whitelist/blacklist some projectiles)
+  * [entityCommands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands) (In this activator the entity is the projectile)
+  * [Projectile placeholders](/tools-for-all-plugins-score/placeholders#projectile-placeholders)
+  * [detailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities) (To whitelist/blacklist some projectiles)
 
 ### PLAYER\_DEATH
 
 * Info: Activator that gets triggered when the player dies.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here. 
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### PLAYER\_DESELECT\_THE\_EI <CustomTag type="premium" />
 
@@ -258,8 +258,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player dismounts / steps out from riding an entity. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_DROP\_ITEM
 
@@ -269,8 +269,8 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered when the player drops the ExecutableItem. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_EDIT\_BOOK <CustomTag type="premium" />
 
@@ -328,59 +328,59 @@ Activator features are features that are exclusive to that activator.
 
 * Info: Activator that gets triggered if the player fertilizes a block with bone meal. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### PLAYER\_FILL\_BUCKET
 
 * Info: Activator that gets triggered when the player fills the bucket with eitherwater or lava. 
   * Be careful ! When an ExecutableItem fills a bucket and it turns to either "water\_bucket" or "lava\_bucket" its not longer an ExecutableItem, it turns into a vanilla item and cant be reverted.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### PLAYER\_FISH\_BLOCK <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber is on a block. 
-  * It doesn't get triggered when is not on a block, if you want to trigger it on the air then use the activator [PLAYER_FISH_NOTHING](/docs/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_fish_nothing)
+  * It doesn't get triggered when is not on a block, if you want to trigger it on the air then use the activator [PLAYER_FISH_NOTHING](/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_fish_nothing)
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### PLAYER\_FISH\_ENTITY <CustomTag type="premium" />
 
 * Activates when the player right-click the fishing rod when the fishing rod bobber catches an entity or Citizens NPC.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here. 
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_FISH\_FISH <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches an item in the water due to fish loot system. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Disable Drops](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Disable Drops](/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_FISH\_NOTHING <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player fishes nothing, that means, the bobber wasn't on neither block nor entity nor player.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_FISH\_PLAYER <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player right-click the fishing rod when the fishing rod bobber catches another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### PLAYER\_FISH\_XIAOMOMI\_FISH <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player successfully catches something using the CustomFishing plugin (formerly known as Xiaomomi Fish). This activator requires the [CustomFishing plugin](https://modrinth.com/plugin/customfishing) to be installed on your server.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 * Available placeholders:
   * `%result%` - The fishing result (e.g., SUCCESS, FAILURE, etc.)
   * `%fish_hook%` - The name of the fish hook used
@@ -398,8 +398,8 @@ This activator only works if you have the **CustomFishing** plugin installed. It
 
 * Info: Activator that gets triggered when the player harvests a block
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here. 
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 * Examples:
   * When right-clicking a sweet berry bush to harvest, there is a 10% chance that the bush bites back, dealing half a heart of damage but giving the player Strength I for 5 seconds as a "taste for blood" effect.
   * Bountiful Touch – When harvesting crops, there is a 15% chance to instantly replant them at full growth, allowing for continuous farming.
@@ -408,21 +408,21 @@ This activator only works if you have the **CustomFishing** plugin installed. It
 ### PLAYER\_HIT\_ENTITY <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player hits an entity.
-  * This activator only works when there is damage involved, that means, the player actually hit the entity. If you would like it to work when clicking the entity then use [PLAYER_CLICK_ON_ENTITY](/docs/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_click_on_entity)
+  * This activator only works when there is damage involved, that means, the player actually hit the entity. If you would like it to work when clicking the entity then use [PLAYER_CLICK_ON_ENTITY](/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_click_on_entity)
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### PLAYER\_HIT\_PLAYER
 
 * Info: Activator that gets triggered when the player hits another player (usually called target).
-  * This activator only works when there is damage involved, that means, the player actually hit the other player. If you would like it to work when clicking the player then use [PLAYER_CLICK_ON_PLAYER](/docs/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_click_on_player)
+  * This activator only works when there is damage involved, that means, the player actually hit the other player. If you would like it to work when clicking the player then use [PLAYER_CLICK_ON_PLAYER](/executableitems/configurations/activator-configuration/list-of-the-activators-for-executableitems#player_click_on_player)
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
-### PLAYER\_INPUT <CustomTag type="premium" />
+### PLAYER\_INPUT <CustomTag type="premium" /> <CustomTag type="version" version="1.21.3" />
 
 * Info: Activator that gets triggered when the player input a key. (forward, backward, left, right, jump, sprint, sneak)
 
@@ -443,23 +443,23 @@ This activator only works if you have the **CustomFishing** plugin installed. It
 
 * Info: Activator that gets triggered when the player kills an entity or a Citizens NPC. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [Disable Drops](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Disable Drops](/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
 
 ### PLAYER\_KILL\_PLAYER <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player kills a player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Disable Drops](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [Disable Drops](/executableitems/configurations/activator-configuration/activators-features#s_a_l-desactivedrops)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### PLAYER\_LAUNCH\_PROJECTILE
 
 * Info: Activator that gets triggered when the player shoots a projectile. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_LEAVE\_THEIR\_LAND
 
@@ -477,10 +477,10 @@ This activator only works if you have the **CustomFishing** plugin installed. It
 
 * Info: Activator that gets triggered when the player left-clicks the item. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [TypeTarget](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
+  * [TypeTarget](/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget)
   * If typeTarget: ONLY\_BLOCK this features will be available.
-    * [blockCommands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands) : To write [block commands](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
-    * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+    * [blockCommands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands) : To write [block commands](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
+    * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### PLAYER\_MEND\_THE\_EI
 
@@ -508,28 +508,28 @@ The event is only triggered when someone force the player to open its inventory 
 
 * Info: Activator that gets triggered when the player receives a potion effect. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedEffects](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedeffects)
+  * [DetailedEffects](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedeffects)
 
 ### PLAYER\_RECEIVE\_HIT\_BY\_ENTITY <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player gets hit by an entity. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### PLAYER\_RECEIVE\_HIT\_BY\_PLAYER <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player gets hit by another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### PLAYER\_RECEIVE\_HIT\_GLOBAL <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the player gets hit. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedDamageCauses](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
+  * [DetailedDamageCauses](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detaileddamagecauses)
 
 ### PLAYER\_REGAIN\_HEALTH
 
@@ -545,10 +545,10 @@ The event is only triggered when someone force the player to open its inventory 
 * Info: Activator that gets triggered when the player right-clicks the item. 
   * Due to spigot limitations this activator will only trigger if you have an item(any) in your hand.
 * Custom Features of this activator:
-  * [typeTarget](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget) : To specify the type of the click (ONLY\_AIR, ONLY\_BLOCK, NO\_TYPE\_TARGET)
+  * [typeTarget](/executableitems/configurations/activator-configuration/activators-features#s_a_l-typetarget) : To specify the type of the click (ONLY\_AIR, ONLY\_BLOCK, NO\_TYPE\_TARGET)
   * If typeTarget: ONLY\_BLOCK these features will be available:
-    * [blockCommands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands) : To write [block commands](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
-    * [detailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks) : To specify which types of block are valid
+    * [blockCommands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands) : To write [block commands](../../../tools-for-all-plugins-score/custom-commands/block-commands.md)
+    * [detailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks) : To specify which types of block are valid
 
 ### PLAYER\_RIPTIDE
 
@@ -562,14 +562,14 @@ The event is only triggered when someone force the player to open its inventory 
 
 * Info: Activator that gets triggered when the player shears an entity. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_SHIELD\_BREAK\_BY\_PLAYER <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when the shield of the player gets broken by another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
 
 ### PLAYER\_SPAWN\_CHANGE
 
@@ -583,16 +583,16 @@ The event is only triggered when someone force the player to open its inventory 
 
 * Info: Activator that gets triggered when an entity targets the player. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
 
 ### PLAYER\_TRAMPLE\_CROP
 
 * Info: Activator that gets triggered when the player tramples a crop. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
   * [Block commands
-    ](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+    ](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
 
 ### PLAYER\_UNEQUIP\_THE\_EI <CustomTag type="premium" />
 
@@ -609,44 +609,44 @@ The event is only triggered when someone force the player to open its inventory 
 
 * Info: Activator that gets triggered when the player enters/inputs a command. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedCommands](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedcommands)
+  * [DetailedCommands](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedcommands)
 
 ### PROJECTILE\_ENTER\_IN\_LIQUID <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when a launched projectile of the player enters to water.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [Must Be A Projectile Launch With The Same EI](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Must Be A Projectile Launch With The Same EI](/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
 
 ### PROJECTILE\_HIT\_BLOCK <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when a launched projectile by a player hits a block. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Block commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [DetailedBlocks](/docs/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/docs/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
-  * [Must Be A Projectile Launch With The Same EI](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
+  * [Block commands](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [DetailedBlocks](/executableitems/configurations/activator-configuration/activators-features#p_b-blockcommands/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)
+  * [Must Be A Projectile Launch With The Same EI](/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
 
 ### PROJECTILE\_HIT\_ENTITY <CustomTag type="premium" />
 
 * Info: Activator that gets triggered when a launched projectile by a player hits an entity. \
   Be carefull it doesnt be triggered when the projectile hits a player (For that use PROJECTILE\_HIT\_PLAYER).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Entity commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [DetailedEntities](/docs/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/docs/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
-  * [Must Be A Projectile Launch With The Same EI](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
+  * [Entity commands](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [DetailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-entitycommands/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities)
+  * [Must Be A Projectile Launch With The Same EI](/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
 
 ### PROJECTILE\_HIT\_PLAYER
 
 * Info: Activator that gets triggered when a launched projectile by a player hits another player (usually called target).
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Target commands](/docs/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
-  * [Must Be A Projectile Launch With The Same EI](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
+  * [Target commands](/executableitems/configurations/activator-configuration/activators-features#p_t-targetcommands)
+  * [Must Be A Projectile Launch With The Same EI](/executableitems/configurations/activator-configuration/activators-features#s_a_l-mustbeaprojectilelaunchwiththesameei)
 
 ### CUSTOM\_TRIGGER
 
 * Info: Activator that can be executed by running a command, or it can be scheduled. 
-  * This activator is for all plugins, because of that its explained on [Custom triggers](/docs/tools-for-all-plugins-score/custom-triggers)
+  * This activator is for all plugins, because of that its explained on [Custom triggers](/tools-for-all-plugins-score/custom-triggers)
 
 ### EI\_CLICK\_ON\_ANOTHER\_INVENTORY\_ITEM 
 
@@ -670,10 +670,10 @@ The event is only triggered when someone force the player to open its inventory 
 
 * Info: Activator that gets triggered when the player clicks the item in its inventory. 
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [DetailedClick](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
+  * [DetailedClick](/executableitems/configurations/activator-configuration/activators-features#s_a_l-detailedclick)
 
 ### LOOP <CustomTag type="premium" />
 
 * Info: Activator that gets triggered in repeat as long as the item is in the player's inventory. Its basically a cycle, it runs the commands each \<delay> \<seconds/ticks> depending on the configuration of this activator.
 * activatorFeatures: Normally all activators shares features, but there are some that are exclusive for some activators, if its the case, the feature(s) will be listed here.
-  * [Delay](/docs/executableitems/configurations/activator-configuration/activators-features#s_a_l-delay-and-delaytick)
+  * [Delay](/executableitems/configurations/activator-configuration/activators-features#s_a_l-delay-and-delaytick)

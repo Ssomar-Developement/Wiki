@@ -41,17 +41,17 @@ Each plugin provides different contexts for command execution:
 
 ### 🗡️ ExecutableItems
 - **Requirement:** Item must be in player's inventory
-- **Available commands:** Player commands
+- **Available playerCommands:** Player commands
 - **Placeholders:** Player-based placeholders (`%player%`, etc.)
 
 ### 🧱 ExecutableBlocks
 - **Requirement:** Block must be placed
-- **Available commands:** Block commands, Owner commands (if enabled)
+- **Available playerCommands:** Block commands, Owner commands (if enabled)
 - **Placeholders:** Block and owner placeholders
 
 ### 🎯 ExecutableEvents
 - **Requirement:** None (triggers globally)
-- **Available commands:** Console commands only
+- **Available playerCommands:** Console commands only
 - **Placeholders:** Limited (use arguments for player targeting)
 
 ## Trigger Types
@@ -62,7 +62,7 @@ Executed only via command:
 activators:
   my_trigger:
     option: CUSTOM_TRIGGER
-    commands:
+    playerCommands:
     - "say Hello World!"
 ```
 
@@ -75,7 +75,7 @@ activators:
     scheduleFeatures:
       when:
       - '%%%%:::%%:::%%:::22:::00:::XX'  # Daily at 22:00
-    commands:
+    playerCommands:
     - "say It's 10 PM!"
 ```
 
@@ -188,7 +188,7 @@ activators:
     scheduleFeatures:
       when:
       - '%%%%:::%%:::%%:::[10,14,18]:::00:::XX'
-    commands:
+    playerCommands:
     - "money give %player% 500"
     - "SEND_MESSAGE &aYou received your daily reward!"
 ```
@@ -215,7 +215,7 @@ activators:
 activators:
   harvest_crops:
     option: CUSTOM_TRIGGER
-    commands:
+    playerCommands:
     - "DROPEXECUTABLEITEM wheat_item 5"
     - "score run-player-command player:%owner% SEND_MESSAGE &aHarvest complete!"
 ```
@@ -273,7 +273,7 @@ Create complex sequences by having triggers call other triggers:
 ```yaml
 trigger_1:
   option: CUSTOM_TRIGGER
-  commands:
+  playerCommands:
   - "ei run-custom-trigger trigger:trigger_2"
   - "ei run-custom-trigger trigger:trigger_3"
 ```
@@ -293,4 +293,4 @@ server_event:
 
 ## Related Documentation
 
-- [Placeholders](/docs/tools-for-all-plugins-score/placeholders)
+- [Placeholders](/tools-for-all-plugins-score/placeholders)

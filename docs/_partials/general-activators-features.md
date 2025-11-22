@@ -104,12 +104,12 @@ activators:
 ```yaml
 activators:
   activator1: # Activator ID, you can create as many activators on the activator    
-    commands:
+    playerCommands:
     - effect give %player% strength 5 5
     silenceOutput: true
 ```
 
-* Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config](https://docs.ssomar.com/tools-for-all-plugins-score/score/general-config).
+* Its important to understand that this feature is made to disable vanilla commands output, if you use another plugin command and it has a console output, its not our side who should fix it, the other plugin should provide you a way to hide those messages. Anyways, because we are gentle you have a way to customize messages from being hidden so you can have the default messages silenced by silenceOutput + custom messages you would like to add. This process is handled by Score config file more information here and how to do it here [General config](/tools-for-all-plugins-score/score/general-config).
 
 ## Cooldown
 
@@ -251,7 +251,7 @@ activators:
 
 ### requiredLevel <CustomTag type="premium" />
 
-* Info: This feature allows the activator to have as requirement vanilla experience levels. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience levels with experience, more info here [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
+* Info: This feature allows the activator to have as requirement vanilla experience levels. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience levels with experience, more info here [Experience](https://minecraft.fandom.com/wiki/Experience)
   * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
   * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.
@@ -269,7 +269,7 @@ activators:
 
 ### requiredExperience <CustomTag type="premium" />
 
-* Info: This feature allows the activator to have as requirement minecraft vanilla experiencei. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience with experience levels, they are different things, more info at [https://minecraft.fandom.com/wiki/Experience](https://minecraft.fandom.com/wiki/Experience)
+* Info: This feature allows the activator to have as requirement minecraft vanilla experiencei. If the player meets this requirement the requirement will be consumed and the activator will run. Don't confuse experience with experience levels, they are different things, more info at [Experience](https://minecraft.fandom.com/wiki/Experience)
   * `cancelEventIfError`: Boolean value that represents if the event will be cancelled if the player doesn't have the requirement.
     * This means, for example, let's say there is an event of PLAYER\_HIT\_ENTITY, and it occurs but the player doesn't have the requirements in order to trigger the activator, if this feature is enabled the event of PLAYER\_HIT\_ENTITY will be cancelled so the player even though its clicking/hit the entity, the entity is not getting damage because in reality the event is not occurring due its being cancelled.
   * `errorMessage`: String message that will be sent to the player if the player doesn't meet the requirement.

@@ -4,7 +4,7 @@
 ## Activators
 
 * Very important features that allow you to add abilities on your blocks
-* Dedicated Wiki for this feature : [EB Activators list](/docs/executableblocks/configurations/activator-configuration/list-of-the-activators.md) and [EB Activators features](/docs/executableblocks/configurations/activator-configuration/activators-features.md)
+* Dedicated Wiki for this feature : [EB Activators list](/executableblocks/configurations/activator-configuration/list-of-the-activators.md) and [EB Activators features](/executableblocks/configurations/activator-configuration/activators-features.md)
 
 
 ## Basic Settings

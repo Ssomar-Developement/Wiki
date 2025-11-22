@@ -8,7 +8,7 @@ This tutorial requires the premium version of the plugin.
 
 In this tutorial I will directly explain how to add custom damages/actions on two different projectiles launched by your ExecutableItem. But you can do exactly the same only for one Custom Projectile.
 
-* [x] Create 2 [Score projectiles](../../../tools-for-all-plugins-score/custom-projectiles.md) or more or less
+* [x] Create 2 [Score projectiles](/tools-for-all-plugins-score/custom-projectiles.md) or more or less
 
 Examples
 
@@ -45,7 +45,7 @@ activators:
     typeTarget: NO_TYPE_TARGET
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - LAUNCH projectile:SNIPERBULLET
     
   activator_launch_rocket:
@@ -54,7 +54,7 @@ activators:
     typeTarget: NO_TYPE_TARGET
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - LAUNCH projectile:ROCKETBULLET
     
   activator_for_sniper:
@@ -62,7 +62,7 @@ activators:
     option: PROJECTILE_HIT_PLAYER
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - DAMAGE 1000 # The Sniper bullet will inflict 1000 damages
     placeholdersConditions:
       plchCdt0:
@@ -76,7 +76,7 @@ activators:
     option: PROJECTILE_HIT_PLAYER
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     # The rocket projectile will inflict 10 damages to all players
     # around the player hit in radius of 5 blocks 
     # and it will display particles near all these place

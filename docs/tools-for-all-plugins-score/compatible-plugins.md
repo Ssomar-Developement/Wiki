@@ -39,7 +39,7 @@ This section is for compatible plugins that works with Ssomar plugins, there are
 * ExecutableBlocks:
   * The same idea but instead of using ExecutableItem use the ExecutableBlock, and on the command from skill use "eb" instead of "ei".
 
-#### You can specify the activators from SsomarPlugins to only work with specific MythicMobs using the feature [detailedEntities](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities).
+#### You can specify the activators from SsomarPlugins to only work with specific MythicMobs using the feature [detailedEntities](/executableitems/configurations/activator-configuration/activators-features#p_e-detailedentities).
 
 * Example : Creating an ExecutableItem that makes more damage to a list of MythicMobs
 * Example: Creating an ExecutableBlock  that damages a specific MythicMob when it walks above the block
@@ -53,7 +53,7 @@ This section is for compatible plugins that works with Ssomar plugins, there are
 ```yaml
 activators:  
   activator1: # Activator ID, you can create as many activator on the activators list    
-    commands:
+    playerCommands:
     - mm m spawn {mob_id} 1 %world%,%x%,%y%,%z%
 ```
 
@@ -65,7 +65,7 @@ activators:
 
 #### Custom SCore commands
 
-* [CHANGETOMYTHICMOB](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob)
+* [CHANGETOMYTHICMOB](/tools-for-all-plugins-score/custom-commands/entity-commands#changetomythicmob)
   * ⭐Its possible to make a fishing system using MythicMobs like the one that is on the Hypixel Minecraft Server. For example having tier list of different fishing rods (All handled by ExecutableItems), that each tier will have from low probability to higher probability to catch more epic mobs from your lakes, adding restrictions to only fish MM mobs from the lakes in "x" cordinates (or a WorldGuard region), etc.
 
 ### **LevelledMobs**
@@ -76,7 +76,7 @@ activators:
 
 ### AureliumSkills
 
-* Ssomar Plugins have the activator feature of [requiredMana](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work.
+* Ssomar Plugins have the activator feature of [requiredMana](/executableitems/configurations/activator-configuration/activators-features#requiredmana) in order to have as requirement for the activator to work.
 * Aurelium Skills commands
   * Also you can use AureliumSkills commands on your plugin, such as giving mana to the player, giving mana to the players around (Like a supporter), etc.
 * ExecutableItems
@@ -85,7 +85,7 @@ activators:
 
 ### ExecutableBlocks & ExecutableItems
 
-* This two plugins (ExecutableBlocks and ExecutableItems) can get linked to each other. This link is made by the EB on the [TYPE\_OF\_CREATION ](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype)feature. For example:
+* This two plugins (ExecutableBlocks and ExecutableItems) can get linked to each other. This link is made by the EB on the [TYPE\_OF\_CREATION ](/executableblocks/configurations/block-configuration/block-features#creationtype)feature. For example:
   * Placing the ExecutableItem and it becomes the ExecutableBlock linked to it (by default it would lose the data of ExecutableItem and it would be placed as a vanilla block)
   * Breaking an ExecutableBlock and getting the ExecutableItem linked to it.
   * Tracking the same usage that the ExecutableBlock had placed when its broken and turned into the ExecutableItem linked and viceversa.
@@ -94,7 +94,7 @@ activators:
 ### ItemsAdder
 
 * ExecutableItems
-  * You can use the textures created with ItemsAdder by using [customModelData ](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14)feature or by using [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
+  * You can use the textures created with ItemsAdder by using [customModelData ](/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14)feature or by using [item\_model](/executableitems/configurations/item-configuration/item-features#itemmodel).
   *   You can link the ItemsAdder item into EI by following their wiki on how to link, its by adding the next line of code to the ItemsAdder item file.
 
       ```yaml
@@ -102,8 +102,8 @@ activators:
         id: ZEUSCROWN
       ```
 * ExecutableBlocks
-  * You can create an ExecutableBlock with the texture of ItemsAdder block, this is done by selecting the [TYPE\_OF\_CREATION ](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype)feature of ExecutableBlocks.
-* Its possible to select as [detailedBlocks ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)for the activators related to a block of all plugins to select specific ItemsAdder blocks
+  * You can create an ExecutableBlock with the texture of ItemsAdder block, this is done by selecting the [TYPE\_OF\_CREATION ](/executableblocks/configurations/block-configuration/block-features#creationtype)feature of ExecutableBlocks.
+* Its possible to select as [detailedBlocks ](/executableitems/configurations/activator-configuration/activators-features#p_b-detailedblocks)for the activators related to a block of all plugins to select specific ItemsAdder blocks
   *   Example:
 
       ```yaml
@@ -117,7 +117,7 @@ activators:
 ### Nexo
 
 * ExecutableItems
-  * You can use the textures from Nexo inside your ExecutableItem just by using the [Custom model data](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14) value or the [item\_model](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#itemmodel).
+  * You can use the textures from Nexo inside your ExecutableItem just by using the [Custom model data](/executableitems/configurations/item-configuration/item-features#custom-model-data-1.14) value or the [item\_model](/executableitems/configurations/item-configuration/item-features#itemmodel).
 
 ### PlaceholderAPI
 
@@ -131,7 +131,7 @@ activators:
 ### ShopGui+
 
 * This plugin supports selling items with specific NBT Tags on the shop, therefore, it supports ExecutableItems and ExecutableBlocks for being sell.
-* The block command [SELL\_CONTENT ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)is supported for this plugin.
+* The block command [SELL\_CONTENT ](/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)is supported for this plugin.
 
 ### ShopKeepers
 
@@ -143,36 +143,36 @@ activators:
 
 ### WorldGuard
 
-* For all plugins you have the condition to make the activator work only if the player is inside or outside a region, its called [ifInRegion](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinregion-not) and its compatible with this plugin.
+* For all plugins you have the condition to make the activator work only if the player is inside or outside a region, its called [ifInRegion](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinregion-not) and its compatible with this plugin.
 * All SCore commands are conditioned by WorldGuard protection
   * This means, a BREAK (SCore command) wont run if the player doesnt have permission to break a block at the selected position.
   * Keep in mind that this feature is on SCore commands, not on commands run by our plugins, this means using vanilla command inside one of our plugins "execute at %player% run setblock %block\_x% %block\_y% %block\_z% air replace" will bypass any restriction.
 * ExecutableBlocks
-  * You can fill a region with specific ExecutableBlock(s) with detailed weights by using [/eb wg-fill-region](https://docs.ssomar.com/executableblocks/commands-and-permissions#fill-a-worldguard-region-with-an-eb).
+  * You can fill a region with specific ExecutableBlock(s) with detailed weights by using [/eb wg-fill-region](/executableblocks/commands-and-permissions#fill-a-worldguard-region-with-an-eb).
     * With this feature for example you could make a globlal loop that resets a specific mine like typical /warp mines inside Minecraft servers.
 
 ### HeadDB
 
 * ExecutableItems
-  * You can use this plugin in order to select a specific player head for the item of the ExecutableItem by using [head settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings).
+  * You can use this plugin in order to select a specific player head for the item of the ExecutableItem by using [head settings](/executableitems/configurations/item-configuration/item-features#head-settings).
 * ExecutableBlocks
-  * You can use this plugin in order to select a specific player head for the block of the ExecutableBlock by link an ExecutableItem with [head settings](https://docs.ssomar.com/executableitems/configurations/item-configuration/item-features#head-settings) and using the [TYPE\_OF\_CREATION](https://docs.ssomar.com/executableblocks/configurations/block-configuration/block-features#creationtype) as from the ExecutableItem specified.
+  * You can use this plugin in order to select a specific player head for the block of the ExecutableBlock by link an ExecutableItem with [head settings](/executableitems/configurations/item-configuration/item-features#head-settings) and using the [TYPE\_OF\_CREATION](/executableblocks/configurations/block-configuration/block-features#creationtype) as from the ExecutableItem specified.
 
 ### IridiumSkyblock
 
-* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
+* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
 
 ### SuperiorSkyblock
 
-* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
+* For all plugins you have the condition to make the activator work only if the player is inside their island, its called [ifPlayerMustBeOnHisIsland ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisisland)and its compatible with this plugin.
 
 ### GriefPrevention
 
-* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
+* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
 
 ### Lands
 
-* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
+* For all plugins you have the condition to make the activator work only if the player is inside their claim, its called [ifPlayerMustBeOnHisClaim ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and also there is [ifPlayerMustBeOnHisClaimOrWilderness ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaimorwilderness)and both are compatible with this plugin.
 * ExecutableItems
   * There are some activators specific for this plugin, these are:
     * PLAYER\_ENTER\_IN\_THEIR\_LAND
@@ -180,19 +180,19 @@ activators:
 
 ### GriefDefender
 
-* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
+* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
 
 ### Residence
 
-* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
+* For all plugins, you have the condition to make the activator work only if the player is inside their claim. This condition is called [ifPlayerMustBeOnHisClaim ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisclaim)and is compatible with this plugin.
 
 ### PlotSquared
 
-* For all plugins, you have the condition to make the activator work only if the player is inside their plot. This condition is called [ifPlayerMustBeOnHisPlot ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisplot)and is compatible with this plugin.
+* For all plugins, you have the condition to make the activator work only if the player is inside their plot. This condition is called [ifPlayerMustBeOnHisPlot ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhisplot)and is compatible with this plugin.
 
 ### Towny
 
-* For all plugins, you have the condition to make the activator work only if the player is inside their town. This condition is called [ifPlayerMustBeOnHisTown ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhistown)and is compatible with this plugin.
+* For all plugins, you have the condition to make the activator work only if the player is inside their town. This condition is called [ifPlayerMustBeOnHisTown ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifplayermustbeonhistown)and is compatible with this plugin.
 
 ### Advanced Enchantments
 
@@ -213,7 +213,7 @@ activators:
 
 ### RoseLoots
 
-* All block commands related (e.g. [MINEINCUBE](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#mineincube), [FARMINCUBE](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#farmincube), [BREAK](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#break), etc) supports the custom block loots from this plugin.
+* All block commands related (e.g. [MINEINCUBE](/tools-for-all-plugins-score/custom-commands/block-commands#mineincube), [FARMINCUBE](/tools-for-all-plugins-score/custom-commands/block-commands#farmincube), [BREAK](/tools-for-all-plugins-score/custom-commands/block-commands#break), etc) supports the custom block loots from this plugin.
 
 ### MMOInventory
 
@@ -244,14 +244,14 @@ activators:
 
 ### Terra
 
-* Terra's custom biomes are supported by biome conditions using the [ifInBiome ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinbiome-not)condition. This allows you to create specific activators, effects, or restrictions based on the biome a player is in.
+* Terra's custom biomes are supported by biome conditions using the [ifInBiome ](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions#ifinbiome-not)condition. This allows you to create specific activators, effects, or restrictions based on the biome a player is in.
 
 ### EcoSkills
 
 * You can use placeholders conditions to check if a player has specific magic values before allowing an activator to trigger.
 * You can use commands to get or remove magic values.
 * ExecutableItems
-  * [RequiredMagic ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmagic-ecoskills)feature instead of using placeholders conditions and commands to remove magic.
+  * [RequiredMagic ](/executableitems/configurations/activator-configuration/activators-features#requiredmagic-ecoskills)feature instead of using placeholders conditions and commands to remove magic.
 
 ### FACTIONS UUID
 
@@ -259,7 +259,7 @@ activators:
 
 ### CMI
 
-* [SELL\_CONTENT ](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)command supports CMI prices, allowing seamless integration with the CMI economy system for selling items at the correct in-game value.
+* [SELL\_CONTENT ](/tools-for-all-plugins-score/custom-commands/block-commands#sell_content)command supports CMI prices, allowing seamless integration with the CMI economy system for selling items at the correct in-game value.
 
 ### JOBS REBORN
 
@@ -267,12 +267,12 @@ activators:
 
 ### AURA SKILLS
 
-* [JOBS\_MONEY\_BOOST](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/player-and-target-commands#jobs_money_boost) command works with Jobs Reborn, allowing you to apply money multipliers for players based on their job earnings.
+* [JOBS\_MONEY\_BOOST](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#jobs_money_boost) command works with Jobs Reborn, allowing you to apply money multipliers for players based on their job earnings.
 
 ### VAULT
 
 * ExecutableItems
-  * [requiredMoney ](https://docs.ssomar.com/executableitems/configurations/activator-configuration/activators-features#requiredmoney)feature works with Vault, allowing you to set a money requirement for activators to trigger.
+  * [requiredMoney ](/executableitems/configurations/activator-configuration/activators-features#requiredmoney)feature works with Vault, allowing you to set a money requirement for activators to trigger.
 
 ### Citizen NPC
 

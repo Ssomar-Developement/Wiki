@@ -35,7 +35,7 @@ Premium features are labeled with the tag:  <CustomTag type="premium" />
 
 ### Detailed slots
 
-* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered. [More Info about the slots values.](https://docs.ssomar.com/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
+* Info: List of integer values that represents slots of the inventory where the activator will be able to work. This means, if the event occurs in one slot that is not from here then the activator won't be triggered. [More Info about the slots values.](/tools-for-all-plugins-score/general-questions-or-guides/utilities#slots)
 * Example:
 
 ```yaml
@@ -85,17 +85,17 @@ activators:
 ### worldConditions
 
 * Info: You can use this conditions in all type of activators
-* [World conditions](/docs/tools-for-all-plugins-score/custom-conditions/world-conditions.md)
+* [World conditions](/tools-for-all-plugins-score/custom-conditions/world-conditions.md)
 
 ### placeholdersConditions
 
 * Info: You can use this conditions in all type of activators
-* [PlaceholdersConditions](/docs/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
+* [PlaceholdersConditions](/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
 
 ### itemConditions
 
 * Info: You can use this conditions in all type of activators
-* [Item conditions](/docs/tools-for-all-plugins-score/custom-conditions/item-conditions.md)
+* [Item conditions](/tools-for-all-plugins-score/custom-conditions/item-conditions.md)
 
 
 ### otherEICooldowns
@@ -202,7 +202,7 @@ To make the features more understandable on where activators do they work, we wi
   * PROJECTILE\_HIT\_ENTITY <CustomTag type="premium" compact />
   * PROJECTILE\_HIT\_PLAYER
 * Info: Feature for the activator that are related to projectile, it affects if the activator should run with projectiles not launched by the same EI.
-  * Example, there is an activator PROJECTILE\_HIT\_ENTITY, detailedSlots: \[all slots] and on commands: \["say hi"]
+  * Example, there is an activator PROJECTILE\_HIT\_ENTITY, detailedSlots: \[all slots] and on playerCommands: \["say hi"]
     * If the feature is enabled, then it will only work if this ExecutableItem has another activator that has LAUNCH command, so, the projectile will be launched from the EI and then the condition will met
     * If the feature is disabled, all projectiles, such as: vanilla bow, vanilla snowball, projectiles from others ExecutableItems, and projectile for the ExecutableItem itself will run the activator.
   * Example:

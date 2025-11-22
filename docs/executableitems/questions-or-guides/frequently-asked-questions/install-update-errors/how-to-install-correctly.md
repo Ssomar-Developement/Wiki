@@ -29,7 +29,7 @@ There are Hostings that allows you to install quickly some plugins that are down
 * These are the versions supported by ExecutableItems.
   * Free version from 1.12.2 to 1.21.4+
   * Premium version from 1.8 to 1.21.4+
-*  (More information in [**MC Versions Compatibility**](../../../mc-versions-compatibility.md))
+*  (More information in [**MC Versions Compatibility**](executableitems/mc-versions-compatibility))
 
 :::info
 In case you are using a version between **1.8** and **1.12.2** you need to have installed NBTAPI.
@@ -45,11 +45,11 @@ In case you are using a version between **1.8** and **1.12.2** you need to have 
 
 ### You get a .zip
 * You get a file .zip (this is like a folder, you have to open it using Winrar)
-* You open it and you see that there are 2 files inside, **ExecutableItems.jar** and **Score.jar**, ****both of them are needed****
+* You open it and you see that there are 2 files inside, **ExecutableItems.jar** and **Score.jar**, **both of them are needed**
 * Pick up both **plugins jar** and drag them into plugins folder. (the zip is nothing so don't drag that file into plugins folder, you only need the two plugins inside the jar)
 
 :::warning
-If its the case you are using a webpage host server, it is ****highly recommended**** to ****don't drop it instantly into plugins folder****, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
+If its the case you are using a webpage host server, it is **highly recommended** to **don't drop it instantly into plugins folder**, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 :::
 
 Once done, you can start your server.

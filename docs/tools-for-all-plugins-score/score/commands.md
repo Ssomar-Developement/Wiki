@@ -4,12 +4,12 @@
 
 * This command allow you to clear most of SCore content in progress
 * You can clear:
-  * [ACTIONBARS](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#actionbar)
+  * [ACTIONBARS](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#actionbar)
   * COOLDOWNS
   * DELAYED_COMMANDS (SCore commands run with delay)
-  * [WHILE](/docs/tools-for-all-plugins-score/custom-commands/utility-commands#while)
-  * [BOSSBARS](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#bossbar)
-  * [PARTICLES](/docs/tools-for-all-plugins-score/score-particles)
+  * [WHILE](/tools-for-all-plugins-score/custom-commands/utility-commands#while)
+  * [BOSSBARS](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#bossbar)
+  * [PARTICLES](/tools-for-all-plugins-score/score-particles)
   * ALL
 * Command: /score clear \{player\} \{WHAT_YOU_WANT_TO_CLEAR\}
 
@@ -40,11 +40,11 @@ Send a message to discord via webhook
 
 ## Particles commands
 
-Check [SCore Particles](/docs/tools-for-all-plugins-score/score-particles)
+Check [SCore Particles](/tools-for-all-plugins-score/score-particles)
 
 ## Variables commands
 
-Check [SCore Variables](/docs/tools-for-all-plugins-score/score-variables)
+Check [SCore Variables](/tools-for-all-plugins-score/score-variables)
 
 ## Manually run SCore commands
 

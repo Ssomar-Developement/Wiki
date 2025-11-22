@@ -38,17 +38,17 @@ itemCheckers:
 ### playerConditions
 
 * Info: Conditions for the player that build the recipe
-* [Player conditions](../../../tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
+* [Player conditions](/tools-for-all-plugins-score/custom-conditions/player-and-target-conditions.md)
 
 ### blockConditions
 
 * Info: Conditions for the Craft station (example the anvil for the Anvil recipes)
-* [Block conditions](../../../tools-for-all-plugins-score/custom-conditions/block-conditions.md)
+* [Block conditions](/tools-for-all-plugins-score/custom-conditions/block-conditions.md)
 
 ### placeholdersConditions
 
 * Info: Placeholders conditions, where you can define conditions using the block placeholders / player placeholders or other PAPI placeholders...
-* [Placeholder conditions](../../../tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
+* [Placeholder conditions](/tools-for-all-plugins-score/custom-conditions/placeholder-conditions.md)
 
 ## Crafting recipe features
 
@@ -132,7 +132,7 @@ result: minecraft:stone{"minecraft:custom_data":{PublicBukkitValues:{"executable
 ### itemCommands
 
 * Info: To modify the result item
-* [Item commands](https://docs.ssomar.com/tools-for-all-plugins-score/custom-commands/item-commands)
+* [Item commands](/tools-for-all-plugins-score/custom-commands/item-commands)
 * Examples:
 
 ```yaml

@@ -78,7 +78,7 @@ _Sorted by alphabetical order_
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ABSORPTION amount:5 time:200 # Gives the player absorption
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -98,7 +98,7 @@ And you can increase it by typing: /attribute PLAYER\_NAME minecraft:max\_absorp
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     # You can do that to temporary up the max_absorption value of the player
     - minecraft:attribute %player% minecraft:max_absorption base set 5**
     - ABSORPTION amount:5 time:200
@@ -126,7 +126,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - `ACTIONBAR &6Hey &e%player% ! 10` # Sends an ACTIONBAR to the player
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -153,7 +153,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ADD_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ATTACK_DAMAGE value:1.0 equipmentSlot:HAND mode:ADD # Add this attribute to the player
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -174,7 +174,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ADD_ITEM_ENCHANTMENT slot:-1 enchantment:unbreaking level:1 
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
@@ -194,11 +194,11 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - ADD_ITEM_LORE slot:%slot% text:&7Item of %player%
   activator1: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of target
-    commands:
+    playerCommands:
     - ADD_ITEM_LORE slot:%slot% text:&7Item of %target% added by %player%
 ```
 
@@ -212,7 +212,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - BOOTS
 ```
 
@@ -239,7 +239,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - BOSSBAR time:200 color:RED text:This is a bossbar text
     - BOSSBAR time:20 color:BLUE text:Hello_world count:50 countTicks:true countOrder:ascending
     - BOSSBAR time:200 color:RED text:This is a bossbar text overrideMode:OVERRIDE_SAME_TEXT
@@ -257,7 +257,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CANCEL_PICKUP time:600
     - CANCEL_PICKUP time:600 material:stone
 ```
@@ -277,7 +277,7 @@ The only way to RESET this command after setting a time in ticks is reloading or
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CHAT &6Hello !!
 ```
 
@@ -291,7 +291,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CHESTPLATE
 ```
 
@@ -305,7 +305,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CLOSE_INVENTORY
 ```
 
@@ -326,7 +326,7 @@ All blocks within the radius will have 50% chance to growth when a boost is appl
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - CROPS_GROWTH_BOOST radius:5 delay:10 durations:200 chance:50
 ```
 
@@ -341,7 +341,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DISABLE_FLY_ACTIVATION time:60
 ```
 
@@ -356,7 +356,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - DISABLE_GLIDE_ACTIVATION time:20
 ```
 
@@ -375,7 +375,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - EICOOLDOWN %player% thisismyid 10 true # For the ExecutableItem thisismyid 
     - EICOOLDOWN %player% all 10 true # For all ExecutableItems
 ```
@@ -395,7 +395,7 @@ activators:
 activators:**
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - EBCOOLDOWN %player% thisismyid 10 true # For the ExecutableBlock thisismyid 
     - EBCOOLDOWN %player% all 10 true # For all ExecutableBlocks
 ```
@@ -415,7 +415,7 @@ activators:**
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - EECOOLDOWN %player% thisismyid 10 true # For the ExecutableEvent thisismyid 
     - EECOOLDOWN %player% all 10 true # For all ExecutableEvents
 ```
@@ -430,7 +430,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - FLY_ON
 ```
 
@@ -445,7 +445,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - FLY_OFF teleportOnTheGround:true
 ```
 
@@ -460,7 +460,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - FORCE_DROP ei_id:excalibursword
 ```
 
@@ -475,7 +475,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - FORMAT_ENCHANTMENTS %slot%
 ```
 
@@ -493,7 +493,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - GIVE_MONEY amount:50.0
 ```
 
@@ -507,7 +507,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - GRAVITY_DISABLE
     - DELAY 5
     - GRAVITY_ENABLE
@@ -523,7 +523,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - GRAVITY_DISABLE
     - DELAY 5
     - GRAVITY_ENABLE
@@ -539,7 +539,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - HEAD
 ```
 
@@ -555,13 +555,13 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - JOBS_MONEY_BOOST multiplier:2.0 time:10
 ```
 
 ### LAUNCH
 
-* Info: Launches a custom projectile. [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type)
+* Info: Launches a custom projectile. [Reference](/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type)
 * List: 
 <details>
 <summary>Projectile Types</summary>
@@ -581,7 +581,7 @@ activators:
 </details>
 
 * Command settings:
-  * `{projectile}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * `{projectile}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
   * `[angleRotationVertical]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> (in degrees) Define the direction where the entity will be launched
   * `[angleRotationHorizontal]`: (Optional) (default = 0) <CustomTag type="version" version="1.14" /> (in degrees) Define the direction where the entity will be launched
   * `[velocity]`: (Optional) (default = 1) To customize the velocity of the projectile
@@ -591,7 +591,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - LAUNCH projectile:My_Custom_Proj velocity:5
 ```
 
@@ -601,7 +601,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - LAUNCH projectile:WITHERSKULL
     - LAUNCH projectile:WITHERSKULL angleRotationVertical:20
     - LAUNCH projectile:WITHERSKULL angleRotationVertical:-20
@@ -621,7 +621,7 @@ If you use the LAUNCH COMMAND in the activator PLAYER\_LAUNCH\_PROJECTILE, and t
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - LEGGINGS
 ```
 
@@ -629,7 +629,7 @@ activators:
 
 * Info: Launches a projectile at a specific location
 * Command settings:
-  * `{projectileType}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/docs/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
+  * `{projectileType}`: the type of the projectile or the custom projectile ID from SCore ( [Reference](/ExecutableItems/wiki/%E2%9E%A4-Custom-Projectiles#type) )
   * `[frontValue]`: (Optional) (default = 0) positive=front , negative=back - Front/Back Position. For example, if you want to spawn the projectile 5 blocks far from where you're facing, use a higher positive value
   * `[rightValue]`: (Optional) (default = 0) right=positive, negative=left - Right/Left Position. For example, if you want the projectile to spawn to your left, use a higher negative value
   * `[yValue]`: (Optional) (default = 0) To how high up from your Y position will the projectile will spawn.
@@ -642,7 +642,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - LOCATED_LAUNCH projectile:ARROW frontValue:0 rightValue:0 yValue:0 velocity:1 angleRotationVertical:0 angleRotationHorizontal:0
 ```
 
@@ -657,7 +657,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - MINECART_BOOST boost:10
 ```
 
@@ -671,7 +671,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - MIX_HOTBAR
 ```
 
@@ -689,7 +689,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - MODIFY_DURABILITY modification:-1 slot:%slot% supportUnbreaking:true
 ```
 
@@ -708,7 +708,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - OPENCHEST VanillaWorld 100 100 100
 ```
 
@@ -722,7 +722,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - OPEN_ENDERCHEST
 ```
 
@@ -736,7 +736,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - OPEN_WORKBENCH
 ```
 
@@ -751,7 +751,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - OXYGEN time:200
 ```
 
@@ -766,7 +766,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - PROJECTILE_CUSTOMDASH1 fallDamage:false
 ```
 
@@ -781,7 +781,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REGAIN_FOOD amount:5
 ```
 
@@ -797,7 +797,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REGAIN_MAGIC ecoSkillsMagicID:mana amount:15
 ```
 
@@ -816,7 +816,7 @@ It supports negative values.
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REGAIN_SATURATION amount:10
 ```
 
@@ -833,7 +833,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REMOVE_ENCHANTMENT slot:-1 enchantment:ALL
 ```
 
@@ -850,7 +850,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REMOVE_LORE slot:1 line:5
 ```
 
@@ -865,7 +865,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - REPLACE_BLOCK STONE_BRICKS
     - REPLACE_BLOCK WATER[LEVEL=0]
 ```
@@ -880,7 +880,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SEND_BLANK_MESSAGE
 ```
 
@@ -895,7 +895,7 @@ activators:
 ```yaml
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
-    commands:
+    playerCommands:
     - SEND_MESSAGE text:&fThis is a somewhat random text.
     - SEND_MESSAGE text:<yellow>Hello </yellow><blue>World</blue><yellow>!</yellow> # MiniMessage Suported, but dont use MiniMessage + vanilla at the same time
 ```
@@ -912,7 +912,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SEND_CENTERED_MESSAGE text:&fThis is a somewhat random text.
     - SEND_CENTERED_MESSAGE text:<yellow>Hello </yellow><blue>World</blue><yellow>!</yellow> # MiniMessage Suported, but dont use MiniMessage + vanilla at the same time
 ```
@@ -932,7 +932,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ARMOR_TRIM slot:38 pattern:vex patternMaterial:netherite
     - SET_ARMOR_TRIM slot:38 pattern:null #to clear the armor trim
 ```
@@ -951,7 +951,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_BLOCK blockface:UP material:OAK_WOOD
     - SET_BLOCK material:FURNACE[LIT=TRUE]
 ```
@@ -972,7 +972,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_BLOCK_POS x:0 y:0 z:0 material:STONE bypassProtection:false replace:true
 ```
 
@@ -994,7 +994,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_EXECUTABLE_BLOCK id:Mithril_Ore x:%block_x_int% y:%block_y_int% z:%block_z_int% world:%block_world% replace:false bypassProtection:true ownerUUID:%player_uuid%
 ```
 
@@ -1011,7 +1011,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_NAME slot:%slot% name:&eThis is the new name of the item
 ```
 
@@ -1029,7 +1029,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_COLOR slot:1 color:0
 ```
 
@@ -1048,7 +1048,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_ATTRIBUTE slot:%slot% attribute:GENERIC_ARMOR value:10 equipmentSlot:CHEST
 ```
 
@@ -1066,7 +1066,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_CUSTOM_MODEL_DATA slot:10 customModelData:10
 ```
 
@@ -1082,7 +1082,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_COOLDOWN material:ENDER_PEARL cooldown:10
 ```
 
@@ -1090,7 +1090,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_COOLDOWN group:my_cooldown_group cooldown:10
 ```
 
@@ -1109,7 +1109,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_MATERIAL slot:10 material:DIAMOND_HOE
 ```
 
@@ -1128,7 +1128,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_ITEM_LORE slot:%slot% line:3 text:&6LEGENDARY SWORD
 ```
 
@@ -1153,7 +1153,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SET_TEMP_BLOCK_POS x:%entity_x% y:%entity_y% z:%entity_z% world:%entity_world% material:BEDROCK time:40 bypassProtectiontrue whitelistCurrentBlock:!AIR,!WATER
 ```
 
@@ -1174,7 +1174,7 @@ It doesn't replace blocks that have extra datas (inventory, rotation, etc)
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SPAWN_ENTITY_ON_CURSOR entity:CREEPER amount:1
 ```
 
@@ -1189,7 +1189,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SUDO sit
     - SUDO say hi
 ```
@@ -1206,7 +1206,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SUDO_OP summon zombie
     - SUDO_OP fly
     - SUDO_OP god
@@ -1214,7 +1214,7 @@ activators:
 ```
 
 :::danger
-It is not recommended to use this **a lot**. As it is explained on the top of this page, if want to run vanilla commands use the execute command (Explained on the FAQ [How to use vanilla commands](/docs/executableitems/questions-or-guides/frequently-asked-questions/how-to-use-vanilla-commands)).
+It is not recommended to use this **a lot**. As it is explained on the top of this page, if want to run vanilla commands use the execute command (Explained on the FAQ [How to use vanilla commands](/executableitems/questions-or-guides/frequently-asked-questions/how-to-use-vanilla-commands)).
 
 Only use SUDOOP if there is absolutely no other option — it should be your last resort, not your first choice.
 :::
@@ -1229,7 +1229,7 @@ Only use SUDOOP if there is absolutely no other option — it should be your las
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - SWAP_HAND
 ```
 
@@ -1255,7 +1255,7 @@ activators:
 activators:
   activator0: # Activator ID, you can create as many activator on the activators list
     option: # Here goes an activator that is at least instance of player
-    commands:
+    playerCommands:
     - XP_BOOST 2 10
 ```
 

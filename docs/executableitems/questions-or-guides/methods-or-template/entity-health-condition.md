@@ -2,7 +2,7 @@
 
 I will explain this later, for now I'll leave the file, it requires math placeholder
 
-```
+```yaml
 name: '&eDefault name'
 lore:
 - '&b&oDefault lore'
@@ -49,7 +49,7 @@ activators:
     requiredExecutableItems: {}
     detailedSlots:
     - -1
-    commands:
+    playerCommands:
     - say LESS THAN 50
     playerConditions: {}
     worldConditions: {}

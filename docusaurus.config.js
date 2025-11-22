@@ -92,7 +92,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       announcementBar: {
         id: 'welcome_announcement',
-        content: '🎉 <strong>Welcome to our new Wiki!</strong> 🚀 Explore our completely redesigned documentation with improved search, better navigation, and enhanced readability.',
+        content: '🎉 <strong>Welcome to our new Wiki!</strong> 🚀 Explore our completely redesigned documentation with enhanced readability.',
         backgroundColor: '#5b5ee6',
         textColor: '#ffffff',
         isCloseable: true,
@@ -131,11 +131,11 @@ const config = {
             position: 'left',
             label: 'Discord',
           },
-          {
-            to: '/ssomar-services',
-            position: 'left',
-            label: 'Products for developers',
-          },
+          // {
+          //   to: '/ssomar-services',
+          //   position: 'left',
+          //   label: 'Products for developers',
+          // },
           {
             type: 'search',
             position: 'right',

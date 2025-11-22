@@ -38,7 +38,7 @@ The order explained here isn't the best, you can do it in the order you want, it
 *   Let's go back to the activator PLAYER\_RIGHT\_CLICK of our item, and in commands we are going to use the LAUNCH command, the format is
 
     * LAUNCH \<ID>
-    * Check [LAUNCH Wiki](http://localhost:3003/Wiki/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+    * Check [LAUNCH Wiki](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
 
     In this case, the ID is the id of the projectile, I set it to "ThisIsTheIdOfMyProjectile" so the command part would look like:
 
@@ -51,8 +51,8 @@ The order explained here isn't the best, you can do it in the order you want, it
 
 ## Related Documentation
 
-- [Custom Projectiles System](/docs/tools-for-all-plugins-score/custom-projectiles)
-- [LAUNCH Command](/docs/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
-- [PLAYER_RIGHT_CLICK Activator](/docs/executableitems/configurations/activator-configuration/list-of-the-activators#player_right_click)
-- [Advanced Projectile Examples](/docs/executableitems/questions-or-guides/custom-projectiles-implementation/launch-diamond-axe)
+- [Custom Projectiles System](/tools-for-all-plugins-score/custom-projectiles)
+- [LAUNCH Command](/tools-for-all-plugins-score/custom-commands/player-and-target-commands#launch)
+- [PLAYER_RIGHT_CLICK Activator](/executableitems/configurations/activator-configuration/list-of-the-activators#player_right_click)
+- [Advanced Projectile Examples](/executableitems/questions-or-guides/custom-projectiles-implementation/launch-diamond-axe)
 

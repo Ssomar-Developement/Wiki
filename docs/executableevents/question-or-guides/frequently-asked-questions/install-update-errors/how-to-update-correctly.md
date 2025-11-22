@@ -10,7 +10,7 @@ This tutorial will be made assuming you already have the plugin on your server f
 * Start your server.
 
 :::warning
-If its the case you are using a webpage host server, it is ****highly recommended**** to ****don't drop it instantly into plugins folder****, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
+If its the case you are using a webpage host server, it is **highly recommended** to **don't drop it instantly into plugins folder**, but, drag them first into desktop and once they are in your desktop, drag them into plugins folder.
 :::
 
 ### Special case

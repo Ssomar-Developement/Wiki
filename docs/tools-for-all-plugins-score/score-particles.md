@@ -231,7 +231,7 @@ Examples:
 ```yaml
 # Examples that you can include into your commands
 # Display multiple Green circles in front the player
-commands:
+playerCommands:
 - FOR [+20,-20,+40,-40,+60,-60,+80,-80,+100,-100] > for3
 - score particles shape:circle location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% color:GREEN,WHITE radius:3 density:100 time:10 drawMode:clockwise offsetDistance:8 offsetPitch:0 offsetYaw:%player_yaw_initial%%for3%  directionYaw:%player_yaw_initial%%for3% fillMode:disk directionPitch:-90 offsetY:-1
 - END_FOR for3
@@ -579,7 +579,7 @@ Draws a sphere with random spikes.
 ...
 
 # Examples that you can include into your commands
-commands:
+playerCommands:
 # A line of explosion
 - score particles shape:square location:%player_world_initial%,%player_x_initial%,%player_y_initial%,%player_z_initial% particle:EXPLOSION height:1 length:30 timeToDisplay:20 density:1 directionYaw:%player_yaw_initial% directionPitch:%player_pitch_initial% verticalOrder:up horizontalOrder:near offsetY:-1
 # A wall of flame
