@@ -9,7 +9,7 @@ Premium features are labeled with the tag:  <CustomTag type="premium" />
 ### Activators
 
 * Very important features that allow you to add abilities on your item
-* Dedicated Wiki for this feature : [EI Activators list](/executableitems/configurations/activator-configuration/list-of-the-activators.md) and [EI Activators features](/executableitems/configurations/activator-configuration/activators-features.md)
+* Dedicated Wiki for this feature : [EI Activators list](.../activator-configuration/list-of-the-activators.md) and [EI Activators features](/executableitems/configurations/activator-configuration/activators-features.md)
 
 
 ### Material of the item
