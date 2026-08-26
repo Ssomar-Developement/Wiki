@@ -143,9 +143,9 @@ activators:
   * `{value}`: The value for the operation
   * `{equipmentSlot}`: The slot where the attribute will be enabled. [EquipmentSlot list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
   * `{mode}`: select the mode of addition
-    * mode:ADD # Add the attribute to the item 
-    * mode:OVERRIDE # Remove the current attributes of the same type of the item + Add the attribute to the item 
-    * mode:STACK # Stack with the attribute present on the item, if no one exist it adds it
+    * `mode:ADD` — Add the attribute to the item
+    * `mode:OVERRIDE` — Remove the current attributes of the same type of the item + Add the attribute to the item
+    * `mode:STACK` — Stack with the attribute present on the item, if no one exist it adds it
   * affectDefaultAttributes: true or false # When it's true the mode OVERRIDE will also override the default attributes, and for the MODE stack it allows to stack with the default attributes (green)
 * Example:
 
