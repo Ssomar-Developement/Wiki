@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T01:14:20.977Z",
+  "generatedAt": "2026-08-26T11:05:09.219Z",
   "items": [
     {
       "source": "@site/docs/_partials/block-features.md",
@@ -3969,7 +3969,7 @@
     },
     {
       "source": "@site/docs/tools-for-all-plugins-score/general-questions-or-guides/cannot-open-wiki.md",
-      "content": "Cannot Open Wiki",
+      "content": "Cannot Open Wiki Some users have reported that they could not access the plugin documentation website. The known fix (not totally verified) is by following this guide: https://www.reddit.com/r/chrome/comments/1k30id7/dns probe finished nxdomain/ Credits: in discord",
       "headings": [
         "Cannot Open Wiki"
       ]

@@ -144,3 +144,36 @@ super_chestplate:
 :::
 
 Context: https://discord.com/channels/701066025516531753/1428177971700830218
+
+
+## Q: I have issues when running `/ei show` in folia
+
+A: Delete your logs folder
+> As of this writing, the issue has been narrowed down and will be getting a fix in the future. For now, if you face issues similar to this, try deleting your logs folder.
+
+Reference Error from `blazepxly`
+
+```log
+[05:45:54] [Folia Watchdog Thread/ERROR]: [io.papermc.paper.threadedregions.FoliaWatchdogThread] Tick region located in world 'world' around chunk '[-3, -20]' has not responded in 5.552753763s:
+[05:45:54] [Folia Watchdog Thread/ERROR]: ------------------------------
+[05:45:54] [Folia Watchdog Thread/ERROR]: Current Thread: Folia Region Scheduler Thread #0
+[05:45:54] [Folia Watchdog Thread/ERROR]: 	PID: 90 | Suspended: false | Native: false | State: RUNNABLE
+[05:45:54] [Folia Watchdog Thread/ERROR]: 	Stack:
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.CipherBlockChaining.decrypt(CipherBlockChaining.java:219)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.FeedbackCipher.decryptFinal(FeedbackCipher.java:203)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.CipherCore.finalNoPadding(CipherCore.java:988)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:937)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:734)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/com.sun.crypto.provider.AESCipher.engineDoFinal(AESCipher.java:446)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/javax.crypto.Cipher.doFinal(Cipher.java:2281)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/java.lang.invoke.DirectMethodHandle$Holder.invokeSpecial(DirectMethodHandle$Holder)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/java.lang.invoke.LambdaForm$MH/0x000000007f0cdc00.invoke(LambdaForm$MH)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/java.lang.invoke.Invokers$Holder.invokeExact_MT(Invokers$Holder)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(DirectMethodHandleAccessor.java:155)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		java.base@25.0.3/java.lang.reflect.Method.invoke(Method.java:565)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		SCore-5.26.7.17.jar//com.ssomar.score.utils.placeholders.EffectPlaceholders.preparePluginBridge(EffectPlaceholders.java)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		SCore-5.26.7.17.jar//com.ssomar.score.utils.placeholders.EffectPlaceholders.<init>(EffectPlaceholders.java:27)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		SCore-5.26.7.17.jar//com.ssomar.score.utils.placeholders.StringPlaceholder.<init>(StringPlaceholder.java:84)
+[05:45:54] [Folia Watchdog Thread/ERROR]: 		ExecutableItems_Prem-7.26.7.17.jar//com.ssomar.executableitems.executableitems.ExecutableItemObject.getStringPlaceholderWithVariables(ExecutableItemObject.java:570)
+```
