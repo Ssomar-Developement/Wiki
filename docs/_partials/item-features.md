@@ -26,11 +26,11 @@ activators:
   * You can blacklist items using ! like:
     * "!TORCH"
   * It supports also ExecutableItems
-    * "EXECUTABLEITEMS:the_id"
+    * "EXECUTABLEITEMS\:the_id"
   * ExecutableBlocks
-    * "EXECUTABLEBLOCKS:the_id"
+    * "EXECUTABLEBLOCKS\:the_id"
   * ItemsAdder
-    * "ITEMSADDER:the_id"
+    * "ITEMSADDER\:the_id"
 * Example:
 
 ```yaml

@@ -35,7 +35,7 @@ Use the activator PLAYER\_BREAK\_BLOCK and on commands you can either use:
   * DROPITEM
 * Vanilla commands to drop the items
   * Vanilla command to drop more than one item broken (this example gives 2 items more, you can randomize this using instead of "2" a RNG Placeholder)
-    * execute at %player% run summon minecraft:item %block\_x\_int% %block\_y\_int% %block\_z\_int% \{Item:\{id:"minecraft:%block\_item\_material\_lower%",Count:2b\\}\}
+    * execute at %player% run summon minecraft\:item %block\_x\_int% %block\_y\_int% %block\_z\_int% \{Item:\{id:"minecraft:%block\_item\_material\_lower%",Count:2b\\}\}
 
 :::info
 Don't forget that if you want this command not work 100% you can give them chances ! Just check the wiki, that is already explained ^^

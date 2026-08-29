@@ -75,7 +75,7 @@ ID of the variables can't have underscores, points or spaces but - is ok
         * Remove the last value
       * /score variables list-remove PLAYER ThisIsTheNameOfMyVariable Ssomar index:0
         * Remove a specific index
-      * /score variables list-remove PLAYER ThisIsTheNameOfMyVariable Ssomar value:Test
+      * /score variables list-remove PLAYER ThisIsTheNameOfMyVariable Ssomar value\:Test
         * Remove a specific value
 
 :::info

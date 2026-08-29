@@ -155,7 +155,7 @@ just modify the delay depending the time you want the wolf to be alive
 ### How to increase the max life "x" each time the activator gets triggered
 
 * To increase your max life you need PlaceholderAPI and Player expansion, and the command you will use is:
-  * execute run attribute %player% minecraft:generic.max\_health base set %player\_max\_health%+2
+  * execute run attribute %player% minecraft\:generic.max\_health base set %player\_max\_health%+2
 
 ### How to regain health per hit
 

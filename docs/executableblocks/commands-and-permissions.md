@@ -76,7 +76,7 @@ To give the permissions of all items, I advice you to download a permission plug
 
 **Reload a folder**
 
-* Command: **/eb reload folder:Name\_Of\_My\_Folder**
+* Command: **/eb reload folder\:Name\_Of\_My\_Folder**
 * Permission: `eb.cmd.reload`
 
 #### Delete an ExecutableBlock
@@ -145,7 +145,7 @@ It supports entities too just use the entity UUID instead of player name
 
 * (Works for offline players)
 * Command: 
-  * **/eb give \{playername\} \{id\}**\{Variables:\{var\_id:val\},Usage:val\}** **\{quantity\}** \[giveOfflinePlayer default true]
+  * **/eb give \{playername\} \{id\}**\{Variables:\{var\_id\:val\},Usage\:val\}** **\{quantity\}** \[giveOfflinePlayer default true]
 * Permission: `eb.cmd.give`
 * Examples:
   * Examples: 
@@ -168,7 +168,7 @@ It supports entities too just use the entity UUID instead of player name
 #### Give an EB in a specific slot of a player 
 
 * Command: 
-  * **/eb giveslot \{playername\} \{id\}**\{Variables:\{var\_id:val\},Usage:val\}** **\{quantity\} \{slot\}**  **\[override true or false]**
+  * **/eb giveslot \{playername\} \{id\}**\{Variables:\{var\_id\:val\},Usage\:val\}** **\{quantity\} \{slot\}**  **\[override true or false]**
   * Examples: 
     * **/eb giveslot Ssomar test\{Variables:\{x:"Hey",world:"Island"\},Usage:50\} 1 0**  
     * **/eb giveslot Special70 rum\{Usage:69420,Variables:\{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\\}\} 1 %slot%**

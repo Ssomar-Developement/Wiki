@@ -86,7 +86,7 @@ To give the permissions of all furniture, I advice you to download a permission 
 
 **Reload a folder**
 
-* Command: **/mf reload folder:Name\_Of\_My\_Folder**
+* Command: **/mf reload folder\:Name\_Of\_My\_Folder**
 * Permission: `mf.cmd.reload`
 
 #### Delete a Furniture
@@ -204,7 +204,7 @@ This removes **every** placed furniture in all worlds. Use with caution.
 
 * (Works for offline players)
 * Command:
-  * **/mf give \{playername\} \{id\}**\{Variables:\{var\_id:val\},Usage:val\}** **\{quantity\}** \[giveOfflinePlayer default true]
+  * **/mf give \{playername\} \{id\}**\{Variables:\{var\_id\:val\},Usage\:val\}** **\{quantity\}** \[giveOfflinePlayer default true]
 * Permission: `mf.cmd.give`
 * Examples:
   * Examples:
@@ -227,7 +227,7 @@ This removes **every** placed furniture in all worlds. Use with caution.
 #### Give a furniture in a specific slot of a player
 
 * Command:
-  * **/mf giveslot \{playername\} \{id\}**\{Variables:\{var\_id:val\},Usage:val\}** **\{quantity\} \{slot\}**  **\[override true or false]**
+  * **/mf giveslot \{playername\} \{id\}**\{Variables:\{var\_id\:val\},Usage\:val\}** **\{quantity\} \{slot\}**  **\[override true or false]**
   * Examples:
     * **/mf giveslot Ssomar test\{Variables:\{x:"Hey",world:"Island"\},Usage:50\} 1 0**
     * **/mf giveslot Special70 rum\{Usage:69420,Variables:\{tell\_me:"why",aint\_nothing:"BUT A HEARTBREAK"\\}\} 1 %slot%**
