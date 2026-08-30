@@ -96,7 +96,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 
 **Reload a folder**
 
-* Command: **/ei reload folder:Name\_Of\_My\_Folder**
+* Command: **/ei reload folder\:Name\_Of\_My\_Folder**
 * Permission: `ei.cmd.reload`
 
 #### Regenerates the default items configs
@@ -228,7 +228,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 #### Give command
 
 * Info: Command to give a player an ExecutableItem in the first slot available.
-* Command: **/ei give \{player\} \{id\} \{Variables:\{var\_id:value\},Usage:value\} \{quantity\} \[giveOfflinePlayer]**
+* Command: **/ei give \{player\} \{id\} \{Variables:\{var\_id\:value\},Usage\:value\} \{quantity\} \[giveOfflinePlayer]**
   * `player`: Name of the player who will be the target of this command
   * `id`: Id of the ExecutableItem to give.
     * Optional values: In order to add this custom setup, there must be no space(s)/white space(s) in the format. 
@@ -261,7 +261,7 @@ Also there will be different colors (but its the same idea as \{\} and \[] ):
 
 #### Give an EI in a specific slot of a player <CustomTag type="premium" />
 
-* Command: **/ei giveslot \{player\} \{id\} \{Variables:\{var\_id:value\},Usage:value\} \{quantity\} \{slot\} \[override true or false]**
+* Command: **/ei giveslot \{player\} \{id\} \{Variables:\{var\_id\:value\},Usage\:value\} \{quantity\} \{slot\} \[override true or false]**
   * `player`: Name of the player who will be the target of this command
   * `id`: Id of the ExecutableItem to give.
     * Optional values: In order to add this custom setup, there must be no space(s)/white space(s) in the format. 

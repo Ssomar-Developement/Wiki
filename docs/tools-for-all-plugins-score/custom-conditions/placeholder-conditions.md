@@ -22,7 +22,7 @@
     * IS\_NOT\_CONTAINED\_IN: Compares if the PART1 is cointained in the PART2, if it isn't, this placeholder is OK and the activator will run.
   * `messageIfNotValid:`: The custom message if the custom placeholder condition didn't match with the first and second part
   * `cancelEventIfNotValid:`: If the custom placeholder condition didn't match with the first and second part, the activator's event will be cancelled. (Default: false)
-  * `stopCheckingOtherConditionsIfNotValid`: If the conditions is not valid the other conditions won't be checked, so only 1 message of error will be displayed. (Default:true)
+  * `stopCheckingOtherConditionsIfNotValid`: If the conditions is not valid the other conditions won't be checked, so only 1 message of error will be displayed. (Default\:true)
   * `placeholderConditionCmds`: If the conditions are not met this list of commands will run. (It only support console commands)
 * Example:
 

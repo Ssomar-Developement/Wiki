@@ -29,7 +29,7 @@
 
 **Reload a folder**
 
-* Command: **/ee reload folder:Name\_Of\_My\_Folder**
+* Command: **/ee reload folder\:Name\_Of\_My\_Folder**
 * Permission: `ee.cmd.reload`
 
 #### Delete an ExecutableEvent

@@ -25,11 +25,11 @@ Commands:
 In the detailed blocks feature where you specify the block you can choose : 
 
 * A vanilla material like DIRT
-* An ExecutableBlock with EXECUTABLEBLOCKS:MyEBID
-* A Block form ItemsAdder  with ITEMSADDER:MyBlock
+* An ExecutableBlock with EXECUTABLEBLOCKS\:MyEBID
+* A Block form ItemsAdder  with ITEMSADDER\:MyBlock
 
 In the detailed items features where you specify the item to break the block you can choose : 
 
 * A vanilla material like STICK
-* An ExecutableItem with EXECUTABLEITEMS:MyEIID
-* An item from ItemsAdder with ITEMSADDER:MyItem
+* An ExecutableItem with EXECUTABLEITEMS\:MyEIID
+* An item from ItemsAdder with ITEMSADDER\:MyItem

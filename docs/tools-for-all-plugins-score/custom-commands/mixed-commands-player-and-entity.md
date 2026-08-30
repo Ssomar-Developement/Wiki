@@ -593,8 +593,8 @@ activators:
 
 :::info
 To apply real damage you can use:\
-\- 1.20.5++ use /minecraft:damage command, for example\
-minecraft:damage %target% 10 by %player%\
+\- 1.20.5++ use /minecraft\:damage command, for example\
+minecraft\:damage %target% 10 by %player%\
 \
 \- 1.20.5-- use REGAIN HEALTH command, is not the best but its a workaround.
 :::

@@ -40,7 +40,7 @@ _(Very useful for broadcast, boost, giveall commands, ...)_
 Example:
 
 * \[\<OFFLINE>] broadcast hello !
-* \[\<OFFLINE>] execute at %player% run setblock %block\_x\_int%+3 %block\_y\_int%-1 %block\_z\_int%-14 minecraft:air
+* \[\<OFFLINE>] execute at %player% run setblock %block\_x\_int%+3 %block\_y\_int%-1 %block\_z\_int%-14 minecraft\:air
 :::
 
 :::info
@@ -143,9 +143,9 @@ activators:
   * `{value}`: The value for the operation
   * `{equipmentSlot}`: The slot where the attribute will be enabled. [EquipmentSlot list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/EquipmentSlot.html)
   * `{mode}`: select the mode of addition
-    * mode:ADD # Add the attribute to the item 
-    * mode:OVERRIDE # Remove the current attributes of the same type of the item + Add the attribute to the item 
-    * mode:STACK # Stack with the attribute present on the item, if no one exist it adds it
+    * `mode:ADD` — Add the attribute to the item
+    * `mode:OVERRIDE` — Remove the current attributes of the same type of the item + Add the attribute to the item
+    * `mode:STACK` — Stack with the attribute present on the item, if no one exist it adds it
   * affectDefaultAttributes: true or false # When it's true the mode OVERRIDE will also override the default attributes, and for the MODE stack it allows to stack with the default attributes (green)
 * Example:
 
@@ -988,6 +988,10 @@ activators:
   * `{blockface}`: You can specify or not a blockFace to force the placement above for example. [BlockFaces](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html)
   * `{material}`: Block ID (Block states are supported) 
   * `{bypassProtection}`: Whether or not it will place the block even if the player doesnt have the permission
+  * `[whitelistCurrentBlock]`: (Optional) (default = can set on every types of block) List of blocks that the current block must match to be replaced
+    * Examples:
+    * AIR, WATER
+    * !STONE, !COBBLESTONE
 * Example:
 
 ```yaml
@@ -997,6 +1001,7 @@ activators:
     playerCommands:
     - SET_BLOCK blockface:UP material:OAK_WOOD
     - SET_BLOCK material:FURNACE[LIT=TRUE]
+    - SET_BLOCK material:GOLD_BLOCK whitelistCurrentBlock:SAND,DIRT
 ```
 
 ### SET\_BLOCK\_POS
@@ -1009,6 +1014,10 @@ activators:
   * `{material}`: the material of the block
   * `[bypassProtection]`: (Optional) (default = false), whether or not it bypass region, claim , island protection
   * `[replace]`: (Optional) (default = true), whether or not it replaces the block if one already exists
+  * `[whitelistCurrentBlock]`: (Optional) (default = can set on every types of block) List of blocks that the current block must match to be replaced
+    * Examples:
+    * AIR, WATER
+    * !STONE, !COBBLESTONE
 * Example:
 
 ```yaml
@@ -1017,6 +1026,7 @@ activators:
     option: # Here goes an activator that is at least instance of player
     playerCommands:
     - SET_BLOCK_POS x:0 y:0 z:0 material:STONE bypassProtection:false replace:true
+    - SET_BLOCK_POS x:0 y:0 z:0 material:GOLD_BLOCK whitelistCurrentBlock:SAND,DIRT
 ```
 
 ### SET\_EQUIPPABLE\_MODEL

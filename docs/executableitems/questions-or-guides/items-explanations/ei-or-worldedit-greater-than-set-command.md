@@ -69,7 +69,7 @@ Well ! We have the blocks saved, now the "complex" part, because what we have do
 #### How to get the amount of blocks needed to run the set command and the amount of material the player has
 
 * First, the easy one, to get the amount of material we can use [**checkitem expansion**](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#checkitem). From there we can take the amount of material the player has **in their hand**
-  * %checkitem\_amount\_mat:MMMMMMMMMMMH%
+  * %checkitem\_amount\_mat\:MMMMMMMMMMMH%
   *   MMMMMMMMMMMH is the material, to get the material on the HAND we will use [player expansion](https://github.com/PlaceholderAPI/PlaceholderAPI/wiki/Placeholders#player).
 
       * `%checkitem\_amount\_mat:{player\_item\_in\_hand}%`

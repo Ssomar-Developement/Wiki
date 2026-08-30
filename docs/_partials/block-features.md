@@ -52,7 +52,7 @@ activators:
   * You can blacklist certain blocks adding ! at the beginning like:
     * "!DIRT"
   * You can add Block Tags like: 
-    * "#MINECRAFT:MINEABLE/PICKAXE"
+    * "#MINECRAFT\:MINEABLE/PICKAXE"
   * You can add group of blocks like
     * "ALL\_ORES"
 

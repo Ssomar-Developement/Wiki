@@ -17,7 +17,7 @@
 
 * Command to clear a specific cooldown (for a specifc player / entity)
 * Command: /score cooldowns clear \{cooldown\_id\} \[UUID]
-  * `{cooldown_id}`: Example -> EI:myitem:myactivator
+  * `{cooldown_id}`: Example -> EI\:myitem\:myactivator
   * `[UUID]`: (Optionnal) The UUID of the player / entity
 
 ## Inspect loops, useful for debug
@@ -34,7 +34,7 @@ Send a message to discord via webhook
 * /score webhook \{url\} \{debug\} [allowed_mentions] \{message...\}
   * `{url}`: url for the webhook
   * `{debug}`: whether to let the executor know if a webhook message is to be performed or not
-  * `[allowed_mentions]`: it can be users:id\[,id,...\] or roles:id\[,id,...\] or nothing
+  * `[allowed_mentions]`: it can be users\:id\[,id,...\] or roles\:id\[,id,...\] or nothing
   * `{message...}`: the message that will be sent by the target webhook
 
 
@@ -58,9 +58,9 @@ Check [SCore Variables](/tools-for-all-plugins-score/score-variables)
   * `command`: SCore player command that will be applied to \{player\}
 
 * Examples:
-  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE &eHello
-  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE &eHello player:Ssomar +++ DELAY 10 +++ SWING_MAIN_HAND
-  * /score run-player-command player:SsomarPluginsPlayer SENDMESSAGE &eHello my name is %player% and my life is %player_health%
+  * /score run-player-command player\:SsomarPluginsPlayer SENDMESSAGE &eHello
+  * /score run-player-command player\:SsomarPluginsPlayer SENDMESSAGE &eHello player\:Ssomar +++ DELAY 10 +++ SWING_MAIN_HAND
+  * /score run-player-command player\:SsomarPluginsPlayer SENDMESSAGE &eHello my name is %player% and my life is %player_health%
 
 ### Block commands
 
@@ -82,8 +82,8 @@ Check [SCore Variables](/tools-for-all-plugins-score/score-variables)
   * `command`: Block command who will be run against the block and, if exists, by the player.
 
 * Examples:
-  * /score run-block-command block:world,-23,-61,27 BREAK
-  * /score run-block-command player:SsomarPluginsPlayer block:world,-23,-61,27 MINEINCUBE 1 false
+  * /score run-block-command block\:world,-23,-61,27 BREAK
+  * /score run-block-command player\:SsomarPluginsPlayer block\:world,-23,-61,27 MINEINCUBE 1 false
 
 ### Entity commands
 
@@ -93,6 +93,6 @@ Check [SCore Variables](/tools-for-all-plugins-score/score-variables)
   * `entityUUID`: UUID of the entity targeted
   * `command`: Entity command who will be run against the entity.
 * Example:
-  * /score run-entity-command entity:c4d5338b-6f8e-4b97-9f18-9dbc47f60131 JUMP 1
+  * /score run-entity-command entity\:c4d5338b-6f8e-4b97-9f18-9dbc47f60131 JUMP 1
   * /score run-entity-command entity:%entity_uuid% JUMP 1
 
